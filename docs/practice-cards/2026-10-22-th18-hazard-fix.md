@@ -8,7 +8,7 @@
 
 x86共享 `make all` 通过；PE32/i386、精确导出与依赖核验通过。候选提取器SHA256 `82a7146174a234d8c87f4c725b2fe18969a9542df47093d95a4f341de1c632aa`；DLL SHA256 `3c51e515650a503e02ce7c5b4e684a7840a3379c735e5b20ca43bf983127c66e`。
 
-候选包 `dist/th18-ai-probe-20261022-r4.zip`，8225807字节，SHA256 `e9f7ae2411ce59b08e3550feeb523a36251b834e49dc5a080e303155908ce8f0`。沿用启动器、模型、ORT、Boss优先追敌及probe1。未Windows实跑、未提交、推送或发布。
+候选包 `dist/archive/2026-11-before-full-pretrain/th18-ai-probe-20261022-r4.zip`，8225807字节，SHA256 `e9f7ae2411ce59b08e3550feeb523a36251b834e49dc5a080e303155908ce8f0`。沿用启动器、模型、ORT、Boss优先追敌及probe1。未Windows实跑、未提交、推送或发布。
 
 ## 640的来源（用户追问后核验）
 

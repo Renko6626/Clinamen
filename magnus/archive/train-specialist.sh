@@ -8,8 +8,8 @@
 # (640 episodes each, about 1.5 min on an A100) and land in <run>/probe/ inside the bundle.
 # PROBES overrides the list ("name|eval_ckpt flags;…"); PROBES= (empty) skips them.
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
-source "$(dirname "$0")/lib.sh"
+source "$(dirname "$0")/../bootstrap.sh"
+source "$(dirname "$0")/../lib.sh"
 
 out_dir="runs/job-${MAGNUS_JOB_ID:-local}"
 mkdir -p "$out_dir"

@@ -2395,7 +2395,7 @@
     "cnn": {
       "job_id": "efee48f5a6b9127d",
       "status": "success",
-      "archive": "/data/sunyunbo/www/stg-rl-train/runs/job-efee48f5a6b9127d.tar.gz",
+      "archive": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/job-efee48f5a6b9127d.tar.gz",
       "sha256": "2cbc1a9f0c36a8d1bfaa0c9d8c02bf123515b9a22871546d43b8e08bba14d0f1",
       "final_json": 9,
       "stage_json": 4,
@@ -2404,7 +2404,7 @@
     "none": {
       "job_id": "d0b3a240f2628dcf",
       "status": "success",
-      "archive": "/data/sunyunbo/www/stg-rl-train/runs/job-d0b3a240f2628dcf.tar.gz",
+      "archive": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/job-d0b3a240f2628dcf.tar.gz",
       "sha256": "74e8aa78990b15b39287d736dea070f6ab14181a6bb3e69a2660a5d6ba7bc8d7",
       "final_json": 9,
       "stage_json": 4,

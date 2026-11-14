@@ -9,8 +9,8 @@
 | 实验 | 配置 | 激光K | 联合序列长度 | 起点 |
 |---|---|---:|---:|---|
 | T6历史基线 | exp-t6-laser-joint.toml | 16 | 80 | 随机初始化，seed1 |
-| T7 | [exp-t7-laser-k8.toml](../../configs/exp-t7-laser-k8.toml) | 8 | 72 | 随机初始化，seed1 |
-| T8 | [exp-t8-laser-k4.toml](../../configs/exp-t8-laser-k4.toml) | 4 | 68 | 随机初始化，seed1 |
+| T7 | [exp-t7-laser-k8.toml](../../configs/archive/exp-t7-laser-k8.toml) | 8 | 72 | 随机初始化，seed1 |
+| T8 | [exp-t8-laser-k4.toml](../../configs/archive/exp-t8-laser-k4.toml) | 4 | 68 | 随机初始化，seed1 |
 
 两条均从T6配置复制，规范化后的唯一差异为`featurize.k_lasers`。不加载T6权重继续训练；之前同权重裁剪的结果已经单独保存在[T6记录](2026-10-01-t6-experiment.md)。此次检验低K从头学习后的水平，避免把训练时K16造成的分布依赖当作低K能力上限。
 
@@ -27,7 +27,7 @@
 
 ## 执行路线
 
-分别提交两个Magnus Job，每条1×A100、32CPU、64G，B2，缓存CUDA12.4 devel镜像。保持单训练／GPU的计时口径，沿用`GPUCHECK=1 bash magnus/train-specialist.sh`：先对本K形状做严格GPU验收，PASS后才正式训练。失败保存已有产物，仍有240分钟File Custody取回窗口。
+分别提交两个Magnus Job，每条1×A100、32CPU、64G，B2，缓存CUDA12.4 devel镜像。保持单训练／GPU的计时口径，沿用`GPUCHECK=1 bash magnus/archive/train-specialist.sh`：先对本K形状做严格GPU验收，PASS后才正式训练。失败保存已有产物，仍有240分钟File Custody取回窗口。
 
 准备时资源实查：0张A100空闲、60核CPU空闲；Job需排队，不以提交成功或Pending声称已经开始训练。每个Job用固定已推送完整SHA。本机为两条分别启动结果取回监视器，保留PID、状态和下载证据；监视器不是平台持久存储。
 
@@ -35,7 +35,7 @@
 
 纯现有配置对照，不新增永久测试或重构训练器。提交前检查与T6的完整配置差异、卡池和留出隔离、模型参数／初始权重一致、现有相关检查，以及旧torch2.5.1 CPU栈下K4和K8的短PPO冒烟。实际命令、提交SHA和Job结果随后追加。
 
-已验证：规范化配置仅k_lasers不同；383,443参数及seed1初始权重逐张量一致；213加载卡、195训练起点、5张专项留出隔离。`uv run --frozen pytest -q tests/test_featurize_v8.py tests/test_model_v3.py tests/test_export_v8.py`为21 passed。旧torch2.5.1+cpu／tensordict0.6.2／stg_rl0.4.1使用`PYTHONPATH=src <v062>/bin/python runs/t6-preflight/t7-t8-cpu-smoke.py`完成K8/K4各1次bf16 PPO更新、夹具评测、checkpoint和部署包装；每条16env×16steps，使用160帧上限，仅检验链路。初版临时脚本漏掉eval目录初始化，改用项目make_run_dir后两条均通过，不修改生产训练器。配置差异复核、入口bash语法与git diff空白检查通过。
+已验证：规范化配置仅k_lasers不同；383,443参数及seed1初始权重逐张量一致；213加载卡、195训练起点、5张专项留出隔离。`uv run --frozen pytest -q tests/test_featurize_v8.py tests/test_model_v3.py tests/test_export_v8.py`为21 passed。旧torch2.5.1+cpu／tensordict0.6.2／stg_rl0.4.1使用`PYTHONPATH=src <v062>/bin/python runs/archive/2026-11-before-full-pretrain/t6-preflight/t7-t8-cpu-smoke.py`完成K8/K4各1次bf16 PPO更新、夹具评测、checkpoint和部署包装；每条16env×16steps，使用160帧上限，仅检验链路。初版临时脚本漏掉eval目录初始化，改用项目make_run_dir后两条均通过，不修改生产训练器。配置差异复核、入口bash语法与git diff空白检查通过。
 
 缩短序列在数学上减少计算：attention配对减少19%／27.75%，现有联合block主要矩阵乘MAC约减少12.14%／18.04%。实际GPU内核和训练SPS是否提升、提升多少仍由本次运行测量，不保证理论比例或固定完成时刻。
 
@@ -47,18 +47,18 @@
 
 | 实验 | Job | 状态（提交后实查） | 入口 |
 |---|---|---|---|
-| T7，K8 | [82677c563c5b0cc1](http://162.105.151.134:3011/jobs/82677c563c5b0cc1) | Pending | GPUCHECK=1 bash magnus/train-specialist.sh configs/exp-t7-laser-k8.toml t7-laser-k8 |
-| T8，K4 | [28a4532abf792cc4](http://162.105.151.134:3011/jobs/28a4532abf792cc4) | Pending | GPUCHECK=1 bash magnus/train-specialist.sh configs/exp-t8-laser-k4.toml t8-laser-k4 |
+| T7，K8 | [82677c563c5b0cc1](http://162.105.151.134:3011/jobs/82677c563c5b0cc1) | Pending | GPUCHECK=1 bash magnus/archive/train-specialist.sh configs/archive/exp-t7-laser-k8.toml t7-laser-k8 |
+| T8，K4 | [28a4532abf792cc4](http://162.105.151.134:3011/jobs/28a4532abf792cc4) | Pending | GPUCHECK=1 bash magnus/archive/train-specialist.sh configs/archive/exp-t8-laser-k4.toml t8-laser-k4 |
 
 Job list逐项核验了固定SHA、B2、1GPU和32CPU。两条均为64G内存、20G临时盘、CUDA12.4 devel镜像；目前尚未进入安装／GPU验收／正式训练。排队等待不可据GPU历史速度预测，未承诺半夜完成时刻。
 
-分别在`runs/t7-monitor/`、`runs/t8-monitor/`启动本机监视器，Python PID2548425／2548447已确认存活并记录Pending。它们每60秒检查状态，在Success或提前退出时保存日志、尝试取回结果，检查u3500、最终原作评测和8份专项JSON。领取码数字长度不固定；监视最长72小时以覆盖排队，不会修改Job时限。进程若因本机关闭而停止，仍需在240分钟领取窗口内人工取回。
+分别在`runs/archive/2026-11-before-full-pretrain/t7-monitor/`、`runs/archive/2026-11-before-full-pretrain/t8-monitor/`启动本机监视器，Python PID2548425／2548447已确认存活并记录Pending。它们每60秒检查状态，在Success或提前退出时保存日志、尝试取回结果，检查u3500、最终原作评测和8份专项JSON。领取码数字长度不固定；监视最长72小时以覆盖排队，不会修改Job时限。进程若因本机关闭而停止，仍需在240分钟领取窗口内人工取回。
 
 用户本次明确要求将两项任务挂上去；没有新增续训、稀疏注意力或其他卡池实验。
 
 ## 2026-10-02 T8完成与T7网络失败／重试
 
-T8 Job28a4532abf792cc4完整完成3500updates／917,504,000环境帧，latest与best均为u3500，GPU检查PASS，4个末段checkpoint、14次原作评测和8份专项评测齐全。取回包84,775,415字节，SHA256 `9f305e01d34fbdd493cfcff61b38f0c52aea0b1ac62afdce57b3efded9c1daec`；解包`runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/`。
+T8 Job28a4532abf792cc4完整完成3500updates／917,504,000环境帧，latest与best均为u3500，GPU检查PASS，4个末段checkpoint、14次原作评测和8份专项评测齐全。取回包84,775,415字节，SHA256 `9f305e01d34fbdd493cfcff61b38f0c52aea0b1ac62afdce57b3efded9c1daec`；解包`runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/`。
 
 对照T6，保存配置唯一差异为k_lasers16→4，卡池／起点／意图／引擎build_info一致。末四次固定跟点、Hard/Lunatic：原作激光80.73→86.33%，普通88.44→89.02%，全13卡86.66→88.40%。激光Hard82.55→88.80%，Lunatic78.91→83.85%。逐卡露米娅98.05→93.36%、水符58.98→76.17%、竖柱85.16→89.45%。末次u3500原作激光92.19%，不以这个单点替代四次均值。
 
@@ -66,13 +66,13 @@ T8 Job28a4532abf792cc4完整完成3500updates／917,504,000环境帧，latest与
 
 实测稳态SPS中位数65,028→68,163（+4.82%），训练含原作评测耗时4.48→4.29小时，节省约11.34分钟。u260..3500每20轮的163个同步计时样本：PPO update2.3256→2.1925秒（−5.72%）、策略推理0.2399→0.2189秒（−8.77%）、单轮总计时4.4139→4.2638秒（−3.40%）；跨Job计时仍受资源／轨迹差异影响，不将4.8%作为精确因果估计。
 
-[精确统计与来源SHA](reports/t8-results-summary.json)、[阶段耗时与来源SHA](reports/t8-performance-summary.json)。复算`uv run --frozen python runs/t8-analysis/analyze.py`检查了连续轮次、预算、32局分母、无超时、留出隔离、配置／卡池一致、GPU检查和取回SHA。各臂只有一次seed1训练，重复checkpoint不是独立训练；没有逐局记录，不做配对显著性结论。
+[精确统计与来源SHA](reports/t8-results-summary.json)、[阶段耗时与来源SHA](reports/t8-performance-summary.json)。复算`uv run --frozen python runs/archive/2026-11-before-full-pretrain/t8-analysis/analyze.py`（历史命令；归档脚本内仍是当时路径，复算前按[归档映射](../training-archive.md#旧路径映射)调整输入与输出位置）检查了连续轮次、预算、32局分母、无超时、留出隔离、配置／卡池一致、GPU检查和取回SHA。各臂只有一次seed1训练，重复checkpoint不是独立训练；没有逐局记录，不做配对显著性结论。
 
 T7原Job82677c563c5b0cc1在bootstrap的pip安装阶段失败，末尾为`HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out`。日志未出现GPU检查PASS或训练开始，不能称为8根模型训练失败；没有checkpoint可续。EXIT打包trap在bootstrap之后注册，因此此类安装失败没有结果包，取回器日志的“无领取码”不是训练产物下载丢失。
 
-为补齐已授权的T7实验，保持原编号、配置、seed、预算、SHA5997cec、B2和1A100/32CPU/64G，重挂[T7 retry1 bfd1c1cd62146a55](http://162.105.151.134:3011/jobs/bfd1c1cd62146a55)。只在entry前增加`PIP_DEFAULT_TIMEOUT=120 PIP_RETRIES=10`，不改依赖版本或模型。提交前资源实查5GPU/92CPU空闲。依赖安装成功，GPU检查PASS；真实更新日志已核验至u153/3500，约65k–70k帧／秒。自动取回监视器`runs/t7-retry1-monitor`，Python PID3291997已确认存活；原T7失败证据保留在`runs/t7-monitor`。
+为补齐已授权的T7实验，保持原编号、配置、seed、预算、SHA5997cec、B2和1A100/32CPU/64G，重挂[T7 retry1 bfd1c1cd62146a55](http://162.105.151.134:3011/jobs/bfd1c1cd62146a55)。只在entry前增加`PIP_DEFAULT_TIMEOUT=120 PIP_RETRIES=10`，不改依赖版本或模型。提交前资源实查5GPU/92CPU空闲。依赖安装成功，GPU检查PASS；真实更新日志已核验至u153/3500，约65k–70k帧／秒。自动取回监视器`runs/archive/2026-11-before-full-pretrain/t7-retry1-monitor`，Python PID3291997已确认存活；原T7失败证据保留在`runs/archive/2026-11-before-full-pretrain/t7-monitor`。
 
-用户随后将关注范围明确为原作激光与原作弹幕+激光合成，排除纯激光专项。原30张混合合成卡只参加训练，旧评测未直接给出该组通过率；补测T6/T8 u3500同CPU、同seed12345、固定跟点／原运动层。选全部30张有TH06 base_card血缘的synthetic卡，27张rank2/3与3张Extra-only rank4，每卡／rank32局，共1824局／臂。分成每批6卡的相同批量安排，结果保存`runs/t6-t8-mixed-eval`；这一组是训练内卡能力探针，不是留出泛化评测，且不能与末四次GPU原作组混成单一通过率。补测结果完成后追加。
+用户随后将关注范围明确为原作激光与原作弹幕+激光合成，排除纯激光专项。原30张混合合成卡只参加训练，旧评测未直接给出该组通过率；补测T6/T8 u3500同CPU、同seed12345、固定跟点／原运动层。选全部30张有TH06 base_card血缘的synthetic卡，27张rank2/3与3张Extra-only rank4，每卡／rank32局，共1824局／臂。分成每批6卡的相同批量安排，结果保存`runs/archive/2026-11-before-full-pretrain/t6-t8-mixed-eval`；这一组是训练内卡能力探针，不是留出泛化评测，且不能与末四次GPU原作组混成单一通过率。补测结果完成后追加。
 
 ## 原作弹幕＋激光合成组补测完成
 
@@ -80,11 +80,11 @@ T7原Job82677c563c5b0cc1在bootstrap的pip安装阶段失败，末尾为`HTTPSCo
 
 Hard：92.48→93.75%；Lunatic：86.11→86.11%；Extra：100→95.83%。30张中12张提高、8张持平、10张下降。最大单卡下降为`synthetic synth_laser_s7_b1_v2`（Extra随机短棒扇）：100→87.50%，−12.50pp（32局中4局差异）；其次synth_laser_s5_b1与synth_laser_s5_w05_v2各−7.81pp。不能以总体持平称为所有卡无损。
 
-[混合组完整逐卡／rank与来源SHA](reports/t6-t8-mixed-results-summary.json)。原始结果／临时脚本为`runs/t6-t8-mixed-eval/T6.json`、`T8.json`和`evaluate.py`，无需重训。该组30张均参与训练，因此是训练内能力探针；与原作3张留出末四次GPU指标采用不同checkpoint窗口／设备，不合成一个总体率，也不把+0.38pp当作统计显著改善。原作激光3卡80.73→86.33%，原作普通10卡88.44→89.02%；在用户关心的原作／混合范围未见整体下降，纯激光专项54.34→42.93%的退化应单独陈述。
+[混合组完整逐卡／rank与来源SHA](reports/t6-t8-mixed-results-summary.json)。原始结果／临时脚本为`runs/archive/2026-11-before-full-pretrain/t6-t8-mixed-eval/T6.json`、`T8.json`和`evaluate.py`，无需重训。该组30张均参与训练，因此是训练内能力探针；与原作3张留出末四次GPU指标采用不同checkpoint窗口／设备，不合成一个总体率，也不把+0.38pp当作统计显著改善。原作激光3卡80.73→86.33%，原作普通10卡88.44→89.02%；在用户关心的原作／混合范围未见整体下降，纯激光专项54.34→42.93%的退化应单独陈述。
 
 ## T7 retry1完成与三臂结果
 
-T7 retry1 Jobbfd1c1cd62146a55为Success，完整完成3500updates／917,504,000环境帧，latest与best均为u3500，GPU检查PASS。75个归档成员，末四次checkpoint、14次原作评测、4个best探针和8份专项JSON齐全。取回包84,717,572字节，SHA256 `81e075875b26debe9dcd99d5d8bd269c6348e54bbeb1774d98ae3c58d37279eb`，2026-10-02 12:03 UTC自动取回。目录`runs/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/`。
+T7 retry1 Jobbfd1c1cd62146a55为Success，完整完成3500updates／917,504,000环境帧，latest与best均为u3500，GPU检查PASS。75个归档成员，末四次checkpoint、14次原作评测、4个best探针和8份专项JSON齐全。取回包84,717,572字节，SHA256 `81e075875b26debe9dcd99d5d8bd269c6348e54bbeb1774d98ae3c58d37279eb`，2026-10-02 12:03 UTC自动取回。目录`runs/archive/2026-11-before-full-pretrain/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/`。
 
 T7与T6保存配置唯一差异为k_lasers16→8，卡池、训练起点、意图混合与引擎build_info逐项一致；原作／专项分母、无timeout、预算、checkpoint和取回哈希已验证。
 
@@ -106,4 +106,4 @@ T7相较16根，稳态吞吐+2.19%，训练含原作评测约少5.20分钟；相
 
 在本轮单seed历史对照中，8根原作通过率最高，4根速度略快；纯激光专项总体均低于16根。此前30张原作+激光混合合成组只补测了T6和T8，T7尚未补测，不以原作指标代替混合组测量。各臂只有一次seed1训练，末四次不是独立训练，不作多种子显著性结论。
 
-[统计与全部输入SHA](reports/t7-results-summary.json)、[三臂阶段耗时](reports/t6-t7-t8-performance-summary.json)。复算命令`uv run --frozen python runs/t7-analysis/analyze.py`；没有重新训练、改模型或自动替换已交付T8包。
+[统计与全部输入SHA](reports/t7-results-summary.json)、[三臂阶段耗时](reports/t6-t7-t8-performance-summary.json)。复算命令`uv run --frozen python runs/archive/2026-11-before-full-pretrain/t7-analysis/analyze.py`（历史命令；归档脚本内仍是当时路径，复算前按[归档映射](../training-archive.md#旧路径映射)调整输入与输出位置）；没有重新训练、改模型或自动替换已交付T8包。

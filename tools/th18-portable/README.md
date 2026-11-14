@@ -22,9 +22,9 @@ r2 修正了首包的配置参数错误：thcrap 将不含反斜杠的相对参�
 make -C tools/th18-portable check all OUT=/path/to/TH18-AI.exe
 python3 tools/th18-portable/build.py \
   --cache /path/to/verified-inputs \
-  --adapter dist/th18-autoplay-thcrap-20261022-draft.zip \
+  --adapter dist/archive/2026-11-before-full-pretrain/th18-autoplay-thcrap-20261022-draft.zip \
   --launcher /path/to/TH18-AI.exe \
-  --output dist/th18-ai-portable-20261022.zip
+  --output dist/th18-ai-portable-rebuild.zip
 ```
 
 先按 `dependencies.json` 的文件名准备官方输入归档和许可缓存。构建不会下载或安装依赖；每次都验证全部输入 SHA256，在临时目录从原始归档提取所需文件，不信任缓存中的预解压 DLL。微软签名 CAB 的附加签名数据可能触发 cabextract 的 `extra bytes at end of file` 警告；提取成功仍以命令退出码和后续闭包检查为准。

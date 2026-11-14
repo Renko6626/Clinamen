@@ -180,7 +180,7 @@ def test_ordinary_synthetic_still_requires_base_card(tmp_path):
         discover(tmp_path)
 
 
-@pytest.mark.parametrize("original_source", ["th16", "th18"])
+@pytest.mark.parametrize("original_source", ["th14", "th15", "th16", "th18"])
 def test_source_tree_filters_metadata_and_skips_disabled(tmp_path, original_source):
     from stgtrain.cards import configured_cards
 

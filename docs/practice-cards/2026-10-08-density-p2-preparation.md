@@ -32,12 +32,12 @@
 - 无CNN组跳过密度分箱/聚合，特征化返回同shape零占位以保留现有构造契约；模型requires移除density，PPO只缓存模型所需特征，密度图不进入rollout/shuffle buffer。主干拼接位置仍为64维零向量，旧CNN参数保留便于严格迁移。
 - 新初始化保存u0.pt，并在训练开始前评测原作跟点/自由，保存首局记录。u0只作诊断，不参与best选择；原训练标准评测仍按跟点选best。
 - 评测CLI支持显式eval seed、逐局记录、划分覆盖与rank过滤；默认划分保留全部原rank，全卡默认rank2的旧行为保持。
-- `magnus/train-density.sh`：bootstrap→严格FP32 GPUCHECK→bf16训练→固定u1000最终评测→打包取回。训练/评测失败会交回已有产物；上传失败也返回非零，不能把无结果的Job标为正常成功。
+- `magnus/archive/train-density.sh`：bootstrap→严格FP32 GPUCHECK→bf16训练→固定u1000最终评测→打包取回。训练/评测失败会交回已有产物；上传失败也返回非零，不能把无结果的Job标为正常成功。
 - `tools/eval_density_checkpoints.py`：三个eval seed（12345/23456/34567），每card/rank32局，原作跟点+自由、专项自由，仅rank2/3，每臂5952局。输出逐局身份、arm、训练seed、意图、运动层与update，核对数量/ID/汇总及输入SHA。
 
 ## 资源与估时
 
-准备完成时资源查询：**2026-10-08 13:25:08 UTC（北京时间21:25:08）**，Rise-AGI，6张A100/108核CPU空闲。快照在`runs/density-p2-submit/cluster-preparation.json`，不能当作稍后提交时仍可用的保证。
+准备完成时资源查询：**2026-10-08 13:25:08 UTC（北京时间21:25:08）**，Rise-AGI，6张A100/108核CPU空闲。快照在`runs/archive/2026-11-before-full-pretrain/density-p2-submit/cluster-preparation.json`，不能当作稍后提交时仍可用的保证。
 
 拟每臂1×A100、32核CPU、64G主存、20G临时盘，优先级**B2**，使用已验证CUDA12.4 devel镜像；两臂最多并行，共2张GPU/64核CPU。启动时另检查实际亲和性与cgroup配额。
 
@@ -50,8 +50,8 @@
 - 相关已有检查与覆盖缺口：本地`uv run --frozen pytest -q tests/test_checkpoint.py tests/test_featurize.py tests/test_featurize_v8.py tests/test_ppo.py tests/test_model_v3.py tests/test_eval_ckpt.py tests/test_smoke.py`，67 passed，4条CPU CudaGraphModule旁路警告；同一组在torch2.5.1+cpu/tensordict0.6.2旧CPU venv亦67 passed。
 - u0新增端到端：本地`pytest -q tests/test_smoke.py::test_train_warm_start_uses_new_config_and_fresh_counters tests/test_eval_ckpt.py`，4 passed；旧CPU栈三种初始化模式3 passed。测试核对真实u0张量等于来源、optimizer空、计数0、基线记录及后续真实PPO更新。
 - 最终rank/seed/records CLI检查在旧CPU栈1 passed；覆盖真实划分rank3筛选，不把专项rank0/1混入主口径。
-- `runs/density-p2-submit/preflight.py`对真实最新B/Shift权重严格加载两臂：全部源张量一致（含推理副本）、optimizer全新、同真实观测非密度特征相同、B缺density仍能推理、缓存键正确。两臂均PASS，结果在preflight.json。
-- `bash -n magnus/train-density.sh`、Python编译、`git diff --check`通过。独立只读审阅发现并修复上传失败退出码问题；准备产物复核未发现新的实质问题。
+- `runs/archive/2026-11-before-full-pretrain/density-p2-submit/preflight.py`对真实最新B/Shift权重严格加载两臂：全部源张量一致（含推理副本）、optimizer全新、同真实观测非密度特征相同、B缺density仍能推理、缓存键正确。两臂均PASS，结果在preflight.json。
+- `bash -n magnus/archive/train-density.sh`、Python编译、`git diff --check`通过。独立只读审阅发现并修复上传失败退出码问题；准备产物复核未发现新的实质问题。
 - P1完整输入已在后续开发前留存，当前P1逐局重算通过冻结快照继续有效，未把新代码当旧实验来源。
 
 本地检查命令使用`UV_CACHE_DIR=/tmp/sunyunbo/uv-cache`、`MPLCONFIGDIR=/tmp/sunyunbo/mpl-density-ablation`、`OMP_NUM_THREADS=2 MKL_NUM_THREADS=2`；旧CPU命令使用`PYTHONPATH=src`及本机历史临时v062解释器。上述测试结果分批记录，存在重复用例，不相加作为独立验收样本。
@@ -60,7 +60,7 @@
 
 ## 冻结提交材料
 
-材料位于`runs/density-p2-submit/`：preflight.json、source-manifest.json、stage/、source-overlay.tar.gz、archive.json、两份submission-args.json、prepare.py/submit.py。运行产物遵守现有gitignore。
+材料位于`runs/archive/2026-11-before-full-pretrain/density-p2-submit/`：preflight.json、source-manifest.json、stage/、source-overlay.tar.gz、archive.json、两份submission-args.json、prepare.py/submit.py。运行产物遵守现有gitignore。
 
 - 固定Git main基底：`4a3bc4a35ca57d4fd114cca227206fed658a84a0`，采用已使用过的源码overlay路线，不commit/push。
 - 冻结647个文件，归档5,771,466字节。

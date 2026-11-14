@@ -62,7 +62,7 @@ CNN后500轮专项明显改善，瞄准卡在该seed从7.81%升到50.00%；无CN
 
 两臂各9份最终JSON（5952局）及4份阶段JSON（2304局），合计16512逐局记录，全部manifest completed=true。检查了：配置仅density_enabled不同、checkpoint/update/帧数与seed、SHA、rank/首局身份唯一、跨臂配对键及start/mode/motor一致、数值有限、逐局存活与汇总重算一致。所有检查通过；三eval seed属于同一个训练seed，不是三个独立训练重复，不据此宣称训练差异具有统计显著性。
 
-- 重算命令：`python runs/density-p2-u2000-20261009/analyze.py`。
+- 重算命令：`python runs/archive/2026-11-before-full-pretrain/density-p2-u2000-20261009/analyze.py`。
 - 可版本管理的[逐组汇总与来源SHA](reports/density-p2-u2000-summary.json)；原始JSON与checkpoint在`runs/job-<ID>/`，忽略入库。
 - CNN结果包SHA256：`2cbc1a9f0c36a8d1bfaa0c9d8c02bf123515b9a22871546d43b8e08bba14d0f1`。
 - 无CNN结果包SHA256：`74e8aa78990b15b39287d736dea070f6ab14181a6bb3e69a2660a5d6ba7bc8d7`。

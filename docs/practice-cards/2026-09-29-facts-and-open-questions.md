@@ -14,7 +14,7 @@
 
 ## 2. `th06_s4_b12` 的准确机制
 
-依据 [实际脚本](../../cards/th06_s4_b12/main.ecl) 的 `pattern()`：
+依据 [实际脚本](../../cards/th06/th06_s4_b12/main.ecl) 的 `pattern()`：
 
 - 卡名为水符「ベリーインレイク」，每轮 12 组，每 10 帧创建两条长 640 px 的激光，传入宽度为 4 px；预警/生效/收缩为 20/50/10 帧。
 - 每组分别 `lz_aim(lz0, f0)` 与 `lz_aim(lz1, -f0)`，即相对于**当时自机方向**的正负偏角。`f0` 从 22.5° 起逐组减约 1.5°，最后约 6°。
@@ -51,7 +51,7 @@
 
 三条日志均报告完成 3500 updates / 917,504,000 环境帧。T3/T4 最终全组撑过率低于 T2；`s4_b12` 在这些固定跟点评测下仍弱。这不足以定位根因。
 
-T4 有重要设计偏差，依据 [课程实现](../../src/stgtrain/curriculum.py)、[训练入口](../../src/stgtrain/train.py) 和 [配置](../../configs/exp-t4-laser-stratified.toml)：
+T4 有重要设计偏差，依据 [课程实现](../../src/stgtrain/curriculum.py)、[训练入口](../../src/stgtrain/train.py) 和 [配置](../../configs/archive/exp-t4-laser-stratified.toml)：
 
 - 最初提出的“每卡最低配额 + 近期贪心评测死亡率”没有实现。实际仍用训练中随机动作下的死亡率 EMA。
 - 实际做法是将原有权重在两组内分别除以组均值。它保持各组内部已有权重比，并没有直接让激光组内部更均匀。

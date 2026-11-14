@@ -151,7 +151,7 @@ def main():
     capture = a.root / "preflight-i1"
     benchmark = report["onnx_benchmark"]
     assert all(str(i) in benchmark["benchmark"] for i in a.intervals)
-    deploy = Path("dist/t8-laser-k4-best.manifest.json")
+    deploy = Path("dist/archive/2026-11-before-full-pretrain/t8-laser-k4-best.manifest.json")
     deploy_meta = json.loads(deploy.read_text())
     assert benchmark["feeds_sha256"] == sha(capture / "feeds.npz")
     assert benchmark["model_sha256"] == deploy_meta["sha256"]["onnx"] == sha(deploy.parent / deploy_meta["onnx"])

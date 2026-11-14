@@ -40,7 +40,7 @@
 
 ## 配置与训练边界
 
-已准备 `configs/exp-request-reward-k8.toml`，复制 [T7 配置](../../../configs/exp-t7-laser-k8.toml)，仅追加 `[reward] action_source="request"` 并显式保留 frame_skip=1。A 可继续用原 T7 配置，默认执行口径。
+已准备 `configs/archive/exp-request-reward-k8.toml`，复制 [T7 配置](../../../configs/archive/exp-t7-laser-k8.toml)，仅追加 `[reward] action_source="request"` 并显式保留 frame_skip=1。A 可继续用原 T7 配置，默认执行口径。
 
 模型结构不变，旧 T7 权重在技术上可加载；本次按用户的直接提交要求，沿用T7从头seed1／3500updates。历史 T7 不能替代同期 A 的因果对照；本轮只提交B，未追加同期A。
 

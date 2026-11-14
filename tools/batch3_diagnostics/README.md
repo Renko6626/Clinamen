@@ -4,4 +4,4 @@ These are the exact controller/orchestration sources used for the recorded check
 
 The scripts preserve their original staging/report paths under `/tmp/sunyunbo/stg-laser-batch3` and this workspace. To replay after staging cleanup, copy the corresponding frozen dataset card back to its recorded staging directory, use the reported stg_rl version and engine source identity, then run the recorded command. `check_corridor_horizon.py` explicitly selects horizon45/90; it must not be described as the canonical18-frame controller.
 
-Final traces are retained in ignored `runs/laser-specialist-batch3-validation/`. Older temporary trajectories may have been overwritten during revision; historical reports are not acceptance for current files.
+Final traces are retained in ignored `runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/`. Older temporary trajectories may have been overwritten during revision; historical reports are not acceptance for current files.

@@ -17,7 +17,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_corridor_01/feasibility/laser_sp_corridor_01.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_corridor_01/3790f00a2d1c"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_corridor_01/3790f00a2d1c"
     },
     {
       "card": "laser_sp_corridor_02",
@@ -36,7 +36,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_corridor_02/feasibility/laser_sp_corridor_02.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_corridor_02/072bfc015f36"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_corridor_02/072bfc015f36"
     },
     {
       "card": "laser_sp_corridor_04",
@@ -55,7 +55,7 @@
       "heuristic_trials": 8,
       "stationary_success": 3,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_corridor_04/feasibility/laser_sp_corridor_04.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_corridor_04/163ccc463dd7"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_corridor_04/163ccc463dd7"
     },
     {
       "card": "laser_sp_stagger_03",
@@ -74,7 +74,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_stagger_03/feasibility/laser_sp_stagger_03.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_stagger_03/1323fb06b34b"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_stagger_03/1323fb06b34b"
     },
     {
       "card": "laser_sp_sweep_01",
@@ -93,7 +93,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_sweep_01/feasibility/laser_sp_sweep_01.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_sweep_01/e16e15762a93"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_sweep_01/e16e15762a93"
     },
     {
       "card": "laser_sp_corridor_03",
@@ -112,7 +112,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_corridor_03/feasibility/laser_sp_corridor_03.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_corridor_03/45daed6cbb83"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_corridor_03/45daed6cbb83"
     },
     {
       "card": "laser_sp_stagger_01",
@@ -131,7 +131,7 @@
       "heuristic_trials": 8,
       "stationary_success": 7,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_stagger_01/feasibility/laser_sp_stagger_01.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_stagger_01/09a2858184a0"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_stagger_01/09a2858184a0"
     },
     {
       "card": "laser_sp_stagger_02",
@@ -150,7 +150,7 @@
       "heuristic_trials": 8,
       "stationary_success": 8,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_stagger_02/feasibility/laser_sp_stagger_02.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_stagger_02/f7feb8bbacc4"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_stagger_02/f7feb8bbacc4"
     },
     {
       "card": "laser_sp_sweep_02",
@@ -169,7 +169,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_sweep_02/feasibility/laser_sp_sweep_02.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_sweep_02/fb491761c27b"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_sweep_02/fb491761c27b"
     },
     {
       "card": "laser_sp_stagger_04",
@@ -188,7 +188,7 @@
       "heuristic_trials": 8,
       "stationary_success": 34,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_stagger_04/feasibility/laser_sp_stagger_04.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_stagger_04/102953fcc1a4"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_stagger_04/102953fcc1a4"
     },
     {
       "card": "laser_sp_sweep_03",
@@ -207,7 +207,7 @@
       "heuristic_trials": 8,
       "stationary_success": 2,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_sweep_03/feasibility/laser_sp_sweep_03.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_sweep_03/75f24977d3f9"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_sweep_03/75f24977d3f9"
     },
     {
       "card": "laser_sp_aimed_04",
@@ -226,7 +226,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_aimed_04/feasibility/laser_sp_aimed_04.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_aimed_04/9d7ee664f19d"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_aimed_04/9d7ee664f19d"
     },
     {
       "card": "laser_sp_aimed_03",
@@ -245,7 +245,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_aimed_03/feasibility/laser_sp_aimed_03.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_aimed_03/221325dcd5ec"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_aimed_03/221325dcd5ec"
     },
     {
       "card": "laser_sp_aimed_01",
@@ -264,7 +264,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_aimed_01/feasibility/laser_sp_aimed_01.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_aimed_01/d3b555e8cc1b"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_aimed_01/d3b555e8cc1b"
     },
     {
       "card": "laser_sp_aimed_02",
@@ -283,7 +283,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_aimed_02/feasibility/laser_sp_aimed_02.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_aimed_02/95727f42a991"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_aimed_02/95727f42a991"
     },
     {
       "card": "laser_sp_sweep_04",
@@ -302,7 +302,7 @@
       "heuristic_trials": 8,
       "stationary_success": 17,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_sweep_04/feasibility/laser_sp_sweep_04.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_sweep_04/e57e4ed9c079"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_sweep_04/e57e4ed9c079"
     },
     {
       "card": "laser_sp_bars_01",
@@ -321,7 +321,7 @@
       "heuristic_trials": 8,
       "stationary_success": 0,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_bars_01/feasibility/laser_sp_bars_01.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844"
     },
     {
       "card": "laser_sp_bars_02",
@@ -340,7 +340,7 @@
       "heuristic_trials": 8,
       "stationary_success": 17,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_bars_02/feasibility/laser_sp_bars_02.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_02/d4b9e65e3221"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_02/d4b9e65e3221"
     },
     {
       "card": "laser_sp_bars_03",
@@ -359,7 +359,7 @@
       "heuristic_trials": 8,
       "stationary_success": 39,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_bars_03/feasibility/laser_sp_bars_03.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_03/9dbc8cd1f2d2"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_03/9dbc8cd1f2d2"
     },
     {
       "card": "laser_sp_bars_04",
@@ -378,7 +378,7 @@
       "heuristic_trials": 8,
       "stationary_success": 18,
       "player_report": "/data/sunyunbo/www/stg-rl-train/docs/practice-cards/reports/batch3/final/laser_sp_bars_04/feasibility/laser_sp_bars_04.json",
-      "logs": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_04/042c46297ba9"
+      "logs": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_04/042c46297ba9"
     }
   ],
   "expected_cards": [

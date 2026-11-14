@@ -68,7 +68,7 @@
 
 ## 产物与复跑
 
-正式输出：`runs/density-ablation-20261008/`，包括manifest、六份原始逐局JSON、summary、complete.json和独立重算脚本validate.py；这些运行产物按现有gitignore不入库。可版本管理汇总：[P1汇总JSON](reports/density-ablation-p1-summary.json)，记录各产物SHA、逐组计数及逐卡结果。
+正式输出：`runs/archive/2026-11-before-full-pretrain/density-ablation-20261008/`，包括manifest、六份原始逐局JSON、summary、complete.json和独立重算脚本validate.py；这些运行产物按现有gitignore不入库。可版本管理汇总：[P1汇总JSON](reports/density-ablation-p1-summary.json)，记录各产物SHA、逐组计数及逐卡结果。
 
 后续准备P2之前，已将P1完整输入（619个文件和原checkpoint）留存至同目录`source-snapshot.tar.gz`，SHA由`source-snapshot.json`记录。P2开发改变工作树后，validate.py核验该冻结快照，仍可重算P1；不会用新源码冒充旧实验输入。
 
@@ -93,7 +93,7 @@ OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 MPLCONFIGDIR=/tmp/sunyunbo/mpl-density-ablat
 - 两项新增行为先观察到预期失败，再实现开关/逐局输出；专项分组修复复用真实pair_summary验证，不以mock或源码字符串断言。
 - 独立只读审阅发现专项激光被标为普通的汇总问题，已修正并复核。未重复运行产品测试。
 - 调试预检曾主动中止，未合并进正式数据。正式run的逐局结果才用于本次结论。
-- `python runs/density-ablation-20261008/validate.py`：3968局重算通过，ID唯一/两臂匹配、总体与分组撑过数、平均帧数、配对净差、checkpoint与冻结输入SHA全部核对，生成上述汇总JSON。
+- `python runs/archive/2026-11-before-full-pretrain/density-ablation-20261008/validate.py`：3968局重算通过，ID唯一/两臂匹配、总体与分组撑过数、平均帧数、配对净差、checkpoint与冻结输入SHA全部核对，生成上述汇总JSON。
 - `git diff --check`通过。纯CPU评测，无训练、GPU任务或游戏UI操作；未提交/推送。
 
 ## 解释边界

@@ -12,7 +12,7 @@
 
 支持样本仅 TH18 v1.00a，MD5 `9969cac756098c1da05a81de45437a70`。挂点 VA `0x45be90`，原字节 `55 8B EC 83 E4 F8`，type3、六字节完整指令窗口；输入 tick 在前，自机消费在后，商店期间原生 wrapper 跳过该 body。
 
-草稿包：`dist/th18-autoplay-thcrap-20261022-draft.zip`，34 文件、5,818,692 字节。包含插件、图6 B/Shift K8 模型、官方 ORT1.22 x86 DLL 与声明、patch、示例配置、适配源码和独立审阅记录；不包含原作游戏文件或 thcrap 本体。TH16 旧草稿包保留。
+草稿包：`dist/archive/2026-11-before-full-pretrain/th18-autoplay-thcrap-20261022-draft.zip`，34 文件、5,818,692 字节。包含插件、图6 B/Shift K8 模型、官方 ORT1.22 x86 DLL 与声明、patch、示例配置、适配源码和独立审阅记录；不包含原作游戏文件或 thcrap 本体。TH16 旧草稿包保留。
 
 | 文件 | SHA256 |
 | --- | --- |

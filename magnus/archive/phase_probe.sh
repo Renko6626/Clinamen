@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Per-phase timing on the cached A100 image; positional args = env thread counts to run in turn (default 28).
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
+source "$(dirname "$0")/../bootstrap.sh"
 
 # GPUCHECK=1：先跑 gpucheck（录图 / 编译与 eager 的数值对拍），不过就不测
 if [[ ${GPUCHECK:-0} == 1 ]]; then

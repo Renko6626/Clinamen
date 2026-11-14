@@ -1,0 +1,3963 @@
+{
+  "date": "2026-11-15",
+  "state": "Training complete; checkpoints/results retained locally; GPU stopped, disk retained. New model optimization requires a new decision.",
+  "scope": "Versioned aggregate evidence only. Raw checkpoint/observations/replays remain under ignored runs/. No API keys,private keys,original game source excerpts or model binaries.",
+  "data": {
+    "enabled_materials": 686,
+    "training_starts": 668,
+    "training_ranks": {
+      "rank_config": [
+        2
+      ],
+      "total_starts": 668,
+      "rank_counts": {
+        "2": 504,
+        "1": 14,
+        "4": 150
+      },
+      "by_source": {
+        "th06": {
+          "2": 102,
+          "1": 14,
+          "4": 37
+        },
+        "th14": {
+          "2": 93,
+          "4": 31
+        },
+        "th15": {
+          "2": 97,
+          "4": 32
+        },
+        "th16": {
+          "2": 81,
+          "4": 29
+        },
+        "th18": {
+          "2": 92,
+          "4": 18
+        },
+        "synthetic": {
+          "2": 39,
+          "4": 3
+        }
+      },
+      "non_hard_ids": {
+        "1": [
+          "th06_s2_b2",
+          "th06_s3_b6",
+          "th06_s3_mb2",
+          "th06_s4_b11",
+          "th06_s4_b13",
+          "th06_s4_b16",
+          "th06_s4_b17",
+          "th06_s4_b2",
+          "th06_s5_b2",
+          "th06_s5_b5",
+          "th06_s5_b8",
+          "th06_s5_mb2",
+          "th06_s6_b11",
+          "th06_s6_b5"
+        ],
+        "4": [
+          "th06_s7_b1",
+          "th06_s7_b10",
+          "th06_s7_b11",
+          "th06_s7_b12",
+          "th06_s7_b13",
+          "th06_s7_b14",
+          "th06_s7_b15",
+          "th06_s7_b16",
+          "th06_s7_b17",
+          "th06_s7_b18",
+          "th06_s7_b2",
+          "th06_s7_b3",
+          "th06_s7_b4",
+          "th06_s7_b5",
+          "th06_s7_b6",
+          "th06_s7_b7",
+          "th06_s7_b9",
+          "th06_s7_mb1",
+          "th06_s7_mb2",
+          "th06_s7_mb3",
+          "th06_s7_w01",
+          "th06_s7_w02",
+          "th06_s7_w03",
+          "th06_s7_w04",
+          "th06_s7_w05",
+          "th06_s7_w06",
+          "th06_s7_w07",
+          "th06_s7_w08",
+          "th06_s7_w09",
+          "th06_s7_w10",
+          "th06_s7_w11",
+          "th06_s7_w12",
+          "th06_s7_w13",
+          "th06_s7_w14",
+          "th06_s7_w15",
+          "th06_s7_w16",
+          "th06_s7_w17",
+          "th14_s7_b1",
+          "th14_s7_b11",
+          "th14_s7_b12",
+          "th14_s7_b13",
+          "th14_s7_b14",
+          "th14_s7_b15",
+          "th14_s7_b17",
+          "th14_s7_b18",
+          "th14_s7_b2",
+          "th14_s7_b3",
+          "th14_s7_b4",
+          "th14_s7_b5",
+          "th14_s7_b6",
+          "th14_s7_b7",
+          "th14_s7_b8",
+          "th14_s7_b9",
+          "th14_s7_mb2",
+          "th14_s7_mb3",
+          "th14_s7_w01",
+          "th14_s7_w02",
+          "th14_s7_w03",
+          "th14_s7_w04",
+          "th14_s7_w05",
+          "th14_s7_w06",
+          "th14_s7_w07",
+          "th14_s7_w08",
+          "th14_s7_w09",
+          "th14_s7_w10",
+          "th14_s7_w11",
+          "th14_s7_w12",
+          "th14_s7_w13",
+          "th15_s7_b1",
+          "th15_s7_b10",
+          "th15_s7_b11",
+          "th15_s7_b12",
+          "th15_s7_b13",
+          "th15_s7_b14",
+          "th15_s7_b15",
+          "th15_s7_b16",
+          "th15_s7_b17",
+          "th15_s7_b18",
+          "th15_s7_b2",
+          "th15_s7_b3",
+          "th15_s7_b4",
+          "th15_s7_b5",
+          "th15_s7_b6",
+          "th15_s7_b7",
+          "th15_s7_b8",
+          "th15_s7_b9",
+          "th15_s7_mb1",
+          "th15_s7_mb2",
+          "th15_s7_mb3",
+          "th15_s7_w01",
+          "th15_s7_w02",
+          "th15_s7_w03",
+          "th15_s7_w04",
+          "th15_s7_w05",
+          "th15_s7_w06",
+          "th15_s7_w07",
+          "th15_s7_w08",
+          "th15_s7_w09",
+          "th15_s7_w10",
+          "th15_s7_w11",
+          "th16_s7_b1",
+          "th16_s7_b10",
+          "th16_s7_b11",
+          "th16_s7_b12",
+          "th16_s7_b13",
+          "th16_s7_b14",
+          "th16_s7_b15",
+          "th16_s7_b16",
+          "th16_s7_b17",
+          "th16_s7_b18",
+          "th16_s7_b2",
+          "th16_s7_b3",
+          "th16_s7_b4",
+          "th16_s7_b5",
+          "th16_s7_b6",
+          "th16_s7_b7",
+          "th16_s7_b8",
+          "th16_s7_b9",
+          "th16_s7_mb1",
+          "th16_s7_mb2",
+          "th16_s7_mb3",
+          "th16_s7_w01",
+          "th16_s7_w02",
+          "th16_s7_w03",
+          "th16_s7_w04",
+          "th16_s7_w05",
+          "th16_s7_w06",
+          "th16_s7_w07",
+          "th16_s7_w08",
+          "th18_s7_b1",
+          "th18_s7_b11",
+          "th18_s7_b13",
+          "th18_s7_b15",
+          "th18_s7_b16",
+          "th18_s7_b2",
+          "th18_s7_b3",
+          "th18_s7_b5",
+          "th18_s7_b7",
+          "th18_s7_b8",
+          "th18_s7_b9",
+          "th18_s7_w01",
+          "th18_s7_w02",
+          "th18_s7_w03",
+          "th18_s7_w04",
+          "th18_s7_w05",
+          "th18_s7_w06",
+          "th18_s7_w08",
+          "synth_laser_s7_b1",
+          "synth_laser_s7_b1_v2",
+          "synth_laser_s7_b1_v3"
+        ]
+      },
+      "same_starts_as_single_layer": true
+    }
+  },
+  "sa2": {
+    "updates": 4000,
+    "frames": 1048576000,
+    "checkpoints_verified": [
+      {
+        "file": "latest.pt",
+        "update": 4000,
+        "frames": 1048576000,
+        "all_weights_finite": true
+      },
+      {
+        "file": "u4000.pt",
+        "update": 4000,
+        "frames": 1048576000,
+        "all_weights_finite": true
+      },
+      {
+        "file": "best.pt",
+        "update": 4000,
+        "frames": 1048576000,
+        "all_weights_finite": true
+      }
+    ],
+    "final_eval": {
+      "update": 4000,
+      "sa1_overall": {
+        "passed": 772,
+        "episodes": 832,
+        "percent": 92.78846153846155
+      },
+      "sa2_overall": {
+        "passed": 754,
+        "episodes": 832,
+        "percent": 90.625
+      },
+      "sa1_spells": {
+        "passed": 309,
+        "episodes": 320,
+        "percent": 96.5625
+      },
+      "sa2_spells": {
+        "passed": 303,
+        "episodes": 320,
+        "percent": 94.6875
+      },
+      "sa1_follow_percent": 50.62661262927908,
+      "sa2_follow_percent": 52.71569322351315
+    },
+    "eval_curve": [
+      {
+        "update": 250,
+        "sa1_overall": {
+          "passed": 391,
+          "episodes": 832,
+          "percent": 46.99519230769231
+        },
+        "sa2_overall": {
+          "passed": 391,
+          "episodes": 832,
+          "percent": 46.99519230769231
+        },
+        "sa1_spells": {
+          "passed": 175,
+          "episodes": 320,
+          "percent": 54.6875
+        },
+        "sa2_spells": {
+          "passed": 182,
+          "episodes": 320,
+          "percent": 56.875
+        },
+        "sa1_follow_percent": 4.188053527254055,
+        "sa2_follow_percent": 5.618720157285018
+      },
+      {
+        "update": 500,
+        "sa1_overall": {
+          "passed": 534,
+          "episodes": 832,
+          "percent": 64.1826923076923
+        },
+        "sa2_overall": {
+          "passed": 494,
+          "episodes": 832,
+          "percent": 59.375
+        },
+        "sa1_spells": {
+          "passed": 250,
+          "episodes": 320,
+          "percent": 78.125
+        },
+        "sa2_spells": {
+          "passed": 217,
+          "episodes": 320,
+          "percent": 67.8125
+        },
+        "sa1_follow_percent": 16.543778258356625,
+        "sa2_follow_percent": 24.135992470445885
+      },
+      {
+        "update": 750,
+        "sa1_overall": {
+          "passed": 546,
+          "episodes": 832,
+          "percent": 65.625
+        },
+        "sa2_overall": {
+          "passed": 586,
+          "episodes": 832,
+          "percent": 70.4326923076923
+        },
+        "sa1_spells": {
+          "passed": 232,
+          "episodes": 320,
+          "percent": 72.5
+        },
+        "sa2_spells": {
+          "passed": 264,
+          "episodes": 320,
+          "percent": 82.5
+        },
+        "sa1_follow_percent": 26.596208681705434,
+        "sa2_follow_percent": 28.529910134137605
+      },
+      {
+        "update": 1000,
+        "sa1_overall": {
+          "passed": 599,
+          "episodes": 832,
+          "percent": 71.9951923076923
+        },
+        "sa2_overall": {
+          "passed": 601,
+          "episodes": 832,
+          "percent": 72.23557692307693
+        },
+        "sa1_spells": {
+          "passed": 265,
+          "episodes": 320,
+          "percent": 82.8125
+        },
+        "sa2_spells": {
+          "passed": 245,
+          "episodes": 320,
+          "percent": 76.5625
+        },
+        "sa1_follow_percent": 30.724150445901905,
+        "sa2_follow_percent": 35.39658410808941
+      },
+      {
+        "update": 1250,
+        "sa1_overall": {
+          "passed": 596,
+          "episodes": 832,
+          "percent": 71.63461538461539
+        },
+        "sa2_overall": {
+          "passed": 638,
+          "episodes": 832,
+          "percent": 76.6826923076923
+        },
+        "sa1_spells": {
+          "passed": 254,
+          "episodes": 320,
+          "percent": 79.375
+        },
+        "sa2_spells": {
+          "passed": 272,
+          "episodes": 320,
+          "percent": 85.0
+        },
+        "sa1_follow_percent": 34.005642668908706,
+        "sa2_follow_percent": 37.1865918655648
+      },
+      {
+        "update": 1500,
+        "sa1_overall": {
+          "passed": 673,
+          "episodes": 832,
+          "percent": 80.88942307692307
+        },
+        "sa2_overall": {
+          "passed": 690,
+          "episodes": 832,
+          "percent": 82.9326923076923
+        },
+        "sa1_spells": {
+          "passed": 280,
+          "episodes": 320,
+          "percent": 87.5
+        },
+        "sa2_spells": {
+          "passed": 298,
+          "episodes": 320,
+          "percent": 93.125
+        },
+        "sa1_follow_percent": 38.90254401042603,
+        "sa2_follow_percent": 40.10554853738804
+      },
+      {
+        "update": 1750,
+        "sa1_overall": {
+          "passed": 675,
+          "episodes": 832,
+          "percent": 81.1298076923077
+        },
+        "sa2_overall": {
+          "passed": 708,
+          "episodes": 832,
+          "percent": 85.09615384615384
+        },
+        "sa1_spells": {
+          "passed": 275,
+          "episodes": 320,
+          "percent": 85.9375
+        },
+        "sa2_spells": {
+          "passed": 298,
+          "episodes": 320,
+          "percent": 93.125
+        },
+        "sa1_follow_percent": 42.02752497030546,
+        "sa2_follow_percent": 42.05570335005937
+      },
+      {
+        "update": 2000,
+        "sa1_overall": {
+          "passed": 692,
+          "episodes": 832,
+          "percent": 83.17307692307693
+        },
+        "sa2_overall": {
+          "passed": 716,
+          "episodes": 832,
+          "percent": 86.0576923076923
+        },
+        "sa1_spells": {
+          "passed": 296,
+          "episodes": 320,
+          "percent": 92.5
+        },
+        "sa2_spells": {
+          "passed": 303,
+          "episodes": 320,
+          "percent": 94.6875
+        },
+        "sa1_follow_percent": 42.54169058721941,
+        "sa2_follow_percent": 43.76505263790643
+      },
+      {
+        "update": 2250,
+        "sa1_overall": {
+          "passed": 700,
+          "episodes": 832,
+          "percent": 84.13461538461539
+        },
+        "sa2_overall": {
+          "passed": 716,
+          "episodes": 832,
+          "percent": 86.0576923076923
+        },
+        "sa1_spells": {
+          "passed": 295,
+          "episodes": 320,
+          "percent": 92.1875
+        },
+        "sa2_spells": {
+          "passed": 300,
+          "episodes": 320,
+          "percent": 93.75
+        },
+        "sa1_follow_percent": 46.335088975465055,
+        "sa2_follow_percent": 46.44528236609122
+      },
+      {
+        "update": 2500,
+        "sa1_overall": {
+          "passed": 723,
+          "episodes": 832,
+          "percent": 86.89903846153845
+        },
+        "sa2_overall": {
+          "passed": 716,
+          "episodes": 832,
+          "percent": 86.0576923076923
+        },
+        "sa1_spells": {
+          "passed": 301,
+          "episodes": 320,
+          "percent": 94.0625
+        },
+        "sa2_spells": {
+          "passed": 297,
+          "episodes": 320,
+          "percent": 92.8125
+        },
+        "sa1_follow_percent": 46.16901049238194,
+        "sa2_follow_percent": 47.78003358485035
+      },
+      {
+        "update": 2750,
+        "sa1_overall": {
+          "passed": 732,
+          "episodes": 832,
+          "percent": 87.98076923076923
+        },
+        "sa2_overall": {
+          "passed": 731,
+          "episodes": 832,
+          "percent": 87.86057692307693
+        },
+        "sa1_spells": {
+          "passed": 297,
+          "episodes": 320,
+          "percent": 92.8125
+        },
+        "sa2_spells": {
+          "passed": 305,
+          "episodes": 320,
+          "percent": 95.3125
+        },
+        "sa1_follow_percent": 48.196552971343735,
+        "sa2_follow_percent": 49.00275243515223
+      },
+      {
+        "update": 3000,
+        "sa1_overall": {
+          "passed": 728,
+          "episodes": 832,
+          "percent": 87.5
+        },
+        "sa2_overall": {
+          "passed": 727,
+          "episodes": 832,
+          "percent": 87.3798076923077
+        },
+        "sa1_spells": {
+          "passed": 307,
+          "episodes": 320,
+          "percent": 95.9375
+        },
+        "sa2_spells": {
+          "passed": 299,
+          "episodes": 320,
+          "percent": 93.4375
+        },
+        "sa1_follow_percent": 49.526743910287166,
+        "sa2_follow_percent": 51.669456436293906
+      },
+      {
+        "update": 3250,
+        "sa1_overall": {
+          "passed": 752,
+          "episodes": 832,
+          "percent": 90.38461538461539
+        },
+        "sa2_overall": {
+          "passed": 753,
+          "episodes": 832,
+          "percent": 90.5048076923077
+        },
+        "sa1_spells": {
+          "passed": 310,
+          "episodes": 320,
+          "percent": 96.875
+        },
+        "sa2_spells": {
+          "passed": 300,
+          "episodes": 320,
+          "percent": 93.75
+        },
+        "sa1_follow_percent": 49.6583112034744,
+        "sa2_follow_percent": 50.13839088800456
+      },
+      {
+        "update": 3500,
+        "sa1_overall": {
+          "passed": 739,
+          "episodes": 832,
+          "percent": 88.82211538461539
+        },
+        "sa2_overall": {
+          "passed": 732,
+          "episodes": 832,
+          "percent": 87.98076923076923
+        },
+        "sa1_spells": {
+          "passed": 299,
+          "episodes": 320,
+          "percent": 93.4375
+        },
+        "sa2_spells": {
+          "passed": 307,
+          "episodes": 320,
+          "percent": 95.9375
+        },
+        "sa1_follow_percent": 51.86812214112122,
+        "sa2_follow_percent": 52.05006827279978
+      },
+      {
+        "update": 3750,
+        "sa1_overall": {
+          "passed": 756,
+          "episodes": 832,
+          "percent": 90.86538461538461
+        },
+        "sa2_overall": {
+          "passed": 739,
+          "episodes": 832,
+          "percent": 88.82211538461539
+        },
+        "sa1_spells": {
+          "passed": 306,
+          "episodes": 320,
+          "percent": 95.625
+        },
+        "sa2_spells": {
+          "passed": 299,
+          "episodes": 320,
+          "percent": 93.4375
+        },
+        "sa1_follow_percent": 51.136952521160495,
+        "sa2_follow_percent": 53.009838482767066
+      },
+      {
+        "update": 4000,
+        "sa1_overall": {
+          "passed": 772,
+          "episodes": 832,
+          "percent": 92.78846153846155
+        },
+        "sa2_overall": {
+          "passed": 754,
+          "episodes": 832,
+          "percent": 90.625
+        },
+        "sa1_spells": {
+          "passed": 309,
+          "episodes": 320,
+          "percent": 96.5625
+        },
+        "sa2_spells": {
+          "passed": 303,
+          "episodes": 320,
+          "percent": 94.6875
+        },
+        "sa1_follow_percent": 50.62661262927908,
+        "sa2_follow_percent": 52.71569322351315
+      }
+    ],
+    "sa1_train_eval_wall_seconds": 11217.754,
+    "sa2_train_eval_wall_seconds": 15138.567,
+    "sa1_recent100": {
+      "ep/done1": 0.6364014128402244,
+      "ep/done2": 0.3277062123415749,
+      "ep/done3": 0.035892374818200706,
+      "ep/frames": 1356.4724703926865,
+      "ep/return": -1.7757548534538428,
+      "episodes": 19252.0,
+      "update_range": [
+        3901,
+        4000
+      ],
+      "value_explained_variance": 0.9166789901256561,
+      "approx_kl": 0.0003453532861021813,
+      "sps": 104225.45938917276
+    },
+    "sa2_recent100": {
+      "ep/done1": 0.6297019256132946,
+      "ep/done2": 0.33347401740965443,
+      "ep/done3": 0.03682405697705091,
+      "ep/frames": 1383.3179635979952,
+      "ep/return": -1.3398080791399178,
+      "episodes": 18955.0,
+      "update_range": [
+        3901,
+        4000
+      ],
+      "value_explained_variance": 0.916069403886795,
+      "approx_kl": 0.000393689231495955,
+      "sps": 73477.03916081414
+    },
+    "usd_as_of_final_query": 3.552207769900008,
+    "gpu_verified_stopped": true
+  },
+  "modern_stage6": {
+    "scope": "Same eight enabled TH16 stage6 spells; all r3 Lunatic,32 first episodes/card,seed12345,CPU FP32 greedy,free dodge,trained motor,full card limits,no mirror/warmup/hit-extra. Four subseason cards separate; b8 remains excluded.",
+    "comparison": "Single-layeru4000 versus SA2u4000 at equal1,048,576,000 training frames; same data and parsed config except joint attention layers. Single-seed runs have different initial weights/RNG trajectories. Training-card performance, not unseen generalization or all-game aggregate.",
+    "rows": [
+      {
+        "id": "th16_s6_b2",
+        "title": "Stage 6 BossCard1 後符「秘神の後光」",
+        "single_u4000": 32,
+        "sa2_u1500": 32,
+        "sa2_u2250": 32,
+        "sa2_u4000": 32,
+        "architecture_delta_wins": 0,
+        "paired_gained_vs_single": 0,
+        "paired_lost_vs_single": 0,
+        "frames_mean_u1500": 2827.0,
+        "frames_mean_u2250": 2827.0,
+        "frames_mean_u4000": 2827.0,
+        "frames_mean_single_u4000": 2827.0,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b4",
+        "title": "Stage 6 Boss 第 4 卡 裏夏「スコーチ・バイ・ホットサマー」",
+        "single_u4000": 0,
+        "sa2_u1500": 0,
+        "sa2_u2250": 0,
+        "sa2_u4000": 0,
+        "architecture_delta_wins": 0,
+        "paired_gained_vs_single": 0,
+        "paired_lost_vs_single": 0,
+        "frames_mean_u1500": 704.9375,
+        "frames_mean_u2250": 816.65625,
+        "frames_mean_u4000": 1095.09375,
+        "frames_mean_single_u4000": 971.96875,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b6",
+        "title": "Stage 6 Boss 第3符卡 裏秋「異常枯死の餓鬼」",
+        "single_u4000": 3,
+        "sa2_u1500": 0,
+        "sa2_u2250": 0,
+        "sa2_u4000": 0,
+        "architecture_delta_wins": -3,
+        "paired_gained_vs_single": 0,
+        "paired_lost_vs_single": 3,
+        "frames_mean_u1500": 690.34375,
+        "frames_mean_u2250": 957.90625,
+        "frames_mean_u4000": 1452.15625,
+        "frames_mean_single_u4000": 1529.25,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b10",
+        "title": "Stage 6 Boss 第5符卡 裏春「エイプリルウィザード」",
+        "single_u4000": 25,
+        "sa2_u1500": 1,
+        "sa2_u2250": 4,
+        "sa2_u4000": 20,
+        "architecture_delta_wins": -5,
+        "paired_gained_vs_single": 4,
+        "paired_lost_vs_single": 9,
+        "frames_mean_u1500": 1208.59375,
+        "frames_mean_u2250": 1896.4375,
+        "frames_mean_u4000": 2885.8125,
+        "frames_mean_single_u4000": 3324.9375,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b11",
+        "title": "Stage 6 BossCard6 SUBSEASON=0「裏・ブリージーチェリーブロッサム」",
+        "single_u4000": 8,
+        "sa2_u1500": 0,
+        "sa2_u2250": 4,
+        "sa2_u4000": 12,
+        "architecture_delta_wins": 4,
+        "paired_gained_vs_single": 8,
+        "paired_lost_vs_single": 4,
+        "frames_mean_u1500": 3959.5625,
+        "frames_mean_u2250": 4983.625,
+        "frames_mean_u4000": 5724.375,
+        "frames_mean_single_u4000": 5665.625,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b12",
+        "title": "Stage 6 BossCard7 「裏・パーフェクトサマーアイス」(SUBSEASON=1)",
+        "single_u4000": 23,
+        "sa2_u1500": 8,
+        "sa2_u2250": 14,
+        "sa2_u4000": 25,
+        "architecture_delta_wins": 2,
+        "paired_gained_vs_single": 7,
+        "paired_lost_vs_single": 5,
+        "frames_mean_u1500": 5012.875,
+        "frames_mean_u2250": 5733.03125,
+        "frames_mean_u4000": 7062.59375,
+        "frames_mean_single_u4000": 6558.34375,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b13",
+        "title": "Stage 6 Boss SUBSEASON=2 符卡「裏・クレイジーフォールウィンド」",
+        "single_u4000": 29,
+        "sa2_u1500": 16,
+        "sa2_u2250": 22,
+        "sa2_u4000": 24,
+        "architecture_delta_wins": -5,
+        "paired_gained_vs_single": 3,
+        "paired_lost_vs_single": 8,
+        "frames_mean_u1500": 6236.9375,
+        "frames_mean_u2250": 6300.59375,
+        "frames_mean_u4000": 6779.25,
+        "frames_mean_single_u4000": 7119.59375,
+        "timeouts_final": 0
+      },
+      {
+        "id": "th16_s6_b14",
+        "title": "Stage 6 BossCard9 裏・エクストリームウィンター (SUBSEASON=3)",
+        "single_u4000": 2,
+        "sa2_u1500": 0,
+        "sa2_u2250": 5,
+        "sa2_u4000": 8,
+        "architecture_delta_wins": 6,
+        "paired_gained_vs_single": 8,
+        "paired_lost_vs_single": 2,
+        "frames_mean_u1500": 2706.71875,
+        "frames_mean_u2250": 3972.09375,
+        "frames_mean_u4000": 4719.25,
+        "frames_mean_single_u4000": 3750.8125,
+        "timeouts_final": 0
+      }
+    ],
+    "total": {
+      "single_u4000": 122,
+      "sa2_u1500": 57,
+      "sa2_u2250": 81,
+      "sa2_u4000": 121,
+      "architecture_delta_wins": -1,
+      "paired_gained_vs_single": 30,
+      "paired_lost_vs_single": 31,
+      "timeouts_final": 0,
+      "cards": 8,
+      "episodes_per_model": 256,
+      "new_final_episodes": 256,
+      "better_than_single_cards": 3,
+      "worse_than_single_cards": 3,
+      "tied_with_single_cards": 2
+    },
+    "records_verified": true
+  },
+  "coverage": {
+    "rows": [
+      {
+        "id": "th06_s6_b11",
+        "game": "th06",
+        "rank": 1,
+        "episodes": 32,
+        "survived": 32,
+        "all_alive": {
+          "samples": 11552,
+          "r64": null,
+          "under64_fraction": 1.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 11552,
+              "mean": 0.40694252077562326,
+              "p10": 0.0,
+              "median": 0.0,
+              "p90": 1.0,
+              "max": 3.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 11552,
+              "mean": 0.5171398891966759,
+              "p10": 0.0,
+              "median": 0.0,
+              "p90": 1.0,
+              "max": 3.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": null
+      },
+      {
+        "id": "th06_s6_b12",
+        "game": "th06",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 32,
+        "all_alive": {
+          "samples": 11552,
+          "r64": null,
+          "under64_fraction": 1.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 11552,
+              "mean": 0.953601108033241,
+              "p10": 0.0,
+              "median": 0.0,
+              "p90": 3.0,
+              "max": 6.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 11552,
+              "mean": 1.300207756232687,
+              "p10": 0.0,
+              "median": 1.0,
+              "p90": 4.0,
+              "max": 7.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": null
+      },
+      {
+        "id": "th06_s6_b5",
+        "game": "th06",
+        "rank": 1,
+        "episodes": 32,
+        "survived": 32,
+        "all_alive": {
+          "samples": 15392,
+          "r64": {
+            "n": 14528,
+            "mean": 165.34764715648433,
+            "p10": 138.64004516601562,
+            "median": 160.78812408447266,
+            "p90": 197.60457000732424,
+            "max": 281.0225830078125
+          },
+          "under64_fraction": 0.056133056133056136,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 15392,
+              "mean": 19.255002598752597,
+              "p10": 5.0,
+              "median": 20.0,
+              "p90": 33.0,
+              "max": 43.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 15392,
+              "mean": 36.06535862785863,
+              "p10": 13.0,
+              "median": 39.0,
+              "p90": 54.0,
+              "max": 88.0
+            },
+            "64": {
+              "omitted_mean": 0.2179054054054054,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.027676715176715178
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": null
+      },
+      {
+        "id": "th06_s6_b6",
+        "game": "th06",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 30,
+        "all_alive": {
+          "samples": 15239,
+          "r64": {
+            "n": 14375,
+            "mean": 111.77306207806132,
+            "p10": 88.43577423095704,
+            "median": 102.6084976196289,
+            "p90": 143.7947540283203,
+            "max": 285.09869384765625
+          },
+          "under64_fraction": 0.05669663363737778,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 15239,
+              "mean": 49.69709298510401,
+              "p10": 0.0,
+              "median": 55.0,
+              "p90": 72.20000000000073,
+              "max": 118.0
+            },
+            "64": {
+              "omitted_mean": 2.0945600104993765,
+              "omitted_p90": 8.200000000000728,
+              "omitted_frame_fraction": 0.27232758054990486
+            },
+            "96": {
+              "omitted_mean": 0.01581468600301857,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.002559223046131636
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 15239,
+              "mean": 83.8721700899009,
+              "p10": 2.0,
+              "median": 93.0,
+              "p90": 119.0,
+              "max": 188.0
+            },
+            "64": {
+              "omitted_mean": 28.21038125861277,
+              "omitted_p90": 55.0,
+              "omitted_frame_fraction": 0.80129929785419
+            },
+            "96": {
+              "omitted_mean": 6.732987728853599,
+              "omitted_p90": 23.0,
+              "omitted_frame_fraction": 0.4225999081304547
+            },
+            "128": {
+              "omitted_mean": 0.5151912855174224,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.04928144891397073
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 24,
+          "r64": {
+            "n": 24,
+            "mean": 97.16931343078613,
+            "p10": 94.08794631958008,
+            "median": 96.90625381469727,
+            "p90": 100.22137145996093,
+            "max": 102.12834930419922
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 24,
+              "mean": 61.5,
+              "p10": 56.6,
+              "median": 61.5,
+              "p90": 67.0,
+              "max": 69.0
+            },
+            "64": {
+              "omitted_mean": 0.6666666666666666,
+              "omitted_p90": 3.0,
+              "omitted_frame_fraction": 0.25
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 24,
+              "mean": 102.83333333333333,
+              "p10": 94.9,
+              "median": 99.5,
+              "p90": 115.5,
+              "max": 124.0
+            },
+            "64": {
+              "omitted_mean": 38.833333333333336,
+              "omitted_p90": 51.5,
+              "omitted_frame_fraction": 1.0
+            },
+            "96": {
+              "omitted_mean": 7.083333333333333,
+              "omitted_p90": 19.499999999999996,
+              "omitted_frame_fraction": 0.875
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      },
+      {
+        "id": "th06_s6_mb2",
+        "game": "th06",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 29,
+        "all_alive": {
+          "samples": 5550,
+          "r64": {
+            "n": 4654,
+            "mean": 169.0273938082706,
+            "p10": 149.93718872070312,
+            "median": 165.2669906616211,
+            "p90": 191.4195388793945,
+            "max": 248.27236938476562
+          },
+          "under64_fraction": 0.16144144144144143,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 5550,
+              "mean": 18.36072072072072,
+              "p10": 0.0,
+              "median": 21.0,
+              "p90": 28.100000000000364,
+              "max": 40.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 5550,
+              "mean": 31.972972972972972,
+              "p10": 0.0,
+              "median": 37.0,
+              "p90": 47.0,
+              "max": 62.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 36,
+          "r64": {
+            "n": 36,
+            "mean": 167.86969163682727,
+            "p10": 149.25634765625,
+            "median": 168.95354461669922,
+            "p90": 182.98373413085938,
+            "max": 188.7731475830078
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 36,
+              "mean": 24.38888888888889,
+              "p10": 20.0,
+              "median": 24.0,
+              "p90": 29.0,
+              "max": 32.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 36,
+              "mean": 40.05555555555556,
+              "p10": 34.0,
+              "median": 39.5,
+              "p90": 47.0,
+              "max": 53.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b10",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 20,
+        "all_alive": {
+          "samples": 18466,
+          "r64": {
+            "n": 16866,
+            "mean": 217.3534704231218,
+            "p10": 153.6313705444336,
+            "median": 202.62003326416016,
+            "p90": 302.7532653808594,
+            "max": 418.32708740234375
+          },
+          "under64_fraction": 0.08664572728257337,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 18466,
+              "mean": 10.320264269468211,
+              "p10": 0.0,
+              "median": 8.0,
+              "p90": 25.0,
+              "max": 45.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 18466,
+              "mean": 20.530109390230695,
+              "p10": 0.0,
+              "median": 17.0,
+              "p90": 44.0,
+              "max": 76.0
+            },
+            "64": {
+              "omitted_mean": 0.011480558864940973,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.002815986136683635
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 144,
+          "r64": {
+            "n": 144,
+            "mean": 179.69692272610135,
+            "p10": 151.51329193115234,
+            "median": 170.46257781982422,
+            "p90": 222.36017456054688,
+            "max": 249.21200561523438
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 144,
+              "mean": 27.23611111111111,
+              "p10": 19.0,
+              "median": 27.0,
+              "p90": 36.0,
+              "max": 38.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 144,
+              "mean": 42.31944444444444,
+              "p10": 34.0,
+              "median": 42.0,
+              "p90": 51.70000000000002,
+              "max": 58.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b11",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 12,
+        "all_alive": {
+          "samples": 36620,
+          "r64": {
+            "n": 33944,
+            "mean": 140.41813330298572,
+            "p10": 105.52185363769532,
+            "median": 132.1598892211914,
+            "p90": 177.4487762451172,
+            "max": 428.7061767578125
+          },
+          "under64_fraction": 0.07307482250136538,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 36620,
+              "mean": 30.104915346805026,
+              "p10": 1.0,
+              "median": 30.0,
+              "p90": 52.0,
+              "max": 85.0
+            },
+            "64": {
+              "omitted_mean": 0.08738394320043692,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.016602949208083015
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 36620,
+              "mean": 54.0800655379574,
+              "p10": 6.0,
+              "median": 57.0,
+              "p90": 89.0,
+              "max": 147.0
+            },
+            "64": {
+              "omitted_mean": 6.66990715456035,
+              "omitted_p90": 25.0,
+              "omitted_frame_fraction": 0.3853085745494265
+            },
+            "96": {
+              "omitted_mean": 0.3898416166029492,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.048989623156744946
+            },
+            "128": {
+              "omitted_mean": 0.0042872747132714365,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.00040961223375204805
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 240,
+          "r64": {
+            "n": 240,
+            "mean": 119.83856137593587,
+            "p10": 96.44541854858399,
+            "median": 114.20829391479492,
+            "p90": 149.7545455932617,
+            "max": 275.9911804199219
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 240,
+              "mean": 46.84166666666667,
+              "p10": 30.900000000000002,
+              "median": 48.0,
+              "p90": 63.0,
+              "max": 75.0
+            },
+            "64": {
+              "omitted_mean": 0.25416666666666665,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.05416666666666667
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 240,
+              "mean": 74.5375,
+              "p10": 49.900000000000006,
+              "median": 77.0,
+              "p90": 97.1,
+              "max": 125.0
+            },
+            "64": {
+              "omitted_mean": 15.095833333333333,
+              "omitted_p90": 33.099999999999994,
+              "omitted_frame_fraction": 0.7291666666666666
+            },
+            "96": {
+              "omitted_mean": 1.0708333333333333,
+              "omitted_p90": 1.0999999999999943,
+              "omitted_frame_fraction": 0.10416666666666667
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b12",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 25,
+        "all_alive": {
+          "samples": 45207,
+          "r64": {
+            "n": 42393,
+            "mean": 209.13927806245687,
+            "p10": 142.90290222167968,
+            "median": 208.20635986328125,
+            "p90": 278.9469970703126,
+            "max": 419.6627197265625
+          },
+          "under64_fraction": 0.06224699714645962,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 45207,
+              "mean": 15.667507244453292,
+              "p10": 4.0,
+              "median": 15.0,
+              "p90": 27.0,
+              "max": 80.0
+            },
+            "64": {
+              "omitted_mean": 0.0015041918286990952,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.00035392748910566946
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 45207,
+              "mean": 27.41759019620855,
+              "p10": 8.0,
+              "median": 26.0,
+              "p90": 49.0,
+              "max": 146.0
+            },
+            "64": {
+              "omitted_mean": 0.280465414648174,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.02619063419381954
+            },
+            "96": {
+              "omitted_mean": 0.014400424712986927,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0011723848076625302
+            },
+            "128": {
+              "omitted_mean": 0.0013272280841462604,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.00013272280841462606
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 84,
+          "r64": {
+            "n": 84,
+            "mean": 110.76351465497699,
+            "p10": 94.75614776611329,
+            "median": 110.18767929077148,
+            "p90": 124.62368316650391,
+            "max": 138.1166534423828
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 84,
+              "mean": 47.70238095238095,
+              "p10": 31.0,
+              "median": 47.0,
+              "p90": 65.0,
+              "max": 80.0
+            },
+            "64": {
+              "omitted_mean": 0.6428571428571429,
+              "omitted_p90": 1.0,
+              "omitted_frame_fraction": 0.11904761904761904
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 84,
+              "mean": 88.35714285714286,
+              "p10": 66.6,
+              "median": 88.0,
+              "p90": 115.20000000000002,
+              "max": 139.0
+            },
+            "64": {
+              "omitted_mean": 24.88095238095238,
+              "omitted_p90": 51.20000000000002,
+              "omitted_frame_fraction": 0.9166666666666666
+            },
+            "96": {
+              "omitted_mean": 4.404761904761905,
+              "omitted_p90": 19.200000000000017,
+              "omitted_frame_fraction": 0.2857142857142857
+            },
+            "128": {
+              "omitted_mean": 0.2857142857142857,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.03571428571428571
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b13",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 24,
+        "all_alive": {
+          "samples": 43392,
+          "r64": {
+            "n": 37439,
+            "mean": 214.0250495399763,
+            "p10": 138.01068420410155,
+            "median": 202.8207244873047,
+            "p90": 314.8180175781251,
+            "max": 509.2591247558594
+          },
+          "under64_fraction": 0.1371911873156342,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 43392,
+              "mean": 19.162794985250738,
+              "p10": 3.0,
+              "median": 20.0,
+              "p90": 34.0,
+              "max": 61.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 43392,
+              "mean": 31.3234697640118,
+              "p10": 7.0,
+              "median": 32.0,
+              "p90": 55.0,
+              "max": 95.0
+            },
+            "64": {
+              "omitted_mean": 0.45559089233038347,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.041758849557522126
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 96,
+          "r64": {
+            "n": 96,
+            "mean": 153.53537122408548,
+            "p10": 111.81682205200195,
+            "median": 147.68277740478516,
+            "p90": 211.77356719970703,
+            "max": 247.39599609375
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 96,
+              "mean": 32.979166666666664,
+              "p10": 20.0,
+              "median": 31.0,
+              "p90": 50.0,
+              "max": 60.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 96,
+              "mean": 52.53125,
+              "p10": 29.0,
+              "median": 49.5,
+              "p90": 77.5,
+              "max": 86.0
+            },
+            "64": {
+              "omitted_mean": 3.4895833333333335,
+              "omitted_p90": 13.5,
+              "omitted_frame_fraction": 0.34375
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b14",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 8,
+        "all_alive": {
+          "samples": 30174,
+          "r64": {
+            "n": 27725,
+            "mean": 221.32750584622136,
+            "p10": 132.71971740722657,
+            "median": 204.6275634765625,
+            "p90": 321.1086120605469,
+            "max": 431.64215087890625
+          },
+          "under64_fraction": 0.08116259030953801,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.6086697156492344,
+          "omissions_within96": {
+            "within": {
+              "n": 30174,
+              "mean": 16.390402333134485,
+              "p10": 0.0,
+              "median": 14.0,
+              "p90": 36.0,
+              "max": 48.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 30174,
+              "mean": 27.636408828793,
+              "p10": 0.0,
+              "median": 23.0,
+              "p90": 59.0,
+              "max": 86.0
+            },
+            "64": {
+              "omitted_mean": 0.262577053092066,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.047458076489693114
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 288,
+          "r64": {
+            "n": 288,
+            "mean": 213.31251825226678,
+            "p10": 137.53964233398438,
+            "median": 236.4892349243164,
+            "p90": 262.58324279785154,
+            "max": 359.79266357421875
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.9444444444444444,
+          "omissions_within96": {
+            "within": {
+              "n": 288,
+              "mean": 19.541666666666668,
+              "p10": 11.0,
+              "median": 15.0,
+              "p90": 34.0,
+              "max": 43.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 288,
+              "mean": 30.65972222222222,
+              "p10": 17.0,
+              "median": 22.0,
+              "p90": 54.0,
+              "max": 69.0
+            },
+            "64": {
+              "omitted_mean": 0.06597222222222222,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.020833333333333332
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b2",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 32,
+        "all_alive": {
+          "samples": 18112,
+          "r64": {
+            "n": 13864,
+            "mean": 317.3939145270346,
+            "p10": 232.48755340576173,
+            "median": 305.47926330566406,
+            "p90": 418.0735260009766,
+            "max": 523.1862182617188
+          },
+          "under64_fraction": 0.23454063604240283,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 18112,
+              "mean": 6.806978798586573,
+              "p10": 0.0,
+              "median": 3.0,
+              "p90": 20.0,
+              "max": 29.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 18112,
+              "mean": 12.074977915194346,
+              "p10": 0.0,
+              "median": 9.0,
+              "p90": 29.0,
+              "max": 43.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": null
+      },
+      {
+        "id": "th16_s6_b4",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 0,
+        "all_alive": {
+          "samples": 6977,
+          "r64": {
+            "n": 5025,
+            "mean": 157.0036256264454,
+            "p10": 86.60336303710938,
+            "median": 124.58909606933594,
+            "p90": 318.27815551757817,
+            "max": 422.5399169921875
+          },
+          "under64_fraction": 0.2797764081983661,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 6977,
+              "mean": 26.833596101476278,
+              "p10": 0.0,
+              "median": 25.0,
+              "p90": 70.0,
+              "max": 109.0
+            },
+            "64": {
+              "omitted_mean": 2.1254120682241653,
+              "omitted_p90": 6.0,
+              "omitted_frame_fraction": 0.13143184749892503
+            },
+            "96": {
+              "omitted_mean": 0.05016482728966604,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.012612870861401749
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 6977,
+              "mean": 45.07954708327361,
+              "p10": 0.0,
+              "median": 46.0,
+              "p90": 111.40000000000055,
+              "max": 139.0
+            },
+            "64": {
+              "omitted_mean": 12.235058047871577,
+              "omitted_p90": 47.400000000000546,
+              "omitted_frame_fraction": 0.3798194066217572
+            },
+            "96": {
+              "omitted_mean": 3.263437007309732,
+              "omitted_p90": 15.400000000000546,
+              "omitted_frame_fraction": 0.18460656442597104
+            },
+            "128": {
+              "omitted_mean": 0.05718790311021929,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.016769385122545506
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 384,
+          "r64": {
+            "n": 384,
+            "mean": 93.61162219444911,
+            "p10": 67.9291000366211,
+            "median": 87.21415710449219,
+            "p90": 129.56603088378907,
+            "max": 186.96670532226562
+          },
+          "under64_fraction": 0.0,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 384,
+              "mean": 72.98177083333333,
+              "p10": 38.60000000000001,
+              "median": 75.0,
+              "p90": 98.0,
+              "max": 109.0
+            },
+            "64": {
+              "omitted_mean": 14.661458333333334,
+              "omitted_p90": 34.0,
+              "omitted_frame_fraction": 0.6484375
+            },
+            "96": {
+              "omitted_mean": 0.6848958333333334,
+              "omitted_p90": 2.0,
+              "omitted_frame_fraction": 0.15104166666666666
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 384,
+              "mean": 105.63541666666667,
+              "p10": 59.60000000000001,
+              "median": 116.0,
+              "p90": 131.0,
+              "max": 139.0
+            },
+            "64": {
+              "omitted_mean": 43.427083333333336,
+              "omitted_p90": 67.0,
+              "omitted_frame_fraction": 0.8828125
+            },
+            "96": {
+              "omitted_mean": 17.174479166666668,
+              "omitted_p90": 35.0,
+              "omitted_frame_fraction": 0.7135416666666666
+            },
+            "128": {
+              "omitted_mean": 0.6927083333333334,
+              "omitted_p90": 3.0,
+              "omitted_frame_fraction": 0.1796875
+            }
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b6",
+        "game": "th16",
+        "rank": 3,
+        "episodes": 32,
+        "survived": 0,
+        "all_alive": {
+          "samples": 9255,
+          "r64": {
+            "n": 6691,
+            "mean": 156.6453222076092,
+            "p10": 124.48614501953125,
+            "median": 147.69589233398438,
+            "p90": 203.1359405517578,
+            "max": 320.824462890625
+          },
+          "under64_fraction": 0.27703943814154514,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 9255,
+              "mean": 23.050027012425716,
+              "p10": 0.0,
+              "median": 25.0,
+              "p90": 42.0,
+              "max": 72.0
+            },
+            "64": {
+              "omitted_mean": 0.003349540788762831,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.000864397622906537
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 9255,
+              "mean": 37.19611021069692,
+              "p10": 0.0,
+              "median": 40.0,
+              "p90": 63.0,
+              "max": 95.0
+            },
+            "64": {
+              "omitted_mean": 0.5900594273365748,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.08406266882766072
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        },
+        "prehit60": {
+          "samples": 384,
+          "r64": {
+            "n": 362,
+            "mean": 148.36122453805493,
+            "p10": 119.95450744628906,
+            "median": 146.3002471923828,
+            "p90": 184.00688781738285,
+            "max": 266.8656311035156
+          },
+          "under64_fraction": 0.057291666666666664,
+          "raw_drop_fraction": 0.0,
+          "laser_present_fraction": 0.0,
+          "omissions_within96": {
+            "within": {
+              "n": 384,
+              "mean": 34.020833333333336,
+              "p10": 21.0,
+              "median": 33.0,
+              "p90": 50.0,
+              "max": 59.0
+            },
+            "64": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          },
+          "omissions_within128": {
+            "within": {
+              "n": 384,
+              "mean": 51.0078125,
+              "p10": 33.0,
+              "median": 51.0,
+              "p90": 68.69999999999999,
+              "max": 85.0
+            },
+            "64": {
+              "omitted_mean": 1.1536458333333333,
+              "omitted_p90": 4.699999999999989,
+              "omitted_frame_fraction": 0.16666666666666666
+            },
+            "96": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            },
+            "128": {
+              "omitted_mean": 0.0,
+              "omitted_p90": 0.0,
+              "omitted_frame_fraction": 0.0
+            }
+          }
+        }
+      }
+    ],
+    "groups": {
+      "th06_all": {
+        "cards": 5,
+        "episodes": 160,
+        "passed": 155,
+        "equal_card_median_r64": 160.78812408447266,
+        "equal_card_mean_omitted64_within96": 0.4189120020998753,
+        "equal_card_mean_omitted64_fraction_within96": 0.054465516109980974,
+        "equal_card_mean_raw_drop_fraction": 0.0
+      },
+      "th06_lunatic_only": {
+        "cards": 3,
+        "episodes": 96,
+        "passed": 91,
+        "equal_card_median_r64": 133.937744140625,
+        "equal_card_mean_omitted64_within96": 0.6981866701664589,
+        "equal_card_mean_omitted64_fraction_within96": 0.09077586018330162,
+        "equal_card_mean_raw_drop_fraction": 0.0
+      },
+      "th06_normal_only": {
+        "cards": 2,
+        "episodes": 64,
+        "passed": 64,
+        "equal_card_median_r64": 160.78812408447266,
+        "equal_card_mean_omitted64_within96": 0.0,
+        "equal_card_mean_omitted64_fraction_within96": 0.0,
+        "equal_card_mean_raw_drop_fraction": 0.0
+      },
+      "th16_all": {
+        "cards": 8,
+        "episodes": 256,
+        "passed": 121,
+        "equal_card_median_r64": 202.72037887573242,
+        "equal_card_mean_omitted64_within96": 0.277206218005258,
+        "equal_card_mean_omitted64_fraction_within96": 0.018656640227377532,
+        "equal_card_mean_raw_drop_fraction": 0.0
+      }
+    },
+    "limitations": "Equal-card aggregate,not pooled frames; separate two Normal-onlyTH06 spells from three LunaticTH06 spells. TH16 all Lunatic. Card durations/mechanisms differ; no causal attribution from cross-game averages. K96/K128 coverage only on fixed K64 trajectories; not alternate-policy success or trained-K improvement."
+  },
+  "forensics": {
+    "rank_control": {
+      "rows": [
+        {
+          "id": "th16_s6_b4",
+          "rank2_pass": 10,
+          "rank3_pass": 0,
+          "episodes_each": 32,
+          "rank3_failures_before3600": 32,
+          "rank3_failures_after3600": 0,
+          "rank3_survive3600": 0,
+          "time_limit": 3124,
+          "train_max_frames": 3600,
+          "sa1_train_start": "th16_s6_b4:0:2",
+          "sa1_u1000_seen": 589,
+          "sa1_u1000_death_ema": 1.0,
+          "sa1_u1000_weight": 1.4337,
+          "sa1_u2000_seen": 1115,
+          "sa1_u2000_death_ema": 1.0,
+          "sa1_u2000_weight": 1.633,
+          "sa1_u4000_seen": 2278,
+          "sa1_u4000_death_ema": 0.9694,
+          "sa1_u4000_weight": 2.2152,
+          "sa2_train_start": "th16_s6_b4:0:2",
+          "sa2_u1000_seen": 619,
+          "sa2_u1000_death_ema": 1.0,
+          "sa2_u1000_weight": 1.4081,
+          "sa2_u2000_seen": 1207,
+          "sa2_u2000_death_ema": 1.0,
+          "sa2_u2000_weight": 1.6692,
+          "sa2_u4000_seen": 2346,
+          "sa2_u4000_death_ema": 0.9654,
+          "sa2_u4000_weight": 2.2638
+        },
+        {
+          "id": "th16_s6_b6",
+          "rank2_pass": 32,
+          "rank3_pass": 0,
+          "episodes_each": 32,
+          "rank3_failures_before3600": 32,
+          "rank3_failures_after3600": 0,
+          "rank3_survive3600": 0,
+          "time_limit": 3124,
+          "train_max_frames": 3600,
+          "sa1_train_start": "th16_s6_b6:0:2",
+          "sa1_u1000_seen": 615,
+          "sa1_u1000_death_ema": 0.9588,
+          "sa1_u1000_weight": 1.4337,
+          "sa1_u2000_seen": 1105,
+          "sa1_u2000_death_ema": 0.687,
+          "sa1_u2000_weight": 1.1809,
+          "sa1_u4000_seen": 1719,
+          "sa1_u4000_death_ema": 0.2394,
+          "sa1_u4000_weight": 0.5583,
+          "sa2_train_start": "th16_s6_b6:0:2",
+          "sa2_u1000_seen": 610,
+          "sa2_u1000_death_ema": 0.9237,
+          "sa2_u1000_weight": 1.3691,
+          "sa2_u2000_seen": 1054,
+          "sa2_u2000_death_ema": 0.6133,
+          "sa2_u2000_weight": 1.0776,
+          "sa2_u4000_seen": 1671,
+          "sa2_u4000_death_ema": 0.3504,
+          "sa2_u4000_weight": 0.8349
+        },
+        {
+          "id": "th16_s6_b14",
+          "rank2_pass": 8,
+          "rank3_pass": 8,
+          "episodes_each": 32,
+          "rank3_failures_before3600": 16,
+          "rank3_failures_after3600": 8,
+          "rank3_survive3600": 16,
+          "time_limit": 7324,
+          "train_max_frames": 3600,
+          "sa1_train_start": "th16_s6_b14:0:2",
+          "sa1_u1000_seen": 604,
+          "sa1_u1000_death_ema": 0.9693,
+          "sa1_u1000_weight": 1.4337,
+          "sa1_u2000_seen": 1133,
+          "sa1_u2000_death_ema": 0.9142,
+          "sa1_u2000_weight": 1.5714,
+          "sa1_u4000_seen": 2222,
+          "sa1_u4000_death_ema": 0.893,
+          "sa1_u4000_weight": 2.0823,
+          "sa2_train_start": "th16_s6_b14:0:2",
+          "sa2_u1000_seen": 625,
+          "sa2_u1000_death_ema": 0.9966,
+          "sa2_u1000_weight": 1.4081,
+          "sa2_u2000_seen": 1169,
+          "sa2_u2000_death_ema": 0.9076,
+          "sa2_u2000_weight": 1.5947,
+          "sa2_u4000_seen": 2215,
+          "sa2_u4000_death_ema": 0.8013,
+          "sa2_u4000_weight": 1.9095
+        },
+        {
+          "id": "th06_s6_b6",
+          "rank2_pass": 31,
+          "rank3_pass": 30,
+          "episodes_each": 32,
+          "rank3_failures_before3600": 2,
+          "rank3_failures_after3600": 0,
+          "rank3_survive3600": 30,
+          "time_limit": 2400,
+          "train_max_frames": 3600,
+          "sa1_train_start": "th06_s6_b6:0:2",
+          "sa1_u1000_seen": 571,
+          "sa1_u1000_death_ema": 0.7362,
+          "sa1_u1000_weight": 1.1111,
+          "sa1_u2000_seen": 948,
+          "sa1_u2000_death_ema": 0.6327,
+          "sa1_u2000_weight": 1.0876,
+          "sa1_u4000_seen": 1522,
+          "sa1_u4000_death_ema": 0.3265,
+          "sa1_u4000_weight": 0.7613,
+          "sa2_train_start": "th06_s6_b6:0:2",
+          "sa2_u1000_seen": 548,
+          "sa2_u1000_death_ema": 0.8201,
+          "sa2_u1000_weight": 1.2156,
+          "sa2_u2000_seen": 926,
+          "sa2_u2000_death_ema": 0.5827,
+          "sa2_u2000_weight": 1.0239,
+          "sa2_u4000_seen": 1460,
+          "sa2_u4000_death_ema": 0.3482,
+          "sa2_u4000_weight": 0.8296
+        },
+        {
+          "id": "th06_s6_mb2",
+          "rank2_pass": 32,
+          "rank3_pass": 29,
+          "episodes_each": 32,
+          "rank3_failures_before3600": 3,
+          "rank3_failures_after3600": 0,
+          "rank3_survive3600": 29,
+          "time_limit": 900,
+          "train_max_frames": 3600,
+          "sa1_train_start": "th06_s6_mb2:0:2",
+          "sa1_u1000_seen": 518,
+          "sa1_u1000_death_ema": 0.5476,
+          "sa1_u1000_weight": 0.8264,
+          "sa1_u2000_seen": 776,
+          "sa1_u2000_death_ema": 0.4571,
+          "sa1_u2000_weight": 0.7858,
+          "sa1_u4000_seen": 1113,
+          "sa1_u4000_death_ema": 0.2429,
+          "sa1_u4000_weight": 0.5664,
+          "sa2_train_start": "th06_s6_mb2:0:2",
+          "sa2_u1000_seen": 521,
+          "sa2_u1000_death_ema": 0.5324,
+          "sa2_u1000_weight": 0.7891,
+          "sa2_u2000_seen": 808,
+          "sa2_u2000_death_ema": 0.5008,
+          "sa2_u2000_weight": 0.8799,
+          "sa2_u4000_seen": 1208,
+          "sa2_u4000_death_ema": 0.1548,
+          "sa2_u4000_weight": 0.3689
+        },
+        {
+          "id": "th16_s6_b2",
+          "rank2_pass": 32,
+          "rank3_pass": 32,
+          "episodes_each": 32,
+          "rank3_failures_before3600": 0,
+          "rank3_failures_after3600": 0,
+          "rank3_survive3600": 32,
+          "time_limit": 2824,
+          "train_max_frames": 3600,
+          "sa1_train_start": "th16_s6_b2:0:2",
+          "sa1_u1000_seen": 324,
+          "sa1_u1000_death_ema": 0.3079,
+          "sa1_u1000_weight": 0.4647,
+          "sa1_u2000_seen": 498,
+          "sa1_u2000_death_ema": 0.2456,
+          "sa1_u2000_weight": 0.4221,
+          "sa1_u4000_seen": 811,
+          "sa1_u4000_death_ema": 0.1349,
+          "sa1_u4000_weight": 0.3146,
+          "sa2_train_start": "th16_s6_b2:0:2",
+          "sa2_u1000_seen": 351,
+          "sa2_u1000_death_ema": 0.394,
+          "sa2_u1000_weight": 0.584,
+          "sa2_u2000_seen": 534,
+          "sa2_u2000_death_ema": 0.3138,
+          "sa2_u2000_weight": 0.5514,
+          "sa2_u4000_seen": 843,
+          "sa2_u4000_death_ema": 0.1167,
+          "sa2_u4000_weight": 0.2781
+        }
+      ],
+      "new_rank2_episodes": 192,
+      "scope": "Same checkpoint/rank-only controlled6x32 CPU evaluations; r2/r3 cfg identical,raw card/rank is only changed environment variable. Different rank intentionally changes card emission/speed branches. Fixedseed,fulltime,greedy free-dodge/originalmotor,no mirror/hit-extra/warmup.",
+      "curriculum": "seen counts finished training episodes incl death/timeout;fail EMA counts death only,not equal fixed-greedy pass and not full-card long-time survival."
+    },
+    "collision_cards": [
+      {
+        "card": "th06_s6_b6",
+        "episodes": 32,
+        "failed": 2,
+        "contacts": 2,
+        "source_count_hist": {
+          "1": 2
+        },
+        "laser_max": 0,
+        "laser_intersections": 0,
+        "laser_only_contacts": 0,
+        "body_intersections": 0,
+        "age": {
+          "n": 2,
+          "min": 241,
+          "median": 244.5,
+          "max": 248
+        },
+        "speed": {
+          "n": 2,
+          "min": 1.2999938975625651,
+          "median": 1.2999971079460821,
+          "max": 1.300000318329599
+        },
+        "radius": {
+          "n": 2,
+          "min": 2.0,
+          "median": 2.0,
+          "max": 2.0
+        },
+        "frame_residual": {
+          "n": 2,
+          "min": 0,
+          "median": 0.0,
+          "max": 0
+        },
+        "dv": {
+          "n": 2,
+          "min": 0,
+          "median": 0.0,
+          "max": 0
+        },
+        "delay_activated_last_frame": 0,
+        "visibility": {
+          "1": {
+            "present": 2,
+            "k64": 2,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "4": {
+            "present": 2,
+            "k64": 2,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "8": {
+            "present": 2,
+            "k64": 2,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "16": {
+            "present": 2,
+            "k64": 2,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "30": {
+            "present": 2,
+            "k64": 2,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "60": {
+            "present": 2,
+            "k64": 2,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      {
+        "card": "th06_s6_mb2",
+        "episodes": 32,
+        "failed": 3,
+        "contacts": 3,
+        "source_count_hist": {
+          "1": 3
+        },
+        "laser_max": 0,
+        "laser_intersections": 0,
+        "laser_only_contacts": 0,
+        "body_intersections": 0,
+        "age": {
+          "n": 3,
+          "min": 51,
+          "median": 63,
+          "max": 69
+        },
+        "speed": {
+          "n": 3,
+          "min": 3.8671428635699177,
+          "median": 4.2656345361048,
+          "max": 5.191363025195428
+        },
+        "radius": {
+          "n": 3,
+          "min": 5.0,
+          "median": 5.0,
+          "max": 5.0
+        },
+        "frame_residual": {
+          "n": 3,
+          "min": 0,
+          "median": 0,
+          "max": 0
+        },
+        "dv": {
+          "n": 3,
+          "min": 0,
+          "median": 0,
+          "max": 0
+        },
+        "delay_activated_last_frame": 0,
+        "visibility": {
+          "1": {
+            "present": 3,
+            "k64": 3,
+            "raw1024": 3,
+            "error": {
+              "n": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "4": {
+            "present": 3,
+            "k64": 3,
+            "raw1024": 3,
+            "error": {
+              "n": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "8": {
+            "present": 3,
+            "k64": 3,
+            "raw1024": 3,
+            "error": {
+              "n": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "16": {
+            "present": 3,
+            "k64": 3,
+            "raw1024": 3,
+            "error": {
+              "n": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "30": {
+            "present": 3,
+            "k64": 3,
+            "raw1024": 3,
+            "error": {
+              "n": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "60": {
+            "present": 2,
+            "k64": 0,
+            "raw1024": 2,
+            "error": {
+              "n": 2,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      {
+        "card": "th16_s6_b14",
+        "episodes": 32,
+        "failed": 24,
+        "contacts": 24,
+        "source_count_hist": {
+          "1": 11,
+          "0": 13
+        },
+        "laser_max": 4,
+        "laser_intersections": 13,
+        "laser_only_contacts": 13,
+        "body_intersections": 0,
+        "age": {
+          "n": 11,
+          "min": 99,
+          "median": 122,
+          "max": 264
+        },
+        "speed": {
+          "n": 11,
+          "min": 1.4999980197740685,
+          "median": 2.5999962394259755,
+          "max": 3.1000299100102287
+        },
+        "radius": {
+          "n": 11,
+          "min": 2.399993896484375,
+          "median": 2.399993896484375,
+          "max": 12.0
+        },
+        "frame_residual": {
+          "n": 11,
+          "min": 0,
+          "median": 0,
+          "max": 0
+        },
+        "dv": {
+          "n": 11,
+          "min": 0,
+          "median": 0,
+          "max": 0
+        },
+        "delay_activated_last_frame": 0,
+        "visibility": {
+          "1": {
+            "present": 11,
+            "k64": 11,
+            "raw1024": 11,
+            "error": {
+              "n": 11,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "4": {
+            "present": 11,
+            "k64": 11,
+            "raw1024": 11,
+            "error": {
+              "n": 11,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "8": {
+            "present": 11,
+            "k64": 11,
+            "raw1024": 11,
+            "error": {
+              "n": 11,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "16": {
+            "present": 11,
+            "k64": 11,
+            "raw1024": 11,
+            "error": {
+              "n": 11,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "30": {
+            "present": 11,
+            "k64": 11,
+            "raw1024": 11,
+            "error": {
+              "n": 11,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          },
+          "60": {
+            "present": 11,
+            "k64": 9,
+            "raw1024": 11,
+            "error": {
+              "n": 11,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      {
+        "card": "th16_s6_b2",
+        "episodes": 32,
+        "failed": 0,
+        "contacts": 0,
+        "source_count_hist": {},
+        "laser_max": 0,
+        "laser_intersections": 0,
+        "laser_only_contacts": 0,
+        "body_intersections": 0,
+        "age": null,
+        "speed": null,
+        "radius": null,
+        "frame_residual": null,
+        "dv": null,
+        "delay_activated_last_frame": 0,
+        "visibility": {
+          "1": {
+            "present": 0,
+            "k64": 0,
+            "raw1024": 0,
+            "error": null
+          },
+          "4": {
+            "present": 0,
+            "k64": 0,
+            "raw1024": 0,
+            "error": null
+          },
+          "8": {
+            "present": 0,
+            "k64": 0,
+            "raw1024": 0,
+            "error": null
+          },
+          "16": {
+            "present": 0,
+            "k64": 0,
+            "raw1024": 0,
+            "error": null
+          },
+          "30": {
+            "present": 0,
+            "k64": 0,
+            "raw1024": 0,
+            "error": null
+          },
+          "60": {
+            "present": 0,
+            "k64": 0,
+            "raw1024": 0,
+            "error": null
+          }
+        }
+      },
+      {
+        "card": "th16_s6_b4",
+        "episodes": 32,
+        "failed": 32,
+        "contacts": 32,
+        "source_count_hist": {
+          "1": 29,
+          "2": 3
+        },
+        "laser_max": 0,
+        "laser_intersections": 0,
+        "laser_only_contacts": 0,
+        "body_intersections": 0,
+        "age": {
+          "n": 35,
+          "min": 1,
+          "median": 233,
+          "max": 491
+        },
+        "speed": {
+          "n": 35,
+          "min": 0.3217048422243338,
+          "median": 0.9999986414322715,
+          "max": 1.0000078958380307
+        },
+        "radius": {
+          "n": 35,
+          "min": 6.0,
+          "median": 6.0,
+          "max": 6.0
+        },
+        "frame_residual": {
+          "n": 35,
+          "min": 0,
+          "median": 0,
+          "max": 0.005561781518053888
+        },
+        "dv": {
+          "n": 35,
+          "min": 0,
+          "median": 0,
+          "max": 0.005561781518053888
+        },
+        "delay_activated_last_frame": 0,
+        "visibility": {
+          "1": {
+            "present": 31,
+            "k64": 31,
+            "raw1024": 31,
+            "error": {
+              "n": 31,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0055313899593641925
+            }
+          },
+          "4": {
+            "present": 31,
+            "k64": 31,
+            "raw1024": 31,
+            "error": {
+              "n": 31,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.05535396776983461
+            }
+          },
+          "8": {
+            "present": 31,
+            "k64": 31,
+            "raw1024": 31,
+            "error": {
+              "n": 31,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.19934140489706273
+            }
+          },
+          "16": {
+            "present": 31,
+            "k64": 31,
+            "raw1024": 31,
+            "error": {
+              "n": 31,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.752994213759406
+            }
+          },
+          "30": {
+            "present": 31,
+            "k64": 31,
+            "raw1024": 31,
+            "error": {
+              "n": 31,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 2.5744570367582864
+            }
+          },
+          "60": {
+            "present": 31,
+            "k64": 27,
+            "raw1024": 31,
+            "error": {
+              "n": 31,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 10.132731855490842
+            }
+          }
+        }
+      },
+      {
+        "card": "th16_s6_b6",
+        "episodes": 32,
+        "failed": 32,
+        "contacts": 32,
+        "source_count_hist": {
+          "1": 31,
+          "2": 1
+        },
+        "laser_max": 0,
+        "laser_intersections": 0,
+        "laser_only_contacts": 0,
+        "body_intersections": 0,
+        "age": {
+          "n": 33,
+          "min": 103,
+          "median": 330,
+          "max": 509
+        },
+        "speed": {
+          "n": 33,
+          "min": 0.3002616625648593,
+          "median": 2.465630379198118,
+          "max": 5.998497011271455
+        },
+        "radius": {
+          "n": 33,
+          "min": 4.0,
+          "median": 4.0,
+          "max": 4.0
+        },
+        "frame_residual": {
+          "n": 33,
+          "min": 0.0109100341796875,
+          "median": 0.0217437744140625,
+          "max": 1.0541199275106794
+        },
+        "dv": {
+          "n": 33,
+          "min": 0.0109100341796875,
+          "median": 0.0217437744140625,
+          "max": 1.0541199275106794
+        },
+        "delay_activated_last_frame": 0,
+        "visibility": {
+          "1": {
+            "present": 33,
+            "k64": 33,
+            "raw1024": 33,
+            "error": {
+              "n": 33,
+              "min": 0.0,
+              "median": 0.0155181884765625,
+              "max": 0.04999972702860825
+            }
+          },
+          "4": {
+            "present": 33,
+            "k64": 33,
+            "raw1024": 33,
+            "error": {
+              "n": 33,
+              "min": 0.0,
+              "median": 0.17486572265625,
+              "max": 0.4998961076237564
+            }
+          },
+          "8": {
+            "present": 33,
+            "k64": 33,
+            "raw1024": 33,
+            "error": {
+              "n": 33,
+              "min": 0.0,
+              "median": 0.6295166015625,
+              "max": 1.7996264812939065
+            }
+          },
+          "16": {
+            "present": 33,
+            "k64": 33,
+            "raw1024": 33,
+            "error": {
+              "n": 33,
+              "min": 0.44384765625,
+              "median": 2.81396484375,
+              "max": 6.798445144542088
+            }
+          },
+          "30": {
+            "present": 33,
+            "k64": 28,
+            "raw1024": 33,
+            "error": {
+              "n": 33,
+              "min": 0.800628662109375,
+              "median": 9.62127685546875,
+              "max": 23.244684188989584
+            }
+          },
+          "60": {
+            "present": 33,
+            "k64": 18,
+            "raw1024": 33,
+            "error": {
+              "n": 33,
+              "min": 12.50445556640625,
+              "median": 37.8643798828125,
+              "max": 113.87572818515221
+            }
+          }
+        }
+      }
+    ],
+    "collision_contacts": 93,
+    "native_bullet_sources": 84,
+    "native_laser_sources": 13,
+    "input_audits": {
+      "th06_s6_mb2": {
+        "prehit_last16": {
+          "n": 12,
+          "raw_count_mean": 373.6666666666667,
+          "nearest_edge_mean": 8.18732213973999,
+          "r64_mean": 166.46545028686523,
+          "near64_mean": 12.25,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 2.0,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 5.981448133786519,
+          "selected_speed_mean": 4.328298608462016,
+          "selected_approach_mean": 0.3981133196502924,
+          "entropy_mean": 0.502848573649923,
+          "logit_gap_mean": 2.3865220149358115,
+          "occupied_octants_near64_mean": 6.083333333333333,
+          "bottom64_fraction": 0.5833333333333334,
+          "side64_fraction": 0.3333333333333333,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 16.833333333333332,
+          "density_approach_max_mean": 3.202362298965454,
+          "token_max_abs_position_mean": 0.8816905617713928,
+          "token_max_abs_velocity_mean": 0.7364012400309244,
+          "offscreen_count_mean": 92.33333333333333,
+          "zero_density_changed_action_fraction": 0.16666666666666666,
+          "zero_density_tv_mean": 0.23560924424479404,
+          "remove_near32_changed_action_fraction": 0.9166666666666666,
+          "remove_near32_tv_mean": 0.8974978427092234,
+          "remove_far64_changed_action_fraction": 0.6666666666666666,
+          "remove_far64_tv_mean": 0.5031543620862067,
+          "zero_bullet_velocity_changed_action_fraction": 0.5833333333333334,
+          "zero_bullet_velocity_tv_mean": 0.5680345430349311,
+          "cond_hold_to_far_right_changed_action_fraction": 0.5,
+          "cond_hold_to_far_right_tv_mean": 0.29283427509168786
+        },
+        "survivor_temporal_controls": {
+          "n": 87,
+          "raw_count_mean": 382.02298850574715,
+          "nearest_edge_mean": 17.38618681896692,
+          "r64_mean": 164.9282279179014,
+          "near64_mean": 10.137931034482758,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 1.0919540229885059,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 5.969691715021243,
+          "selected_speed_mean": 4.323925314278438,
+          "selected_approach_mean": 0.24350517326644783,
+          "entropy_mean": 0.8821946908987459,
+          "logit_gap_mean": 1.822825424972622,
+          "occupied_octants_near64_mean": 5.896551724137931,
+          "bottom64_fraction": 0.3793103448275862,
+          "side64_fraction": 0.11494252873563218,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 20.413793103448278,
+          "density_approach_max_mean": 3.694740340627473,
+          "token_max_abs_position_mean": 0.8768961765300268,
+          "token_max_abs_velocity_mean": 0.7217401745675625,
+          "offscreen_count_mean": 95.98850574712644,
+          "zero_density_changed_action_fraction": 0.2413793103448276,
+          "zero_density_tv_mean": 0.20994602847073612,
+          "remove_near32_changed_action_fraction": 0.39080459770114945,
+          "remove_near32_tv_mean": 0.3539564655237328,
+          "remove_far64_changed_action_fraction": 0.45977011494252873,
+          "remove_far64_tv_mean": 0.4022140104093471,
+          "zero_bullet_velocity_changed_action_fraction": 0.4367816091954023,
+          "zero_bullet_velocity_tv_mean": 0.5042825487988263,
+          "cond_hold_to_far_right_changed_action_fraction": 0.6896551724137931,
+          "cond_hold_to_far_right_tv_mean": 0.5101240061266327
+        },
+        "all_samples": 105,
+        "max_lasers_all_replay": 0,
+        "density_count_max_error_sampled": 0.0,
+        "token_max_error": 0.0,
+        "mask_all_parity": true,
+        "recomputed_argmax_mismatches": 0,
+        "cond_unique": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "th16_s6_b6": {
+        "prehit_last16": {
+          "n": 128,
+          "raw_count_mean": 178.1171875,
+          "nearest_edge_mean": 7.9652856811881065,
+          "r64_mean": 154.50191193819046,
+          "near64_mean": 20.8515625,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 3.234375,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 5.320743076503277,
+          "selected_speed_mean": 2.244575895369053,
+          "selected_approach_mean": 0.3711076068211696,
+          "entropy_mean": 0.7199760865187272,
+          "logit_gap_mean": 1.8571820203214884,
+          "occupied_octants_near64_mean": 6.8125,
+          "bottom64_fraction": 0.0,
+          "side64_fraction": 0.1875,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 6.390625,
+          "density_approach_max_mean": 1.2893235220108181,
+          "token_max_abs_position_mean": 0.8029163307510316,
+          "token_max_abs_velocity_mean": 0.5922839790582657,
+          "offscreen_count_mean": 18.1484375,
+          "zero_density_changed_action_fraction": 0.234375,
+          "zero_density_tv_mean": 0.2193215293027606,
+          "remove_near32_changed_action_fraction": 0.796875,
+          "remove_near32_tv_mean": 0.7056779258418828,
+          "remove_far64_changed_action_fraction": 0.4140625,
+          "remove_far64_tv_mean": 0.39871415387915476,
+          "zero_bullet_velocity_changed_action_fraction": 0.8125,
+          "zero_bullet_velocity_tv_mean": 0.7905884186220646,
+          "cond_hold_to_far_right_changed_action_fraction": 0.1875,
+          "cond_hold_to_far_right_tv_mean": 0.17045180107197666
+        },
+        "survivor_temporal_controls": {
+          "n": 0
+        },
+        "all_samples": 192,
+        "max_lasers_all_replay": 0,
+        "density_count_max_error_sampled": 0.0,
+        "token_max_error": 0.0,
+        "mask_all_parity": true,
+        "recomputed_argmax_mismatches": 0,
+        "cond_unique": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "th06_s6_b6": {
+        "prehit_last16": {
+          "n": 8,
+          "raw_count_mean": 761.75,
+          "nearest_edge_mean": 5.417219936847687,
+          "r64_mean": 98.77920341491699,
+          "near64_mean": 29.375,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 2.625,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 2.0000165700912476,
+          "selected_speed_mean": 1.458594337105751,
+          "selected_approach_mean": 0.14488863397855312,
+          "entropy_mean": 0.38418723683571443,
+          "logit_gap_mean": 3.340196371078491,
+          "occupied_octants_near64_mean": 7.875,
+          "bottom64_fraction": 0.375,
+          "side64_fraction": 0.0,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 26.75,
+          "density_approach_max_mean": 1.532666653394699,
+          "token_max_abs_position_mean": 0.5283460393548012,
+          "token_max_abs_velocity_mean": 0.24863052368164062,
+          "offscreen_count_mean": 148.0,
+          "zero_density_changed_action_fraction": 0.25,
+          "zero_density_tv_mean": 0.153300627192948,
+          "remove_near32_changed_action_fraction": 1.0,
+          "remove_near32_tv_mean": 0.782175850123167,
+          "remove_far64_changed_action_fraction": 0.125,
+          "remove_far64_tv_mean": 0.17852115354617126,
+          "zero_bullet_velocity_changed_action_fraction": 0.625,
+          "zero_bullet_velocity_tv_mean": 0.6251338475849479,
+          "cond_hold_to_far_right_changed_action_fraction": 0.375,
+          "cond_hold_to_far_right_tv_mean": 0.1797529069808661
+        },
+        "survivor_temporal_controls": {
+          "n": 240,
+          "raw_count_mean": 776.85,
+          "nearest_edge_mean": 14.89403354326884,
+          "r64_mean": 107.78906011581421,
+          "near64_mean": 23.858333333333334,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 0.7333333333333333,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 2.000016642610232,
+          "selected_speed_mean": 1.4531243647138277,
+          "selected_approach_mean": 0.13946727864677086,
+          "entropy_mean": 0.7092668393990683,
+          "logit_gap_mean": 2.9227977777520815,
+          "occupied_octants_near64_mean": 6.758333333333334,
+          "bottom64_fraction": 0.36666666666666664,
+          "side64_fraction": 0.20833333333333334,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 34.079166666666666,
+          "density_approach_max_mean": 2.502698741853237,
+          "token_max_abs_position_mean": 0.568111186226209,
+          "token_max_abs_velocity_mean": 0.247977876663208,
+          "offscreen_count_mean": 150.75,
+          "zero_density_changed_action_fraction": 0.12083333333333333,
+          "zero_density_tv_mean": 0.13411575214579444,
+          "remove_near32_changed_action_fraction": 0.2833333333333333,
+          "remove_near32_tv_mean": 0.3356963839828192,
+          "remove_far64_changed_action_fraction": 0.32083333333333336,
+          "remove_far64_tv_mean": 0.28388754087871887,
+          "zero_bullet_velocity_changed_action_fraction": 0.3,
+          "zero_bullet_velocity_tv_mean": 0.301686866124904,
+          "cond_hold_to_far_right_changed_action_fraction": 0.6083333333333333,
+          "cond_hold_to_far_right_tv_mean": 0.5556697207338099
+        },
+        "all_samples": 252,
+        "max_lasers_all_replay": 0,
+        "density_count_max_error_sampled": 0.0,
+        "token_max_error": 0.0,
+        "mask_all_parity": true,
+        "recomputed_argmax_mismatches": 0,
+        "cond_unique": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "th16_s6_b2": {
+        "prehit_last16": {
+          "n": 0
+        },
+        "survivor_temporal_controls": {
+          "n": 288,
+          "raw_count_mean": 68.38888888888889,
+          "nearest_edge_mean": 70.430046700769,
+          "r64_mean": 309.2040017445882,
+          "near64_mean": 3.84375,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 0.20833333333333334,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 1.5000163871381018,
+          "selected_speed_mean": 1.4999976509975061,
+          "selected_approach_mean": 0.17882993763002256,
+          "entropy_mean": 0.8444792677109945,
+          "logit_gap_mean": 1.6917015848060448,
+          "occupied_octants_near64_mean": 1.9756944444444444,
+          "bottom64_fraction": 0.010416666666666666,
+          "side64_fraction": 0.006944444444444444,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 4.927083333333333,
+          "density_approach_max_mean": 0.4776147391854061,
+          "token_max_abs_position_mean": 1.4661228578123782,
+          "token_max_abs_velocity_mean": 0.18748668829600015,
+          "offscreen_count_mean": 12.822916666666666,
+          "zero_density_changed_action_fraction": 0.1076388888888889,
+          "zero_density_tv_mean": 0.11823848288746477,
+          "remove_near32_changed_action_fraction": 0.1111111111111111,
+          "remove_near32_tv_mean": 0.16282970851494205,
+          "remove_far64_changed_action_fraction": 0.7361111111111112,
+          "remove_far64_tv_mean": 0.4425140035734027,
+          "zero_bullet_velocity_changed_action_fraction": 0.19791666666666666,
+          "zero_bullet_velocity_tv_mean": 0.20329635240745525,
+          "cond_hold_to_far_right_changed_action_fraction": 0.8368055555555556,
+          "cond_hold_to_far_right_tv_mean": 0.8043091975053408
+        },
+        "all_samples": 288,
+        "max_lasers_all_replay": 0,
+        "density_count_max_error_sampled": 0.0,
+        "token_max_error": 0.0,
+        "mask_all_parity": true,
+        "recomputed_argmax_mismatches": 0,
+        "cond_unique": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "th16_s6_b14": {
+        "prehit_last16": {
+          "n": 96,
+          "raw_count_mean": 349.6770833333333,
+          "nearest_edge_mean": 12.31861375272274,
+          "r64_mean": 211.55905183156332,
+          "near64_mean": 10.583333333333334,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 0.8020833333333334,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 3.100041463971138,
+          "selected_speed_mean": 2.701708453396956,
+          "selected_approach_mean": 0.8449822447728366,
+          "entropy_mean": 0.8305452050747893,
+          "logit_gap_mean": 1.6742554008960724,
+          "occupied_octants_near64_mean": 5.59375,
+          "bottom64_fraction": 0.9270833333333334,
+          "side64_fraction": 0.7291666666666666,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 21.494791666666668,
+          "density_approach_max_mean": 2.7339278856913247,
+          "token_max_abs_position_mean": 1.1058824906746547,
+          "token_max_abs_velocity_mean": 0.3863534728686015,
+          "offscreen_count_mean": 100.3125,
+          "zero_density_changed_action_fraction": 0.22916666666666666,
+          "zero_density_tv_mean": 0.216973322142015,
+          "remove_near32_changed_action_fraction": 0.7083333333333334,
+          "remove_near32_tv_mean": 0.5875185679566736,
+          "remove_far64_changed_action_fraction": 0.4791666666666667,
+          "remove_far64_tv_mean": 0.4459224957178473,
+          "zero_bullet_velocity_changed_action_fraction": 0.7604166666666666,
+          "zero_bullet_velocity_tv_mean": 0.6332484867889434,
+          "cond_hold_to_far_right_changed_action_fraction": 0.21875,
+          "cond_hold_to_far_right_tv_mean": 0.14352395754243238,
+          "zero_lasers_changed_action_fraction": 0.71875,
+          "zero_lasers_tv_mean": 0.6846164457577592
+        },
+        "survivor_temporal_controls": {
+          "n": 192,
+          "raw_count_mean": 377.6875,
+          "nearest_edge_mean": 17.350342330725297,
+          "r64_mean": 193.32383573055267,
+          "near64_mean": 11.536458333333334,
+          "near64_omitted_mean": 0.0,
+          "imminent24_mean": 0.8697916666666666,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 2.9708737706144652,
+          "selected_speed_mean": 2.5352609480420747,
+          "selected_approach_mean": 0.49234883656996925,
+          "entropy_mean": 0.5954744928035325,
+          "logit_gap_mean": 3.072397151341041,
+          "occupied_octants_near64_mean": 5.442708333333333,
+          "bottom64_fraction": 0.5677083333333334,
+          "side64_fraction": 0.21875,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 17.270833333333332,
+          "density_approach_max_mean": 3.1937740159531436,
+          "token_max_abs_position_mean": 0.9327261503785849,
+          "token_max_abs_velocity_mean": 0.3688112397988637,
+          "offscreen_count_mean": 85.3125,
+          "zero_density_changed_action_fraction": 0.0625,
+          "zero_density_tv_mean": 0.11182272783231421,
+          "remove_near32_changed_action_fraction": 0.4010416666666667,
+          "remove_near32_tv_mean": 0.41480844291315105,
+          "remove_far64_changed_action_fraction": 0.4166666666666667,
+          "remove_far64_tv_mean": 0.3954183503407596,
+          "zero_bullet_velocity_changed_action_fraction": 0.296875,
+          "zero_bullet_velocity_tv_mean": 0.4033902051426897,
+          "cond_hold_to_far_right_changed_action_fraction": 0.5104166666666666,
+          "cond_hold_to_far_right_tv_mean": 0.46664790042435317,
+          "zero_lasers_changed_action_fraction": 0.15104166666666666,
+          "zero_lasers_tv_mean": 0.1726961713948422
+        },
+        "all_samples": 336,
+        "max_lasers_all_replay": 4,
+        "density_count_max_error_sampled": 0.0,
+        "token_max_error": 0.0,
+        "mask_all_parity": true,
+        "recomputed_argmax_mismatches": 0,
+        "cond_unique": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "th16_s6_b4": {
+        "prehit_last16": {
+          "n": 128,
+          "raw_count_mean": 260.3984375,
+          "nearest_edge_mean": 5.154338173568249,
+          "r64_mean": 86.57178163528442,
+          "near64_mean": 46.7734375,
+          "near64_omitted_mean": 0.3515625,
+          "imminent24_mean": 3.40625,
+          "imminent24_omitted_mean": 0.0,
+          "speed_max_mean": 1.0000087833032012,
+          "selected_speed_mean": 0.965897424146533,
+          "selected_approach_mean": 0.29022453024663264,
+          "entropy_mean": 0.6222840748914678,
+          "logit_gap_mean": 2.4014828093349934,
+          "occupied_octants_near64_mean": 7.8515625,
+          "bottom64_fraction": 0.0,
+          "side64_fraction": 0.0390625,
+          "noncollidable_count_mean": 0.0,
+          "density_count_max_mean": 10.265625,
+          "density_approach_max_mean": 0.6051042217295617,
+          "token_max_abs_position_mean": 0.4830624177120626,
+          "token_max_abs_velocity_mean": 0.12469841539859772,
+          "offscreen_count_mean": 49.390625,
+          "zero_density_changed_action_fraction": 0.1875,
+          "zero_density_tv_mean": 0.18468597455671443,
+          "remove_near32_changed_action_fraction": 0.8203125,
+          "remove_near32_tv_mean": 0.7611555622133892,
+          "remove_far64_changed_action_fraction": 0.1484375,
+          "remove_far64_tv_mean": 0.14667484482038162,
+          "zero_bullet_velocity_changed_action_fraction": 0.765625,
+          "zero_bullet_velocity_tv_mean": 0.7082954043487462,
+          "cond_hold_to_far_right_changed_action_fraction": 0.1484375,
+          "cond_hold_to_far_right_tv_mean": 0.16184710820343184
+        },
+        "survivor_temporal_controls": {
+          "n": 0
+        },
+        "all_samples": 192,
+        "max_lasers_all_replay": 0,
+        "density_count_max_error_sampled": 0.0,
+        "token_max_error": 0.0,
+        "mask_all_parity": true,
+        "recomputed_argmax_mismatches": 0,
+        "cond_unique": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "laser_audit": [
+      {
+        "card": "th06_s6_mb2",
+        "snapshot_count": 105,
+        "snapshots_with_selected_lasers": 0,
+        "raw_state_counts": {},
+        "max_independent_scalar_reconstruction_error": 0.0,
+        "missing_selected_lasers": 0,
+        "max_lasers_all_replay": 0
+      },
+      {
+        "card": "th16_s6_b6",
+        "snapshot_count": 192,
+        "snapshots_with_selected_lasers": 0,
+        "raw_state_counts": {},
+        "max_independent_scalar_reconstruction_error": 0.0,
+        "missing_selected_lasers": 0,
+        "max_lasers_all_replay": 0
+      },
+      {
+        "card": "th06_s6_b6",
+        "snapshot_count": 252,
+        "snapshots_with_selected_lasers": 0,
+        "raw_state_counts": {},
+        "max_independent_scalar_reconstruction_error": 0.0,
+        "missing_selected_lasers": 0,
+        "max_lasers_all_replay": 0
+      },
+      {
+        "card": "th16_s6_b2",
+        "snapshot_count": 288,
+        "snapshots_with_selected_lasers": 0,
+        "raw_state_counts": {},
+        "max_independent_scalar_reconstruction_error": 0.0,
+        "missing_selected_lasers": 0,
+        "max_lasers_all_replay": 0
+      },
+      {
+        "card": "th16_s6_b14",
+        "snapshot_count": 336,
+        "snapshots_with_selected_lasers": 268,
+        "raw_state_counts": {
+          "0": 236,
+          "1": 836
+        },
+        "max_independent_scalar_reconstruction_error": 2.612489389264283e-07,
+        "missing_selected_lasers": 0,
+        "max_lasers_all_replay": 4
+      },
+      {
+        "card": "th16_s6_b4",
+        "snapshot_count": 192,
+        "snapshots_with_selected_lasers": 0,
+        "raw_state_counts": {},
+        "max_independent_scalar_reconstruction_error": 0.0,
+        "missing_selected_lasers": 0,
+        "max_lasers_all_replay": 0
+      }
+    ],
+    "forks_summary": [
+      {
+        "id": "th06_s6_b6",
+        "sample_failed_episodes": 2,
+        "motor_safe60": {
+          "60": {
+            "cases": 2,
+            "with_safe_candidate": 2
+          },
+          "30": {
+            "cases": 2,
+            "with_safe_candidate": 2
+          },
+          "15": {
+            "cases": 2,
+            "with_safe_candidate": 2
+          },
+          "5": {
+            "cases": 2,
+            "with_safe_candidate": 0
+          }
+        }
+      },
+      {
+        "id": "th06_s6_mb2",
+        "sample_failed_episodes": 3,
+        "motor_safe60": {
+          "60": {
+            "cases": 3,
+            "with_safe_candidate": 1
+          },
+          "30": {
+            "cases": 3,
+            "with_safe_candidate": 3
+          },
+          "15": {
+            "cases": 3,
+            "with_safe_candidate": 2
+          },
+          "5": {
+            "cases": 3,
+            "with_safe_candidate": 2
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b14",
+        "sample_failed_episodes": 4,
+        "motor_safe60": {
+          "60": {
+            "cases": 4,
+            "with_safe_candidate": 3
+          },
+          "30": {
+            "cases": 4,
+            "with_safe_candidate": 2
+          },
+          "15": {
+            "cases": 4,
+            "with_safe_candidate": 0
+          },
+          "5": {
+            "cases": 4,
+            "with_safe_candidate": 0
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b2",
+        "sample_failed_episodes": 0,
+        "motor_safe60": {
+          "60": {
+            "cases": 0,
+            "with_safe_candidate": 0
+          },
+          "30": {
+            "cases": 0,
+            "with_safe_candidate": 0
+          },
+          "15": {
+            "cases": 0,
+            "with_safe_candidate": 0
+          },
+          "5": {
+            "cases": 0,
+            "with_safe_candidate": 0
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b4",
+        "sample_failed_episodes": 4,
+        "motor_safe60": {
+          "60": {
+            "cases": 4,
+            "with_safe_candidate": 3
+          },
+          "30": {
+            "cases": 4,
+            "with_safe_candidate": 2
+          },
+          "15": {
+            "cases": 4,
+            "with_safe_candidate": 3
+          },
+          "5": {
+            "cases": 4,
+            "with_safe_candidate": 2
+          }
+        }
+      },
+      {
+        "id": "th16_s6_b6",
+        "sample_failed_episodes": 4,
+        "motor_safe60": {
+          "60": {
+            "cases": 4,
+            "with_safe_candidate": 3
+          },
+          "30": {
+            "cases": 4,
+            "with_safe_candidate": 3
+          },
+          "15": {
+            "cases": 4,
+            "with_safe_candidate": 3
+          },
+          "5": {
+            "cases": 4,
+            "with_safe_candidate": 4
+          }
+        }
+      }
+    ],
+    "verification": {
+      "verified_utc": "2026-11-14T20:33:47.718026+00:00",
+      "training_starts": 668,
+      "rank_counts": {
+        "2": 504,
+        "1": 14,
+        "4": 150
+      },
+      "shared_episodes": 192,
+      "new_rank2_episodes": 192,
+      "strict_native_contacts": 93,
+      "native_sources": {
+        "bullets": 84,
+        "lasers": 13
+      },
+      "audited_input_snapshots": 1365,
+      "fork_snapshots": 100,
+      "fork_candidate_trajectories": 3600,
+      "no_new_production_files_modified": true,
+      "checks_passed": true
+    }
+  },
+  "historical_review": {
+    "runs": [
+      {
+        "label": "m",
+        "run": "runs/archive/2026-11-before-full-pretrain/20260920-075238-m",
+        "ranks": [
+          2
+        ],
+        "updates": 3500,
+        "num_envs": 4096,
+        "num_steps": 64,
+        "starts": 74,
+        "train_frames": 917504000,
+        "frames_per_start_uniform_equivalent": 12398702.702702703,
+        "raw_last4_lunatic_survival": [
+          0.59375,
+          0.590625,
+          0.528125,
+          0.64375
+        ],
+        "last4_lunatic_mean": 0.5890625,
+        "card_count_from_env": null
+      },
+      {
+        "label": "l",
+        "run": "runs/archive/2026-11-before-full-pretrain/20260920-200535-l",
+        "ranks": [
+          2,
+          3
+        ],
+        "updates": 3500,
+        "num_envs": 4096,
+        "num_steps": 64,
+        "starts": 139,
+        "train_frames": 917504000,
+        "frames_per_start_uniform_equivalent": 6600748.201438849,
+        "raw_last4_lunatic_survival": [
+          0.584375,
+          0.628125,
+          0.58125,
+          0.678125
+        ],
+        "last4_lunatic_mean": 0.61796875,
+        "card_count_from_env": null
+      },
+      {
+        "label": "q1",
+        "run": "runs/archive/2026-11-before-full-pretrain/20260925-010241-q1",
+        "ranks": [
+          2
+        ],
+        "updates": 3500,
+        "num_envs": 4096,
+        "num_steps": 64,
+        "starts": 74,
+        "train_frames": 917504000,
+        "frames_per_start_uniform_equivalent": 12398702.702702703,
+        "card_count_from_env": null
+      },
+      {
+        "label": "q2",
+        "run": "runs/archive/2026-11-before-full-pretrain/20260925-010239-q2",
+        "ranks": [
+          2
+        ],
+        "updates": 3500,
+        "num_envs": 4096,
+        "num_steps": 64,
+        "starts": 74,
+        "train_frames": 917504000,
+        "frames_per_start_uniform_equivalent": 12398702.702702703,
+        "raw_last4_lunatic_survival": [
+          0.71875,
+          0.771875,
+          0.821875,
+          0.86875
+        ],
+        "last4_lunatic_mean": 0.7953125,
+        "card_count_from_env": null
+      },
+      {
+        "label": "r1a",
+        "run": "runs/archive/2026-11-before-full-pretrain/20260925-054111-r1a",
+        "ranks": [
+          2
+        ],
+        "updates": 3500,
+        "num_envs": 4096,
+        "num_steps": 64,
+        "starts": 74,
+        "train_frames": 917504000,
+        "frames_per_start_uniform_equivalent": 12398702.702702703,
+        "raw_last4_lunatic_survival": [
+          0.8125,
+          0.76875,
+          0.890625,
+          0.903125
+        ],
+        "last4_lunatic_mean": 0.84375,
+        "card_count_from_env": null
+      },
+      {
+        "label": "s1",
+        "run": "runs/archive/2026-11-before-full-pretrain/20260925-200017-s1",
+        "ranks": [
+          2
+        ],
+        "updates": 3500,
+        "num_envs": 4096,
+        "num_steps": 64,
+        "starts": 74,
+        "train_frames": 917504000,
+        "frames_per_start_uniform_equivalent": 12398702.702702703,
+        "raw_last4_lunatic_survival": [
+          0.909375,
+          0.93125,
+          0.884375,
+          0.94375
+        ],
+        "last4_lunatic_mean": 0.9171875,
+        "card_count_from_env": null
+      }
+    ],
+    "current_frames_per_start_uniform_equivalent": 1569724.5508982036,
+    "old_to_current_uniform_per_start_ratio": 7.898648648648648,
+    "limitation": "Uniform arithmetic only;actual adaptive curriculum exposure is not uniform. Historical evals use old TH06-only10-card holdout set,not current modern spells.",
+    "raw_m_l_same_holdout_cards_ranks_episodes_verified": true
+  }
+}

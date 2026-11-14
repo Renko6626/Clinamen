@@ -18,9 +18,9 @@ ZIP SHA256：`b7aae99795d664f2dedc539306b0422a773206fce453201881e3d4d4f50a3f41`�
 
 - `uv run --frozen python -m stgtrain.export_onnx runs/job-b3ef72c1ca44515d/20261006-151317-request-light-shift-k8/checkpoints/best.pt --out dist --name b-request-light-shift-k8-best`：导出自检通过，最大logits误差4.29e-6。
 - 既有native `test_policy_model`通过。真实ORT1.22 `make test-onnx-live`使用新模型，原六项锚点/让弹行为断言及错误签名拒绝全部通过；没有删除或改动断言。旧B曾失败的立即让弹用例这次通过。
-- `uv run --frozen python runs/new-b-shift-th06nc-package-validation/parity.py`：严格数值检查失败，一帧最大绝对误差1.335144e-5，超过原1e-5阈值，失败日志保留。独立完整三帧诊断中全部12个输入及argmax一致，误差依次9.05991e-6/1.33514e-5/2.86102e-6，没有放宽阈值或把严格门标成通过。
-- `uv run --frozen python runs/new-b-shift-th06nc-package-validation/verify_package.py`：CRC、逐文件SHA、默认INI、新checkpoint与ONNX来源、自包含graph6/opset18/IR10、DLL x64、镜像一致通过。主agent另独立核验ZIP、13文件、逐文件SHA、默认新B/u1000、三处镜像及旧包未覆盖。
+- `uv run --frozen python runs/archive/2026-11-before-full-pretrain/new-b-shift-th06nc-package-validation/parity.py`：严格数值检查失败，一帧最大绝对误差1.335144e-5，超过原1e-5阈值，失败日志保留。独立完整三帧诊断中全部12个输入及argmax一致，误差依次9.05991e-6/1.33514e-5/2.86102e-6，没有放宽阈值或把严格门标成通过。
+- `uv run --frozen python runs/archive/2026-11-before-full-pretrain/new-b-shift-th06nc-package-validation/verify_package.py`：CRC、逐文件SHA、默认INI、新checkpoint与ONNX来源、自包含graph6/opset18/IR10、DLL x64、镜像一致通过。主agent另独立核验ZIP、13文件、逐文件SHA、默认新B/u1000、三处镜像及旧包未覆盖。
 
 包内README、MODEL-SOURCE和VALIDATION记录完整来源、数值边界及[水符代价](2026-10-06-request-shift-short-ab-results.md)。尚未进行Windows游戏内游玩验收，不把仿真Shift改善当作实机已修复。
 
-素材在`dist/b-request-light-shift-k8-release-assets/`，日志和脚本在`runs/new-b-shift-th06nc-package-validation/`。未提交、推送、发布Release、启动训练或操作游戏UI。
+素材在`dist/archive/2026-11-before-full-pretrain/b-request-light-shift-k8-release-assets/`，日志和脚本在`runs/archive/2026-11-before-full-pretrain/new-b-shift-th06nc-package-validation/`。未提交、推送、发布Release、启动训练或操作游戏UI。

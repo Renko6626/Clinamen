@@ -4,48 +4,48 @@
   "modes": {
     "follow": {
       "mode": "follow",
-      "manifest": "runs/20261003-t7-control/follow/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/manifest.json",
       "manifest_sha256": "47ecd3766793bb725c641be01a25f1e30d5d8b41f29c59b28683592bd56ee238",
       "checkpoint_sha256": "a402247196f8b9b975553181455ca8eceee083165fe4bfd7a7655a5a6fbba3f6",
       "sources": [
         {
-          "path": "runs/20261003-t7-control/follow/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-00.npz",
           "sha256": "308b1b9df7d46b2b35d52a149eddac5b0cc919544543b4f88fabe8ef0f7234e9"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-00.json",
           "sha256": "ecb0973a71e7d0d1dbac1afbe306ec1a405a8d5f4eebbc3979991f369d2656fd"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-01.npz",
           "sha256": "92571dbd8a00dd53428252d3293565c1f7b053befcf878d0093a62ad5d09e8b0"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-01.json",
           "sha256": "0673b8f9df0fa3d0ee70779e778e0f59e5bf67c27ca34ed9e50594e7fad46042"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-02.npz",
           "sha256": "e4a06cee1b3011abdcadb182271711672f104c4a6ce26438c607d6d36cf1eaa7"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-02.json",
           "sha256": "89d28bbfab2452ebe08d6f1547611b68a037d7674cf9d1419458af902a66927a"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-03.npz",
           "sha256": "1b78a86135e79851b03d497d474d307afc5c2a2179c69c4cd6ea624af5349b22"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-03.json",
           "sha256": "d04cc9f97c8651beed34610f857e50882ea0dab4d266b9754259dad0ce56177f"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-04.npz",
           "sha256": "13e7f9d912a65aa70d328371a84aa1abc9de74c4326b125ed149f55150ed1da4"
         },
         {
-          "path": "runs/20261003-t7-control/follow/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow/batch-04.json",
           "sha256": "d6b209f7178cae856c1383920df6a11ab549e08383db03997d3c28e60111eb79"
         }
       ],
@@ -11676,48 +11676,48 @@
     },
     "free": {
       "mode": "free",
-      "manifest": "runs/20261003-t7-control/free/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/manifest.json",
       "manifest_sha256": "9731703ff38cb5b588cfe511e9577985e985a77b706094a462c7d4e15a4f5d90",
       "checkpoint_sha256": "a402247196f8b9b975553181455ca8eceee083165fe4bfd7a7655a5a6fbba3f6",
       "sources": [
         {
-          "path": "runs/20261003-t7-control/free/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-00.npz",
           "sha256": "151703494c02bb2158b4b0393cbb33ac545ba4aa79cf7364524ff13d68dd36f3"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-00.json",
           "sha256": "e5a6ddec75a1fe02865b6467167fb2c0755f17fd15118b31f49173ed5630876f"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-01.npz",
           "sha256": "2fbb9e0b1260a02565e89d94c504a602de3fdcdcb4791b1dbadebb8a6b7be594"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-01.json",
           "sha256": "13de07cc29e814f1adf072d08e2a043319df0c5c7d864b39d45d463dd6dfb054"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-02.npz",
           "sha256": "3f6ee8c6758b87e0ea11f91c154d47cbfed5d27a10a86c982cce397e6f5cda95"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-02.json",
           "sha256": "aa8f4b41f6bab8a6bb825998440395ffe7c55d4942965f52ac9fe97b97cbd297"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-03.npz",
           "sha256": "202b306cd772bb3c92e87596ac7d7aa03e0ad47f929559033512a6ff2c00b01c"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-03.json",
           "sha256": "27538612fe00422866a52a19762ea2e5ad8c78d2abec2d6c3ee2ed6dfa92f59a"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-04.npz",
           "sha256": "da92fed0214a98d972ffec70bd8928b3300daf384cb41157a1d3318fc47a0327"
         },
         {
-          "path": "runs/20261003-t7-control/free/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free/batch-04.json",
           "sha256": "c599349cd70cdaa97c21c2d28981b3cf15068cea5b0492827efda778e6c7e155"
         }
       ],

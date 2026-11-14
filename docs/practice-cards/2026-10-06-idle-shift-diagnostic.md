@@ -10,7 +10,7 @@ B迁移到请求计量后保留了同样系数，不能把方向明显变稳解�
 
 ## 复用T8离线轨迹
 
-读取既有每帧推理的AUTO／自由两组（runs/20261003-t8-interval/{deploy-i1,free-i1}），未启动新评测。T8 u3500、13卡Hard/Lunatic，每卡rank16局，CPU贪心。仅取首局动作前Alive帧，排除终止／reset和初始比较。
+读取既有每帧推理的AUTO／自由两组（runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/{deploy-i1,free-i1}），未启动新评测。T8 u3500、13卡Hard/Lunatic，每卡rank16局，CPU贪心。仅取首局动作前Alive帧，排除终止／reset和初始比较。
 
 “不动”筛选要求策略请求、实际执行和上一步实际执行方向均为0；持续不动筛选还要求当前及前11帧均满足。实际shift切换从本步执行低速位与上步执行低速位比较，不把被挡住的请求冒充按键。既有记录没有xy，本次不能独立核验物理坐标，更不能把这些仿真轨迹当用户Windows实机日志。
 
@@ -23,7 +23,7 @@ B迁移到请求计量后保留了同样系数，不能把方向明显变稳解�
 
 例子：free-i1/batch-00.npz，env0、th06_s1_w04 Hard，帧索引1–340请求和执行都为不动，约5.67秒；实际低速位在186、195、276、284、304、308处翻转，共6次，状态依次0、1、0、1、0、1。最短相邻翻转4帧。AUTO同卡另有5.55秒不动段，实际切换4次。
 
-[汇总、筛选说明和输入NPZ SHA](reports/t8-idle-shift-summary.json)。分析脚本在runs/shift-idle-analysis/summarize_t8.py；保存轨迹的manifest记录checkpoint／卡源／生产源码SHA。
+[汇总、筛选说明和输入NPZ SHA](reports/t8-idle-shift-summary.json)。分析脚本在runs/archive/2026-11-before-full-pretrain/shift-idle-analysis/summarize_t8.py；保存轨迹的manifest记录checkpoint／卡源／生产源码SHA。
 
 ## 结论与待办
 

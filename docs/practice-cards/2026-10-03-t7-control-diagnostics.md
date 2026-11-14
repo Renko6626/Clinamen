@@ -39,7 +39,7 @@ T5→T6的新激光表示＋联合注意力带来明显收益，T7（8根）末�
 预检命令：
 
 ```bash
-uv run --frozen python scripts/diag/request_execution.py runs/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/checkpoints/best.pt --out runs/20261003-t7-control/preflight --cards th06_s1_b3 --episodes 2 --threads 2 --preflight
+uv run --frozen python scripts/diag/request_execution.py runs/archive/2026-11-before-full-pretrain/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t7-control/preflight --cards th06_s1_b3 --episodes 2 --threads 2 --preflight
 uv run --frozen pytest -q tests/test_motor.py tests/test_evaluate.py tests/test_episodes.py
 ```
 
@@ -52,14 +52,14 @@ uv run --frozen pytest -q tests/test_motor.py tests/test_evaluate.py tests/test_
 正式命令分别执行，输出隔离：
 
 ```bash
-uv run --frozen python scripts/diag/request_execution.py runs/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/checkpoints/best.pt --out runs/20261003-t7-control/follow --mode follow --threads 2
-uv run --frozen python scripts/diag/request_execution.py runs/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/checkpoints/best.pt --out runs/20261003-t7-control/free --mode free --threads 2
+uv run --frozen python scripts/diag/request_execution.py runs/archive/2026-11-before-full-pretrain/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow --mode follow --threads 2
+uv run --frozen python scripts/diag/request_execution.py runs/archive/2026-11-before-full-pretrain/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free --mode free --threads 2
 ```
 
 每批3卡，保存压缩逐帧数据和生产评测逐局结果；`first_episode=false`的补齐／后续局帧不参与统计。manifest保存完成状态、checkpoint／源码／卡源／split／批次SHA。后续复算：
 
 ```bash
-uv run --frozen python scripts/diag/summarize_request_execution.py runs/20261003-t7-control/follow runs/20261003-t7-control/free --out docs/practice-cards/reports/t7-request-execution-summary.json
+uv run --frozen python scripts/diag/summarize_request_execution.py runs/archive/2026-11-before-full-pretrain/20261003-t7-control/follow runs/archive/2026-11-before-full-pretrain/20261003-t7-control/free --out docs/practice-cards/reports/t7-request-execution-summary.json
 ```
 
 初次预检在构造来源哈希时遇到`stg_rl.Image`不可转bytes，尚未进入环境采样；改为逐卡源文件SHA后完成上述预检。不影响模型、引擎或正式实验协议。
@@ -112,7 +112,7 @@ uv run --frozen python scripts/diag/summarize_request_execution.py runs/20261003
 
 - 两个正式进程均退出码0，manifest均为complete；10批逐局数量／唯一首局终止／帧数核验通过，正式批次覆盖107次死亡和1557次通过。
 - 汇总命令退出码0，核验全部NPZ／逐局JSON的SHA；请求生命周期计数闭合。已用手工可数的短轨迹核对短段、A→B→A、请求改写／撤回／局末截断，以及DeathWindow和第二局排除，不新增永久测试文件。
-- [记录脚本](../../scripts/diag/request_execution.py)、[复算脚本](../../scripts/diag/summarize_request_execution.py)；逐帧与逐局原始产物在`runs/20261003-t7-control/{follow,free}/`，受现有gitignore保护；汇总JSON可版本管理。
+- [记录脚本](../../scripts/diag/request_execution.py)、[复算脚本](../../scripts/diag/summarize_request_execution.py)；逐帧与逐局原始产物在`runs/archive/2026-11-before-full-pretrain/20261003-t7-control/{follow,free}/`，受现有gitignore保护；汇总JSON可版本管理。
 - 已运行的相关测试为前述35 passed；没有改PPO、CUDA图、模型或引擎，未运行训练／Magnus／游戏UI，也未提交或推送。
 
 ## 来源

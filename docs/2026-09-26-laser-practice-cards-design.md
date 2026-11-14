@@ -6,7 +6,7 @@
 
 ## 1. 为什么要做
 
-T1 的激光数据（`configs/exp-t1-laser.toml`，rank 2 训练起点 156 个）：
+T1 的激光数据（`configs/archive/exp-t1-laser.toml`，rank 2 训练起点 156 个）：
 
 | 项 | 数值 |
 |---|---|

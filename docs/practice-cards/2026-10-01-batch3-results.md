@@ -14,8 +14,8 @@
 
 ## 产物与数据划分
 
-- 候选：[cards-laser-specialist](../../cards-laser-specialist/README.md)。
-- 隔离：[cards-laser-specialist-quarantine](../../cards-laser-specialist-quarantine/README.md)。
+- 候选：旧目录`cards-laser-specialist/`已迁移，入口见[统一卡库](../../cards/README.md)。
+- 隔离：旧目录`cards-laser-specialist-quarantine/`已迁移，当时状态保留在[逐卡验收汇总](reports/batch3/batch3-acceptance-summary.json)。
 - [逐卡JSON汇总](reports/batch3/batch3-acceptance-summary.json)、[CSV](reports/batch3/batch3-acceptance.csv)、[当前文件清单](reports/batch3/final-current-manifest.json)。
 - 五张04为held-out，加载器无论eval_ids如何均排除训练起点。批次未修改旧训练配置，默认和T2原有卡池不会自动扩入新目录；新held-out列表不能替代原作13卡旧划分。
 
@@ -31,7 +31,7 @@ corridor02仅补充可见几何cell控制器在rank0/1×seed1/7找到4条完成�
 
 残余固定站位样本已记录：bars03有39/80资格站桩完成，两个指定位置各8/8；其他卡也有有限幸存站位。独立审查未发现修订版本的参数全域保证通带，但这并非全空间/全随机域穷举，后续有效暴露及学习检验仍需做。
 
-最终轨迹保存在忽略的 `runs/laser-specialist-batch3-validation/`；大文件不入git。临时补充诊断source已逐字归档在 [tools/batch3_diagnostics](../../tools/batch3_diagnostics/README.md)。部分历史tmp轨迹可能被版本重跑覆盖，历史报告不替当前SHA验收。
+最终轨迹保存在忽略的 `runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/`；大文件不入git。临时补充诊断source已逐字归档在 [tools/batch3_diagnostics](../../tools/batch3_diagnostics/README.md)。部分历史tmp轨迹可能被版本重跑覆盖，历史报告不替当前SHA验收。
 
 ## 生产发现与修复
 

@@ -10,9 +10,9 @@ TH18 v1.00a 原生 tick 在 `0x424c7e` 从 manager+0xc0 读取首节点；manage
 
 - 在 renkolab 使用 `gcc -std=c11 -O2 -Wall -Wextra -Werror -pedantic` 编译 `native/tests/test_extract.c`、`native/th18_extract.c` 和 canonical `sa_model.c`，运行成功：`TH18 extractor/input tests passed`。
 - 使用原共享 Makefile 的 `make all`，显式指定 canonical `RENKOLAB`、`STGAGENT`、`TH16_NATIVE`、`TH18_NATIVE`；严格 x86 编译通过，PE32导出和依赖检查通过。
-- `python3 tools/th18-portable/build_probe.py --base dist/th18-ai-portable-20261022-r2.zip --dll /tmp/sunyunbo/th18-bullet-head-fix-20261022/runtime/stg_ai.dll --source /data/sunyunbo/www/renkolab --output dist/th18-ai-probe-20261022-r2.zip` 成功；22个 x86 二进制依赖闭包及全部文件校验通过。
+- `python3 tools/th18-portable/build_probe.py --base dist/archive/2026-11-before-full-pretrain/th18-ai-portable-20261022-r2.zip --dll /tmp/sunyunbo/th18-bullet-head-fix-20261022/runtime/stg_ai.dll --source /data/sunyunbo/www/renkolab --output dist/archive/2026-11-before-full-pretrain/th18-ai-probe-20261022-r2.zip` 成功；22个 x86 二进制依赖闭包及全部文件校验通过。
 
-修正版包：`dist/th18-ai-probe-20261022-r2.zip`，8,184,622字节、72文件。
+修正版包：`dist/archive/2026-11-before-full-pretrain/th18-ai-probe-20261022-r2.zip`，8,184,622字节、72文件。
 
 ZIP SHA256：`9c4a6eea37350a0f247be39a7e62f2760839124a1abc728fd76476a684db6cf3`。
 

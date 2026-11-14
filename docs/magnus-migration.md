@@ -10,8 +10,8 @@ Magnus（北大站点）上用 A100 跑训练，替代在 Vast.ai 租卡。本�
 - `docker://python:3.12` Job 的 `UV_CACHE_DIR` 未设置，默认 `/magnus/.cache/uv`。两次 `uv sync --frozen` 分别下载 68 个包，耗时 8 分 09 秒、8 分 13 秒，跨 Job 没有命中缓存。
 - 缓存的 PyTorch 镜像没有 `git`，Job 内直连 GitHub 下载 `stg-rl` wheel 发生超时。Magnus 注入的 SDK 也缺少 `typer` 等 Python 依赖，使用 `magnus receive` / `custody` 前要安装 `magnus-sdk`。
 - 该镜像自带的 `ninja 1.11.1.1` 会让全环境 `pip check` 返回非零，与本仓依赖无关；短 Job 改为只验证实际使用的包版本与训练路径。
-- `2.5.1-cuda12.4-cudnn9-runtime` 缺少 C 编译器，`torch.compile` 失败。换成站点已缓存的同版本 `devel` 镜像后，Job `1c1be6b6ac0da812` 的 `gpucheck` 所有数值对拍通过，并完成两次 PPO 更新、640 局评测、checkpoint、出图与打包，Job 状态为 Success。结果包已取回到本地 `runs/20260923-190104-magnus-cu124-smoke.tar.gz`（约 8 MB）。
-- 可复用训练入口 `magnus/train.sh` 也经 Job `bd399f020e27bb86` 完整验证：两次更新、评测、checkpoint、打包、Result secret 和本机下载均通过。结果包在 `runs/20260923-203522-magnus-wrapper-smoke.tar.gz`（约 8 MB）。
+- `2.5.1-cuda12.4-cudnn9-runtime` 缺少 C 编译器，`torch.compile` 失败。换成站点已缓存的同版本 `devel` 镜像后，Job `1c1be6b6ac0da812` 的 `gpucheck` 所有数值对拍通过，并完成两次 PPO 更新、640 局评测、checkpoint、出图与打包，Job 状态为 Success。结果包已取回到本地 `runs/archive/2026-11-before-full-pretrain/20260923-190104-magnus-cu124-smoke.tar.gz`（约 8 MB）。
+- 可复用训练入口 `magnus/train.sh` 也经 Job `bd399f020e27bb86` 完整验证：两次更新、评测、checkpoint、打包、Result secret 和本机下载均通过。结果包在 `runs/archive/2026-11-before-full-pretrain/20260923-203522-magnus-wrapper-smoke.tar.gz`（约 8 MB）。
 - File Custody 的 SDK 结果协议另用 CPU Job `46285c4e0fd0a54e` 验证：上传小文件、写 `$MAGNUS_RESULT`、从 `magnus job status` 读 secret、本机 `magnus receive` 下载，全部通过。
 - **CPU 可见性**：容器内 `os.cpu_count()` 返回宿主机的 112，进程亲和性只有申请到的 CPU（32 核 Job 为 `Cpus_allowed_list=2-17,58-73`，即单插槽 16 物理核加超线程），CFS quota 为 `-1`（Job `032ea8f38643e7dd`）。`env.threads = 0` 已改为取亲和性（`envwrap.usable_cpus`），不再开 112 个线程。
 
@@ -30,9 +30,9 @@ Magnus（北大站点）上用 A100 跑训练，替代在 Vast.ai 租卡。本�
 | `bash magnus/train.sh <配置> <运行名> [训练器参数]` | 正式单次训练；参数原样传给 `stgtrain.train`（`--total-updates N`、`--resume RUN_DIR`；`--runs-dir` 由脚本固定为 `runs/job-<JobID>`） | `job-<JobID>.tar.gz` |
 | `bash magnus/train-multi.sh 配置:名字[:种子] … [-- 训练器参数]` | 同一张卡并跑 K 条训练；每条 env 线程 = (亲和性核数 − 2K) / K（`THREADS=` 可覆盖），配置副本写进结果目录 | `multi-<JobID>.tar.gz`（所有 run 一个包） |
 | `bash magnus/bench.sh [配置] [名字]` | `threads × num_envs` 吞吐扫描（`stgtrain.train --bench`） | `bench.json` |
-| `[GPUCHECK=1] bash magnus/phase_probe.sh [线程数 …]` | 分阶段计时：每个线程数各跑 20 次更新，每 5 次采一次同步计时，汇总稳态帧率、各阶段中位秒数与每步计数；`GPUCHECK=1` 时先跑 gpucheck | `summary.json` + 各 run |
-| `bash magnus/graph_probe.sh` | rollout CUDA 图开 / 关 A/B（先跑 gpucheck） | `summary.json` + 各 run |
-| `[KS="1 2 3 4"] [CONFIG=…] [UPDATES=20] bash magnus/parallel_probe.sh` | 同卡并跑 K 条的吞吐扫描（线程按 `train-multi.sh` 的同一公式分），记每条 / 合计稳态帧率与显存峰值；默认配置 `exp-m0-rebase.toml` | `summary.json` + 各 run |
+| `[GPUCHECK=1] bash magnus/archive/phase_probe.sh [线程数 …]` | 分阶段计时：每个线程数各跑 20 次更新，每 5 次采一次同步计时，汇总稳态帧率、各阶段中位秒数与每步计数；`GPUCHECK=1` 时先跑 gpucheck | `summary.json` + 各 run |
+| `bash magnus/archive/graph_probe.sh` | rollout CUDA 图开 / 关 A/B（先跑 gpucheck） | `summary.json` + 各 run |
+| `[KS="1 2 3 4"] [CONFIG=…] [UPDATES=20] bash magnus/archive/parallel_probe.sh` | 同卡并跑 K 条的吞吐扫描（线程按 `train-multi.sh` 的同一公式分），记每条 / 合计稳态帧率与显存峰值；默认配置 `exp-m0-rebase.toml` | `summary.json` + 各 run |
 
 **退出时尝试交回结果**：`train.sh` / `train-multi.sh` / `parallel_probe.sh` 都装了 `trap EXIT`，正常结束、训练失败、
 Magnus 发 SIGTERM（终止 / 超时）三种情形都会尝试把已有的 run 目录（含 checkpoint）打包交给 File Custody；

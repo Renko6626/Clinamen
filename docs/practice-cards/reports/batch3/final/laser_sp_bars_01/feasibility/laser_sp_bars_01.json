@@ -109,7 +109,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_heuristic.jsonl",
       "trajectory_sha256": "afb65984709e59a0aebaeb3f5d861a5a363dd013ebce4d4acd11d44a8aeb6dcd",
       "trajectory_bytes": 276656,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -156,7 +156,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_spawn.jsonl",
       "trajectory_sha256": "ce213e40ebc067594be964b36b6124ee61e1380bfbae3fab0d69e7c7d5d705b8",
       "trajectory_bytes": 52293,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -203,7 +203,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "6b8e29d69654730121f764748f5f15f2ded69cb0bdbbc5c5e8da87d5ed3489bf",
       "trajectory_bytes": 45653,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -250,7 +250,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "184250fac6ede01599927281c2bfd89a804f518a93da5cfd906f02a621c6fcbd",
       "trajectory_bytes": 67248,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -297,7 +297,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "b5667668096035450b203b2b16d6f236149a46e7f9370f4b9f6ccb007148ca1d",
       "trajectory_bytes": 79326,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -341,7 +341,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "7fa8d7f8c5cdac680a22761c354b766d62cf5e6b5a53be4a72e34cbc32138b10",
       "trajectory_bytes": 41531,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -388,7 +388,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "97e5cefd52818afde8aed94af2a8392c506c4b46e223ff8838c074db168c1b40",
       "trajectory_bytes": 53789,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -435,7 +435,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "8a31f918ce856d2e96f9f16e0acca94c7ea62cb824b73c843033385084aa0e68",
       "trajectory_bytes": 77391,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -479,7 +479,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "549128618612b5ac6a67487d2ba582187c9faf3e24fe2bdec5e2c5c356d3b0c2",
       "trajectory_bytes": 40177,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -526,7 +526,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "a8629333cfcb3a905570811ccc2be66688be0aa51ba1d5d99335025397ee9329",
       "trajectory_bytes": 65689,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -570,7 +570,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s1_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "e19668a231407558b7617066edb2a3068d0014248d38c2d1f28e4030c920e912",
       "trajectory_bytes": 27524,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -608,7 +608,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_heuristic.jsonl",
       "trajectory_sha256": "fee1dcf0323e5b6a5a9c2094385975e0762231885fbb274fb2188d2c5691513d",
       "trajectory_bytes": 269187,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -655,7 +655,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_spawn.jsonl",
       "trajectory_sha256": "de85f2120ff4e4631497997be14627d8323ce863daad287418f8439d0d031902",
       "trajectory_bytes": 44435,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -702,7 +702,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "20aeb8f7beb7788c1c83e41aae0100c85545af65b0671de59d6c9938d1ef90bf",
       "trajectory_bytes": 34999,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -749,7 +749,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "394e4325853c728163650940e28308639d72489447397a9b23f2bba33b47f000",
       "trajectory_bytes": 60312,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -796,7 +796,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "9921b233f68a46a8b391ab1104dfe49cb0cf66e304f1e9d691f213652aa89025",
       "trajectory_bytes": 72581,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -840,7 +840,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "310e4dd40ad9102c018d104977774757706c95bccdffdad58faac1c8054d3c29",
       "trajectory_bytes": 34664,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -884,7 +884,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "3866fcd24be03a25d75d75d9d4c56d3fefac2f21c56f34f134638c7d53314b3f",
       "trajectory_bytes": 46509,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -931,7 +931,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "976e6a2960559dd91f13c0f9abfe49cd4364d8f6fa9e2e78b8d42583d482dfdf",
       "trajectory_bytes": 70681,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -972,7 +972,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "4af02e396105c71c3bddca583f6325a1cab7a1e01c0c9946479d64e6316edeab",
       "trajectory_bytes": 33214,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1019,7 +1019,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "dba122f41a8a6185a0faddb69e68461b40a598534b9d172983b13fee29f1dc44",
       "trajectory_bytes": 58658,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1063,7 +1063,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r0_s7_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "23397b38ab09b203acb865116e666f82aae69bf0417ac9a61ba979504bb7ece8",
       "trajectory_bytes": 20450,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1101,7 +1101,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_heuristic.jsonl",
       "trajectory_sha256": "03033c8a911c1e892b801b09d54c8abd1a94f4117e9468fa24f7edbf59db21bc",
       "trajectory_bytes": 275776,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1148,7 +1148,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_spawn.jsonl",
       "trajectory_sha256": "c88547d957157b55cf697aa4fa2fa29f2e5b15a3b950c8796de470b3d7880f10",
       "trajectory_bytes": 43076,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1195,7 +1195,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "484e66fa0c218e334d2da1d383398c97b00733ede9d3f977a5ef0fe7220f66e4",
       "trajectory_bytes": 38205,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1242,7 +1242,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "f4de3da62347e210a641f3b67382c442a3d4218602c7e4f4f7bcf8206ccc043c",
       "trajectory_bytes": 61075,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1289,7 +1289,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "a7294187ee03ff11f4f6adb2ecda1d24199d9938e2ebc0e421de6871cbdaa273",
       "trajectory_bytes": 56473,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1333,7 +1333,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "1313ed1bdb6f69370b5a8611de2371bde0aa07d522ddada25bc36731315786ee",
       "trajectory_bytes": 35411,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1377,7 +1377,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "891e500bbdc9ce89db27941c7d217990ad9126d41ced9e45681e666318dbd83f",
       "trajectory_bytes": 47696,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1424,7 +1424,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "10568e9e16e00b7f84829d43c5590b0ba3127bdc74aaa91e8375ddb6cc0ad0c4",
       "trajectory_bytes": 75171,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1465,7 +1465,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "04b6df2ee9af78c59f9fbec66667952d9a1b5a626c3963cd80a2f4eb2b4aff8f",
       "trajectory_bytes": 37942,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1512,7 +1512,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "288409b40115e2c9012b37aefaa73cca8d384b4bbb4957f5267a5d10a666296e",
       "trajectory_bytes": 63409,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1556,7 +1556,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s1_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "b15a2d3e48be995df990284410e56dee6df4f737b0e664e668b2a15305d74b3d",
       "trajectory_bytes": 25259,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1594,7 +1594,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_heuristic.jsonl",
       "trajectory_sha256": "2dde6123625be32fc066d511be2e7b1803d6349acaeb20f8cfa76b41cd795e69",
       "trajectory_bytes": 268608,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1641,7 +1641,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_spawn.jsonl",
       "trajectory_sha256": "0aa46c22257decef77739bad9f5002883069cb58dbf5872355a3d7cf4dda449a",
       "trajectory_bytes": 38848,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1688,7 +1688,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "a125777eaf644883b199a218f96ee454350677a1a37e04fe7d7abd1c8cb249d4",
       "trajectory_bytes": 28615,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1735,7 +1735,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "16f418b826a3b211c92d170abc91ed4b3323bca6f994c45fa08c18f5c2430d3b",
       "trajectory_bytes": 54138,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1782,7 +1782,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "72d6f374d149681ffa8e2f4f656948f9e9555bb113f514ef72e4e274e094e103",
       "trajectory_bytes": 66294,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1823,7 +1823,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "d4b5f4d2c02f70c58af66c6c32f9ab1d76e1e2427b85bfb566d8b6d18df5b9d7",
       "trajectory_bytes": 28687,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1867,7 +1867,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "27aacf7fa9986a2e657146df51ad593817463c808f0e42198ab89ceac12fc6c6",
       "trajectory_bytes": 40418,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1908,7 +1908,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "bb614330ea5d9fac097f26d477f6da1994ef423588415ddb38e08de362011754",
       "trajectory_bytes": 31339,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -1955,7 +1955,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "2dffb40c323f3219b4dd464e94a09f2da78320cdbdae03379d56b3010050d023",
       "trajectory_bytes": 80044,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2002,7 +2002,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "28ce12e7b4716e8f5dd989b702116a6b4f2b41d7ddbba154cac4e1cd39a456a0",
       "trajectory_bytes": 56378,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2046,7 +2046,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r1_s7_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "ca29d1b8e98150fec13110219ea2bd4d99fd62e5fe143bc6e0d376ca8bc81c79",
       "trajectory_bytes": 18215,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2084,7 +2084,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_heuristic.jsonl",
       "trajectory_sha256": "fbbd7ecd41a1e7d367a7e27cff1d5630cfd6e6088aae438b8b9cad885c94464b",
       "trajectory_bytes": 246260,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2131,7 +2131,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_spawn.jsonl",
       "trajectory_sha256": "e6d8b206a1e973ca2f5cc7d6cf46aafc9309d025a44f618be2cc084d66833091",
       "trajectory_bytes": 35979,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2178,7 +2178,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "72e647f0e0f5857b5639a03881b1959555eead99d4c402158e627f59032bccae",
       "trajectory_bytes": 32429,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2225,7 +2225,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "03a83baf46ac26f080fd561175753f647d9d753d06a42a24fdf72c33d29456a9",
       "trajectory_bytes": 55993,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2272,7 +2272,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "1d800577f2dc91b676ff0a3d64e4369deec8d97e42ab914b48182be988acf9a8",
       "trajectory_bytes": 45872,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2316,7 +2316,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "f0b2ad8e5a82c12f9b440e99be19eb9280bff8d2e2c05fa5109c5571f2fc22fc",
       "trajectory_bytes": 30362,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2360,7 +2360,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "bc2170dbf971395d08eaefa81d1e123808032ca910487a823d5da007fd03020b",
       "trajectory_bytes": 42680,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2407,7 +2407,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "12e1f5d2de560a4ca750d9d269acbc2bcb80e5428f6f800b7c23ceda70575fca",
       "trajectory_bytes": 72951,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2448,7 +2448,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "b840bda6c25117aa3a5412710ab56ecbc8d51f48aaef3d35aed7113ad7deaed8",
       "trajectory_bytes": 35692,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2495,7 +2495,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "28a3990cecace354a6acb1431a915b357e811f9feb23eb3ece6f007bff1edc6d",
       "trajectory_bytes": 61129,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2539,7 +2539,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s1_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "2a324bb8c977a4919e51a153bd5775d2b136fe8481784b6554250e5ab2b997fc",
       "trajectory_bytes": 22994,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2577,7 +2577,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_heuristic.jsonl",
       "trajectory_sha256": "8a3cc62a30aa09e02afb48806b2632051ff4add15c8906889dab3942bccf03de",
       "trajectory_bytes": 84985,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2624,7 +2624,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_spawn.jsonl",
       "trajectory_sha256": "8332695ef6e81358998a5d79bda9f79a7f7794e7feebd45209169cae8c957c5b",
       "trajectory_bytes": 27070,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2671,7 +2671,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "0d7396730eb35f4f2961801393469e788b3ea817c38cefcd7ac3437e6fb8b8f6",
       "trajectory_bytes": 23447,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2718,7 +2718,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "5cfdbfb79605792f7cd26254c065f7a4c964884d82ecb89155e76e6dbb2fc887",
       "trajectory_bytes": 49056,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2765,7 +2765,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "45858525cab655dac77e6c4b798b654688b61a0810c379bfcdba26ce5689e57f",
       "trajectory_bytes": 43429,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2812,7 +2812,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "4777b5551281105242d0aca419c579a0129e3d2823b82061c141ad271d9591bb",
       "trajectory_bytes": 74423,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2856,7 +2856,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "fda344dcb86b3d9a39635016864b11937f00d73b9cba97b2e3cc9d5428f6b992",
       "trajectory_bytes": 35554,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2897,7 +2897,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "78f4d4ea84eb8b23d42d124739c7d0796cd37cdecdfa1d8d34eed4dfa57e6e40",
       "trajectory_bytes": 29059,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2944,7 +2944,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "6176c0313c11d5367f103515a96eb9692acc8df77a3b913147d47dc870e2cad6",
       "trajectory_bytes": 77839,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -2991,7 +2991,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "9c1392d5454a3fc5ac7cf8f4eb6e94880d958a24e3312f58ae5d3a0b5c400959",
       "trajectory_bytes": 54098,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3035,7 +3035,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r2_s7_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "d1c10038f1ee080e3cf3a9731c12136e587ed70bb81e42bf392807e209c4fab4",
       "trajectory_bytes": 15980,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3073,7 +3073,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_heuristic.jsonl",
       "trajectory_sha256": "075dfd7c71c6ea6e3ad1588a085437a3c2852bcf3979bf91ed3c255940705621",
       "trajectory_bytes": 277477,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3120,7 +3120,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_spawn.jsonl",
       "trajectory_sha256": "a4d9e367f406142a1cda33094430e23f4653e98968c274181100c40b3e59914b",
       "trajectory_bytes": 30241,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3167,7 +3167,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "ebcc3a46249a28fc0a01171638c8c57bd1f6ca001005d30e62010d8a28bec77f",
       "trajectory_bytes": 27717,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3214,7 +3214,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "b91659c77b7d80c63ebaebafde3b9ab4c201fdf4772f1cd8839bc45d861e69ec",
       "trajectory_bytes": 51832,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3261,7 +3261,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "ce3464dedf0aadf45f382fdfbc3bdf80c083c67611afd24a1a8487cafcad99f5",
       "trajectory_bytes": 37916,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3302,7 +3302,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "bc61efc32bf49cf31f326c1e7cce19e853649878b718a325b6915da9ab2b1903",
       "trajectory_bytes": 26840,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3346,7 +3346,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "c41d3309b2bf52396f5f422f2ecf78c94d16655689d8918bafb2fa1078582be1",
       "trajectory_bytes": 38576,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3393,7 +3393,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "daf9860b51e8e60b4d5cc4ef7dcb179a33239a384fc8cd65434d7cb02f316a9a",
       "trajectory_bytes": 70731,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3434,7 +3434,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "9305c06caebb42d16946f58bf07e9ebf14fafbe37fe72d1c462743ac3bab87fd",
       "trajectory_bytes": 33442,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3481,7 +3481,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "16c48917766d589a011eaf0e3a72ca56a6fb4130d0da6dfa00bd42dff0112a0c",
       "trajectory_bytes": 58849,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3525,7 +3525,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s1_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "578a206d57af4d274794744da9d0c2f943390eaf699e11ef9a9c9b924cbf6587",
       "trajectory_bytes": 20729,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3563,7 +3563,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_heuristic.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_heuristic.jsonl",
       "trajectory_sha256": "95873d332cf1666dcc1b4cc09c23f106115f8f22484a68988af1c6297af8e4ae",
       "trajectory_bytes": 267963,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3610,7 +3610,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_spawn.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_spawn.jsonl",
       "trajectory_sha256": "0935d2ebb257c343911e244e3a7088e3da203d7fa77685d1386dbcd8af9cd1a7",
       "trajectory_bytes": 21936,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3654,7 +3654,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_0.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_0.0_392.0.jsonl",
       "trajectory_sha256": "fbe7c49f36f3410b1d552286b787f7a6c7cdac860552e5bf43f1ab73fc884a28",
       "trajectory_bytes": 19343,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3701,7 +3701,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-128.0_392.0.jsonl",
       "trajectory_sha256": "82117a4f7b6703bf8054f4b95d2934cbcb47d89041c7220e6135ea4b5a17b259",
       "trajectory_bytes": 44896,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3748,7 +3748,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_128.0_392.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_128.0_392.0.jsonl",
       "trajectory_sha256": "296bf4a7d928420d148ac10884e7a3e576e1d94ffe0ceff975bafb20caf772a2",
       "trajectory_bytes": 34229,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3795,7 +3795,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-128.0_80.0.jsonl",
       "trajectory_sha256": "ee02f994cae953ff5aad0ac55d3fe5d9c8eb7b7f2c0f300e8dfa074041dddabd",
       "trajectory_bytes": 70290,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3836,7 +3836,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_128.0_80.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_128.0_80.0.jsonl",
       "trajectory_sha256": "c237891de373c6bd5fea4f044e8b04de781a16cf09b4077ec12ddd03ec0bbf76",
       "trajectory_bytes": 31451,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3877,7 +3877,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-192.0_0.0.jsonl",
       "trajectory_sha256": "3e5e025b95e079f3b0d8f42f5428df39c514f9f2f61401a48b2a36f6d4dfe277",
       "trajectory_bytes": 26779,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3924,7 +3924,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_192.0_0.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_192.0_0.0.jsonl",
       "trajectory_sha256": "ff62e2d077ea7ea5a70c3b3dfe30968346ea32917d6c9c6ed3129aebc626bce9",
       "trajectory_bytes": 75634,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -3971,7 +3971,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_-192.0_448.0.jsonl",
       "trajectory_sha256": "4e68611cba9cbeeb838d85fa22a15e6573663449fe9d47259fc13163941f99c2",
       "trajectory_bytes": 51818,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"
@@ -4012,7 +4012,7 @@
         "speed_px_per_frame": 4.5,
         "focus": false
       },
-      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_192.0_448.0.jsonl",
+      "trajectory": "/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/laser-specialist-batch3-validation/laser_sp_bars_01/9cccf7153844/trajectories/laser_sp_bars_01_r3_s7_baseline_192.0_448.0.jsonl",
       "trajectory_sha256": "dbd6cf4a39806d1bff428da61a95908caeb0c1bd488bcb9a4b5c3bf8d979d22e",
       "trajectory_bytes": 14932,
       "auto_reset_note": "stopped on first done; returned observation may be the next reset state"

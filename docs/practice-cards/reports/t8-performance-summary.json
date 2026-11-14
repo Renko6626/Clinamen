@@ -28,8 +28,8 @@
     }
   },
   "sources": {
-    "runs/job-cec000c4981cc5af/20261001-185732-t6-laser-joint/metrics.jsonl": "09f77488b17d973484f5eb8ebc8245dfa0d2205416c6071407ebf2f5fd133e7c",
-    "runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/metrics.jsonl": "1101fc35542b94cece9d67b9d13892c9da45a549d138ce5c9fcbe9da4a7ff82d"
+    "runs/archive/2026-11-before-full-pretrain/job-cec000c4981cc5af/20261001-185732-t6-laser-joint/metrics.jsonl": "09f77488b17d973484f5eb8ebc8245dfa0d2205416c6071407ebf2f5fd133e7c",
+    "runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/metrics.jsonl": "1101fc35542b94cece9d67b9d13892c9da45a549d138ce5c9fcbe9da4a7ff82d"
   },
   "window": "updates>=250 and update%20==0"
 }

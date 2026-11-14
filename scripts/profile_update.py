@@ -5,8 +5,8 @@
   1. 编译 + CUDA 图（与训练相同）下计时 ITERS 次，得到真实的每 minibatch 毫秒数；
   2. 关掉编译与 CUDA 图（否则整段是一次图重放、看不到算子），用 torch.profiler 按算子汇总 GPU 时间。
 
-    python scripts/profile_update.py OUT_DIR configs/exp-q2-raw.toml configs/exp-r1a-sa1.toml …
-    python scripts/profile_update.py OUT_DIR "configs/exp-r1a-sa1.toml+model.ln_affine=false+model.density_fp32=true"
+    python scripts/profile_update.py OUT_DIR configs/archive/exp-q2-raw.toml configs/archive/exp-r1a-sa1.toml …
+    python scripts/profile_update.py OUT_DIR "configs/archive/exp-r1a-sa1.toml+model.ln_affine=false+model.density_fp32=true"
 
 每个参数可带 `+节.键=值`（值按 TOML 解析）覆盖配置，结果名里带上覆盖项。
 """

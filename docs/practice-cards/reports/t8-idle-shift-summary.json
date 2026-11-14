@@ -11,7 +11,7 @@
       "sustained_stationary_shift_flips": 19831,
       "sustained_stationary_flip_per_s": 3.220973985544517,
       "example": {
-        "file": "runs/20261003-t8-interval/deploy-i1/batch-00.npz",
+        "file": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-00.npz",
         "env_column": 0,
         "card_rank": [
           "th06_s1_w04",
@@ -47,7 +47,7 @@
       "sustained_stationary_shift_flips": 24740,
       "sustained_stationary_flip_per_s": 3.22208836648976,
       "example": {
-        "file": "runs/20261003-t8-interval/free-i1/batch-00.npz",
+        "file": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-00.npz",
         "env_column": 0,
         "card_rank": [
           "th06_s1_w04",
@@ -79,15 +79,15 @@
     }
   },
   "sources": {
-    "runs/20261003-t8-interval/deploy-i1/batch-00.npz": "b176f69ef6cbd31b9d050b56640058345e50661f17d2f97b4729a99116622942",
-    "runs/20261003-t8-interval/deploy-i1/batch-01.npz": "4dbddebbc606e40d2b63c55fb9c8e5044a136e2b7310f3877d27b0295ed6f51d",
-    "runs/20261003-t8-interval/deploy-i1/batch-02.npz": "adeaa686901223a6a1401f4d3236fdc2f2a1db7ec66ea180e25b87e7e3a43589",
-    "runs/20261003-t8-interval/deploy-i1/batch-03.npz": "c657bd948bfda7e95e1a00f6acf940cb16f0ea46d2d5022e412b48ff7665fd15",
-    "runs/20261003-t8-interval/deploy-i1/batch-04.npz": "cd4b6d249a1fdc0fd19aaf35f3ffde4a47cd89f495f28177bb9eac2ff1722400",
-    "runs/20261003-t8-interval/free-i1/batch-00.npz": "c7b715d6bf1b29024d5e6b3ff6d2809a26049167f313cb72de0ed09578d57a11",
-    "runs/20261003-t8-interval/free-i1/batch-01.npz": "537ed8c3ce54ceb89647940e7282c1354eeef3fb361388e158d2b993121a699f",
-    "runs/20261003-t8-interval/free-i1/batch-02.npz": "0722e2d04c99f595a7ac98c31555516b247beafe3d875f10ad941d091c01c3ed",
-    "runs/20261003-t8-interval/free-i1/batch-03.npz": "26b3582cbc4c27e077bd88e4b82a3929ea56571895a855e30453596347cc2a26",
-    "runs/20261003-t8-interval/free-i1/batch-04.npz": "64284cb9a729eab6940ad3dcc7d8583c809c6b2346bf6d6cfb0b9654b9d12107"
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-00.npz": "b176f69ef6cbd31b9d050b56640058345e50661f17d2f97b4729a99116622942",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-01.npz": "4dbddebbc606e40d2b63c55fb9c8e5044a136e2b7310f3877d27b0295ed6f51d",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-02.npz": "adeaa686901223a6a1401f4d3236fdc2f2a1db7ec66ea180e25b87e7e3a43589",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-03.npz": "c657bd948bfda7e95e1a00f6acf940cb16f0ea46d2d5022e412b48ff7665fd15",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-04.npz": "cd4b6d249a1fdc0fd19aaf35f3ffde4a47cd89f495f28177bb9eac2ff1722400",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-00.npz": "c7b715d6bf1b29024d5e6b3ff6d2809a26049167f313cb72de0ed09578d57a11",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-01.npz": "537ed8c3ce54ceb89647940e7282c1354eeef3fb361388e158d2b993121a699f",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-02.npz": "0722e2d04c99f595a7ac98c31555516b247beafe3d875f10ad941d091c01c3ed",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-03.npz": "26b3582cbc4c27e077bd88e4b82a3929ea56571895a855e30453596347cc2a26",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-04.npz": "64284cb9a729eab6940ad3dcc7d8583c809c6b2346bf6d6cfb0b9654b9d12107"
   }
 }

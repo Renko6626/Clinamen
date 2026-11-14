@@ -363,8 +363,8 @@
     }
   },
   "sources": {
-    "runs/t6-t8-mixed-eval/T6.json": "ec1cf7b2b567acbc1f0c6266cda561ea348b24d6cc9dcd6003fc152e4391a683",
-    "runs/t6-t8-mixed-eval/T8.json": "1851097a48cd6327c87542e136a5a71d1790a0c55483bcc57e8af39ca57a3752"
+    "runs/archive/2026-11-before-full-pretrain/t6-t8-mixed-eval/T6.json": "ec1cf7b2b567acbc1f0c6266cda561ea348b24d6cc9dcd6003fc152e4391a683",
+    "runs/archive/2026-11-before-full-pretrain/t6-t8-mixed-eval/T8.json": "1851097a48cd6327c87542e136a5a71d1790a0c55483bcc57e8af39ca57a3752"
   },
   "changes_pp": {
     "synth_laser_s1_b1": 6.25,

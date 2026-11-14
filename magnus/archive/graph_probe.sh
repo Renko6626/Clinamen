@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A/B the rollout CUDA graphs (featurize + reward/episode stats) on one A100: gpucheck, then off vs on.
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
+source "$(dirname "$0")/../bootstrap.sh"
 
 python -m stgtrain.gpucheck configs/base.toml
 

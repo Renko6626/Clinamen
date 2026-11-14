@@ -905,47 +905,47 @@
         "batched_torch_inference_seconds": 314.37081180140376
       },
       "wall_seconds": 489.4049233738333,
-      "manifest": "runs/20261003-t8-interval/deploy-i1/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/manifest.json",
       "manifest_sha256": "8d44493b91b3958809daa1d93a47b1edb87feb78812f019194f74ed0b97efaf4",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-00.npz",
           "sha256": "b176f69ef6cbd31b9d050b56640058345e50661f17d2f97b4729a99116622942"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-00.json",
           "sha256": "788c09703fcbb22c85067d83525be868fd04f2d7c04692eab63f0170b0b2bb34"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-01.npz",
           "sha256": "4dbddebbc606e40d2b63c55fb9c8e5044a136e2b7310f3877d27b0295ed6f51d"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-01.json",
           "sha256": "5049c3ca5e20442ab749894ea1cddb6f068cd60d1053b6fab4671f961ce4c04e"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-02.npz",
           "sha256": "adeaa686901223a6a1401f4d3236fdc2f2a1db7ec66ea180e25b87e7e3a43589"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-02.json",
           "sha256": "ff798cbdaf1bd15deb6c490496e935e0c2e86f402549bf229eafb543e709c7c2"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-03.npz",
           "sha256": "c657bd948bfda7e95e1a00f6acf940cb16f0ea46d2d5022e412b48ff7665fd15"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-03.json",
           "sha256": "58f60db6e9e4fb7921aa4f61bde51c7fc79de753d91c0beef9009f64d61cc4c1"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-04.npz",
           "sha256": "cd4b6d249a1fdc0fd19aaf35f3ffde4a47cd89f495f28177bb9eac2ff1722400"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i1/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1/batch-04.json",
           "sha256": "eeebbf74e97eabb0d2647cf3e2f966a324cc5a493641c53791028ad8326c1915"
         }
       ],
@@ -1962,47 +1962,47 @@
         "batched_torch_inference_seconds": 161.03268171288073
       },
       "wall_seconds": 316.6195009164512,
-      "manifest": "runs/20261003-t8-interval/deploy-i2/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/manifest.json",
       "manifest_sha256": "c3ad8bab9bc3f8b16ce68f240be00181d5bd9166ad74858aba5a1404e2e84302",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-00.npz",
           "sha256": "ce9cd43b26101767bc66a46446b0d2e23eec73cc7d55005a1407e3b2de7cce19"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-00.json",
           "sha256": "4836a243cef25eaf8ecb32ecd679b0fbce7b846d2a8963e77510d0584af265d9"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-01.npz",
           "sha256": "ed152d95fa634cb50d2f34fdc86ed01a2e72912736a28d52f47bc66f561e5b6d"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-01.json",
           "sha256": "890971433dda47f34bd9cf914617734422d0008524dcf5b0397d4754de3afe81"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-02.npz",
           "sha256": "3214e1320f208c7df49ef9f43f0e6e2e0f2d94ac040b6f77fc16175b86c7f9b7"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-02.json",
           "sha256": "b6d46e6592e10ab8e5fc1f2adbc1c344ba9abc248a03ff28b3a3510f2b409d4c"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-03.npz",
           "sha256": "489e1bfa00bae569bc154ff2bcd983eefcff185b526973259bd41e12274b1307"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-03.json",
           "sha256": "f19be8232cfe826d124623bb483ffd2fa3c3bb55fd578d66a9b7170a5e043c0f"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-04.npz",
           "sha256": "82163f8a93c1b8fa3de4d7b01cea571f74aca803067bed58f0081233928a9fd6"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i2/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i2/batch-04.json",
           "sha256": "349fe6b89fc71fc165eef2a9b281cad4afe02d14c2ef01ffcb36cccc732799ba"
         }
       ],
@@ -3019,47 +3019,47 @@
         "batched_torch_inference_seconds": 136.30431453883648
       },
       "wall_seconds": 306.92219674400985,
-      "manifest": "runs/20261003-t8-interval/deploy-i3/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/manifest.json",
       "manifest_sha256": "59dba4352202d475253b788777bfa1e7363cca0d1cc1c1e7ca71bf28d509b0d9",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-00.npz",
           "sha256": "aa322dafc44e1fc59ce730cbb17573ec712ffa300be9478099a856daec8d0a17"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-00.json",
           "sha256": "1916b26898760362393f4e952fdc88ef2e9e318d3500175531260dc17bc03988"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-01.npz",
           "sha256": "90e67d6a89644c42c31b3e629a872fa04306ae01e9ec8ffbe88968874e130afb"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-01.json",
           "sha256": "94f9b09b2e3d5077554693954e865419bdb69f8dd69d3463e0968df1e609584a"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-02.npz",
           "sha256": "327013588af9c38f5f3e191c2740467d3e83faa56a4fe835ccd886cc47dacbf0"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-02.json",
           "sha256": "85520aab22bdd360ffd304b0faa5fd2d49acd6c489d8b10205da5efa006bbe7d"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-03.npz",
           "sha256": "a01610723e0c98fdcd256ce50bf0914ac4ebd69cccbab2c36e14e23531c92179"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-03.json",
           "sha256": "18f689457101a1b9b42641007d8231d93cc888dfd41475607b40515566c916b4"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-04.npz",
           "sha256": "79cccdaeefa56abd6c2298c76ef5feb19aeb3c109491aa16e8c821c1257d48e1"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i3/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3/batch-04.json",
           "sha256": "554cb21477bc2ae07477853280cfa3ceacace02aa9b9266290d7e06c2a384b16"
         }
       ],
@@ -4076,47 +4076,47 @@
         "batched_torch_inference_seconds": 114.03344890661538
       },
       "wall_seconds": 282.15808462910354,
-      "manifest": "runs/20261003-t8-interval/deploy-i4/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/manifest.json",
       "manifest_sha256": "bbbf8b48f6fd9856b3bd0c9c8718c8c561fe45d07d281d4ce77b4b77c1986e9a",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-00.npz",
           "sha256": "b66cbaa0355b8ca343e6046a2494d4ac90ceb80ff9636390a01d55645ebfb61d"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-00.json",
           "sha256": "bc2485e2a58da6200a53b83a24027f7edd908631781054468669fb3766e72c13"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-01.npz",
           "sha256": "f8d5c004b99003a942f7dbef316744675ba1c04d6ed9bfaea69533a168a49247"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-01.json",
           "sha256": "d036c479f73990ecba98535731f0deb15eaccebbea15ae6fdd2f64f24859e01a"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-02.npz",
           "sha256": "a768c5d7e8a990dec7c7fac5685199853760ee1ba6873821c58853cfc02e782e"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-02.json",
           "sha256": "c91f4b3165249f66e91c96acd35c336dfaad06b83a2d7b0fa37e1d20439f8e5a"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-03.npz",
           "sha256": "d90eb9f64648531f78665b18e68b92842f3203df0adfc5c6ee6987ce5be8cdbe"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-03.json",
           "sha256": "00faeab913518c69464bfa6434bf491fbe749dabcff9efbbd1205713847f0dee"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-04.npz",
           "sha256": "f487abce0e5d1d3ea40f86490772c26416de300b4fb2cf5d569bdd6c8f01fe83"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i4/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4/batch-04.json",
           "sha256": "324360af662ffdcdd0ba94c70c92c2f72556cd02ff2f36ff28a79ae8de407517"
         }
       ],
@@ -5133,47 +5133,47 @@
         "batched_torch_inference_seconds": 82.18994527123868
       },
       "wall_seconds": 237.1086865104735,
-      "manifest": "runs/20261003-t8-interval/deploy-i6/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/manifest.json",
       "manifest_sha256": "4e13e65983a2367d22f55a62870be3addf90002a03d273392724fc18955d718a",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-00.npz",
           "sha256": "852294327909416d5d63346e95aecba0d5bc9124acf3309560448f2e1183cb97"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-00.json",
           "sha256": "a8a77bc2357feb90b525011e8d49f652e616ae7aac279de6ff5e1bfcc70996bc"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-01.npz",
           "sha256": "7814efa825d4b3b839c58e1b61fc49e32664cb10b69a1d2cd713fef9ade2c9f8"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-01.json",
           "sha256": "eccdc4e19b0a60da5e3b5def6a64b2ac123e03b8a55e1ceb8a9621154dc254bd"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-02.npz",
           "sha256": "bc07911331dec394e3df5b2b1fc809cc1f03dfc87891d06ceb4d8654c32dcbcd"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-02.json",
           "sha256": "30aae8f86510b16a3c86707b988a6c16be19791d18c8e380d2157dc112aa8d69"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-03.npz",
           "sha256": "6631fabc053d961b81969576667d049273bc5b31a7fe550cf07f156b9f405e40"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-03.json",
           "sha256": "b639639ddeaeef8eee783b978b0fe016ae93fc8a1e6036ba8ca69a1805cd46c2"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-04.npz",
           "sha256": "9a980a5ee45ece088fb5b5fdd55980dbd58d9a6652d0f514abaad7777553020e"
         },
         {
-          "path": "runs/20261003-t8-interval/deploy-i6/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i6/batch-04.json",
           "sha256": "d3d6051a44234a7130b440dace9cbec547912c1e06f55bf869155f8e65b71738"
         }
       ],
@@ -6190,47 +6190,47 @@
         "batched_torch_inference_seconds": 317.6960644815117
       },
       "wall_seconds": 451.46635538339615,
-      "manifest": "runs/20261003-t8-interval/free-i1/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/manifest.json",
       "manifest_sha256": "dae19955061fca512d4470d768719aa33750994fa0e8c0aa9a8fc70e43527f1b",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-00.npz",
           "sha256": "c7b715d6bf1b29024d5e6b3ff6d2809a26049167f313cb72de0ed09578d57a11"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-00.json",
           "sha256": "76d1e2942a1f8cba738216f6108fb82012b379f959fd612be1503493b382361f"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-01.npz",
           "sha256": "537ed8c3ce54ceb89647940e7282c1354eeef3fb361388e158d2b993121a699f"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-01.json",
           "sha256": "62d919fe8783482b06ec051160e21cb6e9a82bed320e0585e20d9a8e37f1e838"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-02.npz",
           "sha256": "0722e2d04c99f595a7ac98c31555516b247beafe3d875f10ad941d091c01c3ed"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-02.json",
           "sha256": "97ee825b5f2b1725f3010a901c47b9d7d707ea1e5d650e7fcbcd15a144caeba8"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-03.npz",
           "sha256": "26b3582cbc4c27e077bd88e4b82a3929ea56571895a855e30453596347cc2a26"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-03.json",
           "sha256": "21fb596045814f755ca42e810e8aa25c76be736e5b27ea8a6e20207a1f90a1c5"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-04.npz",
           "sha256": "64284cb9a729eab6940ad3dcc7d8583c809c6b2346bf6d6cfb0b9654b9d12107"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i1/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i1/batch-04.json",
           "sha256": "9b7659b02e0b6a584c5b3b11b3996ce6978ba617a9137f86022c2c83408b1fba"
         }
       ],
@@ -7247,47 +7247,47 @@
         "batched_torch_inference_seconds": 175.02188169024885
       },
       "wall_seconds": 302.4618381485343,
-      "manifest": "runs/20261003-t8-interval/free-i2/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/manifest.json",
       "manifest_sha256": "faac7ac6719c8cdd98d1ee66acc6248f1b22c1aee45b171950111f4a3212c82a",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-00.npz",
           "sha256": "e977d569eca9f881b2fab2e822722e7fb7e203351763afff0437a7041ca22423"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-00.json",
           "sha256": "083bdfcaff2c6bbe383ff04558da03ec19734ce1cd3ddcbfb1ae220e5f289e24"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-01.npz",
           "sha256": "2022d5c47dea7e3a7bfc9d87de40325686027d568ee7fc87b643a8394101b67c"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-01.json",
           "sha256": "a3416d16aff7318be0a1c7d35f99a1acfca751f5feb5e5f51b80f54eabb7c24c"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-02.npz",
           "sha256": "4b789df9597cc9affd8830071af3630f0d4780ce1c29d8256cfc59a7a32d8b80"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-02.json",
           "sha256": "ec8820f6dda826142a74ed5b95c5d304fc1c4b6efb38a9f41e0d5226fbe8ef37"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-03.npz",
           "sha256": "d1df1d8ff83beb96bcfa99d39e3941d8a962566be042fbab89eb7ab9ffd7a94a"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-03.json",
           "sha256": "1db3b7569aa4aead9bd2190dea71d183a5aa99994f7fb4acb4a3f1c360897d1a"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-04.npz",
           "sha256": "723a0889cd5d8d1db2f482220977643e087c33825736637b169b147bc0dca2b5"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i2/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i2/batch-04.json",
           "sha256": "595a20be7ba3507c98ccc101e343b6276d124449763fa5aff44b17bf18f917d0"
         }
       ],
@@ -8304,47 +8304,47 @@
         "batched_torch_inference_seconds": 122.4019047897309
       },
       "wall_seconds": 238.8666966315359,
-      "manifest": "runs/20261003-t8-interval/free-i3/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/manifest.json",
       "manifest_sha256": "33abc03f9e9b060dc6691c4b53b526b4ddc71156f3d2ece87df495e13ef532d8",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-00.npz",
           "sha256": "7c3710a80f41bd24fb95d826865b10089bbbcf27ecd2044cbb284c9af9f32ea8"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-00.json",
           "sha256": "4d26a775bfb9c4875218232958f9a8836c758c5657c6c90e525f528a0ca18115"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-01.npz",
           "sha256": "0f38d7d15c727ef74bc2c4b62b521de43e688d0749dab3e41afbe8f21bb644e8"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-01.json",
           "sha256": "d67b29467e28ac1f57b8e39944f37b507b5cb74b232197003f46ee73e091bc2a"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-02.npz",
           "sha256": "7cb4aa17c85261580085e68df9c6c3e00d62d2f1e2c49387095b1f371690993f"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-02.json",
           "sha256": "bda9ce9846a7f1340d7cb067dd3051e0dae38d35b6742ec757ba5084dd34804c"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-03.npz",
           "sha256": "0cdc327ad1e3074411a08478e6909c833a74e1e62e03addfe5c9fd7a354e5e52"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-03.json",
           "sha256": "268bcc15205f652807a95ea1e79d6092627d672b1cd88ee5075adabd3b1d81d1"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-04.npz",
           "sha256": "1242cb9198eb5ba39d7ef11b47954af814e640a0d412a3cac807c93048ad2086"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i3/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i3/batch-04.json",
           "sha256": "69dae5220cd3c497a3b51b65a9063e7daf2bde91e6816249307ec52c9a4da97f"
         }
       ],
@@ -9361,47 +9361,47 @@
         "batched_torch_inference_seconds": 114.92554126493633
       },
       "wall_seconds": 244.18677904829383,
-      "manifest": "runs/20261003-t8-interval/free-i4/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/manifest.json",
       "manifest_sha256": "8ddf72848230b1ced4e2e7bf7396a46faf71c5c8f1cc1b4d4c58355f3babe311",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-00.npz",
           "sha256": "c4c18ac0e28889bda9c037259194199644e821142e4712f56c5b802e60a342e6"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-00.json",
           "sha256": "63ed8e055222b1724242913d31ab65919637c1773823e86ef44e5e1c9f0b1c46"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-01.npz",
           "sha256": "e2508af36fd85c6867b0662e6a80ade33328452ddf83f07ba5507cfd7262a75a"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-01.json",
           "sha256": "bc78defbe176e649944f65754b032497802409316113109d55b0222a2037a040"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-02.npz",
           "sha256": "d0736198f9e50021508aada709fa41d3baf407fdbd78111f42d9f4287548f942"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-02.json",
           "sha256": "b19776fc4873cc44c6a972774ad68bd5f35144e7b7807ab996b65042a0d95ab8"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-03.npz",
           "sha256": "48ee6cd651e4c632a84a3381b1580eb758d7658d4ffd351c00b0f2ee7b8f4347"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-03.json",
           "sha256": "fec60866f9278ac61cce89d890defecba79444ac2a736b1bb47ad5ddc204e032"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-04.npz",
           "sha256": "7cfca97aed9de656121b145bd162bd36ab16cab0f1a765a0b94609c2a6b9bd14"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i4/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i4/batch-04.json",
           "sha256": "0fdabc1508c32d67023ec4f0e6e4a604af6fa50857167bd33e7e55331dabc135"
         }
       ],
@@ -10418,47 +10418,47 @@
         "batched_torch_inference_seconds": 81.5403408408165
       },
       "wall_seconds": 200.75753180123866,
-      "manifest": "runs/20261003-t8-interval/free-i6/manifest.json",
+      "manifest": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/manifest.json",
       "manifest_sha256": "b758a56053ab3abccb45124503d4e45fcd05be7b90080a0bb607d3acd8145393",
       "source_files": [
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-00.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-00.npz",
           "sha256": "94224104ec1e91b69ad4763a1a41a690689da4e8d0a145acf0bfa12ead165aad"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-00.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-00.json",
           "sha256": "3811fd98a317d13552b956fe34ffbf38c1abde586015fb8350b71ff3dd8abd05"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-01.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-01.npz",
           "sha256": "7cc988a4cea235c4228614859c75e2d6bc5fea1fca9e78a472834fdbe0be7f15"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-01.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-01.json",
           "sha256": "4ec95d451c2ffff1d7fff310ef6badaa0051d862bcf8057fdc26071a495cde40"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-02.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-02.npz",
           "sha256": "8d5aaaf10c4dd3ff437a6734b73faedb0bce844de0c813a3a2933f18de4f18d9"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-02.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-02.json",
           "sha256": "8d88c473c7a8b4ca99715c7e7b32e76d97985c145fac26cf0dcfa539aec50ffc"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-03.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-03.npz",
           "sha256": "0a05a75a665af325343f573663bc862dfe3556114401ecf821f5f46bf984b9d0"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-03.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-03.json",
           "sha256": "15834b0b97171303f1d8642c9c1ed7b4b6e9b8fb7f6f84d27391bd84a1fdfb01"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-04.npz",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-04.npz",
           "sha256": "54c95671f365b83c4a2ae77bf3fc52e50c2a7e53805ca01b94f35015a33f7a40"
         },
         {
-          "path": "runs/20261003-t8-interval/free-i6/batch-04.json",
+          "path": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/free-i6/batch-04.json",
           "sha256": "fff0234f4284bd593af54fa219fdf22cb9bd5be5ebcad1951222473d87325670"
         }
       ],
@@ -14929,13 +14929,13 @@
   },
   "collector_revisions": [
     {
-      "archive": "runs/20261003-t8-interval/collector-before-i3.py",
+      "archive": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/collector-before-i3.py",
       "archive_sha256": "e4d556e800d11f310add50dd2d250c2922a48cf79a64d57cbfac5dd72fb4d08e",
       "current_sha256": "5d99ed265427a26705a7234bc30f4a7d2b01f90ac131dddcd33849c2485f8d07",
       "change": "docstring and CLI choices only; scheduler unchanged"
     },
     {
-      "archive": "runs/20261003-t8-interval/collector-before-i46.py",
+      "archive": "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/collector-before-i46.py",
       "archive_sha256": "82c95f78e7036b9879f4b6014dc23c59d4c660a263939055d336d1e136b8bb5f",
       "current_sha256": "5d99ed265427a26705a7234bc30f4a7d2b01f90ac131dddcd33849c2485f8d07",
       "change": "docstring and CLI choices only; scheduler unchanged"
@@ -16012,9 +16012,9 @@
   "onnx_benchmark_sha256": "192b0d7bde0608a3c179efa158840fbd0659ad525035d5769cc8654232a17702",
   "deployment_manifest_sha256": "cfa391535e3bab5fffd03427c120d793b42ef9dfc0f7249acee8cec7538611af",
   "benchmark_sources": {
-    "runs/20261003-t8-interval/preflight-i1/feeds.npz": "95edb10951cc76c1a7bef4b7fcdae697f0ee6e7c429b20931a9839657647763d",
-    "runs/20261003-t8-interval/preflight-i1/feeds-meta.json": "395d7396c700f27b87bc1d05a6840ebe512f38b9f59fe8486d1e0e7c2fbaa8d2",
-    "runs/20261003-t8-interval/preflight-i1/manifest.json": "8bffa7233c1deb5715b6799bf95190593d9b50216e4775baae356686ce00740c"
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1/feeds.npz": "95edb10951cc76c1a7bef4b7fcdae697f0ee6e7c429b20931a9839657647763d",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1/feeds-meta.json": "395d7396c700f27b87bc1d05a6840ebe512f38b9f59fe8486d1e0e7c2fbaa8d2",
+    "runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1/manifest.json": "8bffa7233c1deb5715b6799bf95190593d9b50216e4775baae356686ce00740c"
   },
   "diagnostic_source_sha256": {
     "/data/sunyunbo/www/stg-rl-train/scripts/diag/benchmark_interval_onnx.py": "75c8c1afe640fcd01573321399d015c9f0e35d539c11eb20931cdf80cc902aaf",

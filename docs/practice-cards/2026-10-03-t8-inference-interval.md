@@ -29,7 +29,7 @@
 预检命令模板（分别取interval=1、2，输出preflight-i1、preflight-i2）：
 
 ```bash
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/preflight-i1 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 1 --preflight
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 1 --preflight
 uv run --frozen pytest -q tests/test_motor.py tests/test_evaluate.py tests/test_episodes.py
 ```
 
@@ -38,7 +38,7 @@ uv run --frozen pytest -q tests/test_motor.py tests/test_evaluate.py tests/test_
 ORT基准在正式四臂启动前完成，避免本次评测负载干扰。使用预检采集的50份实际观测、640／256／64行图输入，实际ONNX与部署manifest SHA一致，ORT1.22.0 wheel与既有官方来源收据SHA一致。CPU单线程／ORT_SEQUENTIAL／ORT_ENABLE_ALL与共享C一致；固定输入流10轮，交替臂顺序与输入偏移0／1，平衡奇偶样本（预检样本按卡／rank交错），不只反复测偶数rank2样本。
 
 ```bash
-uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/20261003-t8-interval/preflight-i1/feeds.npz --model dist/t8-laser-k4-best.onnx --runtime-wheel runs/t8-package-validation/ort122/onnxruntime-1.22.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl --out runs/20261003-t8-interval/onnx-benchmark.json
+uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1/feeds.npz --model dist/archive/2026-11-before-full-pretrain/t8-laser-k4-best.onnx --runtime-wheel runs/archive/2026-11-before-full-pretrain/t8-package-validation/ort122/onnxruntime-1.22.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/onnx-benchmark.json
 ```
 
 实测中位数：每游戏帧摊销0.8477→0.4092毫秒，ONNX调用部分减少51.72%。这不是整个mod或Windows游戏CPU减少51.72%；抽取／填表等仍需逐帧做，硬件与后台负载也有差异。基准不会模拟缓存动作的行为收益，行为由下面四臂单独评测。
@@ -46,7 +46,7 @@ uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/2026
 正式四臂命令采用同一个模板，mode∈{deploy,free}、interval∈{1,2}，日志分别在对应输出目录旁边的.log：
 
 ```bash
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/deploy-i1 --mode deploy --interval 1 --episodes 16 --threads 2
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i1 --mode deploy --interval 1 --episodes 16 --threads 2
 ```
 
 本机cgroup v1 user.slice为quota=-1，每臂torch／引擎2线程。四个实际Python进程已核验且均约200% CPU，有真实步进日志；启动时PID为2099548／2099717／2099547／2099551（deploy-i1／deploy-i2／free-i1／free-i2）。每臂5批、每批最多3卡，manifest记录状态和输入／源码／批次SHA。
@@ -56,7 +56,7 @@ uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792
 后续复算命令：
 
 ```bash
-uv run --frozen python scripts/diag/summarize_inference_interval.py runs/20261003-t8-interval --out docs/practice-cards/reports/t8-inference-interval-summary.json
+uv run --frozen python scripts/diag/summarize_inference_interval.py runs/archive/2026-11-before-full-pretrain/20261003-t8-interval --out docs/practice-cards/reports/t8-inference-interval-summary.json
 ```
 
 ## 完整筛查结果（2026-10-03）
@@ -112,35 +112,35 @@ uv run --frozen python scripts/diag/summarize_inference_interval.py runs/2026100
 - 正式四个进程退出码0、manifest均complete；相关测试35 passed，预检生产评测对齐、完整轨迹及reset检查通过。
 - 复算脚本退出码0，全部NPZ／逐局JSON SHA和计数复算通过；四臂mode／interval／16局、批次布局、rank2/3、config／engine／torch／split／卡源／helper源均一致。benchmark→feeds→部署ONNX→训练checkpoint SHA链已绑定。
 - 独立审查检出了固定偶数样本的基准偏差，正式基准已改为交替输入起点并保留记录；审查后的汇总额外补入局数／批次和模型来源断言，没有改变采集或指标。
-- [采集脚本](../../scripts/diag/inference_interval.py)、[ONNX基准](../../scripts/diag/benchmark_interval_onnx.py)、[复算脚本](../../scripts/diag/summarize_inference_interval.py)；原始产物`runs/20261003-t8-interval/`遵守gitignore，JSON汇总可版本管理。
+- [采集脚本](../../scripts/diag/inference_interval.py)、[ONNX基准](../../scripts/diag/benchmark_interval_onnx.py)、[复算脚本](../../scripts/diag/summarize_inference_interval.py)；原始产物`runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/`遵守gitignore，JSON汇总可版本管理。
 - 未验证Windows实际游戏帧耗时、真实游戏日志或新的游戏部署实现；未提交／推送。
 
 ## 继续消融：间隔3帧（2026-10-03，已完成）
 
 用户随后明确要求继续看3帧效果。沿用已确认语义、T8 u3500、卡／rank／seed／意图／运动层／每格16局及3卡批次，新增deploy-i3与free-i3各416局，共832新局；历史1／2帧行为数据复用，不重新训练或修改mod。每3帧推理，另外两帧复用原始请求；所有环境／控制状态仍每帧推进。
 
-采集器原本的age／缓存调度是通用正间隔，代码只改文档字符串和CLI choices。改前保存`runs/20261003-t8-interval/collector-before-i3.py`，其SHA `e4d556e800d11f310add50dd2d250c2922a48cf79a64d57cbfac5dd72fb4d08e`与全部历史1／2帧manifest一致。新汇总必须证明当前代码等于该归档的这两处替换，才能纳入不同script SHA的历史对照；其他config／源码／卡源／helper／batch要求保持一致。
+采集器原本的age／缓存调度是通用正间隔，代码只改文档字符串和CLI choices。改前保存`runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/collector-before-i3.py`，其SHA `e4d556e800d11f310add50dd2d250c2922a48cf79a64d57cbfac5dd72fb4d08e`与全部历史1／2帧manifest一致。新汇总必须证明当前代码等于该归档的这两处替换，才能纳入不同script SHA的历史对照；其他config／源码／卡源／helper／batch要求保持一致。
 
 3帧小规模预检：原两张弱项卡、两档、每格2局，共8局，5局撑过、3局死亡。逐帧缓存／推理节奏与首局边界及reset检查通过，相关已有测试35 passed（73.29秒）。预检只用于链路检查，不以5/8与旧6/8判断性能差异。
 
 ```bash
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/preflight-i3 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 3 --preflight
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i3 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 3 --preflight
 ```
 
 ONNX性能基准在本次同轮比较1／2／3，旧基准保留；12轮循环／反转执行次序，使各间隔在每个次序位置出现4次，输入起点轮换0..5，平衡模2／3。固定50份样本×12＝600游戏帧／臂／轮，调用次数600／300／200；3帧还会在每轮均匀覆盖50份输入。正式基准在本次预检／测试完成后、完整行为评测启动前运行，避免本次评测负载。
 
 ```bash
-uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/20261003-t8-interval/preflight-i1/feeds.npz --model dist/t8-laser-k4-best.onnx --runtime-wheel runs/t8-package-validation/ort122/onnxruntime-1.22.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl --intervals 1 2 3 --out runs/20261003-t8-interval/onnx-benchmark-i123.json
+uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1/feeds.npz --model dist/archive/2026-11-before-full-pretrain/t8-laser-k4-best.onnx --runtime-wheel runs/archive/2026-11-before-full-pretrain/t8-package-validation/ort122/onnxruntime-1.22.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl --intervals 1 2 3 --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/onnx-benchmark-i123.json
 ```
 
 正式行为命令模板（mode分别deploy／free）：
 
 ```bash
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/deploy-i3 --mode deploy --interval 3 --episodes 16 --threads 2
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i3 --mode deploy --interval 3 --episodes 16 --threads 2
 ```
 
 ```bash
-uv run --frozen python scripts/diag/summarize_inference_interval.py runs/20261003-t8-interval --intervals 1 2 3 --benchmark runs/20261003-t8-interval/onnx-benchmark-i123.json --out docs/practice-cards/reports/t8-inference-interval123-summary.json
+uv run --frozen python scripts/diag/summarize_inference_interval.py runs/archive/2026-11-before-full-pretrain/20261003-t8-interval --intervals 1 2 3 --benchmark runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/onnx-benchmark-i123.json --out docs/practice-cards/reports/t8-inference-interval123-summary.json
 ```
 
 独立只读审查确认3帧调度、基准的模3覆盖与执行顺序，以及历史控制代码的窄范围哈希归并正确。汇总追加“所选间隔必须存在于benchmark”的校验。保持单seed／每格16局、动态前向批量浮点微差及非Windows实机的边界。
@@ -209,25 +209,25 @@ AUTO的rank2总体96.15／97.60／95.67%，rank3总体92.79／92.31／86.06%，�
 各8局预检完成：4帧8/8、6帧5/8撑过，只用于链路验证，不作能力结论。独立完整轨迹核验：4帧2792次首局推理＝sum ceil(steps/4)，15个reset；6帧1562次，16个reset。请求复用／新局立即推理／首局边界／逐帧运动层检查通过，相关已有测试35 passed（71.34秒）。
 
 ```bash
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/preflight-i4 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 4 --preflight
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/preflight-i6 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 6 --preflight
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i4 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 4 --preflight
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i6 --cards th06_s3_w12 th06_s4_b12 --episodes 2 --interval 6 --preflight
 uv run --frozen pytest -q tests/test_motor.py tests/test_evaluate.py tests/test_episodes.py
 ```
 
 本轮五档ORT基准在预检／测试后、正式行为任务前运行。帧数取50×lcm(12,1,2,3,4,6)=600；输入偏移数取lcm(gcd(50,i))=2，轮数2×lcm(5,2)=20。每档在五个执行位置各出现4次；每份输入在1／2／3／4／6帧分别使用240／120／80／60／40次，均等覆盖，旧基准文件不覆盖。
 
 ```bash
-uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/20261003-t8-interval/preflight-i1/feeds.npz --model dist/t8-laser-k4-best.onnx --runtime-wheel runs/t8-package-validation/ort122/onnxruntime-1.22.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl --intervals 1 2 3 4 6 --out runs/20261003-t8-interval/onnx-benchmark-i12346.json
+uv run --frozen python scripts/diag/benchmark_interval_onnx.py --feeds runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/preflight-i1/feeds.npz --model dist/archive/2026-11-before-full-pretrain/t8-laser-k4-best.onnx --runtime-wheel runs/archive/2026-11-before-full-pretrain/t8-package-validation/ort122/onnxruntime-1.22.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl --intervals 1 2 3 4 6 --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/onnx-benchmark-i12346.json
 ```
 
 正式行为模板（mode分别deploy/free、interval分别4/6）：
 
 ```bash
-uv run --frozen python scripts/diag/inference_interval.py runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/20261003-t8-interval/deploy-i4 --mode deploy --interval 4 --episodes 16 --threads 2
+uv run --frozen python scripts/diag/inference_interval.py runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/deploy-i4 --mode deploy --interval 4 --episodes 16 --threads 2
 ```
 
 ```bash
-uv run --frozen python scripts/diag/summarize_inference_interval.py runs/20261003-t8-interval --intervals 1 2 3 4 6 --benchmark runs/20261003-t8-interval/onnx-benchmark-i12346.json --out docs/practice-cards/reports/t8-inference-interval12346-summary.json
+uv run --frozen python scripts/diag/summarize_inference_interval.py runs/archive/2026-11-before-full-pretrain/20261003-t8-interval --intervals 1 2 3 4 6 --benchmark runs/archive/2026-11-before-full-pretrain/20261003-t8-interval/onnx-benchmark-i12346.json --out docs/practice-cards/reports/t8-inference-interval12346-summary.json
 ```
 
 目的为观察各意图／普通／激光的退化曲线，不人为拟合单一阈值，不假定单调。继续保留单seed／每格16局和动态前向批量浮点微差的边界。只读独立审查通过；不改mod、不训练、不执行此前实验2，不提交／推送。

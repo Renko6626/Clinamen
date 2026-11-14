@@ -2,10 +2,10 @@
 # Operator-level profile of one PPO minibatch update (no env): scripts/profile_update.py for each config,
 # fp32 and bf16. Results (per-config tables + summary.json) are packed and uploaded even on failure.
 #
-#   bash magnus/profile_update.sh configs/exp-q2-raw.toml configs/exp-r1a-sa1.toml
+#   bash magnus/archive/profile_update.sh configs/archive/exp-q2-raw.toml configs/archive/exp-r1a-sa1.toml
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
-source "$(dirname "$0")/lib.sh"
+source "$(dirname "$0")/../bootstrap.sh"
+source "$(dirname "$0")/../lib.sh"
 
 out_dir="runs/a100-update-profile-${MAGNUS_JOB_ID:-local}"
 mkdir -p "$out_dir"

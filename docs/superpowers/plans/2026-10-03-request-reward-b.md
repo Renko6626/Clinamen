@@ -44,7 +44,7 @@
 
 ## Task 2：B配置、冒烟与交付
 
-**Files:** 新建 `configs/exp-request-reward-k8.toml`；局部扩展 `tests/test_smoke.py` 的现有v8/v3冒烟参数；更新实验登记、本方案和项目记忆。
+**Files:** 新建 `configs/archive/exp-request-reward-k8.toml`；局部扩展 `tests/test_smoke.py` 的现有v8/v3冒烟参数；更新实验登记、本方案和项目记忆。
 
 **Interfaces:** B 与原 T7 配置的处理差异只有 `reward.action_source="request"`；frame_skip=1显式写出与默认一致。模型构建与导出继续使用v8/v3。
 

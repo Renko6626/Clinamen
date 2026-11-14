@@ -20,7 +20,7 @@
 - [原始输入解码](../../../src/stgtrain/envwrap.py)：激光12列，遗漏缓冲已提供的 `start_len`。
 - 引擎 `crates/stg-rl/src/encode.rs` 输出 `start_len`；名为 `omega` 的观测字段来自 `dang`，是上一帧到当前帧的总转角，包含脚本改角度，不等于未来持续旋转速率。
 - 引擎 `crates/stg-core/src/world/integrate.rs`：`end += speed`，超过 `start_len` 后近端跟进。不可假定近端一直以 `speed` 前移。
-- [T5配置](../../../configs/exp-t5-laser-specialist.toml)与[结果边界](../../practice-cards/2026-10-01-t5-results.md)。
+- [T5配置](../../../configs/archive/exp-t5-laser-specialist.toml)与[结果边界](../../practice-cards/2026-10-01-t5-results.md)。
 
 ## 历史审阅中的截断边界
 
@@ -158,7 +158,7 @@ lasers[14]  -> laser MLP [14  -> 64 -> 64] + laser type embedding
 
 ## 候选实验配置
 
-准备 `configs/exp-t6-laser-joint.toml`，从T5复制训练参数，仅按下述差异更新模型／特征化器。删除旧 `laser_local` 开关；v8固定14维。
+准备 `configs/archive/exp-t6-laser-joint.toml`，从T5复制训练参数，仅按下述差异更新模型／特征化器。删除旧 `laser_local` 开关；v8固定14维。
 
 ```toml
 [featurize]
@@ -220,4 +220,4 @@ density_fp32 = true
 
 这些分组与复核有重复，不相加成总测试数。旧CPU venv未安装ONNX/ORT，旧栈仅验证模型／训练／包装构建；真实ONNX导出对拍来自本地锁定环境。全仓非相关检查未运行。
 
-剩余边界：部署调用方尚未适配版本6；CUDA图、实际GPU bf16和吞吐未验证；未启动正式训练，未证明收益。候选入口为`configs/exp-t6-laser-joint.toml`，不应把候选配置当作开跑授权。
+剩余边界：部署调用方尚未适配版本6；CUDA图、实际GPU bf16和吞吐未验证；未启动正式训练，未证明收益。候选入口为`configs/archive/exp-t6-laser-joint.toml`，不应把候选配置当作开跑授权。

@@ -39,9 +39,9 @@
     }
   },
   "sources": {
-    "runs/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/eval/3500.json": "1cbe1842633191035ea425129d79e0948f9e4458d3723805621ad49a03bac3f7",
-    "runs/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/probe/motor_off.json": "c5398126b938c31023d575dc3b44946b8ec43f883dc7e5621f6c018eb17ad0a7",
-    "runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/eval/3500.json": "e25327119f85b386bbca5b08847907b031bb76cf407f635829ddee202da9623c",
-    "runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/probe/motor_off.json": "3fe4c874ff6839ced0db18203c51319be80e30edaacc06fdf151d865ceff1cbd"
+    "runs/archive/2026-11-before-full-pretrain/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/eval/3500.json": "1cbe1842633191035ea425129d79e0948f9e4458d3723805621ad49a03bac3f7",
+    "runs/archive/2026-11-before-full-pretrain/job-bfd1c1cd62146a55/20261002-152220-t7-laser-k8/probe/motor_off.json": "c5398126b938c31023d575dc3b44946b8ec43f883dc7e5621f6c018eb17ad0a7",
+    "runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/eval/3500.json": "e25327119f85b386bbca5b08847907b031bb76cf407f635829ddee202da9623c",
+    "runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/probe/motor_off.json": "3fe4c874ff6839ced0db18203c51319be80e30edaacc06fdf151d865ceff1cbd"
   }
 }

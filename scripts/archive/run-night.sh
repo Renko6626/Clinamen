@@ -2,16 +2,16 @@
 # 无人值守串行跑一批实验（队列见下面的 EXPS；单条 2000 轮约 2h、3500 轮约 3h40）。
 #
 #   tmux new -s night
-#   bash scripts/run-night.sh                        # 自动选线程（未知机器先 bench 一次，三条复用）
-#   bash scripts/run-night.sh --threads 32
-#   bash scripts/run-night.sh --only h,i             # 只跑其中几条
-#   bash scripts/run-night.sh --retries 3            # 单条最多续训几次（默认 2）
-#   bash scripts/run-night.sh --smoke                # 30 秒 CPU 冒烟：先确认脚本本身没问题再放它跑整夜
-#   bash scripts/run-night.sh --loose-check          # gpucheck 不通过也继续（只打印 WARN）
-#   bash scripts/run-night.sh --no-check             # 完全跳过 gpucheck
-#   bash scripts/run-night.sh --parallel 2           # 同机并行 2 条（受限于显存，见下）
-#   bash scripts/run-night.sh --no-preflight         # 跳过「每条配置真跑 2 轮」的试车
-#   bash scripts/run-night.sh --only n3 --share 2    # 分两个终端各开一条时：告诉脚本这台机器同时要跑 2 条（用来分 CPU 配额）
+#   bash scripts/archive/run-night.sh                        # 自动选线程（未知机器先 bench 一次，三条复用）
+#   bash scripts/archive/run-night.sh --threads 32
+#   bash scripts/archive/run-night.sh --only h,i             # 只跑其中几条
+#   bash scripts/archive/run-night.sh --retries 3            # 单条最多续训几次（默认 2）
+#   bash scripts/archive/run-night.sh --smoke                # 30 秒 CPU 冒烟：先确认脚本本身没问题再放它跑整夜
+#   bash scripts/archive/run-night.sh --loose-check          # gpucheck 不通过也继续（只打印 WARN）
+#   bash scripts/archive/run-night.sh --no-check             # 完全跳过 gpucheck
+#   bash scripts/archive/run-night.sh --parallel 2           # 同机并行 2 条（受限于显存，见下）
+#   bash scripts/archive/run-night.sh --no-preflight         # 跳过「每条配置真跑 2 轮」的试车
+#   bash scripts/archive/run-night.sh --only n3 --share 2    # 分两个终端各开一条时：告诉脚本这台机器同时要跑 2 条（用来分 CPU 配额）
 #
 # 设计要点（都是为了睡觉时别白跑）：
 #   · **开跑前先体检**：GPU 可见 + gpucheck（真做一次前向/反向，编译与 CUDA 图都走一遍）+ 磁盘余量。
@@ -31,14 +31,14 @@
 #     **2026-09-19 实测**（I2 + J 并行 3500 轮）：单条 47.8k / 47.1k 帧/s，合计 94.9k
 #     = 单跑 70k 的 1.36 倍；每条 5.33h / 5.41h（单跑约 3h40）。要线性加速就另租一台，别硬塞第三条。
 set -uo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/../.."
 
 # 当前队列（跑完一批就换成下一批；G0/H/I、I2/J 已于 2026-09-19 跑完，见 docs/experiments.md）
-# L（M + rank 3 进训练）‖ O（M + 熵系数 0.003），两条同机并行：  bash scripts/run-night.sh --parallel 2
-# 分两个终端各开一条：  bash scripts/run-night.sh --only l --share 2   /   --only o --share 2 --no-check
+# L（M + rank 3 进训练）‖ O（M + 熵系数 0.003），两条同机并行：  bash scripts/archive/run-night.sh --parallel 2
+# 分两个终端各开一条：  bash scripts/archive/run-night.sh --only l --share 2   /   --only o --share 2 --no-check
 EXPS=(
-  "l configs/exp-l-rank3.toml"
-  "o configs/exp-o-entropy.toml"
+  "l configs/archive/exp-l-rank3.toml"
+  "o configs/archive/exp-o-entropy.toml"
 )
 THREADS=""; RETRIES=2; ONLY=""; SMOKE=0; CHECK=strict; PAR=1; PREFLIGHT=1; SHARE=""
 VRAM_PER_RUN_MB=11000     # 单条实测峰值 10.1G，留一点余量

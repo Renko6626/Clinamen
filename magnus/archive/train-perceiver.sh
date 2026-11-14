@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# P2: strict GPU gate, density-only initialization, fixed final paired evaluation.
+# Perceiver: direct u2000 training, shared-only initialization, fixed paired evaluation.
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
-source "$(dirname "$0")/lib.sh"
+source "$(dirname "$0")/../bootstrap.sh"
+source "$(dirname "$0")/../lib.sh"
 out_dir="runs/job-${MAGNUS_JOB_ID:-local}"
 mkdir -p "$out_dir"
 MAGNUS_PIDS=()
@@ -21,12 +21,7 @@ on_exit() {
 }
 trap on_exit EXIT
 trap 'echo "收到终止信号，打包已有结果" >&2; exit 0' TERM INT
-python - "$1" "$out_dir/gpucheck.toml" <<'PY'
-import sys
-from stgtrain.config import dump_toml, load_config
-dump_toml(load_config(sys.argv[1], {"ppo": {"amp": "off"}}), sys.argv[2])
-PY
-python -u -m stgtrain.gpucheck "$out_dir/gpucheck.toml" 2>&1 | tee "$out_dir/gpucheck.log"
+echo 'Perceiver seed1/u2000: user waived separate GPU precheck'
 (
     set -o pipefail
     python -u -m stgtrain.train "$@" --runs-dir "$out_dir" --no-pack 2>&1 | tee "$out_dir/console.log"

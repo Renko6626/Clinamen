@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Run several trainings concurrently on this Job's one GPU, then hand back one bundle.
 #
-#   bash magnus/train-multi.sh configs/exp-m0-rebase.toml:m0-s1 configs/exp-m0-rebase.toml:m0-s2:2
+#   bash magnus/train-multi.sh configs/archive/exp-m0-rebase.toml:m0-s1 configs/archive/exp-m0-rebase.toml:m0-s2:2
 #
 # Each argument is config:name[:seed]. Env threads per run = (affinity CPUs − 2K) / K unless
 # THREADS is set. Trainer flags for every run go after "--" (e.g. -- --total-updates 20).

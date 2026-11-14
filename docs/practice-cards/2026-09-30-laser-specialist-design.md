@@ -56,7 +56,7 @@
 
 ## 6. 当前观测带来的设计约束
 
-2026-09-30 核对 [T2 配置](../../configs/exp-t2-laser-pilot.toml) 与 [danger_topk_v7](../../src/stgtrain/featurize/danger_topk_v7.py)：
+2026-09-30 核对 [T2 配置](../../configs/archive/exp-t2-laser-pilot.toml) 与 [danger_topk_v7](../../src/stgtrain/featurize/danger_topk_v7.py)：
 
 - 当前配置 `k_lasers = 16`。候选包含预警态和生效态，排除收缩态；按自机中心到激光判定盒的距离取最近的 K 条。
 - 因此大量同时存在的激光可能让较远但即将封路的预警被截掉。第一批建议把同时存在的预警与生效激光总数控制在 16 条以内，通过接力、空间覆盖与持续时间提高强度。这是隔离观测截断混杂的试产建议，不是引擎容量上限或未来永久限制。

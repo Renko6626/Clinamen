@@ -4,7 +4,7 @@
 
 ## 完成与来源
 
-Job `3c0392a2052fb68e`实际Success，GPUCHECK PASS，训练完整完成3500updates／917,504,000帧；best/latest均u3500。原作最终评测和8份专项JSON齐全，结果包84,769,994字节，SHA256 `ccfee1f4476ac7437ac7d8d7ee0599cd41ee06c56e2a2e25b371c0ec9e6bd3a4`，已解至`runs/job-3c0392a2052fb68e/20261004-204129-request-reward-k8/`。
+Job `3c0392a2052fb68e`实际Success，GPUCHECK PASS，训练完整完成3500updates／917,504,000帧；best/latest均u3500。原作最终评测和8份专项JSON齐全，结果包84,769,994字节，SHA256 `ccfee1f4476ac7437ac7d8d7ee0599cd41ee06c56e2a2e25b371c0ec9e6bd3a4`，已解至`runs/archive/2026-11-before-full-pretrain/job-3c0392a2052fb68e/20261004-204129-request-reward-k8/`。
 
 监视器在下载成功后生成SHA记录时调用了Python3.11才有的hashlib.file_digest，而监视解释器实际为Python3.10.12，导致AttributeError；原报告“download-failed”不能解释为结果丢失。已用分块SHA补齐download.json并修复本任务的临时监视脚本，旧错误保留为download-verification-error.txt。未扩大修改到其他监视器或训练代码。
 
@@ -67,6 +67,6 @@ AUTO激光92.71→80.21%、自由激光93.23→88.54%；关运动层激光两臂
 
 ## 本次检查
 
-对结果归档流式SHA、成员路径和完整产物检查；加载真实best/latest checkpoint核验update／env_steps／reward来源；重算按卡／rank分组的通过数，并与overall及历史T7摘要核对。分析脚本`runs/request-reward-analysis/summarize.py`，结果保留原始JSON和metrics SHA。不改训练代码、不运行额外永久测试或游戏UI。
+对结果归档流式SHA、成员路径和完整产物检查；加载真实best/latest checkpoint核验update／env_steps／reward来源；重算按卡／rank分组的通过数，并与overall及历史T7摘要核对。分析脚本`runs/archive/2026-11-before-full-pretrain/request-reward-analysis/summarize.py`，结果保留原始JSON和metrics SHA。不改训练代码、不运行额外永久测试或游戏UI。
 
 2026-10-06：用户认可保留15维输入、下一轮降低请求惩罚强度的方向；具体系数、对照臂与GPU预算尚未确定，本次仅核对其他待做实验，未创建配置或开跑。

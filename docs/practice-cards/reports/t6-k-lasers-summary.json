@@ -3,12 +3,12 @@
   "device": "cpu",
   "episodes_per_card_rank": 32,
   "sources": {
-    "runs/t6-k-lasers/k16-original-laser.json": "08beb24b563cdab4e61c9fce08c5c8b49d5cd6e9002bfb1dee0daae70f29d9d9",
-    "runs/t6-k-lasers/k16-specialist.json": "5414db4b2cfdc3c3edcf8c3f8b17fa142a0114cada2a201ad9205c226da96c30",
-    "runs/t6-k-lasers/arm8/k8-original-laser.json": "4ed0e471a129fe63ad0cfdb1952982607c1d5f3beb88185c159377f7a016c2fd",
-    "runs/t6-k-lasers/arm8/k8-specialist.json": "e16a00ff5bb2985588175f4c7911166fc571e8f857405c29fc74124ccbe48a1f",
-    "runs/t6-k-lasers/arm4/k4-original-laser.json": "de17929130268e5ee913c89f4a1c3dec559b195f367724fcc9c559996eb6dd40",
-    "runs/t6-k-lasers/arm4/k4-specialist.json": "7fcec5efc018567d672221f0bd20e9ff867569cc62856a223ea01cad3d5c6727"
+    "runs/archive/2026-11-before-full-pretrain/t6-k-lasers/k16-original-laser.json": "08beb24b563cdab4e61c9fce08c5c8b49d5cd6e9002bfb1dee0daae70f29d9d9",
+    "runs/archive/2026-11-before-full-pretrain/t6-k-lasers/k16-specialist.json": "5414db4b2cfdc3c3edcf8c3f8b17fa142a0114cada2a201ad9205c226da96c30",
+    "runs/archive/2026-11-before-full-pretrain/t6-k-lasers/arm8/k8-original-laser.json": "4ed0e471a129fe63ad0cfdb1952982607c1d5f3beb88185c159377f7a016c2fd",
+    "runs/archive/2026-11-before-full-pretrain/t6-k-lasers/arm8/k8-specialist.json": "e16a00ff5bb2985588175f4c7911166fc571e8f857405c29fc74124ccbe48a1f",
+    "runs/archive/2026-11-before-full-pretrain/t6-k-lasers/arm4/k4-original-laser.json": "de17929130268e5ee913c89f4a1c3dec559b195f367724fcc9c559996eb6dd40",
+    "runs/archive/2026-11-before-full-pretrain/t6-k-lasers/arm4/k4-specialist.json": "7fcec5efc018567d672221f0bd20e9ff867569cc62856a223ea01cad3d5c6727"
   },
   "arms": {
     "16": {

@@ -57,6 +57,6 @@ A训练含四次常规评测76分40秒，B76分41秒；两条并行，从提交�
 
 结果路径：`runs/job-9436bd073b636c2b/20261006-151336-request-light-k8`、`runs/job-b3ef72c1ca44515d/20261006-151317-request-light-shift-k8`。
 
-完整指标、源JSON/归档SHA、卡级曲线：[GPU评测汇总](reports/request-shift-short-ab-summary.json)。静止筛选、分子分母、逐卡和NPZ SHA：[逐帧诊断汇总](reports/request-shift-short-ab-idle.json)。可重跑计算在`runs/request-shift-ab-analysis/{analyze.py,analyze_idle.py}`，轨迹在`runs/request-shift-ab-idle/`。
+完整指标、源JSON/归档SHA、卡级曲线：[GPU评测汇总](reports/request-shift-short-ab-summary.json)。静止筛选、分子分母、逐卡和NPZ SHA：[逐帧诊断汇总](reports/request-shift-short-ab-idle.json)。可重跑计算在`runs/archive/2026-11-before-full-pretrain/request-shift-ab-analysis/{analyze.py,analyze_idle.py}`，轨迹在`runs/archive/2026-11-before-full-pretrain/request-shift-ab-idle/`。
 
 验证：归档SHA重算、1000个连续唯一更新、最终帧数、配置唯一差异、共同初始化SHA、best/latest同模型、普通/激光分组加权重算与overall逐项对齐。轨迹记录器检查执行按钮/覆盖标志并核对首局结束记录；静止帧和请求/执行翻转计数另用逐环境逐帧循环独立重算，四组全部一致。非线性段长比例没有从卡级比例重新平均。

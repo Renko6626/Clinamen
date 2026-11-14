@@ -4,9 +4,9 @@
 
 ## 产物与使用
 
-- `dist/th06nc-autoplay-20261006-b-request-reward-k8.zip`，7,758,699字节，13个文件。
+- `dist/archive/2026-11-before-full-pretrain/th06nc-autoplay-20261006-b-request-reward-k8.zip`，7,758,699字节，13个文件。
 - SHA256：`152852bc135834226f3f28ac114e8ce0d208f57dcbcd499fc8fa1b61bc4f74b1`。旁边有`.zip.sha256`，包内有逐文件`SHA256SUMS`和`VALIDATION.json`。
-- 同字节副本位于renkolab仓库的`out/th06nc-autoplay-20261006-b-request-reward-k8.zip`和`mods/th06nc/autoplay/dist/th06nc-autoplay-20261006-b-request-reward-k8.zip`。
+- 同字节副本位于renkolab仓库的`out/th06nc-autoplay-20261006-b-request-reward-k8.zip`和`mods/th06nc/autoplay/dist/archive/2026-11-before-full-pretrain/th06nc-autoplay-20261006-b-request-reward-k8.zip`。
 
 将包目录内文件一起复制到`th06nc.exe`所在目录，先备份旧插件和INI。默认手动，按C切换MANUAL/AUTO/BYPASS。默认`model = b-request-reward-k8-best.onnx`；把该项改为`t8-laser-k4-best.onnx`后重启即可回退旧T8。包中没有游戏exe或资产。
 
@@ -14,7 +14,7 @@
 
 ## 模型来源
 
-唯一B checkpoint：`runs/job-3c0392a2052fb68e/20261004-204129-request-reward-k8/checkpoints/best.pt`，SHA256 `c9456b4d2a8a37c2fa7c79851d1a172ddc77151dc0487c7adc800d3cb764bb59`。
+唯一B checkpoint：`runs/archive/2026-11-before-full-pretrain/job-3c0392a2052fb68e/20261004-204129-request-reward-k8/checkpoints/best.pt`，SHA256 `c9456b4d2a8a37c2fa7c79851d1a172ddc77151dc0487c7adc800d3cb764bb59`。
 
 真实checkpoint核验为u3500、917,504,000帧、seed1、`reward.action_source=request`、`danger_topk_v8`、`set_attn_v3`、player15、8根激光。ONNX SHA256 `0bf5fcfe5b0bc137f7438bb39f9ce998bb6a2d9d11cfc88c491f6a404361d933`，graph6/opset18/IR10，12个输入、原始激光64行、激光token `[8,14]`、联合序列72。没有请求历史输入或图签名变化。
 
@@ -24,16 +24,16 @@ B在仿真中动作更平滑，原作激光主评测末四次通过率为73.44%�
 
 ## 本次实际验证
 
-- `uv run --frozen python -m stgtrain.export_onnx runs/job-3c0392a2052fb68e/20261004-204129-request-reward-k8/checkpoints/best.pt --out dist --name b-request-reward-k8-best`：通过，真实torch/ORT导出自检最大logits偏差3.81e-6。
-- `uv run --frozen python runs/b-th06nc-package-validation/parity.py`：复用T8验证工具与Linux ORT1.22.0，真实C填表/C ORT对独立Python观测/torch三帧全部12输入一致，最大logits偏差5.72205e-6，argmax一致，覆盖预警/运动/伸长及无激光清零。
+- `uv run --frozen python -m stgtrain.export_onnx runs/archive/2026-11-before-full-pretrain/job-3c0392a2052fb68e/20261004-204129-request-reward-k8/checkpoints/best.pt --out dist --name b-request-reward-k8-best`：通过，真实torch/ORT导出自检最大logits偏差3.81e-6。
+- `uv run --frozen python runs/archive/2026-11-before-full-pretrain/b-th06nc-package-validation/parity.py`：复用T8验证工具与Linux ORT1.22.0，真实C填表/C ORT对独立Python观测/torch三帧全部12输入一致，最大logits偏差5.72205e-6，argmax一致，覆盖预警/运动/伸长及无激光清零。
 - `make -C /data/sunyunbo/www/renkolab/mods/th06nc/autoplay/native/tests build/test_policy_model`，随后执行该目录`build/test_policy_model`：通过，`test_policy_model ok`。
-- `make -C /data/sunyunbo/www/stg-agent-proto/c test-onnx-live SA_ONNX_TEST_LIB=/data/sunyunbo/www/stg-rl-train/runs/t8-package-validation/ort122/libonnxruntime.so.1.22.0 SA_ONNX_TEST_MODEL=/data/sunyunbo/www/stg-rl-train/dist/b-request-reward-k8-best.onnx SA_ONNX_TEST_BADMODEL=/data/sunyunbo/www/stg-rl-train/runs/t8-package-validation/wrong-signature.onnx`：**行为检查失败**，见下节；不能报告整体通过。
-- `uv run --frozen python runs/b-th06nc-package-validation/bad_signature.py`：直接调用真实C加载错误签名模型，正确拒绝。
+- `make -C /data/sunyunbo/www/stg-agent-proto/c test-onnx-live SA_ONNX_TEST_LIB=/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/t8-package-validation/ort122/libonnxruntime.so.1.22.0 SA_ONNX_TEST_MODEL=/data/sunyunbo/www/stg-rl-train/dist/archive/2026-11-before-full-pretrain/b-request-reward-k8-best.onnx SA_ONNX_TEST_BADMODEL=/data/sunyunbo/www/stg-rl-train/runs/archive/2026-11-before-full-pretrain/t8-package-validation/wrong-signature.onnx`：**行为检查失败**，见下节；不能报告整体通过。
+- `uv run --frozen python runs/archive/2026-11-before-full-pretrain/b-th06nc-package-validation/bad_signature.py`：直接调用真实C加载错误签名模型，正确拒绝。
 - 将上述live命令的MODEL改为`t8-laser-k4-best.onnx`：通过六项行为检查和错误签名拒绝。
-- `RELEASE_DIR=/data/sunyunbo/www/stg-rl-train/dist/b-th06nc-release-assets bash runs/b-th06nc-package-validation/package.sh`：按既有release.sh独立素材布局和复制/ZIP步骤出包；复用旧DLL，未执行release.sh强制重建段，未修改该脚本或native源码。
-- `uv run --frozen python runs/b-th06nc-package-validation/verify_package.py`：ZIP CRC、13文件、12项逐文件SHA、B checkpoint/ONNX/manifest来源与签名、自包含ONNX检查、默认INI、旧T8回退字节一致、两DLL PE machine `0x8664`、三处ZIP镜像一致全部通过。
+- `RELEASE_DIR=/data/sunyunbo/www/stg-rl-train/dist/archive/2026-11-before-full-pretrain/b-th06nc-release-assets bash runs/archive/2026-11-before-full-pretrain/b-th06nc-package-validation/package.sh`：按既有release.sh独立素材布局和复制/ZIP步骤出包；复用旧DLL，未执行release.sh强制重建段，未修改该脚本或native源码。
+- `uv run --frozen python runs/archive/2026-11-before-full-pretrain/b-th06nc-package-validation/verify_package.py`：ZIP CRC、13文件、12项逐文件SHA、B checkpoint/ONNX/manifest来源与签名、自包含ONNX检查、默认INI、旧T8回退字节一致、两DLL PE machine `0x8664`、三处ZIP镜像一致全部通过。
 
-临时脚本、原始日志及JSON结果在`runs/b-th06nc-package-validation/`。没有新增永久测试，也没有因换权重重建DLL或重跑无关测试。
+临时脚本、原始日志及JSON结果在`runs/archive/2026-11-before-full-pretrain/b-th06nc-package-validation/`。没有新增永久测试，也没有因换权重重建DLL或重跑无关测试。
 
 ## 未通过的行为检查与验收边界
 

@@ -57,7 +57,7 @@
 
 **验收证据：**构建／静态审计、完整产物与安装说明、实际游戏日志和用户试玩反馈分别记录，不混称全部验收通过。
 
-2026-10-22：源码已新增到 renkolab；草稿包 `dist/th16-autoplay-thcrap-20261022-draft.zip` 已准备并核对 CRC／逐文件 SHA。未支持形状策略仍待用户选择、自动炸弹未接入、Windows 未实跑，故本阶段不标记为最终试玩交付完成。详情见[实施记录](../../practice-cards/2026-10-22-th16-implementation.md)。
+2026-10-22：源码已新增到 renkolab；草稿包 `dist/archive/2026-11-before-full-pretrain/th16-autoplay-thcrap-20261022-draft.zip` 已准备并核对 CRC／逐文件 SHA。未支持形状策略仍待用户选择、自动炸弹未接入、Windows 未实跑，故本阶段不标记为最终试玩交付完成。详情见[实施记录](../../practice-cards/2026-10-22-th16-implementation.md)。
 
 ## 后续待办：傻瓜安装包
 

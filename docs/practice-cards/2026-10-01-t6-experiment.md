@@ -4,7 +4,7 @@
 
 ## 实验设置
 
-配置：[exp-t6-laser-joint.toml](../../configs/exp-t6-laser-joint.toml)。沿用T5卡池、seed=1、reward、混合意图、运动层和课程；从随机初始化训练。
+配置：[exp-t6-laser-joint.toml](../../configs/archive/exp-t6-laser-joint.toml)。沿用T5卡池、seed=1、reward、混合意图、运动层和课程；从随机初始化训练。
 
 - `danger_topk_v8`：14维局部几何／观测运动／伸长余量／预警token。
 - `set_attn_v3`：弹与激光独立MLP、类型嵌入，一层联合自注意力替换T5弹专用层；交流后分别池化，主干保持704→256→256。
@@ -15,13 +15,13 @@
 
 ## 入口与验收
 
-沿用`magnus/train-specialist.sh`，以`GPUCHECK=1`启用正式训练前的严格GPU检查。gpucheck配置仅在检查阶段将AMP设为off，比对eager／compile／CUDA图；正式训练仍读取原T6配置，使用bf16。GPU检查失败则Job返回非零并通过EXIT trap保存日志，不进入正式训练，不使用warn-only绕过。
+沿用`magnus/archive/train-specialist.sh`，以`GPUCHECK=1`启用正式训练前的严格GPU检查。gpucheck配置仅在检查阶段将AMP设为off，比对eager／compile／CUDA图；正式训练仍读取原T6配置，使用bf16。GPU检查失败则Job返回非零并通过EXIT trap保存日志，不进入正式训练，不使用warn-only绕过。
 
 Magnus检查提交前资源，再申请1×A100、32核、64G，优先级显式B2，缓存镜像`pytorch:2.5.1-cuda12.4-cudnn9-devel`。提交固定已推送的完整SHA；启动后区分安装、GPU检查和真实训练更新。
 
 本地模型／ONNX和旧torch2.5.1 CPU栈已验证，详见[实施证据](../superpowers/specs/2026-10-01-laser-token-joint-attention-design.md)。本次追加入口开关的验证是shell语法与配置覆盖检查。
 
-提交前将旧CPU venv的stg_rl同步到当前仓库wheel 0.4.1，以`PYTHONPATH=src`运行`python -m pytest -q tests/test_featurize_v8.py tests/test_model_v3.py tests/test_envwrap_lasers.py tests/test_smoke.py -k 'v8 or v3 or lasers'`：27 passed、11 deselected，包含新版bf16 CPU PPO冒烟。`bash -n magnus/train-specialist.sh`、GPU检查配置覆盖／TOML往返、registry模型构建、两份wheel SHA及`git diff --check`通过。新入口不改变未设置GPUCHECK时的旧行为。
+提交前将旧CPU venv的stg_rl同步到当前仓库wheel 0.4.1，以`PYTHONPATH=src`运行`python -m pytest -q tests/test_featurize_v8.py tests/test_model_v3.py tests/test_envwrap_lasers.py tests/test_smoke.py -k 'v8 or v3 or lasers'`：27 passed、11 deselected，包含新版bf16 CPU PPO冒烟。`bash -n magnus/archive/train-specialist.sh`、GPU检查配置覆盖／TOML往返、registry模型构建、两份wheel SHA及`git diff --check`通过。新入口不改变未设置GPUCHECK时的旧行为。
 
 提交前资源实查：6张A100空闲、108核空闲、495,904MB内存空闲，足够申请上述单训练资源；读数只代表当次查询。
 
@@ -83,9 +83,9 @@ best原作激光组：锚点87.50→95.31%，自由89.06→92.19%，boss_or_free
 
 结果支持“激光输入表达／池化前关系建模是重要瓶颈”的判断：同预算下原作激光两档、五个未见布局家族和训练内瞄准卡均改善。它不能单独证明收益来自14维token还是联合注意力，两项同时改变；只有一条seed=1训练/臂，没有同期组件消融或多种子验证。卡池、训练起点、引擎build_info、意图混合与模型／特征化之外的保存配置已经逐项核对一致。原作开发评测不是完全未参与设计的独立测试集；专项结果只代表这五张固定留出布局。
 
-[精确统计与输入SHA](reports/t6-results-summary.json)。复算命令：`uv run --frozen python runs/t6-analysis/analyze.py`；该脚本复用T5的counts／分母核对，并验证3500轮连续、预算、每组32局、无超时、best/latest、held-out隔离、配置差异、来源哈希和GPU检查。JSON保存逐卡／逐rank汇总，没有原始逐局记录，因此不能做逐局配对检验或还原死亡轨迹。
+[精确统计与输入SHA](reports/t6-results-summary.json)。复算命令：`uv run --frozen python runs/archive/2026-11-before-full-pretrain/t6-analysis/analyze.py`；该脚本复用T5的counts／分母核对，并验证3500轮连续、预算、每组32局、无超时、best/latest、held-out隔离、配置差异、来源哈希和GPU检查。JSON保存逐卡／逐rank汇总，没有原始逐局记录，因此不能做逐局配对检验或还原死亡轨迹。
 
-结果包`runs/job-cec000c4981cc5af.tar.gz`，84,892,255字节，SHA256 `72a6e9561b13fa3c898012a73d3a0b7cef6e5d1be208786f65df990df0860e01`；解包`runs/job-cec000c4981cc5af/20261001-185732-t6-laser-joint/`。GPU eager/compile/CUDA图对拍PASS，并实际完成bf16训练；游戏部署调用方仍未适配图版本6。
+结果包`runs/archive/2026-11-before-full-pretrain/job-cec000c4981cc5af.tar.gz`，84,892,255字节，SHA256 `72a6e9561b13fa3c898012a73d3a0b7cef6e5d1be208786f65df990df0860e01`；解包`runs/archive/2026-11-before-full-pretrain/job-cec000c4981cc5af/20261001-185732-t6-laser-joint/`。GPU eager/compile/CUDA图对拍PASS，并实际完成bf16训练；游戏部署调用方仍未适配图版本6。
 
 本次只分析和记录结果，不启动训练或提交／推送。
 
@@ -117,7 +117,7 @@ best原作激光组：锚点87.50→95.31%，自由89.06→92.19%，boss_or_free
 
 ## 2026-10-02 激光K=4／8／16同权重裁剪探针
 
-用户希望试验减少激光数量，并询问远处子弹是否需要稀疏注意力。本轮不改运行代码／模型架构，不启动训练，使用当前k_lasers配置构建相同参数形状并严格加载同一个T6 u3500 checkpoint；只做CPU eager评测。脚本`runs/t6-k-lasers/evaluate.py`及arm4/arm8副本，各组32局，固定原跟点意图／运动层／seed12345；评原作3激光卡Hard/Lunatic和5专项留出四档。为节省等待，4和8的评测作为独立CPU进程运行；16完成后停止原顺序脚本，避免重复跑4/8。所有结果原子写入JSON并核验分母。
+用户希望试验减少激光数量，并询问远处子弹是否需要稀疏注意力。本轮不改运行代码／模型架构，不启动训练，使用当前k_lasers配置构建相同参数形状并严格加载同一个T6 u3500 checkpoint；只做CPU eager评测。脚本`runs/archive/2026-11-before-full-pretrain/t6-k-lasers/evaluate.py`及arm4/arm8副本，各组32局，固定原跟点意图／运动层／seed12345；评原作3激光卡Hard/Lunatic和5专项留出四档。为节省等待，4和8的评测作为独立CPU进程运行；16完成后停止原顺序脚本，避免重复跑4/8。所有结果原子写入JSON并核验分母。
 
 | 激光K | 原作激光（192局） | 专项留出（640局） | 理论attention配对减少 | 联合block矩阵乘MAC减少 |
 |---|---:|---:|---:|---:|

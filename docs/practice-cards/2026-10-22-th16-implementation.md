@@ -11,7 +11,7 @@
 
 直接编译既有 TH06NC 纯 C 控制代码和 `stg-agent-proto` 的 canonical model／motor／ORT 源文件，没有修改或复制另一份算法。当前默认 MANUAL，F10 轮换；C 季节释放保留原生手动输入。普通三种原生分辨率的鼠标引导已有指令与最终合成脚本依据，特殊画面变换仍未验证。
 
-已准备本地审阅草稿 `dist/th16-autoplay-thcrap-20261022-draft.zip`，30 文件、5,808,606 字节。包含 x86 插件、图6 B/Shift K8 模型、官方 ORT1.22 x86 运行时、许可证声明、thcrap patch、示例配置、新增源码及限制说明；不含游戏 exe、资产、Ghidra 工程或 thcrap 本体。
+已准备本地审阅草稿 `dist/archive/2026-11-before-full-pretrain/th16-autoplay-thcrap-20261022-draft.zip`，30 文件、5,808,606 字节。包含 x86 插件、图6 B/Shift K8 模型、官方 ORT1.22 x86 运行时、许可证声明、thcrap patch、示例配置、新增源码及限制说明；不含游戏 exe、资产、Ghidra 工程或 thcrap 本体。
 
 - ZIP SHA256：`889dfcd5ed51fbc670e88080c1031820dc834786e366e2442fb56ce137351079`。
 - 插件 SHA256：`8814331d638e114c7dbed5057a6d241786b64e294e82c569d242f173306da445`。

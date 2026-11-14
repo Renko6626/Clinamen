@@ -25,7 +25,7 @@ def test_laser_experiment_config_builds():
     from stgtrain.registry import FEATURIZERS, MODELS, check_compat, load_builtins
 
     load_builtins()
-    cfg = load_config(REPO / "configs" / "exp-t1-laser.toml")
+    cfg = load_config(REPO / "configs" / "archive" / "exp-t1-laser.toml")
     feat = FEATURIZERS.get(cfg["featurize"]["name"])(cfg)
     check_compat(MODELS.get(cfg["model"]["name"])(cfg, feat.spec()).requires(), feat.spec())
     assert "lasers" in feat.spec()

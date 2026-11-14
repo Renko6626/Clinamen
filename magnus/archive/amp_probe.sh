@@ -2,10 +2,10 @@
 # Speed-only probe: each "config:name:amp" spec runs alone on this Job's GPU for UPDATES updates
 # (phase timing every 5, tiny final eval), then one summary.json compares steady sps and phase medians.
 #
-#   bash magnus/amp_probe.sh configs/exp-q2-raw.toml:q2-fp32:off configs/exp-q2-raw.toml:q2-bf16:bf16 …
+#   bash magnus/archive/amp_probe.sh configs/archive/exp-q2-raw.toml:q2-fp32:off configs/archive/exp-q2-raw.toml:q2-bf16:bf16 …
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
-source "$(dirname "$0")/lib.sh"
+source "$(dirname "$0")/../bootstrap.sh"
+source "$(dirname "$0")/../lib.sh"
 
 UPDATES=${UPDATES:-20}
 probe_dir="runs/a100-amp-probe-${MAGNUS_JOB_ID:-local}"

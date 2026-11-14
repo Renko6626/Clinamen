@@ -125,7 +125,7 @@ def bench_abc(a, dev, n: int) -> None:
         print(f"   {name:28s} {per_call(fn, dev):7.3f}")
     print("   （意图每步调 2× rand + 2× randint [+ 2× multinomial]，镜像 1× rand；counter_draw 每 64 步才调一次）\n")
 
-    for label, cfg_path in (("J", "configs/exp-j-quickchange.toml"), ("N2", "configs/exp-n2-motor-delay.toml")):
+    for label, cfg_path in (("J", "configs/archive/exp-j-quickchange.toml"), ("N2", "configs/archive/exp-n2-motor-delay.toml")):
         cfg = load_config(cfg_path, {"run": {"device": str(dev)}, "env": {"num_envs": n, "threads": a.threads}})
         images, starts, _, _feat, _ = build_components(cfg, dev)
         for style in ("每帧乱按", "保持 2–6 帧"):

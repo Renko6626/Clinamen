@@ -4,7 +4,7 @@
 
 ## 产物
 
-`dist/th06nc-autoplay-20261002-t8-laser-k4.zip`，6,274,203字节，11个文件。
+`dist/archive/2026-11-before-full-pretrain/th06nc-autoplay-20261002-t8-laser-k4.zip`，6,274,203字节，11个文件。
 
 SHA256：`af415a0ac71501ce300f593e7ca8feeed80a2c513ce266abcffc1ede0cad63a6`。旁边有`.zip.sha256`，包内有逐文件`SHA256SUMS`和`VALIDATION.json`。
 
@@ -22,14 +22,14 @@ SHA256：`af415a0ac71501ce300f593e7ca8feeed80a2c513ce266abcffc1ede0cad63a6`。�
 
 ## 验证证据
 
-- `uv run --frozen python -m stgtrain.export_onnx runs/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out dist --name t8-laser-k4-best`：通过，最大logits偏差2.86e-6、argmax一致。
+- `uv run --frozen python -m stgtrain.export_onnx runs/archive/2026-11-before-full-pretrain/job-28a4532abf792cc4/20261002-103401-t8-laser-k4/checkpoints/best.pt --out dist --name t8-laser-k4-best`：通过，最大logits偏差2.86e-6、argmax一致。
 - `make -C /data/sunyunbo/www/stg-agent-proto/c test-host`：通过。
 - `make -C /data/sunyunbo/www/renkolab/mods/th06nc/autoplay/native/tests test`：策略／抽取／模型接线3项通过。
 - `python /data/sunyunbo/www/renkolab/mods/th06nc/autoplay/native/check.py`：本地真实exe MD5、绑定地址、hook与代理导出等核对通过。
 - `bash .../autoplay/native/build.sh`：Windows x64交叉编译通过；包内两个DLL的PE machine为0x8664。
 - 真实`make test-onnx-live`分别加载T8 graph6和旧S1 graph4，在ORT1.22.0下通过；实际错误签名模型被拒绝。首次命令未指定可选BADMODEL时，Makefile传空串触发旧测试错误，已将条件修正为非空文件才运行负例，保留真实负例断言。
-- 为匹配包内现有Windows ORT，验证专用Linux ORT1.22.0从官方PyPI wheel下载并核验SHA；没有替换项目依赖或升级包内运行时。下载来源记录`runs/t8-package-validation/ort122/SOURCE.json`。
-- `uv run --frozen python runs/t8-package-validation/parity.py`：实际C填表+实际C ORT1.22与独立Python构造的RawObs/torch对拍，3帧全部12个输入匹配，最大logits误差6.68e-6、argmax一致，含预警／运动／伸长与无激光清零场景。结果`parity-result.json`在同目录。
+- 为匹配包内现有Windows ORT，验证专用Linux ORT1.22.0从官方PyPI wheel下载并核验SHA；没有替换项目依赖或升级包内运行时。下载来源记录`runs/archive/2026-11-before-full-pretrain/t8-package-validation/ort122/SOURCE.json`。
+- `uv run --frozen python runs/archive/2026-11-before-full-pretrain/t8-package-validation/parity.py`：实际C填表+实际C ORT1.22与独立Python构造的RawObs/torch对拍，3帧全部12个输入匹配，最大logits误差6.68e-6、argmax一致，含预警／运动／伸长与无激光清零场景。结果`parity-result.json`在同目录。
 - `PYTHONPATH=src <train-venv>/bin/python -m pytest -q tests/test_model_parity.py tests/test_obs.py tests/test_schema.py tests/test_c_sample_log.py`（stg-agent-proto cwd）：19 passed。
 - 独立只读审查：共享C无阻塞问题；成品ZIP引用、默认模型、manifest、许可证及各文件SHA无阻塞问题。
 - ZIP CRC、11个文件、默认INI指向模型、ONNX/manifest SHA和逐文件SHA全部核验通过。

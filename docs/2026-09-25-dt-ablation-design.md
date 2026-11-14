@@ -1,6 +1,6 @@
 # d / t 对照实验（M0 ‖ Q1 ‖ Q2）设计
 
-2026-09-25 立项。父实验 M（`configs/exp-m-edgehug.toml`），在新观测语义（`stg_rl` 0.2.0）下重训为 M0。
+2026-09-25 立项。父实验 M（`configs/archive/exp-m-edgehug.toml`），在新观测语义（`stg_rl` 0.2.0）下重训为 M0。
 
 ## 1. 为什么做、为什么现在做
 

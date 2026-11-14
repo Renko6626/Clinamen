@@ -1,6 +1,12 @@
 # stg-rl-train
 
-当前研究顺序见[下一步：先丰富训练数据](docs/next-steps.md)（2026-11-08）。本轮已发现部分持续转向弹幕上的明显弱项，下一阶段先扩充运动机制与组合覆盖、用现有结构验证泛化；大注意力层、Perceiver等结构方向暂缓。最新[TH16全量CPU试测与GIF](docs/practice-cards/2026-11-08-th16-cpu-eval.md)和[击杀／追敌及运动对照](docs/practice-cards/2026-11-08-th16-difficulty-hypotheses.md)已落档。
+2026-11-15阶段收尾：扩充卡池后的单层u4000／u6000及两层SA2 u4000均已完成，权重与结果已取回，Vast GPU已停、磁盘保留。当前卡池686张材料／668个训练起点，实际难度为Hard504、Normal14、Extra150，未训练Lunatic。最终比较与诊断见[实验记录](docs/experiments.md)，可版本管理的关键数据见[阶段摘要](docs/practice-cards/reports/2026-11-15-training-stage.json)。
+
+旧训练结果、包、配置和专用脚本已按阶段整理，见[归档索引](docs/training-archive.md)。常用配置见[配置入口](configs/README.md)，本地脚本见[脚本入口](scripts/README.md)。
+
+当前研究顺序见[研究待办](docs/next-steps.md)（2026-11-15）。用户之后再决定模型优化方案；目前没有新的训练、结构或部署任务。已有[五作基线](docs/practice-cards/2026-11-14-u4000-multigame-baseline.md)和[深度诊断](docs/practice-cards/2026-11-14-u4000-encoder-diagnosis.md)可供后续比较。
+
+2026-11-08本轮归档：[TH15阶段记录](transcribe/th15/README.md)保留129个交付及6个搁置项；发布模型[试测](docs/practice-cards/2026-11-08-th15-published-eval.md)与[关闭运动层对照](docs/practice-cards/2026-11-08-th15-motor-off.md)均已完成，存活334/1290→438/1290，未全批验收收卡或训练。用户指定下一会话从[TH08准备指南](transcribe/th08/README.md)继续，现有源与社区命名Ghidra工程已备好。
 
 原作ECL转写与独立审核使用[统一命令行入口](transcribe/README.md)：单清单、官方headless CLI、一次完整机器验收。
 
@@ -20,7 +26,7 @@ bash run.sh --resume runs/<目录>               # 续训
 bash run.sh configs/base.toml --bench          # 新机器先测吞吐，选 threads × num_envs
 ```
 
-租机注意：env 在 CPU 上跑，吞吐主要吃 CPU 核数。
+`base.toml` 是TH06通用示例，不是本轮扩大卡池的正式预训练方案。环境模拟在CPU上运行；本次5090短测PPO更新约占61%，环境步约占11%。租机需核对CPU型号、cgroup实际配额并实测吞吐，不能只按核心数选型。
 
 ## 探测模式：新机器先跑这个
 

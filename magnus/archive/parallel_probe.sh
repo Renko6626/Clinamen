@@ -2,16 +2,16 @@
 # How many concurrent trainings fit one A100 best: run K = 1, 2, … copies of one config for a few
 # updates each, record per-run and total steady throughput plus the GPU memory peak.
 #
-#   [KS="1 2 3 4"] [CONFIG=configs/exp-m0-rebase.toml] [UPDATES=20] bash magnus/parallel_probe.sh
+#   [KS="1 2 3 4"] [CONFIG=configs/archive/exp-m0-rebase.toml] [UPDATES=20] bash magnus/archive/parallel_probe.sh
 #
 # Env threads per run follow train-multi.sh ((affinity CPUs − 2K) / K), so the result is what
 # train-multi would actually get. Steady = median perf/sps over updates 5..UPDATES-1.
 set -euo pipefail
-source "$(dirname "$0")/bootstrap.sh"
-source "$(dirname "$0")/lib.sh"
+source "$(dirname "$0")/../bootstrap.sh"
+source "$(dirname "$0")/../lib.sh"
 
 KS=${KS:-1 2 3 4}
-CONFIG=${CONFIG:-configs/exp-m0-rebase.toml}
+CONFIG=${CONFIG:-configs/archive/exp-m0-rebase.toml}
 UPDATES=${UPDATES:-20}
 probe_dir="runs/a100-kprobe-${MAGNUS_JOB_ID:-local}"
 mkdir -p "$probe_dir"

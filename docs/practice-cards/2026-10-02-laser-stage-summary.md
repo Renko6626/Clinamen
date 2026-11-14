@@ -58,7 +58,7 @@ T5→T6新增时间约95%集中在模型推理／PPO更新，环境与特征化�
 
 ## 工程交付
 
-T8 u3500包：`dist/th06nc-autoplay-20261002-t8-laser-k4.zip`。共享C／Python对拍工具支持图版本2–6，追加对齐的真实start_len；Windows x64构建、真实ORT1.22和C填表／torch对拍通过。未完成Windows游戏游玩或真实游戏日志逐帧验收。
+T8 u3500包：`dist/archive/2026-11-before-full-pretrain/th06nc-autoplay-20261002-t8-laser-k4.zip`。共享C／Python对拍工具支持图版本2–6，追加对齐的真实start_len；Windows x64构建、真实ORT1.22和C填表／torch对拍通过。未完成Windows游戏游玩或真实游戏日志逐帧验收。
 
 **用户明确要求保留TH06NC原8帧激光运动平滑**，不得自行换成单帧。训练单帧增量与游戏平滑估计的差别已记录。包不因研究建议自动替换，详见[打包记录](2026-10-02-t8-th06nc-package.md)；适配源码尚未提交，各仓其他改动保留。
 

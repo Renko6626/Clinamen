@@ -1,6 +1,6 @@
 # 密度图 CNN 消融与远场 Perceiver 历史计划
 
-> **当前状态（2026-11-08）：P1／P2已完成，P3／Perceiver暂缓。** 当前主线为丰富训练数据，用现有结构检验运动机制覆盖与泛化；大注意力层、逐弹Perceiver、粗网格latent摘要均延后。本文保留当时的设计、命令和任务勾选项，不能作为当前派工或GPU启动清单。下一步统一看[当前研究顺序](../../next-steps.md)，P2最终结果见[u2000结果](../../practice-cards/2026-10-10-density-p2-u2000-results.md)。
+> **状态索引（2026-11-14）：P1／P2已完成，P3／Perceiver未恢复。** 用户已将“大注意力／时间相关性”列入[研究待办](../../next-steps.md)，具体路线未定；新构想不等于恢复本文的旧逐弹原型或粗网格提案。本文保留当时的设计、命令和任务勾选项，不能作为当前派工或GPU启动清单。下一步统一看[当前研究顺序](../../next-steps.md)，P2最终结果见[u2000结果](../../practice-cards/2026-10-10-density-p2-u2000-results.md)。
 
 2026-10-10 的后续边界：用户停止了 1024 槽逐弹编码原型，希望远场保留便宜、有损的模糊态势，且压缩发生在 PPO 缓存之前。其后提出的 Top-64 余集→8×8 网格→小 Perceiver 仅为未批准的候选，未实施；旧逐弹原型也未训练。2026-11-08 已统一暂缓，先扩充数据；旧 seed／预算／跳过 GPU 预检的许可不外推到新方案或恢复执行。
 
@@ -258,7 +258,7 @@ C应仅用现有PyTorch算子，保留未来ONNX可导出性。首轮进行小�
 - [ ] `src/stgtrain/evaluate.py`：可选逐局输出，原返回结构默认不变。
 - [ ] `src/stgtrain/eval_ckpt.py`：增加可选eval seed与逐局记录开关；不混入训练配置永久修改。
 - [ ] `src/stgtrain/models/set_attn_v3.py`：可选density分支开关，默认路径不变，B返回64维零向量。
-- [ ] 冻结manifest至 `runs/density-ablation-20261008/`；检查来源SHA、配置、卡池和划分。P1结果写入同目录。
+- [ ] 冻结manifest至 `runs/archive/2026-11-before-full-pretrain/density-ablation-20261008/`；检查来源SHA、配置、卡池和划分。P1结果写入同目录。
 
 验收：原路径复现、关分支输入独立、3968局记录齐全、宏/微聚合与配对计数重算一致。
 
@@ -267,7 +267,7 @@ C应仅用现有PyTorch算子，保留未来ONNX可导出性。首轮进行小�
 - [ ] `src/stgtrain/train.py` + `src/stgtrain/checkpoint.py`：实验专用严格迁移入口及来源manifest；原init-from/resume语义保持。
 - [ ] `src/stgtrain/featurize/danger_topk_v8.py`：B跳过density构图/缓存的可选路径；近场各张量逐项不变。
 - [ ] `configs/exp-density-cnn.toml`、`configs/exp-density-none.toml`：冻结来源配置生成A/B差异；默认1000轮seed1，seed2/3使用明确覆盖并落盘。
-- [ ] `magnus/train-specialist.sh`：复用现有runner，显式 `SPECIALIST_UPDATES="500 1000"`；不能请求不存在的u2750..3500。最终逐局评测单独运行，避免把best探针当主比较。
+- [ ] `magnus/archive/train-specialist.sh`：复用现有runner，显式 `SPECIALIST_UPDATES="500 1000"`；不能请求不存在的u2750..3500。最终逐局评测单独运行，避免把best探针当主比较。
 - [ ] 相关本地/旧栈检查、GPUcheck通过后，获预算授权才提交P2。
 
 验收：u0共享权重核验、新训练状态、1000连续更新、每臂262144000新增帧、u1000最终评测与成本产物齐全。
@@ -277,7 +277,7 @@ C应仅用现有PyTorch算子，保留未来ONNX可导出性。首轮进行小�
 - [ ] `src/stgtrain/featurize/danger_topk_v9.py`：原v8近场输出加固定槽位远场原始token/mask，复用同一次Top-K索引；不改变旧v8默认行为。
 - [ ] `src/stgtrain/models/far_perceiver.py`：第3节8-latent摘要模块，独立于PPO/环境。
 - [ ] `src/stgtrain/models/set_attn_v4.py`：复用v3主体，替换density分支；`src/stgtrain/models/__init__.py` 注册，特征化注册入口按现有项目模式。
-- [ ] `configs/exp-density-perceiver.toml`：C唯一结构差异与原配置其余项冻结。
+- [ ] `configs/archive/exp-density-perceiver.toml`：C唯一结构差异与原配置其余项冻结。
 - [ ] `scripts/diag/benchmark_density_branches.py`：生产模型/真实观测的统一性能比较；明确采样、同步、warmup、显存口径。
 - [ ] `src/stgtrain/export_onnx.py`：新增注册名对应的实验导出预检，先核查输入契约再决定GRAPH_VERSION；不覆盖旧模型产物。
 - [ ] 本地/旧CPU栈检查后运行实际GPU20-update预检，给出三臂显存/吞吐预算；过资源门才执行P3其余训练。
