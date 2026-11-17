@@ -82,10 +82,15 @@ class SelfAttnBlock(nn.Module):
         return x + self.ffn(self.ln2(x))
 
 
+def token_mlp(f_in: int, d: int) -> nn.Sequential:
+    return nn.Sequential(layer_init(nn.Linear(f_in, d)), nn.ReLU(),
+                         layer_init(nn.Linear(d, d)), nn.ReLU())
+
+
 class SetEncoder(nn.Module):
     def __init__(self, f_in: int, d: int, heads: int, ctx_dim: int, sa_layers: int = 0, ln_affine: bool = True):
         super().__init__()
-        self.phi = nn.Sequential(layer_init(nn.Linear(f_in, d)), nn.ReLU(), layer_init(nn.Linear(d, d)), nn.ReLU())
+        self.phi = token_mlp(f_in, d)
         self.heads, self.dk = heads, d // heads
         self.q = layer_init(nn.Linear(ctx_dim, d))
         self.k = layer_init(nn.Linear(d, d))

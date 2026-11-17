@@ -2,18 +2,9 @@
 
 Magnus（北大站点）上用 A100 跑训练，替代在 Vast.ai 租卡。本文保留迁移时的环境证据，维护 Job 入口、版本兼容和 wheel 来源；简要流程见[启动概况](agent-memory/training-workflow.md)，当前研究安排见[下一步](next-steps.md)，吞吐数据见[性能记录](perf-baseline.md)。
 
-## 迁移初期的环境证据（2026-09）
+## 环境要求
 
-- Magnus `Renko6626/stg-rl-train` 仓库和 `a100` GPU 类型可以提交 Job。
-- A100 80GB 节点驱动为 550.163.01。缓存镜像 `docker://pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime` 内的 Python 3.11.10、PyTorch 2.5.1+cu124 能看到 GPU（Job `81ec9987f70e198d`，Success）。
-- 主仓 `uv.lock` 固定 PyTorch 2.14.0，安装的是 CUDA 13 包；在该节点上 `gpucheck` 报驱动过旧，CUDA 不可用（Job `c44ff59c0e0023fe`）。因此不能直接运行 `bash run.sh`。
-- `docker://python:3.12` Job 的 `UV_CACHE_DIR` 未设置，默认 `/magnus/.cache/uv`。两次 `uv sync --frozen` 分别下载 68 个包，耗时 8 分 09 秒、8 分 13 秒，跨 Job 没有命中缓存。
-- 缓存的 PyTorch 镜像没有 `git`，Job 内直连 GitHub 下载 `stg-rl` wheel 发生超时。Magnus 注入的 SDK 也缺少 `typer` 等 Python 依赖，使用 `magnus receive` / `custody` 前要安装 `magnus-sdk`。
-- 该镜像自带的 `ninja 1.11.1.1` 会让全环境 `pip check` 返回非零，与本仓依赖无关；短 Job 改为只验证实际使用的包版本与训练路径。
-- `2.5.1-cuda12.4-cudnn9-runtime` 缺少 C 编译器，`torch.compile` 失败。换成站点已缓存的同版本 `devel` 镜像后，Job `1c1be6b6ac0da812` 的 `gpucheck` 所有数值对拍通过，并完成两次 PPO 更新、640 局评测、checkpoint、出图与打包，Job 状态为 Success。结果包已取回到本地 `runs/archive/2026-11-before-full-pretrain/20260923-190104-magnus-cu124-smoke.tar.gz`（约 8 MB）。
-- 可复用训练入口 `magnus/train.sh` 也经 Job `bd399f020e27bb86` 完整验证：两次更新、评测、checkpoint、打包、Result secret 和本机下载均通过。结果包在 `runs/archive/2026-11-before-full-pretrain/20260923-203522-magnus-wrapper-smoke.tar.gz`（约 8 MB）。
-- File Custody 的 SDK 结果协议另用 CPU Job `46285c4e0fd0a54e` 验证：上传小文件、写 `$MAGNUS_RESULT`、从 `magnus job status` 读 secret、本机 `magnus receive` 下载，全部通过。
-- **CPU 可见性**：容器内 `os.cpu_count()` 返回宿主机的 112，进程亲和性只有申请到的 CPU（32 核 Job 为 `Cpus_allowed_list=2-17,58-73`，即单插槽 16 物理核加超线程），CFS quota 为 `-1`（Job `032ea8f38643e7dd`）。`env.threads = 0` 已改为取亲和性（`envwrap.usable_cpus`），不再开 112 个线程。
+Magnus已验证使用Python3.11、torch2.5.1+cu124、tensordict0.6.2及CUDA12.4 devel镜像。旧550驱动不能运行本地torch2.14的CUDA13包；runtime镜像缺编译器会使torch.compile失败。bootstrap负责本地wheel、小依赖和PYTHONPATH；不能直接用根run.sh替代。CPU可见核数可能是宿主机数据，按实际亲和性/配额选线程。
 
 ## 与本地 / Vast 环境的差异（踩过的坑）
 

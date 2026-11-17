@@ -81,4 +81,4 @@
 - [TH18逐段CSV](../../runs/modern-u4000-baseline-20261114/th18/summary.csv)、[TH18符卡CSV](../../runs/modern-u4000-baseline-20261114/th18/spellcards.csv)。
 - [三作完整汇总](../../runs/modern-u4000-baseline-20261114/summary.json)、[分类来源](../../runs/modern-u4000-baseline-20261114/classification.json)、[启动参数](../../runs/modern-u4000-baseline-20261114/launch.json)。各作子目录的records.json与results.json保存原始逐局／逐段记录。
 - [评测脚本](../../runs/modern-u4000-baseline-20261114/run_eval.py)复用生产run_groups；[汇总脚本](../../runs/modern-u4000-baseline-20261114/analyze.py)、[合表脚本](../../runs/modern-u4000-baseline-20261114/combine_baselines.py)保存计算过程。
-- 已有[TH06记录](2026-11-14-th06-u4000-eval.md)、[TH16记录](2026-11-14-th16-u4000-eval.md)继续保留原结果，没有为合表重跑。
+- TH06和TH16沿用原评测结果，旧单作说明已合并到本表，没有为合表重跑。

@@ -1,0 +1,564 @@
+{
+  "scope": "K64 one-layer v3 vs MQ4, fixed u4000; both CPU FP32, production run_groups, 16 cards x Hard/Lunatic x 32 episodes, seed12345, warmup0, original motor, full card time. Single training seed; no claim of significance or isolated mean/max causality.",
+  "overall": {
+    "k64": {
+      "episodes": 1024,
+      "passed": 269,
+      "percent": 26.26953125,
+      "frames_mean": 1944.6123046875
+    },
+    "mq4": {
+      "episodes": 1024,
+      "passed": 346,
+      "percent": 33.7890625,
+      "frames_mean": 2127.37890625
+    }
+  },
+  "ranks": {
+    "2": {
+      "k64": {
+        "episodes": 512,
+        "passed": 177,
+        "percent": 34.5703125,
+        "frames_mean": 2103.1640625
+      },
+      "mq4": {
+        "episodes": 512,
+        "passed": 206,
+        "percent": 40.234375,
+        "frames_mean": 2264.068359375
+      }
+    },
+    "3": {
+      "k64": {
+        "episodes": 512,
+        "passed": 92,
+        "percent": 17.96875,
+        "frames_mean": 1786.060546875
+      },
+      "mq4": {
+        "episodes": 512,
+        "passed": 140,
+        "percent": 27.34375,
+        "frames_mean": 1990.689453125
+      }
+    }
+  },
+  "cards": {
+    "th14_s2_mb1": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1255.0625
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 1329.0625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1094.71875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1164.0625
+        }
+      }
+    },
+    "th14_s4_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 29,
+          "percent": 90.625,
+          "frames_mean": 2932.59375
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 29,
+          "percent": 90.625,
+          "frames_mean": 2906.0625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 6,
+          "percent": 18.75,
+          "frames_mean": 2087.25
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 18,
+          "percent": 56.25,
+          "frames_mean": 2429.28125
+        }
+      }
+    },
+    "th14_s6_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1446.03125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 1783.96875
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1338.03125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 4,
+          "percent": 12.5,
+          "frames_mean": 1848.75
+        }
+      }
+    },
+    "th15_s1_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 3,
+          "percent": 9.375,
+          "frames_mean": 1319.3125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 5,
+          "percent": 15.625,
+          "frames_mean": 1583.3125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 3,
+          "percent": 9.375,
+          "frames_mean": 1514.65625
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 8,
+          "percent": 25.0,
+          "frames_mean": 1540.4375
+        }
+      }
+    },
+    "th15_s3_mb2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 618.71875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 1,
+          "percent": 3.125,
+          "frames_mean": 830.84375
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 387.5625
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 404.125
+        }
+      }
+    },
+    "th15_s4_b5": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 699.875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 715.53125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 748.28125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 684.875
+        }
+      }
+    },
+    "th16_s4_b3": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 18,
+          "percent": 56.25,
+          "frames_mean": 1966.5625
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 30,
+          "percent": 93.75,
+          "frames_mean": 2311.84375
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 7,
+          "percent": 21.875,
+          "frames_mean": 1631.90625
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 28,
+          "percent": 87.5,
+          "frames_mean": 2219.96875
+        }
+      }
+    },
+    "th16_s6_b11": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 16,
+          "percent": 50.0,
+          "frames_mean": 6612.21875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 19,
+          "percent": 59.375,
+          "frames_mean": 6275.84375
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 8,
+          "percent": 25.0,
+          "frames_mean": 5665.625
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 12,
+          "percent": 37.5,
+          "frames_mean": 5730.34375
+        }
+      }
+    },
+    "th16_s6_b14": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 3750.8125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 4,
+          "percent": 12.5,
+          "frames_mean": 5317.28125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 3750.8125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 4,
+          "percent": 12.5,
+          "frames_mean": 5317.28125
+        }
+      }
+    },
+    "th16_s6_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        }
+      }
+    },
+    "th16_s6_b4": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 7,
+          "percent": 21.875,
+          "frames_mean": 1647.96875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 6,
+          "percent": 18.75,
+          "frames_mean": 1411.4375
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 971.96875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 966.15625
+        }
+      }
+    },
+    "th16_s6_b6": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 3123
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 3123
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 3,
+          "percent": 9.375,
+          "frames_mean": 1529.25
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1412.625
+        }
+      }
+    },
+    "th18_s1_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2225
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2225
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2199.6875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 30,
+          "percent": 93.75,
+          "frames_mean": 2206.53125
+        }
+      }
+    },
+    "th18_s4_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 6,
+          "percent": 18.75,
+          "frames_mean": 1362.25
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 10,
+          "percent": 31.25,
+          "frames_mean": 1565.3125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1182.71875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 3,
+          "percent": 9.375,
+          "frames_mean": 1271.75
+        }
+      }
+    },
+    "th18_s4_b4": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 977.1875
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 855.1875
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 804
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 791.90625
+        }
+      }
+    },
+    "th18_s5_b4": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 887.03125
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 1164.40625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 843.5
+        },
+        "mq4": {
+          "episodes": 32,
+          "passed": 1,
+          "percent": 3.125,
+          "frames_mean": 1035.9375
+        }
+      }
+    }
+  },
+  "gained": 121,
+  "lost": 44,
+  "training": {
+    "updates": 4000,
+    "frames": 1048576000,
+    "training_and_eval_wall_s": 13497.279,
+    "checkpoint_metadata": {
+      "latest.pt": {
+        "update": 4000,
+        "env_steps": 1048576000
+      },
+      "u4000.pt": {
+        "update": 4000,
+        "env_steps": 1048576000
+      },
+      "best.pt": {
+        "update": 4000,
+        "env_steps": 1048576000
+      }
+    },
+    "eval_episodes_checked": 14848,
+    "platform": {
+      "checked_utc": "2026-11-15T12:38:21.761412+00:00",
+      "actual_status": "exited",
+      "intended_status": "stopped",
+      "credit": 0.5108572903091897,
+      "spent": 3.1093019734999743
+    }
+  },
+  "mq4_gpu_reference": {
+    "episodes": 1024,
+    "passed": 354,
+    "percent": 34.5703125,
+    "frames_mean": 2101.5244140625
+  }
+}

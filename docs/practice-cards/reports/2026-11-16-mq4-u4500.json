@@ -1,0 +1,549 @@
+{
+  "scope": "MQ4 u4000 original5090 GPU FP32 vs u4500 Shaanxi5090 GPU FP32, same fixed protocol; hardware/closed-loop floating-point differences retained.",
+  "modern": {
+    "u4000": {
+      "passed": 354,
+      "episodes": 1024,
+      "percent": 34.5703125,
+      "frames_mean": 2101.5244140625
+    },
+    "u4500": {
+      "passed": 305,
+      "episodes": 1024,
+      "percent": 29.78515625,
+      "frames_mean": 1999.5078125
+    }
+  },
+  "ranks": {
+    "2": {
+      "u4000": {
+        "passed": 215,
+        "episodes": 512,
+        "percent": 41.9921875,
+        "frames_mean": 2261.12890625
+      },
+      "u4500": {
+        "passed": 189,
+        "episodes": 512,
+        "percent": 36.9140625,
+        "frames_mean": 2170.560546875
+      }
+    },
+    "3": {
+      "u4000": {
+        "passed": 139,
+        "episodes": 512,
+        "percent": 27.1484375,
+        "frames_mean": 1941.919921875
+      },
+      "u4500": {
+        "passed": 116,
+        "episodes": 512,
+        "percent": 22.65625,
+        "frames_mean": 1828.455078125
+      }
+    }
+  },
+  "legacy_th06": {
+    "u4000": {
+      "passed": 776,
+      "episodes": 832,
+      "percent": 93.26923076923077,
+      "frames_mean": 1475.608173076923
+    },
+    "u4500": {
+      "passed": 742,
+      "episodes": 832,
+      "percent": 89.1826923076923,
+      "frames_mean": 1457.5204326923076
+    }
+  },
+  "cards": {
+    "th14_s2_mb1": {
+      "2": {
+        "u4000": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 1312.75
+        },
+        "u4500": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 1263.1875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 1166.625
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 1141.40625
+        }
+      }
+    },
+    "th14_s4_b2": {
+      "2": {
+        "u4000": {
+          "passed": 29,
+          "episodes": 32,
+          "percent": 90.625,
+          "frames_mean": 2930.8125
+        },
+        "u4500": {
+          "passed": 24,
+          "episodes": 32,
+          "percent": 75.0,
+          "frames_mean": 2761.125
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 19,
+          "episodes": 32,
+          "percent": 59.375,
+          "frames_mean": 2517.8125
+        },
+        "u4500": {
+          "passed": 9,
+          "episodes": 32,
+          "percent": 28.125,
+          "frames_mean": 1996.25
+        }
+      }
+    },
+    "th14_s6_b2": {
+      "2": {
+        "u4000": {
+          "passed": 7,
+          "episodes": 32,
+          "percent": 21.875,
+          "frames_mean": 2172.03125
+        },
+        "u4500": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 1704.125
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 1757.625
+        },
+        "u4500": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 1444.96875
+        }
+      }
+    },
+    "th15_s1_b2": {
+      "2": {
+        "u4000": {
+          "passed": 5,
+          "episodes": 32,
+          "percent": 15.625,
+          "frames_mean": 1572.28125
+        },
+        "u4500": {
+          "passed": 4,
+          "episodes": 32,
+          "percent": 12.5,
+          "frames_mean": 1520.96875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 11,
+          "episodes": 32,
+          "percent": 34.375,
+          "frames_mean": 1568.15625
+        },
+        "u4500": {
+          "passed": 8,
+          "episodes": 32,
+          "percent": 25.0,
+          "frames_mean": 1660.25
+        }
+      }
+    },
+    "th15_s3_mb2": {
+      "2": {
+        "u4000": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 849.75
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 766.1875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 400.15625
+        },
+        "u4500": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 474.75
+        }
+      }
+    },
+    "th15_s4_b5": {
+      "2": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 715.53125
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 703.96875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 684.9375
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 675.0625
+        }
+      }
+    },
+    "th16_s4_b3": {
+      "2": {
+        "u4000": {
+          "passed": 30,
+          "episodes": 32,
+          "percent": 93.75,
+          "frames_mean": 2310.6875
+        },
+        "u4500": {
+          "passed": 27,
+          "episodes": 32,
+          "percent": 84.375,
+          "frames_mean": 2302.21875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 27,
+          "episodes": 32,
+          "percent": 84.375,
+          "frames_mean": 2194.15625
+        },
+        "u4500": {
+          "passed": 20,
+          "episodes": 32,
+          "percent": 62.5,
+          "frames_mean": 2044.34375
+        }
+      }
+    },
+    "th16_s6_b11": {
+      "2": {
+        "u4000": {
+          "passed": 22,
+          "episodes": 32,
+          "percent": 68.75,
+          "frames_mean": 6622.375
+        },
+        "u4500": {
+          "passed": 19,
+          "episodes": 32,
+          "percent": 59.375,
+          "frames_mean": 6569.53125
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 13,
+          "episodes": 32,
+          "percent": 40.625,
+          "frames_mean": 5919.65625
+        },
+        "u4500": {
+          "passed": 9,
+          "episodes": 32,
+          "percent": 28.125,
+          "frames_mean": 5627.125
+        }
+      }
+    },
+    "th16_s6_b14": {
+      "2": {
+        "u4000": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 4455.21875
+        },
+        "u4500": {
+          "passed": 3,
+          "episodes": 32,
+          "percent": 9.375,
+          "frames_mean": 4343.1875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 4455.21875
+        },
+        "u4500": {
+          "passed": 3,
+          "episodes": 32,
+          "percent": 9.375,
+          "frames_mean": 4343.1875
+        }
+      }
+    },
+    "th16_s6_b2": {
+      "2": {
+        "u4000": {
+          "passed": 32,
+          "episodes": 32,
+          "percent": 100.0,
+          "frames_mean": 2827.0
+        },
+        "u4500": {
+          "passed": 31,
+          "episodes": 32,
+          "percent": 96.875,
+          "frames_mean": 2820.5
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 32,
+          "episodes": 32,
+          "percent": 100.0,
+          "frames_mean": 2827.0
+        },
+        "u4500": {
+          "passed": 31,
+          "episodes": 32,
+          "percent": 96.875,
+          "frames_mean": 2824.46875
+        }
+      }
+    },
+    "th16_s6_b4": {
+      "2": {
+        "u4000": {
+          "passed": 8,
+          "episodes": 32,
+          "percent": 25.0,
+          "frames_mean": 1499.90625
+        },
+        "u4500": {
+          "passed": 5,
+          "episodes": 32,
+          "percent": 15.625,
+          "frames_mean": 1682.5625
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 977.09375
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 850.75
+        }
+      }
+    },
+    "th16_s6_b6": {
+      "2": {
+        "u4000": {
+          "passed": 32,
+          "episodes": 32,
+          "percent": 100.0,
+          "frames_mean": 3123.0
+        },
+        "u4500": {
+          "passed": 30,
+          "episodes": 32,
+          "percent": 93.75,
+          "frames_mean": 2980.9375
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 1379.53125
+        },
+        "u4500": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 1202.4375
+        }
+      }
+    },
+    "th18_s1_b2": {
+      "2": {
+        "u4000": {
+          "passed": 32,
+          "episodes": 32,
+          "percent": 100.0,
+          "frames_mean": 2225.0
+        },
+        "u4500": {
+          "passed": 32,
+          "episodes": 32,
+          "percent": 100.0,
+          "frames_mean": 2225.0
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 31,
+          "episodes": 32,
+          "percent": 96.875,
+          "frames_mean": 2218.53125
+        },
+        "u4500": {
+          "passed": 32,
+          "episodes": 32,
+          "percent": 100.0,
+          "frames_mean": 2225.0
+        }
+      }
+    },
+    "th18_s4_b2": {
+      "2": {
+        "u4000": {
+          "passed": 10,
+          "episodes": 32,
+          "percent": 31.25,
+          "frames_mean": 1599.15625
+        },
+        "u4500": {
+          "passed": 10,
+          "episodes": 32,
+          "percent": 31.25,
+          "frames_mean": 1483.71875
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 1239.8125
+        },
+        "u4500": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 1295.40625
+        }
+      }
+    },
+    "th18_s4_b4": {
+      "2": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 871.15625
+        },
+        "u4500": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 861.375
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 790.6875
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 759.0625
+        }
+      }
+    },
+    "th18_s5_b4": {
+      "2": {
+        "u4000": {
+          "passed": 2,
+          "episodes": 32,
+          "percent": 6.25,
+          "frames_mean": 1091.40625
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 740.375
+        }
+      },
+      "3": {
+        "u4000": {
+          "passed": 1,
+          "episodes": 32,
+          "percent": 3.125,
+          "frames_mean": 973.71875
+        },
+        "u4500": {
+          "passed": 0,
+          "episodes": 32,
+          "percent": 0.0,
+          "frames_mean": 690.8125
+        }
+      }
+    }
+  },
+  "modern_delta_pp": -4.78515625,
+  "cards_improved_unchanged_worse": {
+    "improved": 3,
+    "unchanged": 2,
+    "worse": 11
+  }
+}

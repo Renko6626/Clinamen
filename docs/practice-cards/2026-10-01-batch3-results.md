@@ -39,6 +39,39 @@ corridor02仅补充可见几何cell控制器在rank0/1×seed1/7找到4条完成�
 
 held-out按布局预划分，制作和审查与训练布局分开。开发验收查看了各自真实轨迹；sweep04作者误用一次父目录--all看到兄弟标识/状态，held-out审查者看过一次批次汇总，这些范围披露在报告中。没有据held-out布局反馈调整训练卡；不宣称完全盲开发的未接触测试集。
 
-## 软件验证
+## 独立审核摘要
 
-`.venv/bin/pytest -q`：490 passed、1 skipped，4条既有CPU无CUDA/tensordict警告；不是GPU验证。Rust fmt和相关功能测试通过，Python检查脚本编译通过，最终文件/报告SHA、held-out排除和本地链接另经核对。原作转写后端及其抽检流程未改。
+本节从既有非作者Luna审核记录及最终验收汇总收敛，不是本轮重新审核或升级状态。机器通过、作者交付、独立审核和真实完成轨迹分别记录；20张只取得有限样本范围的判定。历史JSON中的source_review文件名和SHA标识当时审核快照，过程Markdown已删减；本节保留最终判定及限制，机器报告和轨迹定位未改。
+
+| 卡 | 用途 | 最终状态 | 机器 | 动态成功／样本 | 独立审阅来源 |
+| --- | --- | --- | --- | --- | --- |
+| laser_sp_aimed_01 | train | FINITE_SAMPLE_QUALIFIED | PASS | 4/8 | aimed-train-review.md |
+| laser_sp_aimed_02 | train | FINITE_SAMPLE_QUALIFIED | PASS | 4/8 | aimed-train-review.md |
+| laser_sp_aimed_03 | train | FINITE_SAMPLE_QUALIFIED | PASS | 3/8 | aimed-train-review.md |
+| laser_sp_aimed_04 | held-out | FINITE_SAMPLE_QUALIFIED | PASS | 2/8 | heldout-review.md |
+| laser_sp_bars_01 | train | FINITE_SAMPLE_QUALIFIED | PASS | 6/8 | bars-train-review.md |
+| laser_sp_bars_02 | train | FINITE_SAMPLE_QUALIFIED | PASS | 7/8 | bars-train-review.md |
+| laser_sp_bars_03 | train | FINITE_SAMPLE_QUALIFIED | PASS | 8/8 | bars-train-review.md |
+| laser_sp_bars_04 | held-out | FINITE_SAMPLE_QUALIFIED | PASS | 7/8 | heldout-review.md |
+| laser_sp_corridor_01 | train | NOT_PROVEN_QUARANTINED | PASS | 0/8 | corridor-train-review.md |
+| laser_sp_corridor_02 | train | FINITE_SAMPLE_QUALIFIED | PASS | 0/8 | corridor-train-review.md |
+| laser_sp_corridor_03 | train | NOT_PROVEN_QUARANTINED | PASS | 0/8 | corridor-train-review.md |
+| laser_sp_corridor_04 | held-out | FINITE_SAMPLE_QUALIFIED | PASS | 8/8 | heldout-review.md |
+| laser_sp_stagger_01 | train | FINITE_SAMPLE_QUALIFIED | PASS | 7/8 | stagger-train-review.md |
+| laser_sp_stagger_02 | train | FINITE_SAMPLE_QUALIFIED | PASS | 7/8 | stagger-train-review.md |
+| laser_sp_stagger_03 | train | FINITE_SAMPLE_QUALIFIED | PASS | 6/8 | stagger-train-review.md |
+| laser_sp_stagger_04 | held-out | FINITE_SAMPLE_QUALIFIED | PASS | 8/8 | heldout-review.md |
+| laser_sp_sweep_01 | train | FINITE_SAMPLE_QUALIFIED | PASS | 2/8 | sweep-train-review.md |
+| laser_sp_sweep_02 | train | NOT_PROVEN_QUARANTINED | PASS | 0/8 | sweep-train-review.md |
+| laser_sp_sweep_03 | train | FINITE_SAMPLE_QUALIFIED | PASS | 7/8 | sweep-train-review.md |
+| laser_sp_sweep_04 | held-out | FINITE_SAMPLE_QUALIFIED | PASS | 8/8 | heldout-review.md |
+
+stagger01最终采用round3独立复审，旧final/frozen-manifest中的round2已被替代；其余按final-current-manifest与验收汇总核对。corridor02的动态证据另来自cell控制器，仅rank0/1成功；不能只看上表18f控制器成功数决定收卡。3张NOT_PROVEN仍禁用，不能将失败认定为无解。
+
+机器工具、18f真实玩家检查器和补充cell控制器原先均由非作者独立审阅；历史工具审查只覆盖当时实现与样本，不证明全随机域可解，也不保证训练收益。held-out开发接触范围及静止幸存样本的限制仍按上文保留。
+
+## 前两批验收
+
+第一批10张、第二批20张为原作底子上的激光变体；独立Luna审核与机器验收的最终汇总分别见[第一批](reports/acceptance-summary.json)和[第二批](reports/batch2-acceptance-summary.json)。独立审阅曾发现并修正时序、几何、字段与父卡继承问题；以汇总绑定的最终版本为准，不用早期作者自报或失效轮次替代。结果仍只代表已声明rank/seed和检查范围，不是全域可躲证明。
+
+新合成任务按[当前生产入口](../../transcribe/synthetic/README.md)和[通用独立审核约定](../../transcribe/contracts/review.md)执行，不恢复旧批次的hash冻结门或临时派发模板。

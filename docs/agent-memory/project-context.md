@@ -23,6 +23,6 @@
 
 TH16／TH18 已确认的路线是 thcrap 加载共享 x86 AI 插件，由逐版本 patch 提供地址和挂点，复用快照、ONNX 与运动层。源码在 renkolab 的 `mods/_shared/stg-ai/`、`mods/th16.v1.00a/autoplay/`、`mods/th18.v1.00a/autoplay/`；TH06NC 的 x64 适配器在 `mods/th06nc/autoplay/native/`。
 
-TH18 自包含包选择封装现有 thcrap，游戏文件由用户自备。独立代理 DLL 仍只是后续需求；特殊几何、自动炸弹和新增协议范围不能因打包而视为已确认。TH16 季节释放和 TH18 卡牌使用／切换保留手动。构建入口、现行包说明及未验证项见[打包说明](../../tools/th18-portable/README.md)；历史决定与实施见 [TH16 计划](../superpowers/plans/2026-10-22-th16-adaptation.md)、[TH18 计划](../superpowers/plans/2026-10-22-th18-adaptation.md)和[自包含包记录](../practice-cards/2026-10-22-th18-portable.md)。
+TH18 自包含包选择封装现有 thcrap，游戏文件由用户自备。独立代理 DLL 仍只是后续需求；特殊几何、自动炸弹和新增协议范围不能因打包而视为已确认。TH16 季节释放和 TH18 卡牌使用／切换保留手动。构建入口、现行包说明及未验证项见[打包说明](../../tools/th18-portable/README.md)。原生挂点、ABI与样本版本依据保留在renkolab对应模块的FIELD-NOTES／AUDIT；Windows游戏内验收未因接口接通而完成。
 
 实验权重与游戏包模型分别查各自配置／manifest，不按日期推断“最新模型就是部署模型”。游戏编译、主机对拍和 Windows 实机表现也须分开记录。

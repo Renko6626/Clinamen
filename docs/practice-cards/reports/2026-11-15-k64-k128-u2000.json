@@ -1,0 +1,609 @@
+{
+  "scope": "K64 one-layer u2000 CPU FP32 vs K128 one-layer u2000 GPU FP32, same suite, seed12345, motor, warmup0, max_frames7624, 32 episodes/card/rank. Numerical/backend differences remain; K128 also changes PPO minibatch.",
+  "overall": {
+    "k64": {
+      "episodes": 1024,
+      "passed": 248,
+      "percent": 24.21875,
+      "frames_mean": 1668.181640625
+    },
+    "k128": {
+      "episodes": 1024,
+      "passed": 233,
+      "percent": 22.75390625,
+      "frames_mean": 1705.9814453125
+    }
+  },
+  "ranks": {
+    "2": {
+      "k64": {
+        "episodes": 512,
+        "passed": 163,
+        "percent": 31.8359375,
+        "frames_mean": 1844.546875
+      },
+      "k128": {
+        "episodes": 512,
+        "passed": 148,
+        "percent": 28.90625,
+        "frames_mean": 1887.12109375
+      }
+    },
+    "3": {
+      "k64": {
+        "episodes": 512,
+        "passed": 85,
+        "percent": 16.6015625,
+        "frames_mean": 1491.81640625
+      },
+      "k128": {
+        "episodes": 512,
+        "passed": 85,
+        "percent": 16.6015625,
+        "frames_mean": 1524.841796875
+      }
+    }
+  },
+  "cards": {
+    "th14_s2_mb1": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1180.4375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1175.3125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 978.40625
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 990
+        }
+      }
+    },
+    "th14_s4_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 28,
+          "percent": 87.5,
+          "frames_mean": 2911.625
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 22,
+          "percent": 68.75,
+          "frames_mean": 2672.1875
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 5,
+          "percent": 15.625,
+          "frames_mean": 1814.59375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 6,
+          "percent": 18.75,
+          "frames_mean": 1929.71875
+        }
+      }
+    },
+    "th14_s6_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1085.84375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1432.21875
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1039.375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1264.8125
+        }
+      }
+    },
+    "th15_s1_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1095.40625
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 1292.84375
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 3,
+          "percent": 9.375,
+          "frames_mean": 1230.375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 5,
+          "percent": 15.625,
+          "frames_mean": 1269.0625
+        }
+      }
+    },
+    "th15_s3_mb2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 475.3125
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 407.78125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 445.1875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 361.46875
+        }
+      }
+    },
+    "th15_s4_b5": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 707.875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 711.0625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 670.34375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 679.375
+        }
+      }
+    },
+    "th16_s4_b3": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 21,
+          "percent": 65.625,
+          "frames_mean": 2011.875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 6,
+          "percent": 18.75,
+          "frames_mean": 1477.25
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 7,
+          "percent": 21.875,
+          "frames_mean": 1587.09375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 7,
+          "percent": 21.875,
+          "frames_mean": 1433.71875
+        }
+      }
+    },
+    "th16_s6_b11": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 17,
+          "percent": 53.125,
+          "frames_mean": 6359
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 13,
+          "percent": 40.625,
+          "frames_mean": 5978.0625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 8,
+          "percent": 25.0,
+          "frames_mean": 5136.34375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 7,
+          "percent": 21.875,
+          "frames_mean": 4892.9375
+        }
+      }
+    },
+    "th16_s6_b14": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 2252.1875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 2718
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 2252.1875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 2718
+        }
+      }
+    },
+    "th16_s6_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2796.90625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2778.78125
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        }
+      }
+    },
+    "th16_s6_b4": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 881.25
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 1,
+          "percent": 3.125,
+          "frames_mean": 1273.0625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 744.75
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 866.34375
+        }
+      }
+    },
+    "th16_s6_b6": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 3066.3125
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 3100.21875
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 764.625
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 821.9375
+        }
+      }
+    },
+    "th18_s1_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2225
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2218.4375
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2195.59375
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 28,
+          "percent": 87.5,
+          "frames_mean": 2142.6875
+        }
+      }
+    },
+    "th18_s4_b2": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 2,
+          "percent": 6.25,
+          "frames_mean": 1073.1875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 11,
+          "percent": 34.375,
+          "frames_mean": 1711.40625
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 956.21875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1088.28125
+        }
+      }
+    },
+    "th18_s4_b4": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 767.125
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 816.3125
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 731.5
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 688.75
+        }
+      }
+    },
+    "th18_s5_b4": {
+      "2": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 593.3125
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 412.875
+        }
+      },
+      "3": {
+        "k64": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 543.6875
+        },
+        "k128": {
+          "episodes": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 423.375
+        }
+      }
+    }
+  },
+  "gained": 43,
+  "lost": 58,
+  "termination": {
+    "user_requested_termination": true,
+    "process_exit_code": 130,
+    "last_completed_update": 2373,
+    "last_logged_frames": 622067712,
+    "wall_at_last_update_seconds": 11044.713,
+    "checkpoint_metadata": {
+      "latest": {
+        "update": 2250,
+        "frames": 589824000
+      },
+      "best": {
+        "update": 2000,
+        "frames": 524288000
+      },
+      "u2250": {
+        "update": 2250,
+        "frames": 589824000
+      },
+      "u2000": {
+        "update": 2000,
+        "frames": 524288000
+      }
+    },
+    "evaluation_history": [
+      {
+        "update": 500,
+        "modern_passed": 132,
+        "modern_episodes": 1024,
+        "hard_passed": 79,
+        "lunatic_passed": 53,
+        "th06_passed": 554,
+        "th06_episodes": 832
+      },
+      {
+        "update": 1000,
+        "modern_passed": 169,
+        "modern_episodes": 1024,
+        "hard_passed": 96,
+        "lunatic_passed": 73,
+        "th06_passed": 581,
+        "th06_episodes": 832
+      },
+      {
+        "update": 1500,
+        "modern_passed": 201,
+        "modern_episodes": 1024,
+        "hard_passed": 124,
+        "lunatic_passed": 77,
+        "th06_passed": 675,
+        "th06_episodes": 832
+      },
+      {
+        "update": 2000,
+        "modern_passed": 233,
+        "modern_episodes": 1024,
+        "hard_passed": 148,
+        "lunatic_passed": 85,
+        "th06_passed": 714,
+        "th06_episodes": 832
+      }
+    ],
+    "steady_sps": 61963.349619144996,
+    "raw_run": "runs/k128-experiment-20261115/results/k128-experiment-20261115/runs/20261115-044801-sa1-k128-zero",
+    "records_verified": 7424,
+    "all_logged_ppo_values_finite": true,
+    "planned_updates": 4000,
+    "not_completed": true,
+    "platform_state": {
+      "id": 60494618,
+      "actual_status": "exited",
+      "intended_status": "stopped",
+      "at_utc": "2026-11-15T07:55:25.130651+00:00",
+      "spent": 2.5684839608000374,
+      "disk_retained": true
+    },
+    "decision": "User ended K128 experiment after no overall modern-card gain at equal u2000; next priority is attention pooling/readout architecture. No further K128/K256 training authorized."
+  }
+}

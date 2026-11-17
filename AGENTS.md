@@ -4,14 +4,15 @@
 
 - 主会话每次开始任务，先读 [项目记忆索引](docs/agent-memory/MEMORY.md)，再按任务打开相关条目；这些是跨会话保存的用户约定和项目经验。已由主会话准备并通过transcribe/run.py派发的固定单卡worker，按task.md、source.txt和随附的有关章节执行，不再读取整份项目记忆/实验历史或进行项目级规划；代码权限、已批准简化等约束仍须遵守。
 - 项目是 stg-engine 躲弹模型的 PPO 训练仓，同时包含 TH06／TH16／TH18 弹幕转写与合成练习卡资料。
-- 开发入口见 [README.md](README.md)；当前研究顺序见 [下一步](docs/next-steps.md)；训练设计见 [设计文档](docs/2026-09-15-stg-rl-train-design.md)；实验经过与结论见 [实验记录](docs/experiments.md)。
-- Magnus 工作先读 [迁移说明](docs/magnus-migration.md)。TH06/NC 转写先读 [转写总览](transcribe/README.md)、[TH06 操作说明](transcribe/th06/README.md)、[转写设计](docs/2026-09-16-th06-transcribe-design.md) 和 `transcribe/th06/contracts/` 中对应阶段的约定；TH18主会话按[短skill](.claude/skills/th18-transcribe/SKILL.md)进入准备/维护流程；固定单卡worker只按注入的角色说明、task/source及任务给出的[TH18规则书](transcribe/th18/README.md)和引擎ECL手册执行，不重读skill、流程README或项目历史。单卡使用共用 validate 的 [TH18 规则](transcribe/th18/validation.md)，不沿用 TH06 批量切分/摘录命令。
+- 开发入口见 [README.md](README.md)；当前研究顺序见 [下一步](docs/next-steps.md)；训练实现见 [实现概况](README.md#训练实现)；实验经过与结论见 [实验记录](docs/experiments.md)。
+- Magnus 工作先读 [迁移说明](docs/magnus-migration.md)。TH06/NC 转写先读 [转写总览](transcribe/README.md)、[TH06 操作说明](transcribe/th06/README.md) 和 `transcribe/th06/contracts/` 中对应阶段的约定；TH18主会话按[短skill](.claude/skills/th18-transcribe/SKILL.md)进入准备/维护流程；固定单卡worker只按注入的角色说明、task/source及任务给出的[TH18规则书](transcribe/th18/README.md)和引擎ECL手册执行，不重读skill、流程README或项目历史。单卡使用共用 validate 的 [TH18 规则](transcribe/th18/validation.md)，不沿用 TH06 批量切分/摘录命令。
 
 ## 用户约定
 
 - 在 `main` 上工作，不自行创建功能分支或 worktree。用户明确要求提交才 commit，明确要求推送才 `git push origin main`；两项授权分开。不要把历史记忆中的操作命令当作当前执行请求。
 - 主代理若为 Astra，大规模代码探索、修改与验证优先委派，类似任务优先 Sol／medium；主代理负责判断与审查，交接明确范围、文件责任和验收证据。简单记忆维护可直接完成。
-- **当前研究状态（2026-11-15）**：扩池后的单层u4000／u6000与SA2 u4000及本机深度诊断已结束，用户要求阶段保存后再考虑模型优化。训练起点实际Hard504／Normal14／Extra150、无Lunatic；后续先区分训练难度与评测难度。结果和候选统一见[研究待办](docs/next-steps.md)，新架构、接口、训练配置及预算仍需用户确定。旧Perceiver方案／原型不构成恢复授权；不自动继续训练或替换部署模型。
+- **下一阶段决定（2026-11-17）**：用户已认可[逐弹全局场景token替换CNN](docs/superpowers/specs/2026-11-17-mq4-global-latents-design.md)，要求先写文档、下一阶段再做。保留近场MQ4，以16维逐弹编码、32×64全局token及两层近远联合计算替换密度图／CNN；512／1024输入待成本短测选择，优先争取1024。无位置任务MQ4为基线；实现、短测与训练尚未执行，运行预算另定。此决定更新下方历史条目的“后续方案另定”，不恢复旧Perceiver任务或自动开训。
+- **当前研究状态（2026-11-15）**：单层K64 u4000／u6000、SA2 u4000与诊断已结束；后续K128单层按用户要求在日志u2373提前结束，最新权重u2250、best u2000，产物取回、GPU已停、磁盘保留。u2000现代16卡同量K64 24.22%对K128 22.75%，未显示足以抵消成本的整体收益；用户随后确认MQ4多查询读取并要求跳过短测直接训练，现已完成u4000且取回结果、GPU停机、磁盘保留；同CPU现代16卡旧K64 26.27%对MQ4 33.79%，部分段落改善，密集弱项仍未普遍解决。后续方案另定，不自动续训、继续K128／K256或恢复旧Perceiver。训练起点Hard504／Normal14／Extra150、无Lunatic；保留难度口径，不将难度对齐当作研究表征的前置条件。当前结果、边界和候选统一见[研究待办](docs/next-steps.md)，新架构具体实现、接口、训练配置及预算仍按用户确定的方案执行；不自动开训或替换部署模型。
 - 研究方案优先改环境或引擎的真实机制。避免向观测塞入人为构造的几何答案，也不要用固定罚款式 reward 塑形代替真实后果；确需这样做时先说明理由并征求用户同意。
 - 需要引擎接口时直接在 stg-engine 解决；修改前读取该仓库适用的 `AGENTS.md`，以及尚未迁移的 `CLAUDE.md`。保留原有引擎要求：P4 坏参数 no-op + 计数、写 API 钳制、`ENGINE_VER` bump 评审、golden 校验和对拍。
 - 难度 rank 从 0 开始：`0 = Easy`、`1 = Normal`、`2 = Hard`、`3 = Lunatic`；`r2` 是 Hard，`r3` 是 Lunatic。
@@ -53,7 +54,7 @@ bash run.sh configs/smoke.toml smoke
 - 新转写/合成任务不重复加入hash、冻结或签名要求；保留必要编译运行与独立审核，行为变化只补受影响检查。历史SHA流程不默认推广，引擎wheel交付一致性约定另行保留。
 - 已批准的简化连同其自然时序后果一起执行，写审不得以保真/稳妥为由补回省略机制或重新设为阻塞。TH18出生阶段整体省略后ACCEL等可立即开始，具体范围见 `transcribe/th18/transcription-policy.md`。
 - `transcribe/work/` 含原作 ECL 摘录，永不入库；`runs/`、`dist/`、虚拟环境和构建产物遵守现有 `.gitignore`。
-- TH06NC 部署侧保留用户要求的 8 帧激光运动平滑，不自行改成单帧；依据见 [T8 打包记录](docs/practice-cards/2026-10-02-t8-th06nc-package.md)。
+- TH06NC 部署侧保留用户要求的 8 帧激光运动平滑，不自行改成单帧；依据见 [激光阶段交付约定](docs/practice-cards/2026-10-02-laser-stage-summary.md#工程交付)。
 - ONNX 导出后检查自动 torch / onnxruntime 对拍；改图签名时训练侧与部署侧一起更新 `GRAPH_VERSION`。细节见 README。
 
 - **TH14阶段收尾（2026-11-11）**：按用户要求先完成Sol四个特殊项，再阶段性结束作者转写。普通121 written；Sol `th14_s6_b9`、`th14_s6_b10`、`th14_s7_b8` 完整机器检查通过，均待独立审核，未整批验收／收卡／训练。搁置 `th14_s2_w06`、`th14_s6_b4`、`th14_s6_b5`、`th14_s6_b6`、`th14_s6_b7`、`th14_s6_b8`，有元数据的草稿设enabled=false，移出默认派发／返工；原5待补、9暂缓维持排除。未经用户重新决定，不继续调查、重派、审核收卡或启用搁置项，不扩池、减弹或缩寿命；具体缺口、报告与验证范围见[TH14阶段记录](transcribe/th14/README.md)。

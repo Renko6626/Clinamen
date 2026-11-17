@@ -1,4 +1,4 @@
-"""danger_topk_v6（d / t 对照实验，docs/2026-09-25-dt-ablation-design.md §4）。"""
+"""danger_topk_v6（d / t 对照实验，docs/experiments.md 历史实验）。"""
 import pytest
 import torch
 

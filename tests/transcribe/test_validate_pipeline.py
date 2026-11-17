@@ -63,7 +63,7 @@ def test_lint_dir_name(tmp_path):
     assert any("目录名" in e for e in lint_errs(make_card(tmp_path, name="orig_ring")))
 
 
-@pytest.mark.parametrize("source", ["th16", "th18"])
+@pytest.mark.parametrize("source", ["th14", "th15", "th16", "th18"])
 @pytest.mark.parametrize("suffix", ["s1_w01", "s1_mb1", "s6_b12", "s7_b1"])
 def test_lint_modern_ids(tmp_path, source, suffix):
     assert lint_errs(make_card(tmp_path, name=f"{source}_{suffix}", source=f'"{source}"')) == []
@@ -71,6 +71,8 @@ def test_lint_modern_ids(tmp_path, source, suffix):
 
 @pytest.mark.parametrize("name, source", [
     ("th18_s1_w01", '"th06"'),
+    ("th14_s1_w01", '"th15"'),
+    ("th15_s1_w01", '"th16"'),
     ("th16_s1_w01", '"th18"'),
     ("th06_s1_w01", '"th18"'),
     ("th18_s1_w01", '"th19"'),
@@ -86,6 +88,8 @@ def test_lint_invalid_modern_id(tmp_path, name):
 
 @pytest.mark.parametrize("source, limit, valid", [
     ("th06", 3500, False), ("th18", 3500, True),
+    ("th14", 3500, True), ("th14", 65535, True), ("th14", 65536, False),
+    ("th15", 3500, True), ("th15", 65535, True), ("th15", 65536, False),
     ("th16", 3500, True), ("th16", 65535, True), ("th16", 65536, False),
     ("th18", 65535, True), ("th18", 65536, False), ("th18", 0, False),
 ])
@@ -110,6 +114,7 @@ def test_th06_batch_does_not_select_th18(work):
 @pytest.mark.parametrize("source, pool_full, contract_viol, expected_ok", [
     ("th06", 0, 0, False), ("th18", 0, 0, True), ("th18", 1, 0, False),
     ("th18", 0, 1, False), ("th16", 0, 0, True), ("th16", 1, 0, False),
+    ("th15", 0, 0, True), ("th15", 1, 0, False), ("th15", 0, 1, False),
 ])
 def test_peak_policy_keeps_pool_exhaustion_error(tmp_path, monkeypatch, source, pool_full, contract_viol, expected_ok):
     monkeypatch.setattr(validate, "harness_run", lambda *args: {
@@ -127,7 +132,7 @@ def test_peak_policy_keeps_pool_exhaustion_error(tmp_path, monkeypatch, source, 
 
 
 @pytest.mark.skipif(not HAS_HARNESS, reason="没有 stg-engine release harness")
-@pytest.mark.parametrize("source", ["th16", "th18"])
+@pytest.mark.parametrize("source", ["th14", "th15", "th16", "th18"])
 def test_modern_cli_all_layers_with_native_bullets(tmp_path, source):
     """自写合成卡验证新词表、旧预算之外的运行和 JSON；不冒充原作转写。"""
     d = make_card(tmp_path, name=f"{source}_s1_w01", source=f'"{source}"', ranks="[0, 0]", time_limit="3500")

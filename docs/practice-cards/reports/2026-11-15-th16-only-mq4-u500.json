@@ -1,0 +1,271 @@
+{
+  "scope": "MQ4 u500 mixed vs TH16-only, same GPU FP32 backend, seed12345, 32 episodes/card/rank, 6 TH16 diagnostic cards retained in training. LR matched to 4000 horizon. Forward batch differs: 16-card mixed reference vs 6-card specialist. Single seed; TH16 exposure increases, so not isolated negative transfer.",
+  "run_dir": "runs/th16-mq4-probe-20261115/results/th16-mq4-probe-20261115/runs/20261115-132419-th16-mq4-zero-u500",
+  "updates": 500,
+  "frames": 131072000,
+  "wall_seconds": 1545.661,
+  "lr_last": 0.00026257499121129513,
+  "checkpoint_metadata": {
+    "latest.pt": {
+      "update": 500,
+      "env_steps": 131072000
+    },
+    "u500.pt": {
+      "update": 500,
+      "env_steps": 131072000
+    },
+    "best.pt": {
+      "update": 500,
+      "env_steps": 131072000
+    }
+  },
+  "overall": {
+    "mixed": {
+      "n": 384,
+      "passed": 71,
+      "percent": 18.489583333333332,
+      "frames_mean": 1790.7005208333333
+    },
+    "th16_only": {
+      "n": 384,
+      "passed": 104,
+      "percent": 27.083333333333332,
+      "frames_mean": 1823.6875
+    },
+    "delta_percentage_points": 8.59375
+  },
+  "ranks": {
+    "2": {
+      "mixed": {
+        "n": 192,
+        "passed": 40,
+        "percent": 20.833333333333332,
+        "frames_mean": 1949.9322916666667
+      },
+      "th16_only": {
+        "n": 192,
+        "passed": 61,
+        "percent": 31.770833333333332,
+        "frames_mean": 1949.21875
+      }
+    },
+    "3": {
+      "mixed": {
+        "n": 192,
+        "passed": 31,
+        "percent": 16.145833333333332,
+        "frames_mean": 1631.46875
+      },
+      "th16_only": {
+        "n": 192,
+        "passed": 43,
+        "percent": 22.395833333333332,
+        "frames_mean": 1698.15625
+      }
+    }
+  },
+  "cards": {
+    "th16_s4_b3": {
+      "2": {
+        "mixed": {
+          "n": 32,
+          "passed": 6,
+          "percent": 18.75,
+          "frames_mean": 1265.1875
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 17,
+          "percent": 53.125,
+          "frames_mean": 1762.28125
+        }
+      },
+      "3": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 900.15625
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 11,
+          "percent": 34.375,
+          "frames_mean": 1656.71875
+        }
+      }
+    },
+    "th16_s6_b11": {
+      "2": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 4215.9375
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 3531.25
+        }
+      },
+      "3": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 3796.28125
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 3760.4375
+        }
+      }
+    },
+    "th16_s6_b14": {
+      "2": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1102.875
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 695.96875
+        }
+      },
+      "3": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 1102.875
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 695.96875
+        }
+      }
+    },
+    "th16_s6_b2": {
+      "2": {
+        "mixed": {
+          "n": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2788.78125
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        }
+      },
+      "3": {
+        "mixed": {
+          "n": 32,
+          "passed": 31,
+          "percent": 96.875,
+          "frames_mean": 2806.28125
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 32,
+          "percent": 100.0,
+          "frames_mean": 2827
+        }
+      }
+    },
+    "th16_s6_b4": {
+      "2": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 663.5625
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 667.96875
+        }
+      },
+      "3": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 629.375
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 629.9375
+        }
+      }
+    },
+    "th16_s6_b6": {
+      "2": {
+        "mixed": {
+          "n": 32,
+          "passed": 3,
+          "percent": 9.375,
+          "frames_mean": 1663.25
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 12,
+          "percent": 37.5,
+          "frames_mean": 2210.84375
+        }
+      },
+      "3": {
+        "mixed": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 553.84375
+        },
+        "th16_only": {
+          "n": 32,
+          "passed": 0,
+          "percent": 0.0,
+          "frames_mean": 618.875
+        }
+      }
+    }
+  },
+  "platform": {
+    "checked_utc": "2026-11-15T15:45:32.757811+00:00",
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "credit": 0.06576098090921079,
+    "spent": 0.42766906210001565
+  },
+  "completion": {
+    "at_utc": "2026-11-15T13:51:20.772502+00:00",
+    "exit_code": 0,
+    "spent_before_download": 0.38395022600000317,
+    "stop_response": {
+      "cli_output": "stopping instance 60494618."
+    },
+    "disk_retained": true,
+    "status_after_stop": "running"
+  },
+  "ranks_training": {
+    "Hard": 81,
+    "Extra": 29
+  },
+  "lr_matches_mixed_all_500_updates": true
+}

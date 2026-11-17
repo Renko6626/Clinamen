@@ -1,0 +1,2224 @@
+{
+  "scope": "Resumed from Thailand u750 on Shaanxi; environment and curriculum reset on migration. MQ4 without position tasks vs original mixed-intent MQ4; original smoothness/edge penalties retained. Modern GPU FP32 diagnostic protocol matched; TH06 new free evaluation differs from baseline follow evaluation and is not a paired comparison. Different RTX5090 hosts, single training seed.",
+  "run_dir": "results/mq4-free-experiment-20261117/runs/20261116-233328-mq4-free-zero",
+  "updates": 4000,
+  "frames": 1048576000,
+  "resumed_training_and_eval_wall_s": 13731.485,
+  "checkpoint_metadata": {
+    "latest.pt": {
+      "update": 4000,
+      "env_steps": 1048576000
+    },
+    "u4000.pt": {
+      "update": 4000,
+      "env_steps": 1048576000
+    },
+    "best.pt": {
+      "update": 4000,
+      "env_steps": 1048576000
+    }
+  },
+  "eval_episodes_checked": 14848,
+  "platform": {
+    "checked_utc": "2026-11-17T04:40:23.614028+00:00",
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "credit": 2.9468714951892636,
+    "disk_retained": true
+  },
+  "evals": [
+    {
+      "update": 500,
+      "modern": {
+        "episodes": 1024,
+        "passed": 155,
+        "percent": 15.13671875,
+        "frames_mean": 1393.142578125
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 92,
+          "percent": 17.96875,
+          "frames_mean": 1557.81640625
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 63,
+          "percent": 12.3046875,
+          "frames_mean": 1228.46875
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 537,
+        "percent": 64.54326923076923,
+        "frames_mean": 1315.0348557692307
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1063.15625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 919.875
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1292.3125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1077.75
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1023.34375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1057.71875
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1243.59375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1081.53125
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 352.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 352.5625
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 652.25
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 572.46875
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1045.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 833.9375
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 3614.75
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 2602.28125
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 3119.46875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 3119.46875
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 2737.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 733.84375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 642.9375
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 25,
+            "percent": 78.125,
+            "frames_mean": 2845.59375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 700.84375
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 2196.3125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 28,
+            "percent": 87.5,
+            "frames_mean": 2087.6875
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 4,
+            "percent": 12.5,
+            "frames_mean": 1872.03125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 747.625
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 682.875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 598.03125
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 450.75
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 433.78125
+          }
+        }
+      }
+    },
+    {
+      "update": 1000,
+      "modern": {
+        "episodes": 1024,
+        "passed": 182,
+        "percent": 17.7734375,
+        "frames_mean": 1567.7587890625
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 109,
+          "percent": 21.2890625,
+          "frames_mean": 1683.283203125
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 73,
+          "percent": 14.2578125,
+          "frames_mean": 1452.234375
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 667,
+        "percent": 80.16826923076923,
+        "frames_mean": 1419.7860576923076
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1114.25
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 961.78125
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 13,
+            "percent": 40.625,
+            "frames_mean": 2355.4375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1353.40625
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1000.0625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 990.84375
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1055.21875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 1116.71875
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 424.71875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 349.03125
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 641.90625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 622.09375
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 15,
+            "percent": 46.875,
+            "frames_mean": 1788.09375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 10,
+            "percent": 31.25,
+            "frames_mean": 1520.8125
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 4,
+            "percent": 12.5,
+            "frames_mean": 4881.75
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 4590.75
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 2969.78125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 2969.78125
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 852.21875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 670.8125
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 1491.15625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 726.40625
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2174.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 2210.53125
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 13,
+            "percent": 40.625,
+            "frames_mean": 2057.0625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 981.90625
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 780.53125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 753.84375
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 518.96875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 590.03125
+          }
+        }
+      }
+    },
+    {
+      "update": 1500,
+      "modern": {
+        "episodes": 1024,
+        "passed": 224,
+        "percent": 21.875,
+        "frames_mean": 1716.587890625
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 140,
+          "percent": 27.34375,
+          "frames_mean": 1888.375
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 84,
+          "percent": 16.40625,
+          "frames_mean": 1544.80078125
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 684,
+        "percent": 82.21153846153847,
+        "frames_mean": 1432.3533653846155
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1116.5625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 970.65625
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 9,
+            "percent": 28.125,
+            "frames_mean": 2087.625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 940.625
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1039.8125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 965.5625
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 1346.0625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 4,
+            "percent": 12.5,
+            "frames_mean": 1307.0625
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 437.46875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 369.90625
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 660.78125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 660.28125
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 15,
+            "percent": 46.875,
+            "frames_mean": 1818.15625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 14,
+            "percent": 43.75,
+            "frames_mean": 1807.4375
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 12,
+            "percent": 37.5,
+            "frames_mean": 6018.65625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 4,
+            "percent": 12.5,
+            "frames_mean": 4952.28125
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 4046.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 4046.40625
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 869.5625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 636.90625
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 3052.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 703.75
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 2178.53125
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 7,
+            "percent": 21.875,
+            "frames_mean": 1489.65625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1170.03125
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 765.9375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 777.59375
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 412.9375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 402.78125
+          }
+        }
+      }
+    },
+    {
+      "update": 2000,
+      "modern": {
+        "episodes": 1024,
+        "passed": 309,
+        "percent": 30.17578125,
+        "frames_mean": 1999.40234375
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 200,
+          "percent": 39.0625,
+          "frames_mean": 2229.015625
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 109,
+          "percent": 21.2890625,
+          "frames_mean": 1769.7890625
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 752,
+        "percent": 90.38461538461539,
+        "frames_mean": 1476.7367788461538
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1182.34375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 981.0625
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 20,
+            "percent": 62.5,
+            "frames_mean": 2605.78125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 7,
+            "percent": 21.875,
+            "frames_mean": 2032.3125
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 1704.8125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1265.53125
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 10,
+            "percent": 31.25,
+            "frames_mean": 1657.71875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 1162.625
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 503.65625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 410.8125
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 692.90625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 654.71875
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2378.46875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 29,
+            "percent": 90.625,
+            "frames_mean": 2303.4375
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 16,
+            "percent": 50.0,
+            "frames_mean": 6491.90625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 7,
+            "percent": 21.875,
+            "frames_mean": 5752.875
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 4916.46875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 4916.46875
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1047.09375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 696.21875
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 3123.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 763.0
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2188.1875
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 24,
+            "percent": 75.0,
+            "frames_mean": 2576.8125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 901.8125
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 977.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 739.90625
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 753.875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 720.65625
+          }
+        }
+      }
+    },
+    {
+      "update": 2500,
+      "modern": {
+        "episodes": 1024,
+        "passed": 315,
+        "percent": 30.76171875,
+        "frames_mean": 1998.3798828125
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 197,
+          "percent": 38.4765625,
+          "frames_mean": 2195.826171875
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 118,
+          "percent": 23.046875,
+          "frames_mean": 1800.93359375
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 749,
+        "percent": 90.02403846153847,
+        "frames_mean": 1472.032451923077
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1249.84375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1012.65625
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 24,
+            "percent": 75.0,
+            "frames_mean": 2765.84375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 9,
+            "percent": 28.125,
+            "frames_mean": 2106.28125
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1376.5
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1191.125
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 12,
+            "percent": 37.5,
+            "frames_mean": 1595.5
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 6,
+            "percent": 18.75,
+            "frames_mean": 1379.28125
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 807.5
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 384.96875
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 693.65625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 653.125
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 24,
+            "percent": 75.0,
+            "frames_mean": 2163.5625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 26,
+            "percent": 81.25,
+            "frames_mean": 2198.09375
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 21,
+            "percent": 65.625,
+            "frames_mean": 6547.3125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 7,
+            "percent": 21.875,
+            "frames_mean": 5754.8125
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 5,
+            "percent": 15.625,
+            "frames_mean": 4907.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 5,
+            "percent": 15.625,
+            "frames_mean": 4907.40625
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 964.6875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 738.625
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 3123.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 833.96875
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2209.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 13,
+            "percent": 40.625,
+            "frames_mean": 2008.1875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 948.875
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 812.875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 657.0
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1080.96875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 996.71875
+          }
+        }
+      }
+    },
+    {
+      "update": 3000,
+      "modern": {
+        "episodes": 1024,
+        "passed": 327,
+        "percent": 31.93359375,
+        "frames_mean": 2014.3720703125
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 213,
+          "percent": 41.6015625,
+          "frames_mean": 2238.21484375
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 114,
+          "percent": 22.265625,
+          "frames_mean": 1790.529296875
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 743,
+        "percent": 89.30288461538461,
+        "frames_mean": 1465.5060096153845
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1293.96875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1157.875
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2989.59375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 10,
+            "percent": 31.25,
+            "frames_mean": 2148.90625
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1765.28125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1515.03125
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 10,
+            "percent": 31.25,
+            "frames_mean": 1674.75
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 1147.40625
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 646.53125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 420.875
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 689.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 657.75
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2359.59375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 26,
+            "percent": 81.25,
+            "frames_mean": 2184.6875
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 14,
+            "percent": 43.75,
+            "frames_mean": 6002.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 8,
+            "percent": 25.0,
+            "frames_mean": 5635.53125
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 4111.59375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 4111.59375
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 6,
+            "percent": 18.75,
+            "frames_mean": 1535.5625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 910.375
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 3047.75
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 822.78125
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 19,
+            "percent": 59.375,
+            "frames_mean": 2374.28125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 919.15625
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 988.875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 784.4375
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1280.25
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 2,
+            "percent": 6.25,
+            "frames_mean": 1180.0625
+          }
+        }
+      }
+    },
+    {
+      "update": 3500,
+      "modern": {
+        "episodes": 1024,
+        "passed": 342,
+        "percent": 33.3984375,
+        "frames_mean": 1916.9521484375
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 211,
+          "percent": 41.2109375,
+          "frames_mean": 2164.9609375
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 131,
+          "percent": 25.5859375,
+          "frames_mean": 1668.943359375
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 747,
+        "percent": 89.78365384615384,
+        "frames_mean": 1470.4963942307693
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1282.78125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1096.59375
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 28,
+            "percent": 87.5,
+            "frames_mean": 2915.5
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 19,
+            "percent": 59.375,
+            "frames_mean": 2575.5625
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 7,
+            "percent": 21.875,
+            "frames_mean": 2268.03125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 10,
+            "percent": 31.25,
+            "frames_mean": 2231.0625
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 12,
+            "percent": 37.5,
+            "frames_mean": 1598.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 1166.53125
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 5,
+            "percent": 15.625,
+            "frames_mean": 784.75
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 500.96875
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 726.96875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 689.125
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 23,
+            "percent": 71.875,
+            "frames_mean": 2139.5625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 25,
+            "percent": 78.125,
+            "frames_mean": 2156.78125
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 12,
+            "percent": 37.5,
+            "frames_mean": 3865.46875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 927.59375
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 8,
+            "percent": 25.0,
+            "frames_mean": 5560.625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 8,
+            "percent": 25.0,
+            "frames_mean": 5560.625
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 5,
+            "percent": 15.625,
+            "frames_mean": 1562.125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 1005.0
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 3116.03125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 1239.34375
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2167.28125
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 16,
+            "percent": 50.0,
+            "frames_mean": 2138.90625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1037.53125
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 960.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 767.0
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 667.84375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 755.09375
+          }
+        }
+      }
+    },
+    {
+      "update": 4000,
+      "modern": {
+        "episodes": 1024,
+        "passed": 397,
+        "percent": 38.76953125,
+        "frames_mean": 2278.01171875
+      },
+      "ranks": {
+        "2": {
+          "episodes": 512,
+          "passed": 244,
+          "percent": 47.65625,
+          "frames_mean": 2490.4140625
+        },
+        "3": {
+          "episodes": 512,
+          "passed": 153,
+          "percent": 29.8828125,
+          "frames_mean": 2065.609375
+        }
+      },
+      "legacy_th06": {
+        "episodes": 832,
+        "passed": 784,
+        "percent": 94.23076923076923,
+        "frames_mean": 1493.108173076923
+      },
+      "cards": {
+        "th14_s2_mb1": {
+          "2": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 1427.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1046.6875
+          }
+        },
+        "th14_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 29,
+            "percent": 90.625,
+            "frames_mean": 2936.125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 14,
+            "percent": 43.75,
+            "frames_mean": 2343.3125
+          }
+        },
+        "th14_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 13,
+            "percent": 40.625,
+            "frames_mean": 2481.84375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 6,
+            "percent": 18.75,
+            "frames_mean": 2016.09375
+          }
+        },
+        "th15_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 10,
+            "percent": 31.25,
+            "frames_mean": 1555.40625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 5,
+            "percent": 15.625,
+            "frames_mean": 1499.15625
+          }
+        },
+        "th15_s3_mb2": {
+          "2": {
+            "episodes": 32,
+            "passed": 3,
+            "percent": 9.375,
+            "frames_mean": 803.65625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 491.5
+          }
+        },
+        "th15_s4_b5": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 698.28125
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 670.46875
+          }
+        },
+        "th16_s4_b3": {
+          "2": {
+            "episodes": 32,
+            "passed": 28,
+            "percent": 87.5,
+            "frames_mean": 2291.09375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 30,
+            "percent": 93.75,
+            "frames_mean": 2293.125
+          }
+        },
+        "th16_s6_b11": {
+          "2": {
+            "episodes": 32,
+            "passed": 26,
+            "percent": 81.25,
+            "frames_mean": 6976.21875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 17,
+            "percent": 53.125,
+            "frames_mean": 6407.40625
+          }
+        },
+        "th16_s6_b14": {
+          "2": {
+            "episodes": 32,
+            "passed": 15,
+            "percent": 46.875,
+            "frames_mean": 6471.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 15,
+            "percent": 46.875,
+            "frames_mean": 6471.375
+          }
+        },
+        "th16_s6_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2827.0
+          }
+        },
+        "th16_s6_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 5,
+            "percent": 15.625,
+            "frames_mean": 1769.375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1089.8125
+          }
+        },
+        "th16_s6_b6": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 3100.0
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 1305.75
+          }
+        },
+        "th18_s1_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 31,
+            "percent": 96.875,
+            "frames_mean": 2178.46875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 32,
+            "percent": 100.0,
+            "frames_mean": 2225.0
+          }
+        },
+        "th18_s4_b2": {
+          "2": {
+            "episodes": 32,
+            "passed": 17,
+            "percent": 53.125,
+            "frames_mean": 2290.9375
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 912.46875
+          }
+        },
+        "th18_s4_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 1135.1875
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 0,
+            "percent": 0.0,
+            "frames_mean": 733.28125
+          }
+        },
+        "th18_s5_b4": {
+          "2": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 904.65625
+          },
+          "3": {
+            "episodes": 32,
+            "passed": 1,
+            "percent": 3.125,
+            "frames_mean": 717.3125
+          }
+        }
+      }
+    }
+  ],
+  "baseline_mq4_u4000": {
+    "modern": {
+      "episodes": 1024,
+      "passed": 354,
+      "percent": 34.5703125,
+      "frames_mean": 2101.5244140625
+    },
+    "legacy_th06": {
+      "episodes": 832,
+      "passed": 776,
+      "percent": 93.26923076923077,
+      "frames_mean": 1475.608173076923
+    },
+    "ranks": {
+      "2": {
+        "episodes": 512,
+        "passed": 215,
+        "percent": 41.9921875,
+        "frames_mean": 2261.12890625
+      },
+      "3": {
+        "episodes": 512,
+        "passed": 139,
+        "percent": 27.1484375,
+        "frames_mean": 1941.919921875
+      }
+    }
+  },
+  "modern_delta_pp": 4.19921875,
+  "spent": 3.09012022350003,
+  "per_card_comparison": [
+    {
+      "card": "th14_s2_mb1",
+      "old_passed": 2,
+      "new_passed": 3,
+      "episodes": 64,
+      "delta": 1
+    },
+    {
+      "card": "th14_s4_b2",
+      "old_passed": 48,
+      "new_passed": 43,
+      "episodes": 64,
+      "delta": -5
+    },
+    {
+      "card": "th14_s6_b2",
+      "old_passed": 9,
+      "new_passed": 19,
+      "episodes": 64,
+      "delta": 10
+    },
+    {
+      "card": "th15_s1_b2",
+      "old_passed": 16,
+      "new_passed": 15,
+      "episodes": 64,
+      "delta": -1
+    },
+    {
+      "card": "th15_s3_mb2",
+      "old_passed": 2,
+      "new_passed": 3,
+      "episodes": 64,
+      "delta": 1
+    },
+    {
+      "card": "th15_s4_b5",
+      "old_passed": 0,
+      "new_passed": 0,
+      "episodes": 64,
+      "delta": 0
+    },
+    {
+      "card": "th16_s4_b3",
+      "old_passed": 57,
+      "new_passed": 58,
+      "episodes": 64,
+      "delta": 1
+    },
+    {
+      "card": "th16_s6_b11",
+      "old_passed": 35,
+      "new_passed": 43,
+      "episodes": 64,
+      "delta": 8
+    },
+    {
+      "card": "th16_s6_b14",
+      "old_passed": 4,
+      "new_passed": 30,
+      "episodes": 64,
+      "delta": 26
+    },
+    {
+      "card": "th16_s6_b2",
+      "old_passed": 64,
+      "new_passed": 64,
+      "episodes": 64,
+      "delta": 0
+    },
+    {
+      "card": "th16_s6_b4",
+      "old_passed": 8,
+      "new_passed": 5,
+      "episodes": 64,
+      "delta": -3
+    },
+    {
+      "card": "th16_s6_b6",
+      "old_passed": 32,
+      "new_passed": 32,
+      "episodes": 64,
+      "delta": 0
+    },
+    {
+      "card": "th18_s1_b2",
+      "old_passed": 63,
+      "new_passed": 63,
+      "episodes": 64,
+      "delta": 0
+    },
+    {
+      "card": "th18_s4_b2",
+      "old_passed": 11,
+      "new_passed": 17,
+      "episodes": 64,
+      "delta": 6
+    },
+    {
+      "card": "th18_s4_b4",
+      "old_passed": 0,
+      "new_passed": 0,
+      "episodes": 64,
+      "delta": 0
+    },
+    {
+      "card": "th18_s5_b4",
+      "old_passed": 3,
+      "new_passed": 2,
+      "episodes": 64,
+      "delta": -1
+    }
+  ],
+  "migration": {
+    "from": "Thailand 60986066",
+    "to": "Shaanxi 60888240",
+    "last_thailand_log": 809,
+    "resumed_checkpoint": 750,
+    "lost_updates": 59,
+    "environment_and_curriculum_reset": true
+  },
+  "validation": "final_analyze.py rerun, exit0; all4000 update rows, finite loss/gradient/KL/LR, all scheduled checkpoints, final weights and14848 eval episodes checked; current API confirms GPU exited/stopped."
+}

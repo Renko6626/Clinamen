@@ -21,7 +21,7 @@ ZIP SHA256：`20130761e00ed4977383b8fd532f3b34bc03cf373d77d1ab4b538fd249efe877`�
 
 新 Windows x64 DLL SHA256：`7278520d23bdfe0e88ea8b3fa6d34eb8397a9460ffed56515cf45d3269139fe3`。
 
-默认仍为[带 Shift 罚分的 B/K8 u1000](2026-10-06-b-shift-th06nc-package.md)，ONNX SHA256 `e47016c892fc7b0a9667b959d6e06ee10bff4261ea805022b7b8f4e04b7bc7f1`。ORT1.22.0、两个模型及许可证沿用原包；新 DLL 已重建。旧 B/Shift 包未覆盖，SHA256 仍为 `b7aae99795d664f2dedc539306b0422a773206fce453201881e3d4d4f50a3f41`。
+默认仍为[带 Shift 罚分的 B/K8 u1000](2026-10-02-laser-stage-summary.md#工程交付)，ONNX SHA256 `e47016c892fc7b0a9667b959d6e06ee10bff4261ea805022b7b8f4e04b7bc7f1`。ORT1.22.0、两个模型及许可证沿用原包；新 DLL 已重建。旧 B/Shift 包未覆盖，SHA256 仍为 `b7aae99795d664f2dedc539306b0422a773206fce453201881e3d4d4f50a3f41`。
 
 解压后先备份旧 DLL 与 INI，再将目录内文件一起放到 `th06nc.exe` 旁。INI 默认新 B，也可改 `model` 为随包附带的 `t8-laser-k4-best.onnx` 并重启。
 

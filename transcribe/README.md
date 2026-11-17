@@ -41,7 +41,7 @@ uv run --frozen python transcribe/run.py transcribe/work/batch/tasks.json --ids 
 
 DSH模型由其官方配置决定；不要把旧包装器的`--model/--reasoning/--cwd`传给官方headless子命令。Codex审核也可直接用另一条`codex exec`命令。参数配置文件使用绝对路径，确保切换worker cwd后仍可读。认证沿用CLI自身设置，不把密钥放清单、argv或参考副本。
 
-CLI登录、模型和权限按官方工具配置，执行器不做参数转换。旧版本的具体命令与试跑证据见[DSH记录](../docs/investigations/2026-11-06-headless-dsh-flash-smoke.md)和[QoderCN记录](../docs/investigations/2026-11-06-headless-qodercn-flash-smoke.md)；其中模型名须以当前CLI实际识别结果为准，不默默回退Auto。
+CLI登录、模型和权限按官方工具配置，执行器不做参数转换。旧试跑过程文档已删除；模型名以当前CLI实际识别结果为准，不照抄旧别名或默默回退Auto。
 
 执行器通过stdin发送提示词，以子进程cwd选择任务目录，保存stdout/stderr和退出码。它不解析各厂商事件协议；过程退出成功还必须满足交付、机器校验及审核要求。权限由CLI实际配置决定：Codex示例显式workspace-write，DSH沿用其官方profile策略；提示词的文件职责不是沙箱隔离证明。需要交互批准而无法继续时，该任务按CLI失败处理，不绕过批准。
 

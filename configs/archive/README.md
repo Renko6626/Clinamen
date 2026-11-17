@@ -4,4 +4,4 @@
 
 这些文件用于查阅或在另行确定方案后复现，不作为当前自动开跑清单。Perceiver仍暂停，配置存在不代表已训练、已接入导出或获得恢复授权。
 
-结论查[旧实验记录](../../docs/archive/experiments-before-2026-11-13.md)及各专题；常用配置见[上级入口](../README.md)，本地产物映射见[阶段归档](../../docs/training-archive.md)。
+结论查[旧实验记录](../../docs/experiments.md#历史实验)及各专题；常用配置见[上级入口](../README.md)，本地产物映射见[阶段归档](../../docs/training-archive.md)。

@@ -1,0 +1,2665 @@
+{
+  "thresholds": [
+    {
+      "max_passed": 0,
+      "counts": {
+        "mq4_on": 87,
+        "k64_on": 90,
+        "field_on": 62,
+        "field_off": 46
+      },
+      "all4": 34,
+      "model_overlap": 79
+    },
+    {
+      "max_passed": 3,
+      "counts": {
+        "mq4_on": 120,
+        "k64_on": 128,
+        "field_on": 100,
+        "field_off": 62
+      },
+      "all4": 51,
+      "model_overlap": 108
+    },
+    {
+      "max_passed": 8,
+      "counts": {
+        "mq4_on": 148,
+        "k64_on": 162,
+        "field_on": 160,
+        "field_off": 78
+      },
+      "all4": 68,
+      "model_overlap": 136
+    },
+    {
+      "max_passed": 15,
+      "counts": {
+        "mq4_on": 191,
+        "k64_on": 195,
+        "field_on": 226,
+        "field_off": 100
+      },
+      "all4": 83,
+      "model_overlap": 172
+    }
+  ],
+  "profiles": {
+    "all": {
+      "cards": 639,
+      "sources": {
+        "th06": 166,
+        "th14": 124,
+        "th15": 129,
+        "th16": 110,
+        "th18": 110
+      },
+      "kinds": {
+        "nonspell": 155,
+        "spell": 176,
+        "wave": 308
+      },
+      "ranks": {
+        "3": 478,
+        "1": 14,
+        "4": 147
+      },
+      "limit_median": 2222,
+      "limit_mean": 2305.042253521127,
+      "long_cards": 69,
+      "tags": {
+        "dense": 171,
+        "laser": 60,
+        "curve": 64,
+        "random": 359,
+        "aimed": 333,
+        "spiral": 155,
+        "ring": 356,
+        "stream": 255,
+        "mixed": 116,
+        "fast": 31
+      },
+      "mechanisms": {
+        "code_continuous_turn": 74,
+        "code_motion_change": 350,
+        "code_laser_spawn": 60
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 166,
+          "total": 166
+        },
+        "th14": {
+          "weak": 124,
+          "total": 124
+        },
+        "th15": {
+          "weak": 129,
+          "total": 129
+        },
+        "th16": {
+          "weak": 110,
+          "total": 110
+        },
+        "th18": {
+          "weak": 110,
+          "total": 110
+        }
+      }
+    },
+    "common_weak": {
+      "cards": 68,
+      "sources": {
+        "th06": 2,
+        "th14": 11,
+        "th15": 24,
+        "th16": 14,
+        "th18": 17
+      },
+      "kinds": {
+        "spell": 31,
+        "wave": 31,
+        "nonspell": 6
+      },
+      "ranks": {
+        "4": 17,
+        "3": 51
+      },
+      "limit_median": 2559.0,
+      "limit_mean": 2902.176470588235,
+      "long_cards": 14,
+      "tags": {
+        "dense": 23,
+        "laser": 8,
+        "curve": 2,
+        "random": 42,
+        "aimed": 36,
+        "spiral": 16,
+        "ring": 33,
+        "stream": 39,
+        "mixed": 15,
+        "fast": 4
+      },
+      "mechanisms": {
+        "code_continuous_turn": 3,
+        "code_motion_change": 47,
+        "code_laser_spawn": 8
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 2,
+          "total": 166
+        },
+        "th14": {
+          "weak": 11,
+          "total": 124
+        },
+        "th15": {
+          "weak": 24,
+          "total": 129
+        },
+        "th16": {
+          "weak": 14,
+          "total": 110
+        },
+        "th18": {
+          "weak": 17,
+          "total": 110
+        }
+      }
+    },
+    "common_zero": {
+      "cards": 34,
+      "sources": {
+        "th06": 1,
+        "th14": 3,
+        "th15": 14,
+        "th16": 7,
+        "th18": 9
+      },
+      "kinds": {
+        "spell": 17,
+        "wave": 14,
+        "nonspell": 3
+      },
+      "ranks": {
+        "4": 10,
+        "3": 24
+      },
+      "limit_median": 2559.0,
+      "limit_mean": 2891.823529411765,
+      "long_cards": 8,
+      "tags": {
+        "dense": 14,
+        "laser": 3,
+        "curve": 1,
+        "random": 19,
+        "aimed": 15,
+        "spiral": 8,
+        "ring": 14,
+        "stream": 19,
+        "mixed": 4,
+        "fast": 3
+      },
+      "mechanisms": {
+        "code_continuous_turn": 1,
+        "code_motion_change": 25,
+        "code_laser_spawn": 3
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 1,
+          "total": 166
+        },
+        "th14": {
+          "weak": 3,
+          "total": 124
+        },
+        "th15": {
+          "weak": 14,
+          "total": 129
+        },
+        "th16": {
+          "weak": 7,
+          "total": 110
+        },
+        "th18": {
+          "weak": 9,
+          "total": 110
+        }
+      }
+    },
+    "models_weak": {
+      "cards": 136,
+      "sources": {
+        "th06": 8,
+        "th14": 25,
+        "th15": 54,
+        "th16": 23,
+        "th18": 26
+      },
+      "kinds": {
+        "wave": 68,
+        "spell": 52,
+        "nonspell": 16
+      },
+      "ranks": {
+        "3": 101,
+        "4": 35
+      },
+      "limit_median": 2524.0,
+      "limit_mean": 2754.573529411765,
+      "long_cards": 22,
+      "tags": {
+        "dense": 45,
+        "laser": 20,
+        "curve": 3,
+        "random": 83,
+        "aimed": 76,
+        "spiral": 24,
+        "ring": 64,
+        "stream": 72,
+        "mixed": 30,
+        "fast": 6
+      },
+      "mechanisms": {
+        "code_continuous_turn": 7,
+        "code_motion_change": 77,
+        "code_laser_spawn": 20
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 8,
+          "total": 166
+        },
+        "th14": {
+          "weak": 25,
+          "total": 124
+        },
+        "th15": {
+          "weak": 54,
+          "total": 129
+        },
+        "th16": {
+          "weak": 23,
+          "total": 110
+        },
+        "th18": {
+          "weak": 26,
+          "total": 110
+        }
+      }
+    },
+    "gate_rescue": {
+      "cards": 52,
+      "sources": {
+        "th06": 4,
+        "th14": 7,
+        "th15": 27,
+        "th16": 7,
+        "th18": 7
+      },
+      "kinds": {
+        "spell": 17,
+        "wave": 10,
+        "nonspell": 25
+      },
+      "ranks": {
+        "4": 23,
+        "3": 29
+      },
+      "limit_median": 2934.0,
+      "limit_mean": 3126.0576923076924,
+      "long_cards": 14,
+      "tags": {
+        "dense": 27,
+        "laser": 1,
+        "curve": 0,
+        "random": 28,
+        "aimed": 16,
+        "spiral": 20,
+        "ring": 40,
+        "stream": 15,
+        "mixed": 8,
+        "fast": 8
+      },
+      "mechanisms": {
+        "code_continuous_turn": 6,
+        "code_motion_change": 24,
+        "code_laser_spawn": 1
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 4,
+          "total": 166
+        },
+        "th14": {
+          "weak": 7,
+          "total": 124
+        },
+        "th15": {
+          "weak": 27,
+          "total": 129
+        },
+        "th16": {
+          "weak": 7,
+          "total": 110
+        },
+        "th18": {
+          "weak": 7,
+          "total": 110
+        }
+      }
+    },
+    "model_rescue_gated": {
+      "cards": 7,
+      "sources": {
+        "th14": 2,
+        "th15": 1,
+        "th16": 2,
+        "th18": 2
+      },
+      "kinds": {
+        "wave": 4,
+        "spell": 3
+      },
+      "ranks": {
+        "3": 4,
+        "4": 3
+      },
+      "limit_median": 3124,
+      "limit_mean": 3088.5714285714284,
+      "long_cards": 2,
+      "tags": {
+        "dense": 1,
+        "laser": 1,
+        "curve": 0,
+        "random": 4,
+        "aimed": 5,
+        "spiral": 1,
+        "ring": 4,
+        "stream": 5,
+        "mixed": 3,
+        "fast": 0
+      },
+      "mechanisms": {
+        "code_continuous_turn": 2,
+        "code_motion_change": 2,
+        "code_laser_spawn": 1
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 0,
+          "total": 166
+        },
+        "th14": {
+          "weak": 2,
+          "total": 124
+        },
+        "th15": {
+          "weak": 1,
+          "total": 129
+        },
+        "th16": {
+          "weak": 2,
+          "total": 110
+        },
+        "th18": {
+          "weak": 2,
+          "total": 110
+        }
+      }
+    },
+    "model_rescue_ungated": {
+      "cards": 37,
+      "sources": {
+        "th06": 5,
+        "th14": 6,
+        "th15": 16,
+        "th16": 5,
+        "th18": 5
+      },
+      "kinds": {
+        "spell": 12,
+        "wave": 17,
+        "nonspell": 8
+      },
+      "ranks": {
+        "4": 14,
+        "3": 23
+      },
+      "limit_median": 2524,
+      "limit_mean": 2662.6486486486488,
+      "long_cards": 5,
+      "tags": {
+        "dense": 15,
+        "laser": 3,
+        "curve": 1,
+        "random": 18,
+        "aimed": 22,
+        "spiral": 5,
+        "ring": 23,
+        "stream": 18,
+        "mixed": 5,
+        "fast": 1
+      },
+      "mechanisms": {
+        "code_continuous_turn": 3,
+        "code_motion_change": 15,
+        "code_laser_spawn": 3
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 5,
+          "total": 166
+        },
+        "th14": {
+          "weak": 6,
+          "total": 124
+        },
+        "th15": {
+          "weak": 16,
+          "total": 129
+        },
+        "th16": {
+          "weak": 5,
+          "total": 110
+        },
+        "th18": {
+          "weak": 5,
+          "total": 110
+        }
+      }
+    },
+    "field_bad_model_good": {
+      "cards": 5,
+      "sources": {
+        "th14": 2,
+        "th15": 3
+      },
+      "kinds": {
+        "wave": 5
+      },
+      "ranks": {
+        "3": 5
+      },
+      "limit_median": 1824,
+      "limit_mean": 1904.0,
+      "long_cards": 0,
+      "tags": {
+        "dense": 0,
+        "laser": 0,
+        "curve": 0,
+        "random": 3,
+        "aimed": 2,
+        "spiral": 0,
+        "ring": 0,
+        "stream": 4,
+        "mixed": 0,
+        "fast": 0
+      },
+      "mechanisms": {
+        "code_continuous_turn": 0,
+        "code_motion_change": 2,
+        "code_laser_spawn": 0
+      },
+      "per_source_prevalence": {
+        "th06": {
+          "weak": 0,
+          "total": 166
+        },
+        "th14": {
+          "weak": 2,
+          "total": 124
+        },
+        "th15": {
+          "weak": 3,
+          "total": 129
+        },
+        "th16": {
+          "weak": 0,
+          "total": 110
+        },
+        "th18": {
+          "weak": 0,
+          "total": 110
+        }
+      }
+    }
+  },
+  "features": [
+    {
+      "feature": "long",
+      "yes_cards": 69,
+      "yes_common_weak": 14,
+      "yes_weak_percent": 20.28985507246377,
+      "no_cards": 570,
+      "no_common_weak": 54,
+      "no_weak_percent": 9.473684210526317,
+      "matched_cards": 0,
+      "matched_difference_pp": null
+    },
+    {
+      "feature": "tag_dense",
+      "yes_cards": 171,
+      "yes_common_weak": 23,
+      "yes_weak_percent": 13.450292397660817,
+      "no_cards": 468,
+      "no_common_weak": 45,
+      "no_weak_percent": 9.615384615384617,
+      "matched_cards": 452,
+      "matched_difference_pp": -2.466990341969683
+    },
+    {
+      "feature": "tag_laser",
+      "yes_cards": 60,
+      "yes_common_weak": 8,
+      "yes_weak_percent": 13.333333333333334,
+      "no_cards": 579,
+      "no_common_weak": 60,
+      "no_weak_percent": 10.362694300518134,
+      "matched_cards": 253,
+      "matched_difference_pp": -3.9065179311633624
+    },
+    {
+      "feature": "tag_curve",
+      "yes_cards": 64,
+      "yes_common_weak": 2,
+      "yes_weak_percent": 3.125,
+      "no_cards": 575,
+      "no_common_weak": 66,
+      "no_weak_percent": 11.478260869565217,
+      "matched_cards": 221,
+      "matched_difference_pp": -0.5701680096143765
+    },
+    {
+      "feature": "tag_random",
+      "yes_cards": 359,
+      "yes_common_weak": 42,
+      "yes_weak_percent": 11.699164345403899,
+      "no_cards": 280,
+      "no_common_weak": 26,
+      "no_weak_percent": 9.285714285714286,
+      "matched_cards": 500,
+      "matched_difference_pp": -1.1130545594756125
+    },
+    {
+      "feature": "tag_aimed",
+      "yes_cards": 333,
+      "yes_common_weak": 36,
+      "yes_weak_percent": 10.81081081081081,
+      "no_cards": 306,
+      "no_common_weak": 32,
+      "no_weak_percent": 10.457516339869281,
+      "matched_cards": 476,
+      "matched_difference_pp": 0.9211597226303111
+    },
+    {
+      "feature": "tag_spiral",
+      "yes_cards": 155,
+      "yes_common_weak": 16,
+      "yes_weak_percent": 10.32258064516129,
+      "no_cards": 484,
+      "no_common_weak": 52,
+      "no_weak_percent": 10.743801652892563,
+      "matched_cards": 369,
+      "matched_difference_pp": 5.886280502492841
+    },
+    {
+      "feature": "tag_ring",
+      "yes_cards": 356,
+      "yes_common_weak": 33,
+      "yes_weak_percent": 9.269662921348315,
+      "no_cards": 283,
+      "no_common_weak": 35,
+      "no_weak_percent": 12.36749116607774,
+      "matched_cards": 483,
+      "matched_difference_pp": -5.132798837585099
+    },
+    {
+      "feature": "tag_stream",
+      "yes_cards": 255,
+      "yes_common_weak": 39,
+      "yes_weak_percent": 15.294117647058824,
+      "no_cards": 384,
+      "no_common_weak": 29,
+      "no_weak_percent": 7.552083333333333,
+      "matched_cards": 470,
+      "matched_difference_pp": 7.299281392366497
+    },
+    {
+      "feature": "tag_mixed",
+      "yes_cards": 116,
+      "yes_common_weak": 15,
+      "yes_weak_percent": 12.931034482758621,
+      "no_cards": 523,
+      "no_common_weak": 53,
+      "no_weak_percent": 10.133843212237094,
+      "matched_cards": 329,
+      "matched_difference_pp": -3.6404812879870994
+    },
+    {
+      "feature": "tag_fast",
+      "yes_cards": 31,
+      "yes_common_weak": 4,
+      "yes_weak_percent": 12.903225806451612,
+      "no_cards": 608,
+      "no_common_weak": 64,
+      "no_weak_percent": 10.526315789473683,
+      "matched_cards": 139,
+      "matched_difference_pp": 11.466765866244385
+    },
+    {
+      "feature": "tag_wall",
+      "yes_cards": 15,
+      "yes_common_weak": 2,
+      "yes_weak_percent": 13.333333333333334,
+      "no_cards": 624,
+      "no_common_weak": 66,
+      "no_weak_percent": 10.576923076923077,
+      "matched_cards": 19,
+      "matched_difference_pp": -23.27485380116959
+    },
+    {
+      "feature": "code_continuous_turn",
+      "yes_cards": 74,
+      "yes_common_weak": 3,
+      "yes_weak_percent": 4.054054054054054,
+      "no_cards": 565,
+      "no_common_weak": 65,
+      "no_weak_percent": 11.504424778761061,
+      "matched_cards": 203,
+      "matched_difference_pp": -6.909986565158979
+    },
+    {
+      "feature": "code_motion_change",
+      "yes_cards": 350,
+      "yes_common_weak": 47,
+      "yes_weak_percent": 13.428571428571429,
+      "no_cards": 289,
+      "no_common_weak": 21,
+      "no_weak_percent": 7.26643598615917,
+      "matched_cards": 436,
+      "matched_difference_pp": 7.551377354549063
+    },
+    {
+      "feature": "code_laser_spawn",
+      "yes_cards": 60,
+      "yes_common_weak": 8,
+      "yes_weak_percent": 13.333333333333334,
+      "no_cards": 579,
+      "no_common_weak": 60,
+      "no_weak_percent": 10.362694300518134,
+      "matched_cards": 253,
+      "matched_difference_pp": -3.9065179311633624
+    }
+  ],
+  "timing": {
+    "common_weak": {
+      "deaths": 8490,
+      "deaths_le3600": 8314,
+      "median_death_frames": 743.0,
+      "field_env0_death_edge24": 50
+    },
+    "common_zero": {
+      "deaths": 4352,
+      "deaths_le3600": 4350,
+      "median_death_frames": 700.0,
+      "field_env0_death_edge24": 23
+    },
+    "gate_rescue": {
+      "deaths": 3370,
+      "deaths_le3600": 3247,
+      "median_death_frames": 1145.0,
+      "field_env0_death_edge24": 39
+    }
+  },
+  "zero_death_patterns": [
+    {
+      "card": "th06_s7_b4",
+      "title": "禁忌「レーヴァテイン」",
+      "unique_death_frames": 37,
+      "modes": {
+        "mq4_on": {
+          "frame": 251,
+          "count": 27,
+          "range": [
+            250,
+            607
+          ]
+        },
+        "k64_on": {
+          "frame": 608,
+          "count": 3,
+          "range": [
+            601,
+            2699
+          ]
+        },
+        "field_on": {
+          "frame": 589,
+          "count": 11,
+          "range": [
+            396,
+            601
+          ]
+        },
+        "field_off": {
+          "frame": 587,
+          "count": 32,
+          "range": [
+            587,
+            587
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        153.46267700195312,
+        249.78268432617188
+      ]
+    },
+    {
+      "card": "th14_s4_w05",
+      "title": "Stage 4 道中 第 5 波",
+      "unique_death_frames": 101,
+      "modes": {
+        "mq4_on": {
+          "frame": 508,
+          "count": 1,
+          "range": [
+            423,
+            1042
+          ]
+        },
+        "k64_on": {
+          "frame": 587,
+          "count": 2,
+          "range": [
+            432,
+            987
+          ]
+        },
+        "field_on": {
+          "frame": 473,
+          "count": 2,
+          "range": [
+            458,
+            908
+          ]
+        },
+        "field_off": {
+          "frame": 609,
+          "count": 1,
+          "range": [
+            523,
+            971
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -14.360443115234375,
+        448.0
+      ]
+    },
+    {
+      "card": "th14_s4_w06",
+      "title": "Stage 4 道中 第 6 波（GirlA 编队与 ECir02）",
+      "unique_death_frames": 88,
+      "modes": {
+        "mq4_on": {
+          "frame": 461,
+          "count": 2,
+          "range": [
+            401,
+            831
+          ]
+        },
+        "k64_on": {
+          "frame": 477,
+          "count": 3,
+          "range": [
+            424,
+            823
+          ]
+        },
+        "field_on": {
+          "frame": 514,
+          "count": 2,
+          "range": [
+            425,
+            574
+          ]
+        },
+        "field_off": {
+          "frame": 528,
+          "count": 2,
+          "range": [
+            459,
+            837
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -192.0,
+        440.2218322753906
+      ]
+    },
+    {
+      "card": "th14_s5_w08",
+      "title": "Stage 5 道中 第 8 波（中Boss速度击破奖励波）",
+      "unique_death_frames": 92,
+      "modes": {
+        "mq4_on": {
+          "frame": 899,
+          "count": 1,
+          "range": [
+            478,
+            1285
+          ]
+        },
+        "k64_on": {
+          "frame": 800,
+          "count": 4,
+          "range": [
+            404,
+            1277
+          ]
+        },
+        "field_on": {
+          "frame": 810,
+          "count": 3,
+          "range": [
+            572,
+            1083
+          ]
+        },
+        "field_off": {
+          "frame": 752,
+          "count": 10,
+          "range": [
+            750,
+            1201
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        192.0,
+        446.0
+      ]
+    },
+    {
+      "card": "th15_s3_b2",
+      "title": "Stage 3 关底 第2攻击 夢符「藍色の愁夢」",
+      "unique_death_frames": 37,
+      "modes": {
+        "mq4_on": {
+          "frame": 407,
+          "count": 22,
+          "range": [
+            403,
+            408
+          ]
+        },
+        "k64_on": {
+          "frame": 406,
+          "count": 13,
+          "range": [
+            399,
+            408
+          ]
+        },
+        "field_on": {
+          "frame": 350,
+          "count": 5,
+          "range": [
+            349,
+            1070
+          ]
+        },
+        "field_off": {
+          "frame": 1069,
+          "count": 10,
+          "range": [
+            731,
+            1072
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -164.058837890625,
+        417.6593322753906
+      ]
+    },
+    {
+      "card": "th15_s4_b2",
+      "title": "Stage 4 Boss 第2攻击 玉符「烏合の呪」/「逆呪」/「二重呪」",
+      "unique_death_frames": 58,
+      "modes": {
+        "mq4_on": {
+          "frame": 468,
+          "count": 6,
+          "range": [
+            463,
+            544
+          ]
+        },
+        "k64_on": {
+          "frame": 467,
+          "count": 8,
+          "range": [
+            466,
+            535
+          ]
+        },
+        "field_on": {
+          "frame": 532,
+          "count": 3,
+          "range": [
+            495,
+            543
+          ]
+        },
+        "field_off": {
+          "frame": 542,
+          "count": 3,
+          "range": [
+            501,
+            995
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        170.99319458007812,
+        448.0
+      ]
+    },
+    {
+      "card": "th15_s4_b7",
+      "title": "Stage 4 关底第七攻击 「片翼の白鷺」",
+      "unique_death_frames": 19,
+      "modes": {
+        "mq4_on": {
+          "frame": 437,
+          "count": 8,
+          "range": [
+            416,
+            1756
+          ]
+        },
+        "k64_on": {
+          "frame": 425,
+          "count": 20,
+          "range": [
+            416,
+            1515
+          ]
+        },
+        "field_on": {
+          "frame": 416,
+          "count": 16,
+          "range": [
+            416,
+            2358
+          ]
+        },
+        "field_off": {
+          "frame": 416,
+          "count": 15,
+          "range": [
+            416,
+            1506
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        7.778167724609375,
+        339.2781677246094
+      ]
+    },
+    {
+      "card": "th15_s4_mb1",
+      "title": "Stage 4 中Boss 第1非符",
+      "unique_death_frames": 46,
+      "modes": {
+        "mq4_on": {
+          "frame": 764,
+          "count": 8,
+          "range": [
+            704,
+            1283
+          ]
+        },
+        "k64_on": {
+          "frame": 738,
+          "count": 5,
+          "range": [
+            662,
+            998
+          ]
+        },
+        "field_on": {
+          "frame": 763,
+          "count": 11,
+          "range": [
+            759,
+            934
+          ]
+        },
+        "field_off": {
+          "frame": 764,
+          "count": 19,
+          "range": [
+            762,
+            1056
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        179.4332275390625,
+        439.1611633300781
+      ]
+    },
+    {
+      "card": "th15_s5_b6",
+      "title": "獄炎「グレイズインフェルノ」 / 「かすりの獄意」",
+      "unique_death_frames": 44,
+      "modes": {
+        "mq4_on": {
+          "frame": 530,
+          "count": 5,
+          "range": [
+            516,
+            684
+          ]
+        },
+        "k64_on": {
+          "frame": 531,
+          "count": 4,
+          "range": [
+            520,
+            685
+          ]
+        },
+        "field_on": {
+          "frame": 447,
+          "count": 7,
+          "range": [
+            444,
+            453
+          ]
+        },
+        "field_off": {
+          "frame": 449,
+          "count": 6,
+          "range": [
+            441,
+            455
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        192.0,
+        448.0
+      ]
+    },
+    {
+      "card": "th15_s5_b7",
+      "title": "地獄「ストライプドアビス」",
+      "unique_death_frames": 77,
+      "modes": {
+        "mq4_on": {
+          "frame": 451,
+          "count": 5,
+          "range": [
+            450,
+            516
+          ]
+        },
+        "k64_on": {
+          "frame": 433,
+          "count": 18,
+          "range": [
+            433,
+            539
+          ]
+        },
+        "field_on": {
+          "frame": 516,
+          "count": 3,
+          "range": [
+            498,
+            1338
+          ]
+        },
+        "field_off": {
+          "frame": 518,
+          "count": 2,
+          "range": [
+            509,
+            1665
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -7.20458984375,
+        308.4852294921875
+      ]
+    },
+    {
+      "card": "th15_s5_w09",
+      "title": "Stage 5 道中 第 9 波",
+      "unique_death_frames": 8,
+      "modes": {
+        "mq4_on": {
+          "frame": 404,
+          "count": 25,
+          "range": [
+            404,
+            405
+          ]
+        },
+        "k64_on": {
+          "frame": 449,
+          "count": 15,
+          "range": [
+            401,
+            451
+          ]
+        },
+        "field_on": {
+          "frame": 452,
+          "count": 25,
+          "range": [
+            451,
+            452
+          ]
+        },
+        "field_off": {
+          "frame": 452,
+          "count": 32,
+          "range": [
+            452,
+            452
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -169.15603637695312,
+        428.90814208984375
+      ]
+    },
+    {
+      "card": "th15_s6_b10",
+      "title": "Stage 6 BossCard6 「溢れ出る瑕穢」/「地上穢の純化」",
+      "unique_death_frames": 18,
+      "modes": {
+        "mq4_on": {
+          "frame": 520,
+          "count": 6,
+          "range": [
+            518,
+            530
+          ]
+        },
+        "k64_on": {
+          "frame": 522,
+          "count": 7,
+          "range": [
+            520,
+            528
+          ]
+        },
+        "field_on": {
+          "frame": 533,
+          "count": 5,
+          "range": [
+            526,
+            535
+          ]
+        },
+        "field_off": {
+          "frame": 531,
+          "count": 14,
+          "range": [
+            530,
+            534
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        13.830230712890625,
+        337.5459289550781
+      ]
+    },
+    {
+      "card": "th15_s6_b3",
+      "title": "Stage 6 Boss 非符 2",
+      "unique_death_frames": 42,
+      "modes": {
+        "mq4_on": {
+          "frame": 417,
+          "count": 8,
+          "range": [
+            412,
+            773
+          ]
+        },
+        "k64_on": {
+          "frame": 418,
+          "count": 15,
+          "range": [
+            416,
+            435
+          ]
+        },
+        "field_on": {
+          "frame": 418,
+          "count": 2,
+          "range": [
+            412,
+            2291
+          ]
+        },
+        "field_off": {
+          "frame": 416,
+          "count": 32,
+          "range": [
+            416,
+            416
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -129.4342041015625,
+        417.7218322753906
+      ]
+    },
+    {
+      "card": "th15_s6_w03",
+      "title": "Stage 6 道中 第 3 波",
+      "unique_death_frames": 101,
+      "modes": {
+        "mq4_on": {
+          "frame": 425,
+          "count": 2,
+          "range": [
+            363,
+            779
+          ]
+        },
+        "k64_on": {
+          "frame": 730,
+          "count": 1,
+          "range": [
+            369,
+            1088
+          ]
+        },
+        "field_on": {
+          "frame": 756,
+          "count": 2,
+          "range": [
+            409,
+            758
+          ]
+        },
+        "field_off": {
+          "frame": 758,
+          "count": 3,
+          "range": [
+            733,
+            1100
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        190.0,
+        424.3118896484375
+      ]
+    },
+    {
+      "card": "th15_s7_b11",
+      "title": "Stage 7 Extra Boss6 非符",
+      "unique_death_frames": 114,
+      "modes": {
+        "mq4_on": {
+          "frame": 1309,
+          "count": 2,
+          "range": [
+            490,
+            3394
+          ]
+        },
+        "k64_on": {
+          "frame": 838,
+          "count": 1,
+          "range": [
+            833,
+            2012
+          ]
+        },
+        "field_on": {
+          "frame": 1659,
+          "count": 1,
+          "range": [
+            825,
+            2790
+          ]
+        },
+        "field_off": {
+          "frame": 1664,
+          "count": 2,
+          "range": [
+            855,
+            3790
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        163.71572875976562,
+        448.0
+      ]
+    },
+    {
+      "card": "th15_s7_b14",
+      "title": "TH15 Extra BossCard7 月「ルナティックインパクト」",
+      "unique_death_frames": 116,
+      "modes": {
+        "mq4_on": {
+          "frame": 605,
+          "count": 3,
+          "range": [
+            600,
+            1173
+          ]
+        },
+        "k64_on": {
+          "frame": 617,
+          "count": 2,
+          "range": [
+            588,
+            1067
+          ]
+        },
+        "field_on": {
+          "frame": 2223,
+          "count": 1,
+          "range": [
+            1022,
+            2986
+          ]
+        },
+        "field_off": {
+          "frame": 807,
+          "count": 1,
+          "range": [
+            807,
+            4522
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -48.481658935546875,
+        446.5857849121094
+      ]
+    },
+    {
+      "card": "th15_s7_b8",
+      "title": "TH15 Extra Stage 7 BossCard4 「袋の鼠を追い詰める為の単純な弾幕」",
+      "unique_death_frames": 89,
+      "modes": {
+        "mq4_on": {
+          "frame": 1528,
+          "count": 2,
+          "range": [
+            1443,
+            2203
+          ]
+        },
+        "k64_on": {
+          "frame": 1227,
+          "count": 2,
+          "range": [
+            860,
+            2249
+          ]
+        },
+        "field_on": {
+          "frame": 2374,
+          "count": 1,
+          "range": [
+            628,
+            2937
+          ]
+        },
+        "field_off": {
+          "frame": 1564,
+          "count": 32,
+          "range": [
+            1564,
+            1564
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        43.065643310546875,
+        134.1524658203125
+      ]
+    },
+    {
+      "card": "th15_s7_w02",
+      "title": "Extra Stage 道中 第2波 MainSub01",
+      "unique_death_frames": 35,
+      "modes": {
+        "mq4_on": {
+          "frame": 739,
+          "count": 3,
+          "range": [
+            739,
+            956
+          ]
+        },
+        "k64_on": {
+          "frame": 749,
+          "count": 15,
+          "range": [
+            577,
+            801
+          ]
+        },
+        "field_on": {
+          "frame": 742,
+          "count": 30,
+          "range": [
+            559,
+            802
+          ]
+        },
+        "field_off": {
+          "frame": 742,
+          "count": 32,
+          "range": [
+            742,
+            742
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -192.0,
+        448.0
+      ]
+    },
+    {
+      "card": "th16_s3_w05",
+      "title": "Stage 3 道中 第 5 波 GirlA03 对称编队",
+      "unique_death_frames": 65,
+      "modes": {
+        "mq4_on": {
+          "frame": 730,
+          "count": 6,
+          "range": [
+            465,
+            843
+          ]
+        },
+        "k64_on": {
+          "frame": 801,
+          "count": 2,
+          "range": [
+            464,
+            836
+          ]
+        },
+        "field_on": {
+          "frame": 627,
+          "count": 3,
+          "range": [
+            539,
+            825
+          ]
+        },
+        "field_off": {
+          "frame": 787,
+          "count": 32,
+          "range": [
+            787,
+            787
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -163.00860595703125,
+        448.0
+      ]
+    },
+    {
+      "card": "th16_s4_w04",
+      "title": "Stage 4 道中 GirlA04 三组波次",
+      "unique_death_frames": 105,
+      "modes": {
+        "mq4_on": {
+          "frame": 913,
+          "count": 1,
+          "range": [
+            679,
+            1072
+          ]
+        },
+        "k64_on": {
+          "frame": 850,
+          "count": 2,
+          "range": [
+            651,
+            1091
+          ]
+        },
+        "field_on": {
+          "frame": 1029,
+          "count": 2,
+          "range": [
+            666,
+            1074
+          ]
+        },
+        "field_off": {
+          "frame": 1005,
+          "count": 2,
+          "range": [
+            773,
+            1445
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -192.0,
+        443.7573547363281
+      ]
+    },
+    {
+      "card": "th16_s5_w03",
+      "title": "Stage 5 道中 第 3 波 四轮幽灵编队",
+      "unique_death_frames": 67,
+      "modes": {
+        "mq4_on": {
+          "frame": 597,
+          "count": 4,
+          "range": [
+            567,
+            737
+          ]
+        },
+        "k64_on": {
+          "frame": 628,
+          "count": 5,
+          "range": [
+            605,
+            722
+          ]
+        },
+        "field_on": {
+          "frame": 578,
+          "count": 2,
+          "range": [
+            533,
+            713
+          ]
+        },
+        "field_off": {
+          "frame": 522,
+          "count": 32,
+          "range": [
+            522,
+            522
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        172.78359985351562,
+        439.51470947265625
+      ]
+    },
+    {
+      "card": "th16_s6_b4",
+      "title": "Stage 6 Boss 第 4 卡 裏夏「スコーチ・バイ・ホットサマー」",
+      "unique_death_frames": 87,
+      "modes": {
+        "mq4_on": {
+          "frame": 636,
+          "count": 2,
+          "range": [
+            618,
+            1939
+          ]
+        },
+        "k64_on": {
+          "frame": 638,
+          "count": 3,
+          "range": [
+            615,
+            2946
+          ]
+        },
+        "field_on": {
+          "frame": 644,
+          "count": 3,
+          "range": [
+            625,
+            3042
+          ]
+        },
+        "field_off": {
+          "frame": 642,
+          "count": 3,
+          "range": [
+            624,
+            2178
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -39.899505615234375,
+        334.5857849121094
+      ]
+    },
+    {
+      "card": "th16_s7_b2",
+      "title": "TH16 Extra 最终Boss符卡 秘儀「リバースインヴォーカー」",
+      "unique_death_frames": 40,
+      "modes": {
+        "mq4_on": {
+          "frame": 944,
+          "count": 3,
+          "range": [
+            719,
+            3550
+          ]
+        },
+        "k64_on": {
+          "frame": 751,
+          "count": 5,
+          "range": [
+            750,
+            1314
+          ]
+        },
+        "field_on": {
+          "frame": 838,
+          "count": 16,
+          "range": [
+            832,
+            1314
+          ]
+        },
+        "field_off": {
+          "frame": 838,
+          "count": 32,
+          "range": [
+            838,
+            838
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        180.42892456054688,
+        448.0
+      ]
+    },
+    {
+      "card": "th16_s7_mb2",
+      "title": "Extra 中Boss 第2符 狂舞「クレイジーバックダンス」",
+      "unique_death_frames": 98,
+      "modes": {
+        "mq4_on": {
+          "frame": 975,
+          "count": 2,
+          "range": [
+            681,
+            1150
+          ]
+        },
+        "k64_on": {
+          "frame": 729,
+          "count": 3,
+          "range": [
+            696,
+            946
+          ]
+        },
+        "field_on": {
+          "frame": 709,
+          "count": 2,
+          "range": [
+            679,
+            1415
+          ]
+        },
+        "field_off": {
+          "frame": 708,
+          "count": 3,
+          "range": [
+            681,
+            1819
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -173.26168823242188,
+        14.738311767578125
+      ]
+    },
+    {
+      "card": "th16_s7_w05",
+      "title": "Extra 道中 GirlA03 双侧编队",
+      "unique_death_frames": 94,
+      "modes": {
+        "mq4_on": {
+          "frame": 477,
+          "count": 2,
+          "range": [
+            439,
+            659
+          ]
+        },
+        "k64_on": {
+          "frame": 451,
+          "count": 5,
+          "range": [
+            432,
+            636
+          ]
+        },
+        "field_on": {
+          "frame": 355,
+          "count": 2,
+          "range": [
+            323,
+            617
+          ]
+        },
+        "field_off": {
+          "frame": 555,
+          "count": 2,
+          "range": [
+            351,
+            627
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        49.489654541015625,
+        448.0
+      ]
+    },
+    {
+      "card": "th18_s4_b4",
+      "title": "女王珠「虹の扉の向こうに」",
+      "unique_death_frames": 74,
+      "modes": {
+        "mq4_on": {
+          "frame": 793,
+          "count": 3,
+          "range": [
+            689,
+            1182
+          ]
+        },
+        "k64_on": {
+          "frame": 791,
+          "count": 3,
+          "range": [
+            702,
+            1233
+          ]
+        },
+        "field_on": {
+          "frame": 796,
+          "count": 2,
+          "range": [
+            696,
+            1685
+          ]
+        },
+        "field_off": {
+          "frame": 755,
+          "count": 4,
+          "range": [
+            755,
+            1670
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -192.0,
+        448.0
+      ]
+    },
+    {
+      "card": "th18_s4_w09",
+      "title": "Stage 4 道中 第 9 波 Cir03",
+      "unique_death_frames": 90,
+      "modes": {
+        "mq4_on": {
+          "frame": 575,
+          "count": 3,
+          "range": [
+            460,
+            700
+          ]
+        },
+        "k64_on": {
+          "frame": 593,
+          "count": 3,
+          "range": [
+            474,
+            650
+          ]
+        },
+        "field_on": {
+          "frame": 518,
+          "count": 2,
+          "range": [
+            416,
+            732
+          ]
+        },
+        "field_off": {
+          "frame": 563,
+          "count": 2,
+          "range": [
+            452,
+            721
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        192.0,
+        4.242645263671875
+      ]
+    },
+    {
+      "card": "th18_s5_b6",
+      "title": "光馬「天馬行空の舞」",
+      "unique_death_frames": 113,
+      "modes": {
+        "mq4_on": {
+          "frame": 1316,
+          "count": 2,
+          "range": [
+            504,
+            2083
+          ]
+        },
+        "k64_on": {
+          "frame": 814,
+          "count": 1,
+          "range": [
+            466,
+            2280
+          ]
+        },
+        "field_on": {
+          "frame": 691,
+          "count": 2,
+          "range": [
+            569,
+            1613
+          ]
+        },
+        "field_off": {
+          "frame": 692,
+          "count": 3,
+          "range": [
+            678,
+            2161
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        -192.0,
+        433.7573547363281
+      ]
+    },
+    {
+      "card": "th18_s5_w02",
+      "title": "TH18 Stage 5 道中 第 2 波（GirlB01 镜像编队）",
+      "unique_death_frames": 76,
+      "modes": {
+        "mq4_on": {
+          "frame": 608,
+          "count": 3,
+          "range": [
+            586,
+            932
+          ]
+        },
+        "k64_on": {
+          "frame": 614,
+          "count": 4,
+          "range": [
+            586,
+            628
+          ]
+        },
+        "field_on": {
+          "frame": 709,
+          "count": 4,
+          "range": [
+            662,
+            757
+          ]
+        },
+        "field_off": {
+          "frame": 708,
+          "count": 4,
+          "range": [
+            673,
+            757
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        192.0,
+        60.303985595703125
+      ]
+    },
+    {
+      "card": "th18_s5_w04",
+      "title": "Stage 5 道中 MainSub03（GirlA02 编队）",
+      "unique_death_frames": 115,
+      "modes": {
+        "mq4_on": {
+          "frame": 638,
+          "count": 2,
+          "range": [
+            549,
+            1206
+          ]
+        },
+        "k64_on": {
+          "frame": 1130,
+          "count": 2,
+          "range": [
+            483,
+            1218
+          ]
+        },
+        "field_on": {
+          "frame": 842,
+          "count": 2,
+          "range": [
+            630,
+            1121
+          ]
+        },
+        "field_off": {
+          "frame": 677,
+          "count": 2,
+          "range": [
+            645,
+            1251
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        187.5,
+        0.0
+      ]
+    },
+    {
+      "card": "th18_s6_b2",
+      "title": "「無主への供物」",
+      "unique_death_frames": 91,
+      "modes": {
+        "mq4_on": {
+          "frame": 2116,
+          "count": 2,
+          "range": [
+            1277,
+            2205
+          ]
+        },
+        "k64_on": {
+          "frame": 1896,
+          "count": 3,
+          "range": [
+            1873,
+            2479
+          ]
+        },
+        "field_on": {
+          "frame": 2231,
+          "count": 5,
+          "range": [
+            2087,
+            2320
+          ]
+        },
+        "field_off": {
+          "frame": 2229,
+          "count": 5,
+          "range": [
+            1889,
+            2247
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        0.0,
+        53.5
+      ]
+    },
+    {
+      "card": "th18_s6_b6",
+      "title": "Stage 6 关底第三符 「弾幕自由市場」",
+      "unique_death_frames": 80,
+      "modes": {
+        "mq4_on": {
+          "frame": 465,
+          "count": 6,
+          "range": [
+            462,
+            1065
+          ]
+        },
+        "k64_on": {
+          "frame": 484,
+          "count": 6,
+          "range": [
+            467,
+            585
+          ]
+        },
+        "field_on": {
+          "frame": 989,
+          "count": 2,
+          "range": [
+            450,
+            1606
+          ]
+        },
+        "field_off": {
+          "frame": 892,
+          "count": 4,
+          "range": [
+            510,
+            2581
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        64.41598510742188,
+        304.9184875488281
+      ]
+    },
+    {
+      "card": "th18_s7_b16",
+      "title": "TH18 Extra Stage 7 BossCard8 大蜈蚣「ドラゴンイーター」",
+      "unique_death_frames": 98,
+      "modes": {
+        "mq4_on": {
+          "frame": 437,
+          "count": 3,
+          "range": [
+            428,
+            963
+          ]
+        },
+        "k64_on": {
+          "frame": 523,
+          "count": 2,
+          "range": [
+            427,
+            1415
+          ]
+        },
+        "field_on": {
+          "frame": 423,
+          "count": 3,
+          "range": [
+            423,
+            1268
+          ]
+        },
+        "field_off": {
+          "frame": 842,
+          "count": 2,
+          "range": [
+            422,
+            1605
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        76.77996826171875,
+        448.0
+      ]
+    },
+    {
+      "card": "th18_s7_w05",
+      "title": "TH18 Extra 道中 第5波 Cir02/03/04 组合编队",
+      "unique_death_frames": 59,
+      "modes": {
+        "mq4_on": {
+          "frame": 849,
+          "count": 2,
+          "range": [
+            833,
+            878
+          ]
+        },
+        "k64_on": {
+          "frame": 855,
+          "count": 3,
+          "range": [
+            842,
+            868
+          ]
+        },
+        "field_on": {
+          "frame": 801,
+          "count": 2,
+          "range": [
+            763,
+            809
+          ]
+        },
+        "field_off": {
+          "frame": 783,
+          "count": 32,
+          "range": [
+            783,
+            783
+          ]
+        }
+      },
+      "field_env0_last_xy": [
+        114.18380737304688,
+        310.9289245605469
+      ]
+    }
+  ],
+  "groups": {
+    "common_weak": [
+      "th06_s7_b4",
+      "th06_s7_w10",
+      "th14_s2_mb1",
+      "th14_s3_b6",
+      "th14_s4_mb4",
+      "th14_s4_w05",
+      "th14_s4_w06",
+      "th14_s4_w09",
+      "th14_s4_w11",
+      "th14_s5_w08",
+      "th14_s6_b10",
+      "th14_s6_b9",
+      "th14_s7_w02",
+      "th15_s2_w08",
+      "th15_s3_b2",
+      "th15_s3_b7",
+      "th15_s4_b2",
+      "th15_s4_b4",
+      "th15_s4_b5",
+      "th15_s4_b7",
+      "th15_s4_mb1",
+      "th15_s4_w07",
+      "th15_s5_b6",
+      "th15_s5_b7",
+      "th15_s5_w01",
+      "th15_s5_w02",
+      "th15_s5_w09",
+      "th15_s5_w10",
+      "th15_s6_b10",
+      "th15_s6_b3",
+      "th15_s6_w03",
+      "th15_s7_b11",
+      "th15_s7_b14",
+      "th15_s7_b17",
+      "th15_s7_b8",
+      "th15_s7_mb3",
+      "th15_s7_w02",
+      "th16_s3_b6",
+      "th16_s3_w05",
+      "th16_s4_w04",
+      "th16_s4_w07",
+      "th16_s5_w03",
+      "th16_s5_w05",
+      "th16_s6_b14",
+      "th16_s6_b4",
+      "th16_s7_b2",
+      "th16_s7_b4",
+      "th16_s7_mb2",
+      "th16_s7_w05",
+      "th16_s7_w07",
+      "th16_s7_w08",
+      "th18_s4_b2",
+      "th18_s4_b4",
+      "th18_s4_w09",
+      "th18_s5_b2",
+      "th18_s5_b4",
+      "th18_s5_b6",
+      "th18_s5_b7",
+      "th18_s5_w02",
+      "th18_s5_w04",
+      "th18_s5_w05",
+      "th18_s6_b2",
+      "th18_s6_b6",
+      "th18_s6_w02",
+      "th18_s6_w06",
+      "th18_s6_w07",
+      "th18_s7_b16",
+      "th18_s7_w05"
+    ],
+    "common_zero": [
+      "th06_s7_b4",
+      "th14_s4_w05",
+      "th14_s4_w06",
+      "th14_s5_w08",
+      "th15_s3_b2",
+      "th15_s4_b2",
+      "th15_s4_b7",
+      "th15_s4_mb1",
+      "th15_s5_b6",
+      "th15_s5_b7",
+      "th15_s5_w09",
+      "th15_s6_b10",
+      "th15_s6_b3",
+      "th15_s6_w03",
+      "th15_s7_b11",
+      "th15_s7_b14",
+      "th15_s7_b8",
+      "th15_s7_w02",
+      "th16_s3_w05",
+      "th16_s4_w04",
+      "th16_s5_w03",
+      "th16_s6_b4",
+      "th16_s7_b2",
+      "th16_s7_mb2",
+      "th16_s7_w05",
+      "th18_s4_b4",
+      "th18_s4_w09",
+      "th18_s5_b6",
+      "th18_s5_w02",
+      "th18_s5_w04",
+      "th18_s6_b2",
+      "th18_s6_b6",
+      "th18_s7_b16",
+      "th18_s7_w05"
+    ],
+    "models_weak": [
+      "th06_s4_w21",
+      "th06_s7_b16",
+      "th06_s7_b17",
+      "th06_s7_b4",
+      "th06_s7_mb2",
+      "th06_s7_w10",
+      "th06_s7_w11",
+      "th06_s7_w17",
+      "th14_s1_w03",
+      "th14_s1_w06",
+      "th14_s2_b4",
+      "th14_s2_mb1",
+      "th14_s3_b6",
+      "th14_s4_mb4",
+      "th14_s4_w03",
+      "th14_s4_w05",
+      "th14_s4_w06",
+      "th14_s4_w09",
+      "th14_s4_w10",
+      "th14_s4_w11",
+      "th14_s5_b1",
+      "th14_s5_w01",
+      "th14_s5_w05",
+      "th14_s5_w08",
+      "th14_s6_b10",
+      "th14_s6_b2",
+      "th14_s6_b3",
+      "th14_s6_b9",
+      "th14_s7_b12",
+      "th14_s7_b14",
+      "th14_s7_b2",
+      "th14_s7_w01",
+      "th14_s7_w02",
+      "th15_s1_b2",
+      "th15_s1_w06",
+      "th15_s1_w07",
+      "th15_s1_w08",
+      "th15_s2_w05",
+      "th15_s2_w06",
+      "th15_s2_w08",
+      "th15_s2_w09",
+      "th15_s3_b2",
+      "th15_s3_b6",
+      "th15_s3_b7",
+      "th15_s3_mb2",
+      "th15_s3_w01",
+      "th15_s3_w02",
+      "th15_s3_w09",
+      "th15_s4_b1",
+      "th15_s4_b2",
+      "th15_s4_b4",
+      "th15_s4_b5",
+      "th15_s4_b7",
+      "th15_s4_mb1",
+      "th15_s4_w01",
+      "th15_s4_w05",
+      "th15_s4_w07",
+      "th15_s4_w10",
+      "th15_s5_b1",
+      "th15_s5_b6",
+      "th15_s5_b7",
+      "th15_s5_w01",
+      "th15_s5_w02",
+      "th15_s5_w03",
+      "th15_s5_w05",
+      "th15_s5_w09",
+      "th15_s5_w10",
+      "th15_s6_b1",
+      "th15_s6_b10",
+      "th15_s6_b2",
+      "th15_s6_b3",
+      "th15_s6_b5",
+      "th15_s6_b6",
+      "th15_s6_b7",
+      "th15_s6_w03",
+      "th15_s6_w04",
+      "th15_s7_b11",
+      "th15_s7_b12",
+      "th15_s7_b14",
+      "th15_s7_b15",
+      "th15_s7_b16",
+      "th15_s7_b17",
+      "th15_s7_b4",
+      "th15_s7_b7",
+      "th15_s7_b8",
+      "th15_s7_mb3",
+      "th15_s7_w02",
+      "th16_s1_w06",
+      "th16_s3_b6",
+      "th16_s3_w05",
+      "th16_s3_w07",
+      "th16_s4_b4",
+      "th16_s4_w02",
+      "th16_s4_w04",
+      "th16_s4_w07",
+      "th16_s5_w02",
+      "th16_s5_w03",
+      "th16_s5_w05",
+      "th16_s6_b14",
+      "th16_s6_b4",
+      "th16_s6_b6",
+      "th16_s6_w02",
+      "th16_s7_b2",
+      "th16_s7_b4",
+      "th16_s7_b6",
+      "th16_s7_mb1",
+      "th16_s7_mb2",
+      "th16_s7_w05",
+      "th16_s7_w07",
+      "th16_s7_w08",
+      "th18_s1_w07",
+      "th18_s3_w05",
+      "th18_s4_b2",
+      "th18_s4_b4",
+      "th18_s4_w01",
+      "th18_s4_w09",
+      "th18_s5_b1",
+      "th18_s5_b2",
+      "th18_s5_b4",
+      "th18_s5_b6",
+      "th18_s5_b7",
+      "th18_s5_w02",
+      "th18_s5_w04",
+      "th18_s5_w05",
+      "th18_s5_w06",
+      "th18_s5_w08",
+      "th18_s6_b2",
+      "th18_s6_b6",
+      "th18_s6_w02",
+      "th18_s6_w05",
+      "th18_s6_w06",
+      "th18_s6_w07",
+      "th18_s7_b16",
+      "th18_s7_b8",
+      "th18_s7_w01",
+      "th18_s7_w05"
+    ],
+    "gate_rescue": [
+      "th06_s7_b12",
+      "th06_s7_b17",
+      "th06_s7_mb2",
+      "th06_s7_w11",
+      "th14_s4_b2",
+      "th14_s6_b2",
+      "th14_s6_b3",
+      "th14_s6_mb1",
+      "th14_s7_b1",
+      "th14_s7_b13",
+      "th14_s7_w13",
+      "th15_s1_b3",
+      "th15_s2_b1",
+      "th15_s2_b2",
+      "th15_s2_b3",
+      "th15_s2_b5",
+      "th15_s2_mb1",
+      "th15_s2_w06",
+      "th15_s3_b3",
+      "th15_s3_w02",
+      "th15_s4_b1",
+      "th15_s4_b3",
+      "th15_s4_b6",
+      "th15_s6_b1",
+      "th15_s6_b11",
+      "th15_s6_b5",
+      "th15_s6_b7",
+      "th15_s6_b8",
+      "th15_s7_b1",
+      "th15_s7_b13",
+      "th15_s7_b15",
+      "th15_s7_b16",
+      "th15_s7_b18",
+      "th15_s7_b2",
+      "th15_s7_b6",
+      "th15_s7_b7",
+      "th15_s7_mb1",
+      "th15_s7_w06",
+      "th16_s4_w02",
+      "th16_s5_b4",
+      "th16_s5_w02",
+      "th16_s6_b3",
+      "th16_s6_b7",
+      "th16_s6_w02",
+      "th16_s7_b3",
+      "th18_s2_b2",
+      "th18_s3_w07",
+      "th18_s7_b11",
+      "th18_s7_b13",
+      "th18_s7_b15",
+      "th18_s7_b2",
+      "th18_s7_w01"
+    ],
+    "model_rescue_gated": [
+      "th14_s1_w03",
+      "th14_s1_w06",
+      "th15_s7_b4",
+      "th16_s7_b6",
+      "th16_s7_mb1",
+      "th18_s1_w07",
+      "th18_s3_w05"
+    ],
+    "model_rescue_ungated": [
+      "th06_s7_b16",
+      "th06_s7_b17",
+      "th06_s7_mb2",
+      "th06_s7_w11",
+      "th06_s7_w17",
+      "th14_s1_w03",
+      "th14_s1_w06",
+      "th14_s6_b2",
+      "th14_s6_b3",
+      "th14_s7_b2",
+      "th14_s7_w01",
+      "th15_s1_b2",
+      "th15_s2_w05",
+      "th15_s2_w06",
+      "th15_s3_mb2",
+      "th15_s3_w02",
+      "th15_s3_w09",
+      "th15_s4_b1",
+      "th15_s4_w01",
+      "th15_s6_b1",
+      "th15_s6_b2",
+      "th15_s6_b5",
+      "th15_s6_b7",
+      "th15_s7_b15",
+      "th15_s7_b16",
+      "th15_s7_b4",
+      "th15_s7_b7",
+      "th16_s4_w02",
+      "th16_s5_w02",
+      "th16_s6_w02",
+      "th16_s7_b6",
+      "th16_s7_mb1",
+      "th18_s1_w07",
+      "th18_s3_w05",
+      "th18_s5_b1",
+      "th18_s6_w05",
+      "th18_s7_w01"
+    ],
+    "field_bad_model_good": [
+      "th14_s3_w03",
+      "th14_s5_w03",
+      "th15_s3_w07",
+      "th15_s6_w01",
+      "th15_s6_w05"
+    ]
+  },
+  "limitations": [
+    "tags and source-call scans indicate potential mechanisms, not measured nearby bullet density or realized acceleration",
+    "one eval seed and 32 episodes per card; thresholds are descriptive",
+    "matched differences control source/rank/kind/1200-frame bins only, not true geometry/density",
+    "edge positions are only gated potential env0 and are outcome dependent",
+    "no new evaluation or training performed"
+  ],
+  "quality_repair": {
+    "date": "2026-11-17",
+    "issue": "TH16 aggregate group all overwrote attack-kind labels when importing subsets.json",
+    "fixed_cards": 110,
+    "fixed_result_metadata_files": 440,
+    "overall_results_unchanged": true,
+    "reran_evaluations": false,
+    "correct_kind_counts": {
+      "nonspell": 155,
+      "spell": 176,
+      "wave": 308
+    }
+  },
+  "common_without_detected_motion_or_laser": [
+    "th14_s2_mb1",
+    "th14_s7_w02",
+    "th15_s2_w08",
+    "th15_s4_b5",
+    "th15_s4_mb1",
+    "th15_s5_w01",
+    "th15_s6_w03",
+    "th15_s7_b11",
+    "th15_s7_mb3",
+    "th15_s7_w02",
+    "th16_s3_w05",
+    "th16_s7_mb2",
+    "th16_s7_w05",
+    "th16_s7_w08",
+    "th18_s5_w05"
+  ],
+  "pairwise_performance": {
+    "cards": 639,
+    "weak_max_passed": 8,
+    "pairs": [
+      {
+        "a": "mq4_on",
+        "b": "k64_on",
+        "pearson": 0.9397038243409758,
+        "spearman": 0.9040737205873468,
+        "within_source_rank_kind_pearson": 0.9192829933520409,
+        "a_weak": 148,
+        "b_weak": 162,
+        "shared_weak": 136,
+        "weak_jaccard": 0.7816091954022989,
+        "weak_label_agreement": 0.9405320813771518,
+        "mean_absolute_difference_pp": 7.056924882629108,
+        "within_25pp_cards": 607
+      },
+      {
+        "a": "mq4_on",
+        "b": "field_on",
+        "pearson": 0.7417530202078324,
+        "spearman": 0.7379076215133863,
+        "within_source_rank_kind_pearson": 0.6983419536333911,
+        "a_weak": 148,
+        "b_weak": 160,
+        "shared_weak": 105,
+        "weak_jaccard": 0.5172413793103449,
+        "weak_label_agreement": 0.8466353677621283,
+        "mean_absolute_difference_pp": 17.781690140845072,
+        "within_25pp_cards": 476
+      },
+      {
+        "a": "mq4_on",
+        "b": "field_off",
+        "pearson": 0.6851030268104856,
+        "spearman": 0.6833354877727806,
+        "within_source_rank_kind_pearson": 0.6300149458531752,
+        "a_weak": 148,
+        "b_weak": 78,
+        "shared_weak": 69,
+        "weak_jaccard": 0.4394904458598726,
+        "weak_label_agreement": 0.8622848200312989,
+        "mean_absolute_difference_pp": 18.710876369327075,
+        "within_25pp_cards": 472
+      },
+      {
+        "a": "k64_on",
+        "b": "field_on",
+        "pearson": 0.7544167247396333,
+        "spearman": 0.7276952387001858,
+        "within_source_rank_kind_pearson": 0.7080336474071506,
+        "a_weak": 162,
+        "b_weak": 160,
+        "shared_weak": 119,
+        "weak_jaccard": 0.5862068965517241,
+        "weak_label_agreement": 0.8685446009389671,
+        "mean_absolute_difference_pp": 17.199726134585287,
+        "within_25pp_cards": 488
+      },
+      {
+        "a": "k64_on",
+        "b": "field_off",
+        "pearson": 0.6824221896726592,
+        "spearman": 0.6698443523204595,
+        "within_source_rank_kind_pearson": 0.6247414330927867,
+        "a_weak": 162,
+        "b_weak": 78,
+        "shared_weak": 70,
+        "weak_jaccard": 0.4117647058823529,
+        "weak_label_agreement": 0.8435054773082942,
+        "mean_absolute_difference_pp": 19.57648669796557,
+        "within_25pp_cards": 467
+      },
+      {
+        "a": "field_on",
+        "b": "field_off",
+        "pearson": 0.7220515754817407,
+        "spearman": 0.693278284919833,
+        "within_source_rank_kind_pearson": 0.7143296099600127,
+        "a_weak": 160,
+        "b_weak": 78,
+        "shared_weak": 76,
+        "weak_jaccard": 0.4691358024691358,
+        "weak_label_agreement": 0.865414710485133,
+        "mean_absolute_difference_pp": 21.40062597809077,
+        "within_25pp_cards": 447
+      }
+    ],
+    "qualification": "Descriptive correlation of per-card 32-episode pass counts; single eval seed. Residual correlations remove source/rank/kind cell means, not density or actual geometry."
+  }
+}

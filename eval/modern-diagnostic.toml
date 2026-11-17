@@ -1,0 +1,83 @@
+# Modern diagnostic suite: these cards remain in training.
+# Hard measures training-difficulty performance; Lunatic measures difficulty generalization.
+# Use tools/train_with_diagnostics.py --diagnostic-splits; do not set env.eval_splits to this file.
+
+[[eval]]
+card = "th14_s2_mb1"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th14_s4_b2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th14_s6_b2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th15_s1_b2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th15_s3_mb2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th15_s4_b5"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th16_s4_b3"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th16_s6_b2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th16_s6_b4"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th16_s6_b6"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th16_s6_b11"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th16_s6_b14"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th18_s1_b2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th18_s4_b2"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th18_s4_b4"
+ranks = [2, 3]
+episodes = 32
+
+[[eval]]
+card = "th18_s5_b4"
+ranks = [2, 3]
+episodes = 32

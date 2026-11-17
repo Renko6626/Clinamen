@@ -1,21 +1,23 @@
 # stg-rl-train
 
-2026-11-15阶段收尾：扩充卡池后的单层u4000／u6000及两层SA2 u4000均已完成，权重与结果已取回，Vast GPU已停、磁盘保留。当前卡池686张材料／668个训练起点，实际难度为Hard504、Normal14、Extra150，未训练Lunatic。最终比较与诊断见[实验记录](docs/experiments.md)，可版本管理的关键数据见[阶段摘要](docs/practice-cards/reports/2026-11-15-training-stage.json)。
+stg-engine弹幕环境的PPO训练、评测和ONNX导出仓库，也保存TH06／TH14／TH15／TH16／TH18转写资料和合成练习卡。
 
-旧训练结果、包、配置和专用脚本已按阶段整理，见[归档索引](docs/training-archive.md)。常用配置见[配置入口](configs/README.md)，本地脚本见[脚本入口](scripts/README.md)。
+2026-11-17：无位置任务MQ4已完成u4000，现代16卡同GPU原MQ4 34.57%→38.77%。下一阶段已确认[逐弹全局场景token替换CNN](docs/superpowers/specs/2026-11-17-mq4-global-latents-design.md)，尚未实现或开训，512／1024输入与运行预算待成本短测后决定。研究顺序见[下一步](docs/next-steps.md)，结果和比较限制见[实验记录](docs/experiments.md)。研究模型不自动替换发布模型。
 
-当前研究顺序见[研究待办](docs/next-steps.md)（2026-11-15）。用户之后再决定模型优化方案；目前没有新的训练、结构或部署任务。已有[五作基线](docs/practice-cards/2026-11-14-u4000-multigame-baseline.md)和[深度诊断](docs/practice-cards/2026-11-14-u4000-encoder-diagnosis.md)可供后续比较。
+| 用途 | 入口 |
+| --- | --- |
+| 当前模型、评测与成本 | [实验记录](docs/experiments.md)、[性能记录](docs/perf-baseline.md)、[证据专题](docs/practice-cards/README.md) |
+| 训练与复现 | [配置](configs/README.md)、[脚本](scripts/README.md)、[启动概况](docs/agent-memory/training-workflow.md)、[Magnus兼容](docs/magnus-migration.md) |
+| 卡库与生产 | [卡库](cards/README.md)、[转写流程](transcribe/README.md)、各作指南；TH14／TH15阶段结束，搁置和排除卡不恢复 |
+| 历史权重、结果包与路径 | [产物索引](docs/training-archive.md) |
 
-2026-11-08本轮归档：[TH15阶段记录](transcribe/th15/README.md)保留129个交付及6个搁置项；发布模型[试测](docs/practice-cards/2026-11-08-th15-published-eval.md)与[关闭运动层对照](docs/practice-cards/2026-11-08-th15-motor-off.md)均已完成，存活334/1290→438/1290，未全批验收收卡或训练。用户指定下一会话从[TH08准备指南](transcribe/th08/README.md)继续，现有源与社区命名Ghidra工程已备好。
+## 训练实现
 
-原作ECL转写与独立审核使用[统一命令行入口](transcribe/README.md)：单清单、官方headless CLI、一次完整机器验收。
+src/stgtrain/envwrap.py将stg_rl原始缓冲解码为观测并处理运动层；featurize/与models/负责表示和网络，ppo.py负责优化，train.py编排采样、评测、checkpoint和课程。各组件通过registry/config配置选择；代码中的模型、特征化器和图签名按各自版本解释，旧初始设计不再作当前接口规范。
 
-TH16当前范围见[总览的不做清单](transcribe/th16/README.md#明确不做的攻击)：2026-11-08用户排除四张池满卡；`s4_w04`修正每轮发射次数后保留。
+实际弹幕、碰撞、实体池与ECL编译在相邻stg-engine；游戏快照与共用C推理在stg-agent-proto，原生研究与游戏适配在renkolab。模型接口使用固定形状Mapping输入，输出18方向/低速动作logits与value；跨仓接口或引擎变化按AGENTS约定确认和验证。
 
-stg-engine 躲弹小模型的训练仓。设计见 `docs/2026-09-15-stg-rl-train-design.md`。
-Magnus A100 的短 Job 验证与迁移限制见 [`docs/magnus-migration.md`](docs/magnus-migration.md)。
-
-当前运行时为 **stg_rl 0.4.7 / ENGINE_VER35**，本地与Magnus共用`magnus/wheels`中的同一wheel，支持xform标签、wait、goto、loop及限时屏外保活offscreen_keep。默认碰撞模式仍为LEGACY、擦弹开启；此前升级已包含新版擦弹公式，旧版擦弹统计不能直接当作同口径结果。来源与检查见[wheel版本与来源](docs/magnus-migration.md#项目自有-wheel)。
+当前依赖以pyproject.toml、uv.lock和magnus/wheels为准；stg_rl 0.4.7／ENGINE_VER35的[来源与兼容边界](docs/magnus-migration.md#项目自有-wheel)包括2048段池、xform标签及屏外保活，不恢复已撤销的临时扩池版本。
 
 ## 一条命令跑训练（任意有 GPU 的 Linux）
 
@@ -63,7 +65,7 @@ uv run --frozen python -m stgtrain.export_onnx runs/<run>/checkpoints/best.pt --
 
 当前激光模型路线由T6–T8验证，统一[阶段小结与后续候选](docs/practice-cards/2026-10-02-laser-stage-summary.md)：`danger_topk_v8` 使用14维激光token（局部线段几何、有限旋转位移、伸长余量、预警），`set_attn_v3` 将子弹和激光分别投影后送入一层共享自注意力，再按类型池化。它替换旧子弹专用注意力层；主干、PPO与T5训练设置沿用。[设计与字段契约](docs/superpowers/specs/2026-10-01-laser-token-joint-attention-design.md)。
 
-v8的640行导出为**图版本6**：在版本5的激光表／mask之后追加 `laser_start_len: float32[L]`，必须与激光行对齐，填引擎的设定棒长，不能用当前长度代替。当前部署默认2048行，为**图版本7**，十二输入名称和列序沿用；旧640行可显式传 `--bullets-rows 640`。版本2–6旧签名继续由新C loader兼容。T8历史TH06NC包见[记录](docs/practice-cards/2026-10-02-t8-th06nc-package.md)，当前2048部署见下节。
+v8的640行导出为**图版本6**：在版本5的激光表／mask之后追加 `laser_start_len: float32[L]`，必须与激光行对齐，填引擎的设定棒长，不能用当前长度代替。当前部署默认2048行，为**图版本7**，十二输入名称和列序沿用；旧640行可显式传 `--bullets-rows 640`。版本2–6旧签名继续由新C loader兼容。T8历史TH06NC包见[记录](docs/practice-cards/2026-10-02-laser-stage-summary.md#工程交付)，当前2048部署见下节。
 
 ## TH06NC 精简发布包
 

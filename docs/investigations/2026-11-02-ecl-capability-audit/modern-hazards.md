@@ -200,7 +200,7 @@ EX_VEL的2类仅限字面角/速、无其他持续效果的指定触发帧；同
 ## TH18：只列本作已核证据
 
 - `tools/th18-import-prototype/README.md:132,138` 已核EX2出生，以及EX8在active期先更新角/速后积分、timer0…119共120次；出生期EX8暂停。这支持本作原型标3，不把目标引擎内部确定性复跑当成原作对拍。
-- `docs/investigations/2026-10-23-modern-ecl-engine-capabilities.md:43–60` 静态扫描：EX609/610/611/612共847处，async=1共89处；明确字面ID4/9；711出现在 `st07bs::BossCard3_at` 和 `BossCard3_at2`。这些是素材需求证据，不是可运行覆盖或补齐后的收益统计。
+- `docs/agent-memory/evidence-map.md:43–60` 静态扫描：EX609/610/611/612共847处，async=1共89处；明确字面ID4/9；711出现在 `st07bs::BossCard3_at` 和 `BossCard3_at2`。这些是素材需求证据，不是可运行覆盖或补齐后的收益统计。
 - `renkolab/engine/bullet/th18/01-cancel-to-item.md` 确认mode1产生type9，与TH16 mode1只计数不同。不能共用消弹掉落规则。
 - `docs/practice-cards/2026-10-22-th18-geometry-audit.md` 已核TH18圆弹半径缩放和原生平方和/训练相加口径差异；本轮未据TH16字段或EX名称外推更多TH18行为。
 

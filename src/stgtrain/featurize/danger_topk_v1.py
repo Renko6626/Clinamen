@@ -102,8 +102,14 @@ class DangerTopKV1:
             d = obs.target_xy - obs.player_xy
             dn = d.norm(dim=-1)
             cond = torch.stack([d[:, 0] / 192.0, d[:, 1] / 192.0, dn / 448.0, (dn < self.hold_r).to(torch.float32)], dim=-1)
-        return {"bullets": bullets, "bullets_mask": bsel, "enemies": enemies, "enemies_mask": esel,
-                "density": density, "player": player, "cond": cond}
+        out = {"bullets": bullets, "bullets_mask": bsel, "enemies": enemies, "enemies_mask": esel,
+               "density": density, "player": player, "cond": cond}
+        out.update(self.extra_bullet_features(obs, pb, idx, bsel))
+        return out
+
+    def extra_bullet_features(self, obs: RawObs, relative: Tensor, idx: Tensor, selected: Tensor) -> dict[str, Tensor]:
+        """Optional summaries use the actual near-set selection, without repeating Top-K."""
+        return {}
 
     @staticmethod
     def _density(obs: RawObs, pb: Tensor, n: int, dev) -> Tensor:

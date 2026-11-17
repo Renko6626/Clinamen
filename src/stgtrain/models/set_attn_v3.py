@@ -31,6 +31,13 @@ class SetAttnV3(SetAttnV2):
 
     def threat_tokens(self, feats: Mapping[str, Tensor]) -> tuple[Tensor, Tensor]:
         """交流后的弹和激光token；padding输入及每层输出均归零。"""
+        h, _ = self.joint_tokens(feats)
+        k = feats["bullets"].shape[1]
+        return h[:, :k], h[:, k:]
+
+    def joint_tokens(self, feats: Mapping[str, Tensor],
+                     context_token: Tensor | None = None) -> tuple[Tensor, Tensor]:
+        """联合实体表示与mask；可追加一个始终有效的[B,d]上下文token。"""
         bm, lm = feats["bullets_mask"], feats["lasers_mask"]
         bx = torch.where(bm[..., None], feats["bullets"], torch.zeros_like(feats["bullets"]))
         lx = torch.where(lm[..., None], feats["lasers"], torch.zeros_like(feats["lasers"]))
@@ -41,17 +48,14 @@ class SetAttnV3(SetAttnV2):
         lt = lt + self.type_embedding[1].to(lt.dtype)
         mask = torch.cat([bm, lm], dim=1)
         h = torch.cat([bt, lt], dim=1) * mask[..., None]
+        if context_token is not None:
+            h = torch.cat([h, context_token.to(h.dtype)[:, None, :]], dim=1)
+            mask = torch.cat([mask, torch.ones_like(mask[:, :1])], dim=1)
         for block in self.joint_sa:
             h = block(h, mask) * mask[..., None]
-        k = bx.shape[1]
-        return h[:, :k], h[:, k:]
+        return h, mask
 
-    def forward(self, feats: Mapping[str, Tensor]) -> tuple[Tensor, Tensor]:
-        ctx = self.ctx(torch.cat([feats["player"], feats["cond"]], dim=-1))
-        bt, lt = self.threat_tokens(feats)
-        hb = self.bullets(feats["bullets"], feats["bullets_mask"], ctx, bt)
-        hl = self.lasers(feats["lasers"], feats["lasers_mask"], ctx, lt)
-        he = self.enemies(feats["enemies"], feats["enemies_mask"], ctx)
+    def global_summary(self, feats: Mapping[str, Tensor], ctx: Tensor) -> Tensor:
         if not self.density_enabled:
             hd = torch.zeros_like(ctx)
         elif self.density_fp32:
@@ -59,6 +63,15 @@ class SetAttnV3(SetAttnV2):
                 hd = self.dens_proj(self.density(feats["density"].float()))
         else:
             hd = self.dens_proj(self.density(feats["density"]))
+        return hd
+
+    def forward(self, feats: Mapping[str, Tensor]) -> tuple[Tensor, Tensor]:
+        ctx = self.ctx(torch.cat([feats["player"], feats["cond"]], dim=-1))
+        bt, lt = self.threat_tokens(feats)
+        hb = self.bullets(feats["bullets"], feats["bullets_mask"], ctx, bt)
+        hl = self.lasers(feats["lasers"], feats["lasers_mask"], ctx, lt)
+        he = self.enemies(feats["enemies"], feats["enemies_mask"], ctx)
+        hd = self.global_summary(feats, ctx)
         h = self.trunk(torch.cat([hb, he, hd, ctx, hl], dim=-1))
         if self.action_query:
             logits = self.aq(torch.cat([bt, lt], dim=1),

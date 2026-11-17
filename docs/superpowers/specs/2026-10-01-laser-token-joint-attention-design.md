@@ -2,7 +2,7 @@
 
 日期：2026-10-01。
 
-状态：用户已确认本文，并要求立即实现。2026-10-01已完成训练仓v8/v3与图版本6的ONNX适配；本地CPU、bf16 CPU更新、ONNX对拍及旧版本CPU栈检查通过。游戏部署调用方、实际GPU验证和正式训练尚未执行；未提交或推送。
+状态：已实现的v8/v3激光字段和初始联合注意力契约。后续T6–T8训练及游戏侧适配已执行，结果见[阶段小结](../../practice-cards/2026-10-02-laser-stage-summary.md)。本文件保留2026-10-01设计时的接口定义；其中候选K、实施步骤和当时未验证项按历史日期理解，当前训练基线为MQ4、部署2048行为graph7。
 
 ## 目标与范围
 
@@ -20,7 +20,7 @@
 - [原始输入解码](../../../src/stgtrain/envwrap.py)：激光12列，遗漏缓冲已提供的 `start_len`。
 - 引擎 `crates/stg-rl/src/encode.rs` 输出 `start_len`；名为 `omega` 的观测字段来自 `dang`，是上一帧到当前帧的总转角，包含脚本改角度，不等于未来持续旋转速率。
 - 引擎 `crates/stg-core/src/world/integrate.rs`：`end += speed`，超过 `start_len` 后近端跟进。不可假定近端一直以 `speed` 前移。
-- [T5配置](../../../configs/archive/exp-t5-laser-specialist.toml)与[结果边界](../../practice-cards/2026-10-01-t5-results.md)。
+- [T5配置](../../../configs/archive/exp-t5-laser-specialist.toml)与[结果边界](../../experiments.md#历史实验)。
 
 ## 历史审阅中的截断边界
 
@@ -156,68 +156,4 @@ lasers[14]  -> laser MLP [14  -> 64 -> 64] + laser type embedding
 - 部署调用方必须显式识别版本6、填入实际 `start_len`，缺字段时拒绝加载，不能用当前长度代替。对应DLL／Godot仓库变更须先读取其AGENTS/CLAUDE，并与训练侧签名同批完成。
 - 如果本轮实现权限只覆盖训练仓，允许准备并验证ONNX产物，但版本6不得宣称已经可上线；必须报告部署侧仍未完成。是否扩大到部署仓由用户确认。
 
-## 候选实验配置
-
-准备 `configs/archive/exp-t6-laser-joint.toml`，从T5复制训练参数，仅按下述差异更新模型／特征化器。删除旧 `laser_local` 开关；v8固定14维。
-
-```toml
-[featurize]
-name = "danger_topk_v8"
-frame = "static"
-dt = false
-k_lasers = 16
-
-[model]
-name = "set_attn_v3"
-d = 64
-heads = 4
-trunk = 256
-sa_layers = 0
-laser_sa_layers = 0
-joint_sa_layers = 1
-action_query = false
-density_fp32 = true
-```
-
-主配置是“新token+联合注意力”的组合，不把结果归因到单一因素。组件接口保留v8+v2（token对照）和v7+v3（注意力对照）的构建能力；是否训练四臂、用多少seed和预算，属于后续实验决策，本轮不自动启动。
-
-## 验证与完成标准
-
-按项目要求使用真实生产逻辑，补新增行为的缺口；复用现有夹具，不为每一层复制全部场景。
-
-1. 原始解码：实际引擎buffer的 `start_len`逐值对齐，缺行清零，镜像后长度不变；旧12列不改变。
-2. v8几何／运动：独立几何例子覆盖线段内投影与端点最近、有限大角度改写、短棒相同当前长度但不同设定棒长；验证可恢复原始几何及位移，不只断言向量长度。
-3. v3行为：空弹／空激光／两类全空均有限；padding不影响输出；两类各自的已选token排列不改变logits/value；有实际弹和激光的输入下，联合层确实使一种token的表示依赖另一种；训练损失能到达两路编码器和联合层参数。
-4. 导出：同一个真实观测的训练前向、DeployWrapper与ORT logits对拍，覆盖非零 `start_len`与非零转角；新版checkpoint加载和manifest签名匹配；旧v7导出用例仍通过。
-5. 运行相关已有测试，包括envwrap、v7/v2、export、registry/smoke及新版本测试；只在有新改动或失败时扩大检查。
-6. 在Magnus旧版本CPU栈（torch2.5.1/tensordict0.6.2）运行对应检查与一次小型CPU PPO冒烟，验证输入通过训练／评测／checkpoint／export，不将冒烟表现解释为学习收益。
-7. CUDA图、bf16 GPU执行和吞吐必须由实际GPU验证；没有GPU时列为未验证，不因此擅自提交Job。
-
-完成报告区分“代码／CPU／ONNX可用”“部署调用方已适配”“GPU已验证”和“训练收益已验证”。本轮没有commit/push/训练授权。
-
-## 预期涉及的文件
-
-- 新增：`src/stgtrain/featurize/danger_topk_v8.py`、`src/stgtrain/models/set_attn_v3.py`、候选T6配置及对应精简测试。
-- 局部修改：`envwrap.py`、`registry.py`、`export_onnx.py`、现有解码／导出测试辅助和README接口说明。
-- 尽量复用v1编码器和v6导出逻辑，不重构PPO或旧模型；若需要修正可复用模块，保持旧版本语义并跑对应现有检查。
-- 当前已有未跟踪文件 `:memory:.ses` 与本设计无关，不删除或提交。
-
-## 实施与验证记录（2026-10-01）
-
-用户已确认替换弹专用层、交流后分别池化和图版本6追加输入；随后明确要求立即写新版和适配代码。实现与本设计一致。bf16下类型嵌入按激活dtype相加，避免联合序列被提升为fp32。
-
-实测T5模型383,251参数，新版383,443参数，增加192。T6配置可从现有registry构建，激光spec为(16,14)。只读独立审查未发现实质性缺陷。
-
-实际命令与结果：
-
-- `uv run --frozen pytest -q tests/test_featurize_v8.py tests/test_model_v3.py tests/test_envwrap_lasers.py tests/test_featurize_v7.py tests/test_model_v2.py`：首轮52 passed。
-- `uv run --frozen pytest -q tests/test_export_v8.py tests/test_export_v7.py tests/test_export_v6.py tests/test_smoke.py`：39 passed，含新版真实CPU rollout、PPO更新、评测、checkpoint及部署包装。
-- `uv run --frozen pytest -q tests/test_envwrap.py tests/test_registry.py tests/test_export_onnx.py tests/test_amp.py tests/test_checkpoint.py tests/test_ppo.py`：68 passed；4项现有无CUDA／PyTree提示，CPU不能证明CUDA捕获可用。
-- bf16嵌入修正后：`uv run --frozen pytest -q tests/test_model_v3.py tests/test_smoke.py -k 'v3 or v8'`：13 passed、11 deselected，包含bf16 CPU反向与新版bf16 CPU PPO冒烟。
-- 修正后ONNX复核：`uv run --frozen pytest -q tests/test_export_v8.py`：2 passed，训练／包装／ORT logits和argmax一致。
-- Magnus旧CPU栈解释器：`/tmp/sunyunbo/claude-1007/-data-sunyunbo-www-stg-rl-train/eeac6ecc-4642-439c-b86b-9a7d4042fb56/scratchpad/v062/bin/python`，实查torch2.5.1+cpu、tensordict0.6.2、stg_rl0.4.0。以`PYTHONPATH=src`运行`-m pytest -q tests/test_featurize_v8.py tests/test_model_v3.py tests/test_envwrap_lasers.py tests/test_smoke.py -k 'v8 or v3 or lasers'`：首轮26 passed、11 deselected；bf16修正后运行`-m pytest -q tests/test_model_v3.py tests/test_smoke.py -k 'v3 or v8'`：13 passed、11 deselected。
-- `git diff --check`通过。
-
-这些分组与复核有重复，不相加成总测试数。旧CPU venv未安装ONNX/ORT，旧栈仅验证模型／训练／包装构建；真实ONNX导出对拍来自本地锁定环境。全仓非相关检查未运行。
-
-剩余边界：部署调用方尚未适配版本6；CUDA图、实际GPU bf16和吞吐未验证；未启动正式训练，未证明收益。候选入口为`configs/archive/exp-t6-laser-joint.toml`，不应把候选配置当作开跑授权。
+当前MQ4读取结构另见[MQ4设计](2026-11-15-multi-query-readout-design.md)，graph7及兼容导出见[README](../../../README.md)。本页不保留已完成的实施/启动清单，不能作为恢复T6任务的授权。

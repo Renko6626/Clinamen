@@ -107,6 +107,44 @@ def initialize_density_from_checkpoint(ppo: PPO, cfg: dict, path: str | Path) ->
     return _initialize_checkpoint(ppo, cfg, path, density_ablation=True)
 
 
+def initialize_perceiver_from_checkpoint(ppo: PPO, cfg: dict, path: str | Path) -> dict:
+    """Strict v8/v3 → v9/v4 shared migration; only CNN keys are discarded."""
+    path = Path(path).resolve()
+    ck = load_checkpoint(path, map_location=ppo.device)
+    source = from_dict(ck["cfg"])
+    if (source["model"]["name"], source["featurize"]["name"], cfg["model"]["name"], cfg["featurize"]["name"]) != (
+            "set_attn_v3", "danger_topk_v8", "set_attn_v4", "danger_topk_v9"):
+        raise ValueError("Perceiver initialization requires v8/v3 → v9/v4")
+    for section in ("model", "featurize"):
+        allowed = {"name", "density_enabled", "far_init_seed"} if section == "model" else {"name"}
+        different = [k for k in source[section].keys() | cfg[section].keys()
+                     if k not in allowed and source[section].get(k) != cfg[section].get(k)]
+        if different:
+            raise ValueError("Perceiver initialization incompatible: " + ", ".join(f"{section}.{k}" for k in sorted(different)))
+    old = ck["state"]["agent"]
+    new = ppo.agent.state_dict()
+    ignored = {k for k in old if k.startswith(("model.density.", "model.dens_proj."))}
+    added = {k for k in new if k.startswith("model.far.")}
+    shared = set(old) - ignored
+    if not ignored or not added or shared != set(new) - added:
+        raise ValueError("Perceiver initialization has missing or unexpected shared tensors")
+    for k in shared:
+        if old[k].shape != new[k].shape:
+            raise ValueError(f"Perceiver initialization shape incompatible: {k}")
+    # The fresh summary has an exact zero output, matching the no-CNN initial policy.
+    if torch.count_nonzero(new["model.far.out.weight"]) or torch.count_nonzero(new["model.far.out.bias"]):
+        raise ValueError("Perceiver initialization requires a fresh zero output projection")
+    ppo.load_agent_state_dict({k: old[k] if k in shared else new[k] for k in new})
+    with path.open("rb") as f:
+        digest = hashlib.file_digest(f, "sha256").hexdigest()
+    return {"path": str(path), "sha256": digest, "source_update": int(ck["update"]),
+            "source_env_steps": int(ck["env_steps"]), "source_model": source["model"],
+            "source_featurize": source["featurize"], "source_action_table_version": ck["action_table_version"],
+            "migration": {"kind": "far_perceiver_v4", "loaded_keys": sorted(shared),
+                          "new_keys": sorted(added), "ignored_keys": sorted(ignored),
+                          "new_module_seed": int(cfg["model"].get("far_init_seed", 1))}}
+
+
 def _initialize_checkpoint(ppo: PPO, cfg: dict, path: str | Path, *, density_ablation: bool) -> dict:
     path = Path(path).resolve()
     ck = load_checkpoint(path, map_location=ppo.device)
@@ -151,9 +189,10 @@ def _initialize_checkpoint(ppo: PPO, cfg: dict, path: str | Path, *, density_abl
 
 
 def train(cfg: dict, run_dir: Path, resume: dict | None = None, pack_result: bool = True,
-          *, init_from: str | Path | None = None, init_density_from: str | Path | None = None) -> Path:
-    if sum(x is not None for x in (resume, init_from, init_density_from)) > 1:
-        raise ValueError("--init-from、--init-density-from 与 --resume 不能同时使用")
+          *, init_from: str | Path | None = None, init_density_from: str | Path | None = None,
+          init_perceiver_from: str | Path | None = None) -> Path:
+    if sum(x is not None for x in (resume, init_from, init_density_from, init_perceiver_from)) > 1:
+        raise ValueError("checkpoint initialization and resume options are mutually exclusive")
     run_dir = Path(run_dir)
     device = pick_device(cfg["run"]["device"])
     total = int(cfg["run"]["total_updates"])
@@ -169,6 +208,8 @@ def train(cfg: dict, run_dir: Path, resume: dict | None = None, pack_result: boo
     initial_checkpoint = initialize_from_checkpoint(ppo, cfg, init_from) if init_from is not None else None
     if init_density_from is not None:
         initial_checkpoint = initialize_density_from_checkpoint(ppo, cfg, init_density_from)
+    if init_perceiver_from is not None:
+        initial_checkpoint = initialize_perceiver_from_checkpoint(ppo, cfg, init_perceiver_from)
 
     start, env_steps, best = 1, 0, None
     if resume is not None:
@@ -188,7 +229,7 @@ def train(cfg: dict, run_dir: Path, resume: dict | None = None, pack_result: boo
                          start_intent_mixes=start_mixes)
     if initial_checkpoint is not None:
         _update_env_json(run_dir, initial_checkpoint=initial_checkpoint)
-    if init_density_from is not None:
+    if init_density_from is not None or init_perceiver_from is not None:
         save_checkpoint(run_dir / "checkpoints" / "u0.pt", ppo=ppo, update=0, env_steps=0, cfg=cfg,
                         extra={"initial_checkpoint": initial_checkpoint})
         # u0仅诊断，不参与best选择，不恢复源optimizer/课程/计数。
@@ -316,12 +357,13 @@ def main(argv: list[str] | None = None) -> int:
     checkpoint_args.add_argument("--resume", metavar="RUN_DIR", help="从 RUN_DIR/checkpoints/latest.pt 续训")
     checkpoint_args.add_argument("--init-from", metavar="CHECKPOINT", help="只继承模型权重，按新配置开始训练")
     checkpoint_args.add_argument("--init-density-from", metavar="CHECKPOINT", help="v8/v3密度消融专用严格权重初始化")
+    checkpoint_args.add_argument("--init-perceiver-from", metavar="CHECKPOINT", help="v8/v3→v9/v4严格共享权重初始化")
     ap.add_argument("--bench", action="store_true", help="只测吞吐（spec §7.3）")
     ap.add_argument("--runs-dir", default="runs")
     ap.add_argument("--total-updates", type=int, default=None, help="覆盖 run.total_updates（续训加长用）")
     ap.add_argument("--no-pack", action="store_true", help="不打 tar.gz")
     args = ap.parse_args(argv)
-    if (args.init_from or args.init_density_from) and args.bench:
+    if (args.init_from or args.init_density_from or args.init_perceiver_from) and args.bench:
         ap.error("权重初始化仅用于训练，不能与 --bench 同时使用")
     overrides = {"run": {"total_updates": args.total_updates}} if args.total_updates is not None else {}
 
@@ -341,7 +383,8 @@ def main(argv: list[str] | None = None) -> int:
         run_bench(cfg, make_run_dir(Path(args.runs_dir), f"bench-{args.name}"))
         return 0
     train(cfg, make_run_dir(Path(args.runs_dir), args.name), pack_result=not args.no_pack,
-          init_from=args.init_from, init_density_from=args.init_density_from)
+          init_from=args.init_from, init_density_from=args.init_density_from,
+          init_perceiver_from=args.init_perceiver_from)
     return 0
 
 

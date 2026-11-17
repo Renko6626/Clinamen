@@ -117,7 +117,10 @@ def main(argv: list[str] | None = None) -> int:
     res["checkpoint"]["eval_seed"] = int(cfg["eval"]["seed"])
     res["checkpoint"]["eval_splits"] = cfg["env"]["eval_splits"]
     res["checkpoint"]["train_seed"] = int(cfg["run"]["seed"])
-    res["checkpoint"]["density_enabled"] = cfg["model"].get("density_enabled", True)
+    perceiver = cfg["model"]["name"] == "set_attn_v4"
+    res["checkpoint"]["density_enabled"] = False if perceiver else cfg["model"].get("density_enabled", True)
+    res["checkpoint"]["arm"] = "perceiver" if perceiver else (
+        "cnn" if res["checkpoint"]["density_enabled"] else "none")
     print(console.eval_block(int(ck["update"]), res, False, time.perf_counter() - t0), flush=True)
 
     ckp = Path(a.checkpoint)

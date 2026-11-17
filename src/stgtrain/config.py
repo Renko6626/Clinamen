@@ -77,8 +77,8 @@ def validate(cfg: dict) -> None:
     _check_keys(cfg, DEFAULTS)
     run, env, ppo, feat, intent = cfg["run"], cfg["env"], cfg["ppo"], cfg["featurize"], cfg["intent"]
     if "density_enabled" in cfg["model"]:
-        if cfg["model"]["name"] != "set_attn_v3" or not isinstance(cfg["model"]["density_enabled"], bool):
-            raise ValueError("model.density_enabled只支持set_attn_v3的布尔开关")
+        if cfg["model"]["name"] not in ("set_attn_v3", "set_attn_mq") or not isinstance(cfg["model"]["density_enabled"], bool):
+            raise ValueError("model.density_enabled只支持set_attn_v3/set_attn_mq的布尔开关")
     if run["device"] not in ("auto", "cuda", "cpu"):
         raise ValueError(f"run.device 须为 auto/cuda/cpu，得 {run['device']!r}")
     if env["num_envs"] < 1 or env["frame_skip"] < 1 or env["max_frames"] < 1:

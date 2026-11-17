@@ -6,7 +6,7 @@
 # set_attn_v2 加一个激光集合编码器进主干。与 S1 只差这两处（S1 的判定点随机增大、运动层、reward 全照抄）。
 # 部署：ONNX 图版本 5（多 lasers / lasers_mask 两个输入），DLL 侧要跟着填激光表。
 #
-# 已知缺口：脚本 lz_rotate 转的激光观测里 omega = 0（看不出在扫），修引擎前的基线（见 docs/2026-09-26-laser-practice-cards-design.md §2）。
+# 已知缺口：脚本 lz_rotate 转的激光观测里 omega = 0（看不出在扫），修引擎前的历史基线（阶段结果见 docs/experiments.md）。
 #
 # 判读（相对 T0）：① 3 张留出激光卡上的撑过率 / 死亡；
 # ② 非激光卡不退步（主判据噪声约 1–2.4pp）；③ 吞吐（多一张 64 行的激光表拷贝 + 一个小编码器）。

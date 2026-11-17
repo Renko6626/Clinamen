@@ -1,0 +1,147 @@
+{
+  "rows": [
+    {
+      "trial": "k128-mb16",
+      "status": "ok",
+      "k": 128,
+      "minibatch": 16384,
+      "sps": 61722.68461989925,
+      "update_s": 4.247125698020682,
+      "torch_allocated_GiB": 10.34173059463501,
+      "torch_reserved_GiB": 17.0703125,
+      "gpu_peak_GiB": 17.313720703125,
+      "usd_per_billion": 3.7045093677077134,
+      "training4000_hours_excluding_eval_setup": 4.719028553356313
+    },
+    {
+      "trial": "k128-mb8",
+      "status": "ok",
+      "k": 128,
+      "minibatch": 32768,
+      "sps": 62757.92709573314,
+      "update_s": 4.177065944197238,
+      "torch_allocated_GiB": 17.53850793838501,
+      "torch_reserved_GiB": 26.09765625,
+      "gpu_peak_GiB": 27.294189453125,
+      "usd_per_billion": 3.643400506611562,
+      "training4000_hours_excluding_eval_setup": 4.641184382441376
+    },
+    {
+      "trial": "k128-mb32",
+      "status": "ok",
+      "k": 128,
+      "minibatch": 8192,
+      "sps": 62188.87538817669,
+      "update_s": 4.215287675870059,
+      "torch_allocated_GiB": 6.74083948135376,
+      "torch_reserved_GiB": 11.62109375,
+      "gpu_peak_GiB": 12.823486328125,
+      "usd_per_billion": 3.676738997887664,
+      "training4000_hours_excluding_eval_setup": 4.683652973188954
+    },
+    {
+      "trial": "k256-mb32",
+      "status": "ok",
+      "k": 256,
+      "minibatch": 8192,
+      "sps": 32052.669084444096,
+      "update_s": 8.178538870175544,
+      "torch_allocated_GiB": 11.03685998916626,
+      "torch_reserved_GiB": 19.806640625,
+      "gpu_peak_GiB": 21.009033203125,
+      "usd_per_billion": 7.133641905829797,
+      "training4000_hours_excluding_eval_setup": 9.08726541130616
+    },
+    {
+      "trial": "k256-mb16",
+      "status": "ok",
+      "k": 256,
+      "minibatch": 16384,
+      "sps": 32120.256522386924,
+      "update_s": 8.161329590169771,
+      "torch_allocated_GiB": 17.59539270401001,
+      "torch_reserved_GiB": 28.82421875,
+      "gpu_peak_GiB": 30.022705078125,
+      "usd_per_billion": 7.118631297826694,
+      "training4000_hours_excluding_eval_setup": 9.068143989077523
+    },
+    {
+      "trial": "k256-mb8",
+      "status": "OOM"
+    }
+  ],
+  "best_of_scanned_points": {
+    "128": {
+      "trial": "k128-mb8",
+      "status": "ok",
+      "k": 128,
+      "minibatch": 32768,
+      "sps": 62757.92709573314,
+      "update_s": 4.177065944197238,
+      "torch_allocated_GiB": 17.53850793838501,
+      "torch_reserved_GiB": 26.09765625,
+      "gpu_peak_GiB": 27.294189453125,
+      "usd_per_billion": 3.643400506611562,
+      "training4000_hours_excluding_eval_setup": 4.641184382441376
+    },
+    "256": {
+      "trial": "k256-mb16",
+      "status": "ok",
+      "k": 256,
+      "minibatch": 16384,
+      "sps": 32120.256522386924,
+      "update_s": 8.161329590169771,
+      "torch_allocated_GiB": 17.59539270401001,
+      "torch_reserved_GiB": 28.82421875,
+      "gpu_peak_GiB": 30.022705078125,
+      "usd_per_billion": 7.118631297826694,
+      "training4000_hours_excluding_eval_setup": 9.068143989077523
+    }
+  },
+  "scope": "performance only; one training seed, random initial weights, 30 updates; best within scanned minibatches, no claim on learning hyperparameters",
+  "platform": {
+    "id": 60494618,
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "dph_total": 0.8231481481481481,
+    "credit": 6.363516380609262,
+    "spent": 0.25276572050000823,
+    "disk_retained": true
+  },
+  "protocol": {
+    "gpu": "RTX5090",
+    "cpu_quota": 46.08,
+    "envs": 4096,
+    "steps": 64,
+    "threads": 30,
+    "layers": 1,
+    "d": 64,
+    "lasers": 8,
+    "parameters": 383443,
+    "amp": "bf16",
+    "compile": true,
+    "cudagraphs": true,
+    "ppo_epochs": 4,
+    "updates_per_trial": 30,
+    "excluded_warmup_updates": 10,
+    "steady_updates_per_trial": 16,
+    "raw_directory": "runs/token-profile-20261115",
+    "initialization": "random seed1 per trial",
+    "card_count": 686,
+    "training_starts": 668,
+    "curriculum_weights": "uniform for performance probe; no curriculum weight updates",
+    "timing": "every 5th update has phase profiling and is excluded from steady throughput"
+  },
+  "recommended_runtime": {
+    "128": {
+      "minibatch_samples": 8192,
+      "num_minibatches": 32,
+      "reason": "0.91% slower than fastest scanned point, much lower peak memory"
+    },
+    "256": {
+      "minibatch_samples": 8192,
+      "num_minibatches": 32,
+      "reason": "0.21% slower than fastest scanned point, about 9 GiB lower peak memory"
+    }
+  }
+}

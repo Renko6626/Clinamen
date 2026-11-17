@@ -1,7 +1,6 @@
 # TH06 ECL 批量转写
 
 把东方红魔乡（TH06，th06nc 解码）的原作 ECL 按**波次 / boss 段**切开，按[统一写审流程](../README.md)转写成 `cards/th06/` 下的 RL 卡。
-设计：[`docs/2026-09-16-th06-transcribe-design.md`](../../docs/2026-09-16-th06-transcribe-design.md)。
 
 高版本整关切分先读[切分指南](../th18/splitting.md)（TH18已核实例）；TH18工作包准备按[统一流程](../README.md)，单卡写审使用通用角色说明和[TH18规则书](../th18/README.md)；[skill](../../.claude/skills/th18-transcribe/SKILL.md)仅供主会话导航。单卡 `validate` 已按 [TH18 编号与验收规则](../th18/validation.md)接通；本页的批量命令、摘录器和切分检查仍只用于 TH06/NC。
 
@@ -36,7 +35,7 @@ src/stgtranscribe/        工具：thecl 解析 / 结构摘要 / 切分校验 / 
 带参 xform 从 ENGINE_VER28 起支持，单值 STEP 扩展从29起支持，模板体 rand 从30起支持；
 引擎源码、release harness 和 Python wheel 是三个需分别核对的状态，升级方法见
 [wheel 同步说明](../../docs/magnus-migration.md#项目自有-wheel)，本次来源与验证见
-[`stg-rl-045-adoption.json`](../../docs/practice-cards/reports/stg-rl-045-adoption.json)与[大表接入记录](../../docs/investigations/2026-11-05-touhou-bullet-catalog.md)。
+[`stg-rl-045-adoption.json`](../../docs/practice-cards/reports/stg-rl-045-adoption.json)与[大表接入记录](../th18/bullet-types.md)。
 
 运行期变换参数优先按 mapping §5 转成 `NAME(args)`，在原 `bullet_effects` 配置点保存值，保留随机取样位置与共享范围。
 模板体 rand 按原求值标记选择绑定、每弹出生或操作进入时抽样；配置随机仍保持共享，STEP/等待中不重抽。

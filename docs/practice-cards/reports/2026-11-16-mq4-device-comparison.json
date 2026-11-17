@@ -1,0 +1,65 @@
+{
+  "instance_id": 60888240,
+  "device": "Shaanxi RTX5090 / 32vCPU",
+  "comparison": [
+    {
+      "label": "new32",
+      "advertised_vcpu": 32,
+      "actual_cpu_quota": 30.72,
+      "sps": 78916.38863669007,
+      "hourly_usd": 0.5559259259259259,
+      "usd_per_billion_frames": 1.956803535748238,
+      "estimated_2000_training_hours": 1.8454412077321818,
+      "estimated_2000_with_eval_hours": 2.1191211746509633,
+      "estimated_2000_with_eval_usd": 1.1780744011670725
+    },
+    {
+      "label": "old48",
+      "advertised_vcpu": 48,
+      "actual_cpu_quota": 46.08,
+      "sps": 91894.66651550103,
+      "hourly_usd": 0.8231481481481481,
+      "usd_per_billion_frames": 2.4881995010658855,
+      "estimated_2000_training_hours": 1.5848096639100309,
+      "estimated_2000_with_eval_hours": 1.8584896308288121,
+      "estimated_2000_with_eval_usd": 1.529812297969272
+    }
+  ],
+  "new32_speed_ratio_to_old48": 0.8587700639120144,
+  "new32_cost_ratio_per_frame": 0.7864335375479298,
+  "break_even_48vcpu_hourly_training_only": 0.6473513100741755,
+  "break_even_48vcpu_hourly_including_estimated_evaluation": 0.6338880678294118,
+  "new32_gpu_torch_peak_allocated_gib": 10.80491018295288,
+  "new32_gpu_nvml_peak_mb": 21743.375,
+  "new32_cpu_throttle_delta": {
+    "nr_throttled": 0,
+    "throttled_usec": 0
+  },
+  "new32_process_cpu_cores": 5.213128521246424,
+  "phase_seconds": {
+    "env_step": 0.5370820771786384,
+    "h2d": 0.6574848628855156,
+    "featurize": 0.13689554575830698,
+    "policy": 0.12447334866737947,
+    "reward": 0.06315111565830496,
+    "update": 1.8174213766663645
+  },
+  "initialization": {
+    "source_update": 4000,
+    "optimizer_restored": true,
+    "strict_agent_loading": true,
+    "authoritative_checkpoint_unchanged": true
+  },
+  "final_platform": {
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "instance_id": 60888240,
+    "credit": 9.602097673509228
+  },
+  "limitations": [
+    "Different CPU models and trajectories; not a pure vCPU count effect.",
+    "New32 is a40-update probe; old48 is archived MQ4 formal training, excluding warmup/profile updates.",
+    "Evaluation time reused from old48; new32 evaluations and full2000 updates not run.",
+    "Cost estimates exclude fresh-machine installation, compilation, traffic and retained storage."
+  ]
+}

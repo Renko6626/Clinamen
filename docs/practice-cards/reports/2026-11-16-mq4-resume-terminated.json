@@ -1,0 +1,62 @@
+{
+  "status": "terminated at explicit user request; no automatic continuation",
+  "last_log_update": 5282,
+  "additional_logged_updates": 1282,
+  "checkpoint_metadata": {
+    "latest.pt": {
+      "update": 5250,
+      "env_steps": 1376256000
+    },
+    "u5250.pt": {
+      "update": 5250,
+      "env_steps": 1376256000
+    },
+    "best.pt": {
+      "update": 4000,
+      "env_steps": 1048576000
+    }
+  },
+  "evaluations": [
+    "4500",
+    "5000"
+  ],
+  "run_dir": "runs/mq4-resume-shaanxi-20261116/results/mq4-resume-shaanxi-20261116/runs/20261116-mq4-shaanxi-u4000-u6000",
+  "parent_u4000_retained": true,
+  "platform": {
+    "checked_utc": "2026-11-16T08:13:10.677163+00:00",
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "instance_id": 60888240,
+    "disk_retained": true,
+    "credit": 8.794201330709257,
+    "spent": 0.8024129855999789
+  },
+  "evaluation_summary": [
+    {
+      "update": 4000,
+      "modern_passed": 354,
+      "modern_episodes": 1024,
+      "th06_passed": 776,
+      "th06_episodes": 832
+    },
+    {
+      "update": 4500,
+      "modern_passed": 305,
+      "modern_episodes": 1024,
+      "th06_passed": 742,
+      "th06_episodes": 832
+    },
+    {
+      "update": 5000,
+      "modern_passed": 297,
+      "modern_episodes": 1024,
+      "th06_passed": 756,
+      "th06_episodes": 832
+    }
+  ],
+  "limitations": [
+    "Stopped before6000 at user request; no final6000 result.",
+    "u4000 and continued checkpoints evaluated on different5090 hosts using same GPU FP32 fixed protocol.",
+    "Resume restored a larger learning rate and reconstructed environments/curriculum; no isolated causal conclusion."
+  ]
+}

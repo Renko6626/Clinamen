@@ -59,7 +59,7 @@ def main():
                     raise ValueError(f"逐局身份不一致：{key}")
                 ids.add(key)
                 r.update(pool=pool, intent=intent, train_seed=result["checkpoint"]["train_seed"],
-                         arm="cnn" if result["checkpoint"]["density_enabled"] else "none",
+                         arm=result["checkpoint"].get("arm", "cnn" if result["checkpoint"]["density_enabled"] else "none"),
                          update=result["checkpoint"]["update"], motor=dict(result["checkpoint"]["motor"]))
             if result["checkpoint"]["update"] != a.update or not result["checkpoint"]["motor"]["enabled"]:
                 raise ValueError(f"需要固定u{a.update}与开启运动层")
