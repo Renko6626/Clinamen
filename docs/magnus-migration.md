@@ -75,7 +75,7 @@ PYTHONPATH=src <检查目录>/v062/bin/python -m pytest -q tests/test_ppo.py
 
 ### 当前版本与来源（2026-11-25）
 
-- `stg_rl` 为 **0.4.11／ENGINE_VER39**，从 stg-engine main `df6676f` 加本地工作区修改，以 `maturin build --release --locked --compatibility manylinux_2_34` 构建。wheel 的 `build_info().git_sha` 为 `df6676f-dirty`。
+- `stg_rl` 为 **0.4.11／ENGINE_VER39**，从 stg-engine main `df6676f` 加本地工作区修改，以 `maturin build --release --locked --compatibility manylinux_2_34` 构建。wheel 的 `build_info().git_sha` 为 `df6676f-dirty`。已发布的[引擎源码 3794b2d](https://github.com/Renko6626/stg-engine/commit/3794b2d0223bd5a11760e01d395fe38c00a09dd7)包含这份 wheel 使用的 33–35 基线和 39 版改动。从该提交的源码树重建后，与训练仓 wheel 在两张工作卡、两种免伤设置下各跑 720 帧，18 项输出缓冲逐帧相同。
 - 新版可在编译卡时绑定射击资源。经典训练机体的可选平行直射弹在首次有效命中后消失；内建表仍走原来的贯穿结算。ENGINE_VER37 加入首次命中消耗，38 把敌人强制无敌纳入每局碰撞规则、存档与引擎回放。训练配置的选择方法见[配置说明](../configs/README.md)。xform 段池仍为 **2048**；已撤回的 0.4.8／ENGINE_VER36 曾使用 4096 段。
 - 0.4.11 修正活动血条的大血量溢出，真实 HP、伤害与 ECL 血线沿用整数。TH06 一面道中首波和 TH18 四面末符各 420 帧、18 项 wheel 缓冲与 0.4.10 逐帧一致。三段标准场景的本机新旧 release 和新版 debug 校验和一致。
 - 0.4.10 与 0.4.9 本地对拍：未指定无敌开关时，TH06 一面道中第一波和 TH18 一面首符各 2 个环境、420 帧、18 项缓冲逐帧相同。
