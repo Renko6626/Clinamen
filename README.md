@@ -17,7 +17,7 @@ src/stgtrain/envwrap.py将stg_rl原始缓冲解码为观测并处理运动层；
 
 实际弹幕、碰撞、实体池与ECL编译在相邻stg-engine；游戏快照与共用C推理在stg-agent-proto，原生研究与游戏适配在renkolab。模型接口使用固定形状Mapping输入，输出18方向/低速动作logits与value；跨仓接口或引擎变化按AGENTS约定确认和验证。
 
-当前依赖以pyproject.toml、uv.lock和magnus/wheels为准；stg_rl 0.4.7／ENGINE_VER35的[来源与兼容边界](docs/magnus-migration.md#项目自有-wheel)包括2048段池、xform标签及屏外保活，不恢复已撤销的临时扩池版本。
+训练依赖以 pyproject.toml、uv.lock 和 magnus/wheels 为准。stg_rl 0.4.11／ENGINE_VER39 支持平行双路射击配置、按卡或按局设置强制免伤，以及大血量符卡的血条显示。xform 段池容量为 2048。[配置说明](configs/README.md#自机射击配置) · [wheel 来源](docs/magnus-migration.md#项目自有-wheel)
 
 ## 一条命令跑训练（任意有 GPU 的 Linux）
 
@@ -81,7 +81,7 @@ v8的640行导出为**图版本6**：在版本5的激光表／mask之后追加 `
 
 ## 卡库与生产入口
 
-成品按 `cards/<th06|th16|th18|synthetic>/` 归档，生产资料对应 `transcribe/` 下同名目录；TH16当前仍是工作区候选，未收进正式卡库。题材与启用状态使用metadata，训练配置明确选择来源与标签。见[卡库说明](cards/README.md)和[生产总览](transcribe/README.md)。
+成品按 `cards/<th06|th16|th18|synthetic>/` 归档，生产资料对应 `transcribe/` 下同名目录；四个现代作品的可击破工作稿在本机保留，等待独立审核和正式收卡。[可击破迁移进度](transcribe/README.md#可击破迁移)。题材与启用状态使用metadata，训练配置明确选择来源与标签。见[卡库说明](cards/README.md)和[生产总览](transcribe/README.md)。
 
 ## 开发
 

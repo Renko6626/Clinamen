@@ -1,6 +1,6 @@
 # 项目记忆索引
 
-整理：2026-11-17。稳定工作约定见[AGENTS.md](../../AGENTS.md)，本索引仅维护长期背景和当前入口。
+最后核对：2026-11-25（可击破转写入口）。稳定工作约定见[AGENTS.md](../../AGENTS.md)，本索引仅维护长期背景和当前入口。
 
 - [项目背景](project-context.md)：仓库分工、东方／ECL概念与游戏接入。
 - [证据位置](evidence-map.md)：现有Ghidra、原生调查、引擎手册。
@@ -15,4 +15,4 @@
 
 [下一步](../next-steps.md)维护当前安排；[实验结果](../experiments.md)保存比较协议、结论和限制；[共同弱项分析](../practice-cards/2026-11-17-shared-weakness-analysis.md)与[五作基线](../practice-cards/2026-11-14-u4000-multigame-baseline.md)保留研究证据。原始权重、逐局记录及639个GIF仍在忽略的runs中，定位见[产物索引](../training-archive.md)。
 
-转写从[统一流水线](../../transcribe/README.md)及本作指南进入；TH14／TH15阶段收尾和各作排除/搁置决定不因文档清理、机器检查或临时训练许可改变。
+转写从[统一流水线](../../transcribe/README.md)、[可击破转写与实射验收](../../transcribe/contracts/killable.md)及本作指南进入；TH14／TH15阶段收尾和各作排除/搁置决定不因文档清理、机器检查或临时训练许可改变。

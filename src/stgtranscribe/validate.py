@@ -72,6 +72,9 @@ def lint(card: Path) -> tuple[list[str], dict]:
             errs.append(f"meta.toml 缺 {k}")
         elif not isinstance(meta[k], ty) or (ty is int and isinstance(meta[k], bool)):
             errs.append(f"meta.toml 的 {k} 应为 {ty.__name__}")
+    force_invulnerable = meta.get("force_enemy_invulnerable_by_default", False)
+    if not isinstance(force_invulnerable, bool):
+        errs.append("meta.toml 的 force_enemy_invulnerable_by_default 应为 bool")
     if meta.get("source") not in ("th06", "th14", "th15", "th16", "th18"):
         errs.append('meta.toml source 应为 "th06"、"th14"、"th15"、"th16" 或 "th18"')
     elif source is not None and meta["source"] != source:
@@ -91,7 +94,7 @@ def lint(card: Path) -> tuple[list[str], dict]:
     if not src:
         return errs + ["目录里没有 .ecl"], meta
     code = re.sub(r"//[^\n]*", "", src)
-    if "set_invuln(65535)" not in code:
+    if force_invulnerable is not True and "set_invuln(65535)" not in code:
         errs.append("没有 set_invuln(65535)（boss / 导演敌 / 小怪都要无敌）")
     if "phase_begin(" not in code and "spell_begin(" not in code:
         errs.append("没有 phase_begin / spell_begin（段必须以结束事件收尾）")
@@ -165,7 +168,8 @@ def check_runs(report: Report, card: Path, meta: dict) -> None:
 
 # ── 第 4b 层：开场安全（stg_rl 真 env）───────────────────────────────────────
 
-def opening_death_rate(card: Path, rank: int, episodes: int = OPENING_EPISODES, seed: int = 1) -> float:
+def opening_death_rate(card: Path, rank: int, episodes: int = OPENING_EPISODES, seed: int = 1, *,
+                       force_enemy_invulnerable: bool = False) -> float:
     """env 自带预热关掉，照卡池规则自己闭眼游走 120 帧（9 方向，每段 8–32 帧），统计死亡比例。"""
     import numpy as np
     import stg_rl
@@ -174,9 +178,10 @@ def opening_death_rate(card: Path, rank: int, episodes: int = OPENING_EPISODES, 
     dirs = [0, C.BTN_UP, C.BTN_UP | C.BTN_RIGHT, C.BTN_RIGHT, C.BTN_DOWN | C.BTN_RIGHT, C.BTN_DOWN,
             C.BTN_DOWN | C.BTN_LEFT, C.BTN_LEFT, C.BTN_UP | C.BTN_LEFT]
     img = stg_rl.compile_dir(card)
+    options = {"force_enemy_invulnerable": True} if force_enemy_invulnerable else {}
     env = stg_rl.VecEnv(episodes, max(1, min(4, os.cpu_count() or 1)), {"card": img},
                         [stg_rl.Start(image="card", mark=0, rank=rank, weight=1.0)],
-                        max_frames=OPENING_FRAMES + 60, warmup_max=0, seed=seed + rank)
+                        max_frames=OPENING_FRAMES + 60, warmup_max=0, seed=seed + rank, **options)
     buf = env.reset()
     rng = random.Random(seed * 7919 + rank)
     cur = [rng.choice(dirs) for _ in range(episodes)]
@@ -200,7 +205,9 @@ def opening_death_rate(card: Path, rank: int, episodes: int = OPENING_EPISODES, 
 def check_opening(report: Report, card: Path, meta: dict) -> None:
     lo, hi = meta["ranks"]
     for rank in range(lo, hi + 1):
-        rate = opening_death_rate(card, rank)
+        rate = opening_death_rate(
+            card, rank, force_enemy_invulnerable=meta.get("force_enemy_invulnerable_by_default", False),
+        )
         report.opening_death_rate[rank] = rate
         if rate > OPENING_MAX_DEATH_RATE:
             report.errors.append(f"rank {rank}: 开场 {OPENING_FRAMES} 帧闭眼游走死亡率 {rate:.0%} > "

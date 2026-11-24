@@ -84,7 +84,7 @@ def build_components(cfg: dict, device: torch.device):
     missing = [s.card for s in specs if s.card not in cards]
     if missing:
         raise ValueError(f"评测划分里的卡在 {cfg['env']['cards_dir']} 下不存在：{missing}")
-    images = compile_cards(cards)
+    images = compile_cards(cards, shot_profile=cfg["env"].get("shot_profile", ""))
     starts = train_starts(cards, {s.card for s in specs}, cfg["env"]["ranks"])
     featurizer = FEATURIZERS.get(cfg["featurize"]["name"])(cfg)
     spec = featurizer.spec()
@@ -360,6 +360,7 @@ def main(argv: list[str] | None = None) -> int:
     checkpoint_args.add_argument("--init-perceiver-from", metavar="CHECKPOINT", help="v8/v3→v9/v4严格共享权重初始化")
     ap.add_argument("--bench", action="store_true", help="只测吞吐（spec §7.3）")
     ap.add_argument("--runs-dir", default="runs")
+    ap.add_argument("--shot-profile", metavar="JSON", help="Override env.shot_profile for a new run")
     ap.add_argument("--total-updates", type=int, default=None, help="覆盖 run.total_updates（续训加长用）")
     ap.add_argument("--no-pack", action="store_true", help="不打 tar.gz")
     args = ap.parse_args(argv)
@@ -368,6 +369,8 @@ def main(argv: list[str] | None = None) -> int:
     overrides = {"run": {"total_updates": args.total_updates}} if args.total_updates is not None else {}
 
     if args.resume:
+        if args.shot_profile is not None:
+            ap.error("--resume uses the shot profile saved in the checkpoint")
         run_dir = Path(args.resume)
         ck = load_checkpoint(run_dir / "checkpoints" / "latest.pt")
         cfg = from_dict(deep_merge(ck["cfg"], overrides))
@@ -376,6 +379,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if not args.config:
         ap.error("需要配置文件，或 --resume RUN_DIR")
+    if args.shot_profile is not None:
+        overrides["env"] = {"shot_profile": args.shot_profile}
     cfg = load_config(args.config, overrides or None)
     if args.bench:
         from .bench import run_bench

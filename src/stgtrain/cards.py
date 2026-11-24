@@ -181,8 +181,18 @@ def training_ranks(card: Card, ranks: list[int]) -> list[int]:
     return sorted({min(max(r, lo), hi) for r in ranks})
 
 
-def compile_cards(cards: dict[str, Card]) -> dict[str, stg_rl.Image]:
-    return {cid: stg_rl.compile_dir(card.path) for cid, card in cards.items()}
+def compile_cards(cards: dict[str, Card], *, shot_profile: str | Path = "") -> dict[str, stg_rl.Image]:
+    options = {"shot_profile": stg_rl.load_shot_profile(shot_profile)} if shot_profile else {}
+    images = {}
+    for cid, card in cards.items():
+        card_options = options.copy()
+        if "force_enemy_invulnerable_by_default" in card.meta:
+            value = card.meta["force_enemy_invulnerable_by_default"]
+            if not isinstance(value, bool):
+                raise ValueError(f"{cid}: force_enemy_invulnerable_by_default 须为布尔值")
+            card_options["force_enemy_invulnerable_by_default"] = value
+        images[cid] = stg_rl.compile_dir(card.path, **card_options)
+    return images
 
 
 def source_ranges_overlap(a: str, b: str) -> bool:

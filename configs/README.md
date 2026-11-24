@@ -39,3 +39,21 @@ MQ4保持原训练留出划分，现代16卡仍在训练中；不把modern-diagn
 本阶段环境起点为5090／约48vCPU、4096环境、30线程、64步、bf16，4096不是已验证的最优值；见[性能基线](../docs/perf-baseline.md)。线程可用 `scripts/run-exp.sh <配置> <名称> --threads N` 显式覆盖。
 
 其余39份历史研究配置已移至[archive](archive/README.md)，用途及结论见[旧实验记录](../docs/experiments.md#历史实验)。
+
+## 自机射击配置
+
+[平行双发配置](shots/parallel.json)每 4 帧从自机左右各 8 px 发射一枚直线弹，每发伤害 30，沿用 12 px/帧弹速和 4 px 判定半径。弹在首次有效命中后消失。射击参数在各火力档和高低速下相同。
+
+在训练配置的 `[env]` 中设置 `shot_profile = "configs/shots/parallel.json"`，也可从仓库根目录直接为一次新训练启用：
+
+```bash
+bash run.sh configs/base.toml parallel-shot --shot-profile configs/shots/parallel.json
+```
+
+相对路径以启动命令的工作目录为基准，与 `cards_dir` 和 `eval_splits` 一致。配置快照和 checkpoint 保存文件路径，续训、独立评估和回放都按该路径加载配置。复现时需保留同一份 JSON 文件。省略 `shot_profile` 或设为空字符串会使用引擎默认射击。
+
+## 敌方无敌开关
+
+训练配置的 `[env]` 可设置 `force_enemy_invulnerable = true`，为本次运行强制开启敌方无敌。设为 `false` 则显式关闭强制无敌，敌人的受击规则按卡片脚本执行。省略时，每张卡各自采用 `meta.toml` 的 `force_enemy_invulnerable_by_default`，没有此元数据的卡直接按脚本执行。
+
+已设置的开关随配置快照和 checkpoint 保存，训练、评估和回放共用此设置。

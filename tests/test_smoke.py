@@ -2,10 +2,12 @@ import json
 from pathlib import Path
 
 import pytest
+import stg_rl
 import torch
 
 from conftest import small_cfg
 from stgtrain import bench, gpucheck
+from stgtrain.actions import action_buttons
 from stgtrain.checkpoint import load_checkpoint, save_checkpoint
 from stgtrain.config import dump_toml, from_dict, load_config
 from stgtrain.metrics import read_jsonl
@@ -19,6 +21,30 @@ def test_repo_configs_load():
     assert load_config(REPO / "configs" / "base.toml") == from_dict({}), "base.toml 须与 DEFAULTS 一致"
     smoke = load_config(REPO / "configs" / "smoke.toml")
     assert smoke["run"]["device"] == "cpu" and not smoke["ppo"]["compile"] and not smoke["ppo"]["cudagraphs"]
+
+
+def test_shot_profile_round_trip_applies_to_compiled_cards(tmp_path, monkeypatch):
+    card = tmp_path / "cards" / "target"
+    card.mkdir(parents=True)
+    (card / "main.ecl").write_text("""
+async sub target() { set_hurtbox(1.0fx); loop { wait(1); } }
+sub main() { _ = spawn_enemy(8.0fx, 340.0fx, 30, 0, 0, 0, target); loop { wait(1); } }
+""", encoding="utf-8")
+    config = small_cfg(env={"cards_dir": str(card.parent), "eval_splits": str(tmp_path / "unused.toml")})
+    killed = stg_rl.EVENT_COLUMNS.index("enemies_killed")
+
+    def target_destroyed(cfg):
+        images, starts, *_ = build_components(cfg, torch.device("cpu"))
+        env = stg_rl.VecEnv(1, 1, images, starts, warmup_max=0)
+        env.reset()
+        return any(env.step([action_buttons(0)])["events"][0, killed] for _ in range(20))
+
+    assert not target_destroyed(config)
+    monkeypatch.chdir(REPO)
+    config["env"]["shot_profile"] = "configs/shots/parallel.json"
+    snapshot = tmp_path / "config.toml"
+    dump_toml(config, snapshot)
+    assert target_destroyed(load_config(snapshot))
 
 
 def test_laser_experiment_config_builds():

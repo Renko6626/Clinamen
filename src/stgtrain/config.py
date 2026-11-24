@@ -10,7 +10,7 @@ DEFAULTS: dict = {
     "run": {"seed": 1, "device": "auto", "total_updates": 2000, "ckpt_every": 50, "eval_every": 50,
             "torch_threads": 2, "max_minutes": 0.0},
     "env": {"cards_dir": "cards", "card_filter": {"sources": ["th06"], "tags": [], "ids": [], "exclude_synthetic_kinds": []},
-            "eval_splits": "eval/splits.toml", "num_envs": 2048, "threads": 0,
+            "eval_splits": "eval/splits.toml", "shot_profile": "", "num_envs": 2048, "threads": 0,
             "frame_skip": 1, "max_frames": 3600, "warmup_max": 120, "bullets_cap": 1024, "ranks": [2],
             "mirror": True,
             # 判定点随机增大（实验 S）：每局每 env 抽 m ~ U[lo, hi] px 追加到自机中弹判定半径，对模型不可见；
@@ -67,6 +67,8 @@ def _check_keys(cfg: dict, ref: dict, path: tuple[str, ...] = ()) -> None:
     if path in _FREE_SECTIONS:
         return
     for k, v in cfg.items():
+        if path == ("env",) and k == "force_enemy_invulnerable":
+            continue  # Optional so an unset snapshot still uses each card's default.
         if k not in ref:
             raise ValueError(f"未知配置键 {'.'.join(path + (k,))}")
         if isinstance(v, dict) and isinstance(ref[k], dict):
@@ -83,6 +85,10 @@ def validate(cfg: dict) -> None:
         raise ValueError(f"run.device 须为 auto/cuda/cpu，得 {run['device']!r}")
     if env["num_envs"] < 1 or env["frame_skip"] < 1 or env["max_frames"] < 1:
         raise ValueError("env.num_envs / frame_skip / max_frames 须 ≥ 1")
+    if not isinstance(env["shot_profile"], str):
+        raise ValueError("env.shot_profile 须为 JSON 文件路径字符串（空字符串采用引擎默认射击）")
+    if "force_enemy_invulnerable" in env and not isinstance(env["force_enemy_invulnerable"], bool):
+        raise ValueError("env.force_enemy_invulnerable 须为布尔值")
     for key, value in env["card_filter"].items():
         if not isinstance(value, list) or any(not isinstance(item, str) for item in value):
             raise ValueError(f"env.card_filter.{key} 须为字符串列表")

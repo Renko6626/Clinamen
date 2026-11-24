@@ -73,11 +73,13 @@ PYTHONPATH=src <检查目录>/v062/bin/python -m pytest -q tests/test_ppo.py
 
 本地 `pyproject.toml` 的 `tool.uv.sources` 与 Magnus bootstrap 共用 `magnus/wheels/`。升级时同步 `pyproject.toml`、`uv.lock`、wheel 与 `SHA256SUMS`，核对两端字节一致；构建快照可以基于已核对的源码和补丁，不要求先发布上游 Release。
 
-### 当前版本与来源（2026-11-08）
+### 当前版本与来源（2026-11-25）
 
-- `stg_rl` 为 **0.4.7／ENGINE_VER35**，文件 `stg_rl-0.4.7-cp310-abi3-manylinux_2_34_x86_64.whl`。来源是引擎 main `df6676f82d46545f898d41c95f46e0049e9113de` 加已审阅工作区修改；用导出源码快照构建，仅在快照调整 Python 包装版本，`maturin --release --compatibility manylinux_2_34`。`build_info().git_sha` 为 `unknown`，不能据此伪称 wheel 来自干净提交。
-- 该版包含 VM 每任务 4096／全局 65536 指令预算、xform 标签／wait／goto／loop、单值 STEP 修复和限时屏外保活 `offscreen_keep`；xform 段池为 **2048**。2026-11-07 临时的 0.4.8／ENGINE_VER36／4096 段已撤销，不能作为现行能力或验收依据。
-- 当时的接入检查包括 Python 3.12／3.11 返场 probe、三卡固定动作对 0.4.6 的 18 项缓冲逐字节回放一致、TH18 二面首符四档 validate 通过。过程证据在忽略目录 `transcribe/work/wheel-upgrade/0.4.7/`；构建快照和命令当时留在 `/tmp/stg-rl-047-build/`，临时目录可能被清理。以上不代表已在 Magnus 或原作动态验收。
+- `stg_rl` 为 **0.4.11／ENGINE_VER39**，从 stg-engine main `df6676f` 加本地工作区修改，以 `maturin build --release --locked --compatibility manylinux_2_34` 构建。wheel 的 `build_info().git_sha` 为 `df6676f-dirty`。
+- 新版可在编译卡时绑定射击资源。经典训练机体的可选平行直射弹在首次有效命中后消失；内建表仍走原来的贯穿结算。ENGINE_VER37 加入首次命中消耗，38 把敌人强制无敌纳入每局碰撞规则、存档与引擎回放。训练配置的选择方法见[配置说明](../configs/README.md)。xform 段池仍为 **2048**；已撤回的 0.4.8／ENGINE_VER36 曾使用 4096 段。
+- 0.4.11 修正活动血条的大血量溢出，真实 HP、伤害与 ECL 血线沿用整数。TH06 一面道中首波和 TH18 四面末符各 420 帧、18 项 wheel 缓冲与 0.4.10 逐帧一致。三段标准场景的本机新旧 release 和新版 debug 校验和一致。
+- 0.4.10 与 0.4.9 本地对拍：未指定无敌开关时，TH06 一面道中第一波和 TH18 一面首符各 2 个环境、420 帧、18 项缓冲逐帧相同。
+- 0.4.9 与 0.4.7／ENGINE_VER35 对拍：使用默认表，TH06 一面道中第一波和 TH18 一面首符各 2 个环境、320 帧、18 项缓冲逐帧相同。新表在 Python 环境验证了单路与双路命中扣血、发射间隔及前排遮挡。引擎默认三段 golden 与本轮改动前逐字节一致。
 - 默认仍为 LEGACY／擦弹开启。0.4.5→0.4.6 的 ENGINE_VER32 修改了擦弹统计，旧版 graze 不能直接作同口径对照；该轮三卡回放其余缓冲一致。校验值只维护在 lock 和 `SHA256SUMS`，不在记忆另抄一份。
 - `stgagent` wheel 为 0.1.0，来自 `stg-agent-proto` 的 `v0.1.0`（`6b61fa052640377d640e5a7ecee9641b6ac3df96`）。
 

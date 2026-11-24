@@ -270,7 +270,7 @@ class MultiVecEnv:
         self.envs = [
             stg_rl.VecEnv(self.k, max(1, min(int(threads), self.k)), images, [start], frame_skip=int(e["frame_skip"]),
                           max_frames=int(e["max_frames"]), warmup_max=int(e["warmup_max"]), bullets_cap=self.cap,
-                          seed=int(seed), buffers=buf)
+                          seed=int(seed), buffers=buf, force_enemy_invulnerable=e.get("force_enemy_invulnerable"))
             for (images, start), buf in zip(groups, self.bufs)
         ]
         self.buf: dict[str, Tensor] = {}
@@ -383,6 +383,7 @@ class EnvWrapper:
             self.env = stg_rl.VecEnv(
                 self.n, threads, images, starts, frame_skip=self.frame_skip, max_frames=int(e["max_frames"]),
                 warmup_max=int(e["warmup_max"]), bullets_cap=self.cap, seed=int(seed), buffers=self.buf,
+                force_enemy_invulnerable=e.get("force_enemy_invulnerable"),
             )
             self.intent = make_intent()
         if self.card_mix_enabled:

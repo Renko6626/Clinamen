@@ -6,6 +6,7 @@ from stgagent import consts as C
 
 from conftest import FIXTURES, small_cfg
 from stgtrain.cards import compile_cards, discover
+from stgtrain.config import dump_toml, load_config
 from stgtrain.envwrap import EnvWrapper, _fx
 from stgtrain.registry import load_builtins
 
@@ -34,6 +35,44 @@ def test_reset_shapes():
     assert o.enemies.shape == (8, 256, 6) and o.enemies_mask.shape == (8, 256) and o.target_xy.shape == (8, 2)
     assert (o.player_xy[:, 0].abs() <= 192).all() and (o.player_xy[:, 1] <= 448).all()
     assert torch.allclose(o.target_xy, w.intent.target)
+
+
+@pytest.mark.parametrize("override", [None, True, False])
+def test_enemy_invulnerability_uses_card_default_or_run_override(tmp_path, override):
+    cards_dir = tmp_path / "cards"
+    for card_name in ("default_shielded", "vulnerable"):
+        card = cards_dir / card_name
+        card.mkdir(parents=True)
+        (card / "main.ecl").write_text("""
+async sub target() { loop { wait(1); } }
+sub main() { _ = spawn_enemy(0.0fx, 340.0fx, 1, 0, 0, 0, target); loop { wait(1); } }
+""", encoding="utf-8")
+    (cards_dir / "default_shielded" / "meta.toml").write_text(
+        "force_enemy_invulnerable_by_default = true\n", encoding="utf-8")
+    env_config = {"warmup_max": 0}
+    if override is not None:
+        env_config["force_enemy_invulnerable"] = override
+    snapshot = tmp_path / "config.toml"
+    dump_toml(small_cfg(env=env_config), snapshot)
+    cfg = load_config(snapshot)
+    assert cfg["env"].get("force_enemy_invulnerable") is override
+    assert ("force_enemy_invulnerable" in cfg["env"]) == (override is not None)
+
+    images = compile_cards(discover(cards_dir))
+    starts = [stg_rl.Start(name) for name in images]
+    groups = [({start.image: images[start.image]}, start) for start in starts]
+    expected = torch.tensor([False, True] if override is None else [not override, not override])
+    killed = stg_rl.EVENT_COLUMNS.index("enemies_killed")
+    for env in (EnvWrapper(cfg, images, starts, CPU, seed=5),
+                EnvWrapper(cfg, {}, [], CPU, seed=5, num_envs=1, groups=groups)):
+        env.reset()
+        observed = torch.zeros(env.n, dtype=torch.bool)
+        for _ in range(16):
+            _, info = env.step(still(env.n))
+            observed |= info.events[:, killed] > 0
+        start_indices = env.buf["start_index"].long()
+        assert set(start_indices.tolist()) == {0, 1}
+        assert torch.equal(observed, expected[start_indices])
 
 
 def test_decode_matches_raw_buffers():
